@@ -1,0 +1,398 @@
+---
+layout: narrative
+title: 01. Discords Beyond the Itil
+author: Sasha Sokolov
+translator: Alexander Boguslawski
+language: en
+#public: true
+---
+
+The moonth’s clear, no catchin up with the dates, the 
+year’s current. To Citizen Sidor Fomich Pozhilykh, 
+with all due respect, Ilya Petrikeich Zynzyrela’s *Discords Beyond the Itil*. With Your permission, I commence. Citizen Pozhilykh, I’m a man relatively peripheral to these places, 
+but since I’m a sharpener, hence I sharpen knives-scissors, and 
+it would be probably rather difficult to pull the wool over my 
+eyes, even if at first glance I am a total gimp. I also happen to 
+sharpen scythes, axes, and other hardwear, but such details 
+would only obscure my account. That’s why I don’t recount the 
+events of the years out-of-sight-and-out-of-mind, just lemme 
+underscore that up ’til now I haven’t found myself in the slammer, despite dwellin in substantial towns. Wherever they’d settle me, I didn’t mind bein down and out, didn’t seriously hanker after a family, and made ends meet by askin folks for help in 
+proportion to their means and possibilities. About that I remain remorseful, havin chosen for this purpose a co-op of invaliduals named after A. Sharpenhauer. I beg Your pardon, of 
+course, but a dedicated work den and a bill of fare are available. 
+When it’s warm, we do them knives all the time: We wander 
+around and set out to find employment far away. In contrast, 
+when it’s freezin, we service the populace in regard to sharpenin and flattenin ’cuz from November to April, every day 
+without holidays, loners and monsters similar to this here correspondent of Yourses clink and circle on the mirror of the waters, and when the dusk descends, You welcome them in the 
+three-story sickler, aptly named by a whim of some passerby a 
+crashbaret; but Thou shall not find Ilya in their midst. You’ll 
+turn blue: Why is he such a nincompoop, why doesn’t he procure for himself a pair of blades, like them other folks, is he 
+disgusted by the prospect of scratchin what’s smooth with his 
+sharps, is he snubbin a mugful of beneficially social brew? No 
+way, I would never refuse what I’m used to and I’m not one of 
+them sharpeners who ain’t sharp. To tell the truth, I don’t need 
+a pair, but one attachable blade always hangs over the mantelpiece. It don’t matter, really, that I became, unfortunately, damaged, if by nature I am flintlike: I fell in love with glidin and 
+can’t be held back, just as long as there’s somethin to push off 
+with—ding once, Mister Pozhilykh, dong once, keep swayin, 
+keep mutterin under the shaft bow even as far as the Valday 
+harbor—castin of bells, bakin of pretzels, peddlin of hemp—
+and no one can boss you around along the Itil. May I prolong? 
+But what’s precisely happenin is that lately there ain’t nothin to 
+push off with. On the fourth Thursday of December (read: on 
+Christmas Eve), I was walkin from the other side of the river, 
+steppin forth from one of them undertakers, probably unknown to You. We were sendin off a certain recluse who skated 
+to his maker due to his haughty recklessness. He lived in 
+Mylo—one could say—mukomolovo, but on the outskirts, in 
+clusters of adder’s tongue with an admixture of willow; he was 
+a hunter, perpetually kept postal cooers, altogether quite 
+furry-legged, but I doubt that he conducted correspondence 
+with anyone: It’s unlikely. However, he himself shuttlecocked 
+crisp like lime bast in scorchin heat, and he was called—I don’t 
+remember what. Gury—that’s what he was called, as long as 
+we’re on it. Among the amusements of that particular Gury I’d 
+reference the followin: He was the one that adored scrapin and 
+rollin over the slick on his sharps, which additionally resulted 
+in us losin a client, and the undertakers, in contrast, findin one. 
+I’ll provide evidence right away. In the days of the Archer, to 
+make it more dangerous, but more excitin, the loners of both 
+Shallow Reach shores arrange races on the weakenin ice. It 
+happens in the outer darkness, intentionally without heavenly 
+lights, and the folks cut figures as well as they can and hurry- 
+scurry playin catch and chasin each other, without seein the 
+holes and cracks. And that’s fraughtful. In matters of whirlin, 
+everybody was always scorched by a certain Nikolay, a lad 
+from, when everythin was said and done, the trash co-op. With 
+the overly familiar nickname Helper, he played a sincere loser 
+in this world, and some jokers among the envious ones meanly 
+made fun of him, sayin that he shows off so fancifully only ’cuz 
+he’s got a knack for lurkin around dark corners; so, they said, 
+he’s used to it. What is the chronicle of his failures, if You don’t 
+mind? He, first of all, tasted the familial pandemonium, but his 
+spouse got together with a wolf slayer and chased the Helper 
+away from the house, second of all. Then, he knocked on the 
+Gorodnishche shelter for the unhearin, but they showed him 
+the door and no more: Our department’s exclusively for the 
+deaf, and you, as you can see, are also blind, so you understand 
+yourself. For that reason the fellow shuffled to the sightless 
+shelter: Fat chance, the limit of bunk spots has been exceeded; 
+another thing if you had your own concertina, you’d hang 
+around the embarcaderos and just put the proceeds into the 
+common pot, and for that we would keep you. So Nikolay 
+Helperov stood up in front of them in his entire shriveled 
+height and, angrily cryin with his burnin walleyes, shouted: 
+You overseas seedpods, if I had my own musick, would I ask 
+you what to do, really? And at the next stage he turned up without warnin in the house of the transient homeless, and they 
+stepped into his shoes politely, and splashed wholeheartedly. 
+And they tempted: Live, brother, forever. And one day this 
+dame has called on one of them; she notices the Helper in the 
+midst of the other poor, in their circle: Who’s the one so unsightly over there among you at the rink? Not to worry; it’s just 
+Nikolka here among us skatin at the rink. His circumstance is 
+probably not too shabby, she says, if he’s spinnin so lively. No, 
+they said, it’s not good, his circumstance sucks, the only joy he 
+has left is to weave them figures. Then the dame: No, stop, you 
+better don’t let him clown around, just look at him, how unappealin. So the almshouse’s tenants asked the Helper: Do us a 
+favor, do not live, brother, forever, ’cuz there are reprimands. 
+He did not answer nothin, as he had, besides everythin else, 
+the reputation of a mute, and he set out far from the establishment and didn’t even look back. And the co-op of collectin all 
+kinds of trash received him warmly. They reported he didn’t 
+shine there with excessively long service, but durin a drunken 
+incident got slightly upset and vanished somewhere, and it’s 
+rather unlikely he’ll return. This is, if You don’t mind, this 
+chronicle. One wonders: Did I sharpen his unsharpened ones? 
+And it turns out only I and nobody else from the entire collective did his sharpenin, while the remainin co-workers, squeamish, turned up their noses, even though they themselves were 
+pachoolies not of the first freshness. I also sharpened for Gury, 
+and for Krylobyl, and for the Wintry Man I sharpened, for the 
+entire Itil, You understand, I sharpened. And as to Gury the 
+Hunter, he was makin a career in race-skatin. Every chance he 
+gets, he wants nothin else, just let him fly over the slick. Sometimes he would fly into the co-op’s workshop, would fall, like a 
+long-awaited rain durin the drought, would drop in, slightly 
+tired, and what are we supposed to do?—we chip in a ruble 
+each. And we start countin: Gury leaves the misty glade, from 
+his pocket draws a blade; I will sharpen his blade fine, and 
+you’ll have to get the wine. If I—with sadness, but I’m ready. 
+Once I wanted to tether the skate to my boot, but at that moment I noticed it longed after a rasp. Drat—the rasp got completely lost or the colleagues snagged it. Gury graciously 
+thought for a while and said: What are you lookin for, tell? 
+I told him. He told them: Eh, you, mechanics, return the strument, whoever snagged it, ’cuz your mate has been palmin after 
+it for a long time. But the co-op answered: Buzz off; what the 
+heck do we need his freakin rasp for? And also: What, do you 
+think he will dash on the rasp to Sloboda? And You will probably start doubtin too: Does it make sense, bein based in the 
+proximity of the crashbaret, to run seven *verstas* to Sloboda 
+on a wild-goose chase—either on the rasp or on the crasp? 
+Don’t doubt, for, after all, the victim of the wager hurries not 
+empty-handed; he is trundlin in a sack on his mighty hump 
+glasswear collected in the dales and in the hills. And—perhaps 
+You’re still completely out of the loop—I hasten to give You 
+advance notice. In the crashbaret, due to some kind of false 
+pride, they don’t accept them empties at all and trade for takeout with great scandals, by what, from the human point, they 
+commit a commercial blunder. A very different picture can be 
+seen in the joint at the tributary, beyond the ridge of curly, but 
+at the first sight insignificant islands. Over there, what’s yours 
+will be accepted at a fair price, without fuss, and the stuff you 
+had paid for you have the right to use both inside and outside. 
+And Gury to the grinders point-blank: Well, even on the rasp. 
+And afterward, he again to them again: For Ilya it’s probably 
+inconvenient to use the rasp, but I, obviously, could like a 
+charm. Then and there they started eggin him on, Citizen 
+Pozhilykh. We believe, we believe, among us you are a famous 
+marathon whiz, you grew yourself such femurs—first quality, 
+both thin and long; how can we stick our pitiful bonesies 
+where they don’t belong, and Ilya the Malformed even more? I 
+won’t hide it, there can be mug shots worse, but scarce. For 
+instance, the game warden, Manul, who used to go after his fastidious needs to the Other Places, reported he had met there 
+monstrosities even more atrocious. That means not everythin 
+is lost, my dear, and as long as I manage somehow to hold the 
+mallet and the whetstone, I will not count myself among the 
+luckless, so don’t look for despair in Ilya. I’ve found the rasp, 
+whisked away the burr, and come out, loaded, on the river. I am 
+aimin slantily, at an angle, and since the ice is thin, the entire 
+river is under me, like opened. I reach the tributary. On it, after 
+acceleratin ’cuz it’s calm, I wheel up to Sloboda itself. I don’t 
+drag out the tittle-tattle there too much, I’m in a hurry. I perform a lawful purchase-sale, turn around, and swing back, and 
+the dusk keeps whirlin above my foolish bean, and my Sharpenhauers light for me from afar a storm lamp, so I won’t glide, 
+against my will, by the workshops. We had a few then. You’ll 
+outrun us, wretches, as if we were standin in place, the co-op 
+egged on, racin with you, Gury, we’re passes. Yep, mechanics, 
+yep, here, among you all, I am the only wiry runner. Just look, 
+he told them, just look at all our hoar-frosted expanses, there’s 
+no one I wouldn’t out-swoosh; where could such a lad be? We 
+lit up, started chewin the fat, and went out to smoke in the 
+cold. We stood on a hillock; behind us, a large wooden town—
+there the fellas go on a wild bender—and lower, in front of us, 
+a river’s reach, spread stock-still like on the palm of a hand. 
+Look around, Gury informed the masters, there, on the righthand side, we have a settlement, Malokulebyakovo. And who 
+lives down there? Who only doesn’t live in Kulebyakovo, the 
+co-op’s workmen answered evasively. For instance, a wellknown miller-fatso happens to exist there, barely carried by the 
+earth, not to mention the ice, and at the mill the miller’s got a 
+Chink, Aladdin, but we understand it won’t be no honor for 
+you to race with him. And one can also locate in Kulebyakovo 
+a certain game warden who, as rumors have it, fell into a dry 
+well. He’s screamin, but nobody can hear him, and his wife 
+knows where he is, but ain’t interested in gettin him out ’cuz 
+she’s doin hanky-panky with a neybor, also a game warden, but 
+more younger; betcha he had messed her head up. In one word, 
+the game wardens are busy, not into racin. And besides them 
+there’s no one in the village. And in Ploski among more or less 
+runners one can find the youngster Nikolay who never had his 
+own name or, more precisely, had, but too long ago. And when 
+that Nikolay the Helper went thru his transfiguration and flew 
+away, this one snatched his name for himself—he did not allow, as they say, the goods to get wasted. And Gury again: And 
+if he likes to snip some fish, it’s no problem at all, and no reason 
+for the fishermen to take offense and wish his demise. Just 
+think—a man steals a few fishes from people and they have 
+found themselves a reason to chew him out. True, Gury, true, 
+the livin creatures—whether free or in snares—they’re clearly 
+nobody’s, and if somebody’s after all, then we know Whose, 
+but in that case all the trappers here, it appears, are the most 
+greatest poachers in front of Him. And in vain, in vain they 
+bumped Nikola off one day. Here he is, by the way, takin their 
+catch from their under-the-ice traps beyond the islands. He 
+tied his sack, put it on his sled, and started pullin. He’s shiverin, 
+the blizzard has blasted his longsighted orbs, his *valenki* are 
+worn out, he lost his mittens, his skates ain’t sharpened, and 
+the annoyin Wolfox shows right up. Throw me a fishie, he 
+threatens Nikolay, throw me another, otherwise I’ll send darkness on the Itil. Night scares Nikolay from Ploski more than 
+death, so he unconditionally throws into the woods a triple of 
+sturgeons for the Wolfox. ’Cuz, after all, if he won’t make it to 
+Gorodnishche before dark, he won’t get the funds for the 
+stuff; if he won’t get the funds for the stuff, he won’t drop in to 
+the crashbaret; if he won’t drop in to the crashbaret, he won’t 
+have fun with them comrades; and not to have fun with them 
+comrades, then, really, why donkey work like that, Citizen 
+Pozhilykh, You be the judge. And while these activists are 
+waitin for Nikolay with heavy clubs at the edge of the village, 
+he approaches the suburbs with half a sack of silvery sturgeons 
+and green slimy tenches. He declares: I salute you, the most 
+merriest town of bast, hail to you, tall painted cockroach 
+towers. Oh, my dear town, he says, give shelter for the upcomin 
+night to the unlucky fisherman killed by foes, buy his goods, 
+give him some monies to jingle in his pocket; may the old 
+man’s wrinkles become smooth; may the lonely bat spread his 
+folded wings. And don’t be a cheapskate; pour me, town, to the 
+rim. And also, he says, introduce me, town, to some lonesome 
+babe with high cheekbones and a tender heart. So he took off 
+his skates and started walkin, walkin up the hill, that Nikolay 
+from Ploski, and a hellish host of have-nots hurries to meet 
+him, without haste: Give us and give us, they go, some of your 
+catches for Christ’s sake, otherwise it’ll be even worse. Esteemed 
+beggars, the splashers in my sack ain’t mine, ’cuz everythin 
+around us here, includin the spindles of speckled clouds, and 
+the river, and the boats that like big-bellied widows lie strewn, 
+abandoned, with their stomachs up, around the bathhouses, as 
+well as our rags and we ourselves who are wearin them—all 
+this is not mine and not yours. We know, we know, nodded the 
+paupers, laughin like possessed, in that case give us, nevertheless, a tail per soul; give us, furthermore, fishes that ain’t yours. 
+I see, Nikolay wails to the hapless ones on the hill, I see that it’ll 
+be, I reckon, rather hard to take you for a ride. And he hands 
+each one a tench. Where could he go—the poor are legion and 
+he’s alone. A lonely man on the road, especially when such a 
+blue haze hangs over the Volga, he, allow me to note, is alone in 
+the entire world. Nikolay gives each one a tail and enters the 
+wooden December town with the rest of his booty, and knocks 
+with his ancient walkin stick on the gates of resonatin courtyards, and curses snarly mongrels bitin the frozen chains. And 
+we’re still standin on the riverbank; so far not many stars are 
+shinin above us, but still. And Gury the Hunter, he announces 
+without beatin around the bushes: To run races with Nikolay 
+from Ploski, even if I do respect him a little, I don’t consider 
+decent; in my opinion, he’s both decrepit and vain—I’ll outscrape him and embarrass.
+
+
+But ain’t clickin, somebody suddenly said, ain’t smartin over 
+there, in Ploski, that Fyodor, on the abacus of his? That is, not 
+necessarily Fyodor but sorta Pyotr. And, in general—Yegor. 
+His occupation was listed as an accounter, but even he, as it 
+was revealed afterward, was a first-rate thief: That’s with whom 
+Gury should have done his racin. Do You understand what 
+happened? Well, when that dame appeared without warnin on 
+the spit, they—mostly the local sitters out of the game 
+wardens—sat there and observed the flight of geese, like almost always, but about this sittin very few outsiders have any 
+idea ’cuz what’s happenin takes place in the bushes and in twilights and is hidden from those sailin on the water, and when 
+they sit on the spit and have a few, this dame comes to them, 
+inquirin: Say, is there among you the one I’m searchin for? 
+Well, how should we put it, they shrug their shoulders, look for 
+yourself, we only beg you to notice that we’re all first-class and 
+ready for everythin and anythin just to please you, the gatecharmer of our places. She started lookin for herself and later 
+announced: I don’t see among you the one I’m searchin for, 
+but I’m noticin another one who would do for now. And she’s 
+lookin at Pyotr. Cruel shivers seized the accounter, the bookkeeper flared up as if a bright flame went blazin through his 
+veins. And he made an announcement, gettin up and shakin off 
+hurrily-scurrily. He made an announcement, gettin up from 
+the damp earth, where he was to transfer in the mere future: 
+I am Yegor from Ploski; lead me wherever you wish. The dame 
+led him, the happy one, wherever she wished, and the sitters 
+drank, chewed their chasers, and were jealous of Pyotr. After a 
+few days he returned to the spit, and they surrounded him and 
+kept askin: So, Petra, did you happen to have a sweet stroll? 
+The sitters kept askin Fyodor, to learn if he had a sweet time 
+with the dame. And he conveyed almost nothin to them, but 
+said this: It was so that better don’t even ask. Well, but still—
+the wolfmen did not back off—but still, was your visit with her 
+sweeter than a home brew? Don’t ask, answered Pyotr, not 
+even by hintin. Was the past sweeter than krambambuli for 
+you, they asked nevertheless. What krambambuli, Fyodor, enraged, surprised them, everythin went sweeter than Valday rotgut. So they had a few then to Pyotr’s return, and he off the cuff 
+admits with tears that he’s not considerin returnin to his heartthrob; the past is canceled, and that’s why he don’t need nothin, 
+for what could he personally need after all that happened between the two of them; moreover, recollections don’t promise 
+forgettin; memory, brother, don’t go on debit but on credit. 
+And that’s a fact; as far as this is concerned, my dear Pozhilykh, 
+You can depend on me, the one who once suffered a crash at a 
+high speed. It did not work out for you, Ilya Zynzyrella, you 
+got deformed, warped like a sheet of plywood. We muddled by 
+in the countryside, we huddled in a happy-go-lucky marriage 
+in Orina’s burrow, havin forgotten about problems and permits. I won’t swear that our relationship rolled on smoothly, 
+but do stress—in the beginnin it was bearable. It became unbearable, when from the switch, where she used to sort couriers, expresses, and alike, and where due to the shortage of free 
+time hanky-panky was not really goin thru, they transferred my 
+queen to the brick tower and made her a dispecher—to release 
+train cars from the sortin hill. It won’t do you any good that 
+you, Ilya, purred, anticipatin her bonus for cleanliness, you 
+sang “Joy,” she lives, you kept sayin, in a tall tower, you whistled, not expectin major changes. Only afterward you latched 
+on that, hounded by the ramjunctious boredom, she hitched 
+herself to couplers, ran into the maintenance boors, and that if 
+someone was not allowed into the tall tower—it was none else 
+but you, my dear. And, havin latched on, at first you still joked: 
+Orya, stop gettin filthy with them in unmown ditches, it’s 
+kinda not right; after all, they’re just not good, this railroad 
+brood. That’s how you joked, findin inside smidgens of 
+strength, even if every so often you could bear it no longer. 
+Plump, curvaceous, brushin her hair with the hair pick at dawn, 
+she kept givin me runarounds: How do you know if good or 
+not? Meanwhile, I was lyin on my cot and emittin fumes, not 
+willin to get up—what for, I don’t have to hurry nowhere no 
+more. She kept givin me runarounds, and there was no place to 
+put a proof of purity on her, and the hair pick—once I looked 
+more carefully—was not the one I presented to her on Ascension. I skinflinted, humbled myself in distant domiciles to 
+purchase it, denied myself the necessities through the entire 
+leaf-slayer, and then—when I looked more carefully—a 
+different one. I started wondrin. Our attraction turned into 
+dust; I should take off—with no sack, no bag, and no footwear. 
+But I am not awfully mighty, I get attached; instead, I kept diggin, persuadin. What kind of a special hair pick, Oryushka, 
+have you got? A hair pick like any other, she says thru her teeth, 
+clutchin pins-hairpins in them. Hmm, and mine, the one I gave 
+you, you’re still takin care of it, ain’t you? You bet, you bet, I 
+took it to a museum; she shrewdly reins me in with her tongue. 
+On the rails, she stretches the truth, I lost that hair pick, and 
+that’s all there’s to it. I was cowerin like a panic-stricken animal 
+durin the hunt, I kept proddin, fallin into doubts: Hmm, and 
+this one, in that case, by what ruse did you get it, did someone 
+give it to you? And the dawn, I note in passin, is breakin in the 
+window and in the mirror, turnin into a first-class iridescent 
+azure, and Orina’s downrite bathin there, supplethal, she’s 
+splashin, exactly like in our promised pond in devil knows 
+which summer, roughly in the month of July. Those days we 
+haven’t yet shared affections, she kept deceivin, postponin—
+later and later—and I kept waitin and bearin it, encouraged. 
+And two empty cable reels floated there, swellin, like at many 
+other reservoirs. She’s thrown off all her fabrics on the bush of 
+stag-head and steps out on the edge—shameless. Well, and 
+then I got plugged up with the shoe cord; the threaded tape 
+tightened like a noose. There’s no way to break it, I was dealt a 
+stubborn specimen. In short, I undid that knot with my teeth: 
+They were still present. And Orina was standin in her cheap 
+pearls only, but she herself was priceless, just try to find another one like that. I did not count how many others I happened to have before her, but up to my mutilation I did not 
+enjoy casual joys aplenty. And those joys, really—should you 
+laugh or cry? They all make faces, all fuss around, they tease—
+I’ll give or I won’t give, afraid to be too cheap, as if I, a braggart 
+fool, really could offer them, fancy-schmancies, anythin in exchange. And the main thing, when you finally calm them 
+down, even then everythin somehow turns out topsy-turvy, 
+crumpled, not complete, and quite often without real comforts. 
+And as far as allowin themselves to give it up—never, not for 
+the world: They stand on ceremony. In Orina’s case—I suddenly saw her in all her simplicity, and fell in enrapture, of 
+course. I could not bear it and I let her understand, by singin a 
+stanza from one wonderful aria. You do look pretty, say, in any 
+dress, but when you’re naked you look best. It would have been 
+better, however, if I had been less of a songbird in love, and 
+more looked ahead; perhaps I would have noticed besides the 
+real knot on the shoe cord the comin knot of a slightly different 
+kind—where the freight trains are sorted, that is the choochoo switch with various semafors and clever whatchamacallits like greasers’ hooks and the greasers in person, deftly wormin themselves in without soap where they shouldn’t. The first 
+knot—thanks to the flashes of summer lightnin—I managed 
+to untie, but the sortin one—even if all the nights there are full 
+of fire—brought out of the blue a muddle unfatomable to any 
+mind. But right now, I repeat, Orina stood there white and 
+shiny, like a saber in the moonlight. To be honest, all in all it 
+was bearable, but I remember for me personally it was unbearable; I wanted to learn as soon as possible what she was doin, 
+and with whom, and when, that is to worm out all her ins and 
+outs. It’s not enough for you, lecherous Ilya, just to dupe and 
+force the woman, no, you, like an irrepressible spider, suck out 
+of her drop after drop the tincture of confessions, drawin from 
+it the strength of pity, in order to approach and force her again. 
+And Orina stood for a while on the edge of the pond and 
+stepped in, and I, havin disrobed, took a dive. I dived deeply, 
+with opened eyelids; I stared—the liquid glaze. The eye of the 
+world was this pond with reels; a polished opal in the settin of 
+bluish clay, clumps of willows and long slimy weeds it was. 
+And where are our crucians?—suddenly came to my mind. 
+I screwed up my eyes—they kept nappin in their holes, shaded 
+by the banks, under the snags. And the snails, that is the mussels? I love them. Knockin around the world on account of my 
+services with the lonely acordeon of mine or with a grindin 
+foot-operated stand, wandrin in the dale of the beloved river 
+Itil, worn out and not fond of myself, I ate countless numbers 
+of the latter. Do they taste good? You see, I won’t spare praises: 
+Yummy. In the unheard-of area that shelters the ancientest 
+tribe of the deaf, for whom your entire filharmonic is useless, 
+or in a dull district, where nobody cuts, slices, or chops anythin 
+out of rampant laziness; in the unheard-of district or in the dull 
+area oblivious to the runnin out of the uselessly wasted light, 
+when you played for the residents and they did not pay attention, or when you implored if they wanted to have this or that 
+sharpened in order to get from them just enough to keep the 
+pot boilin, but they did not bring out even the tiniest needle, 
+you should find out from the old water yoke the way to the 
+river and scamper, empty-bellied, to pay her a visit, as if you 
+were goin to your mother-in-law for a formal borscht. Limp 
+along the high roads on the only existin leg, hobble through 
+water meadows, shaded by sparklin precious coverlet. What’s 
+that, what seems to have twinkled there so dimly, like that 
+quiverin rot at the Bydogoshch cemetery? What flickered like 
+silver in the pea shrubs, sorta resemblin a shimmer of your rugged aluminum mug in the rips of your never-mended bag? 
+What glimmered there with the cold light of the flash, as if 
+from under the fold of a merchant’s coat at the market, the vessel from Crystal Goose with the priceless blue hooch sparked 
+straight in your dried-out eyes? What is flutterin there like a 
+sarafan’s ruche, what is flappin there like mother-in-law’s 
+tongue? What and what—such an annoyin whatter, you’re 
+nothin but trouble. My buddy, this is the Wolf River, your kin. 
+You tell her: Halloo, my sister, I’m in distress, quench my thirst 
+with your current, feed the tramp with your mussels, gimme as 
+many of them as you can, I enjoy their taste. Provide just them 
+’cuz salt and matches I always have on me; and, obviously, lay 
+me down to sleep along the current of yours, place the softest 
+stone under my nape. And she says: Upon examination, Ilyusha from Gorodnishchi, I don’t begrudge you nothin; for instance, water—drink ’til you burst; and the same situation 
+with the mussels—chomp and don’t count. And the stone—if 
+you want, I’ll give it to you to put under your head or, if you 
+want, on your neck, and then keep restin to your health even to 
+the Lastest Judgment.
