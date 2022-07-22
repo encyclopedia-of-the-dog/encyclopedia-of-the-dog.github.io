@@ -20,15 +20,21 @@ title: "Ed."
 <hr>
 
 <div class="toc">
-  <h2>sample texts</h2>
+  <h2>Chapters</h2>
   <ul class="texts">
-  {% for item in site.texts %}
-
-    <li class="text-title">
-      <a href="{{ site.baseurl }}{{ item.url }}">
-        {{ item.title }}
-      </a>
-    </li>
+  {% for item in site.chapters %}
+    {% if item.number %}
+      {% assign chapterMatch = site.texts | where: "chapter-number", item.number %}
+        {% assign englishMatch = chapterMatch | where: "language", "en" | first %}
+          {% assign title_en = englishMatch.title %}
+        {% assign russianMatch = chapterMatch | where: "language", "ru" | first %}
+          {% assign title_ru = russianMatch.title %}
+            <li class="text-title">
+              <a href="{{ site.baseurl }}{{ item.url }}">
+                {{ item.number }}. {{ title_en }} / {{ title_ru }}
+              </a>
+            </li>
+    {% endif %}
   {% endfor %}
   </ul>
 </div>

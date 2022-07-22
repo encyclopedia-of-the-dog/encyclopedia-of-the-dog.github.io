@@ -1,0 +1,95 @@
+---
+layout: default
+---
+
+{% assign thisChapter = site.texts | where: "chapter-number", page.number %}
+{% assign thisChapter-en = thisChapter | where: "language", "en" %}
+{% for i in thisChapter-en %}
+{% assign title_en = i.title %}
+{% assign text_en = i.content %}
+{% endfor %}
+{% assign thisChapter-ru = thisChapter | where: "language", "ru" %}
+{% for i in thisChapter-ru %}
+{% assign title_ru = i.title %}
+{% assign text_ru = i.content %}
+{% endfor %}
+
+<article class="bilingual poem poetry">
+    <div class="chapter-nav">
+        <ul>
+            {% for item in site.chapters %}
+            {% if item.number == page.number %}
+            <li><a class="active" href="{{ site.baseurl }}{{ item.url }}">{{ item.number }}</a></li>
+            {% else %}
+            <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.number }}</a></li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="header">
+        <h1 class="text-title">{{ page.number }}. {{ title_en }} / {{ title_ru }}</h1>
+        <p class="byline">by {{ page.author }}</p>
+    </div>
+
+    <div>
+        <div id="button-container">
+            <button class="btn active" id="btn-en" onclick="showEnglish()">English</button>
+            <button class="btn" id="btn-ru" onclick="showRussian()">Russian</button>
+            <button class="btn" id="btn-both" onclick="showBoth()">Both</button>
+        </div>
+
+        <div class="panel" id="en" markdown="1">
+            {{ text_en }}
+        </div>
+
+        <div class="panel" id="ru" markdown="1">
+            {{ text_ru }}
+        </div>
+
+        <div class="panel" id="both">
+            <div class="left-panel" markdown="1">
+                {{ text_ru }}
+            </div>
+            <div class="right-panel" markdown="1">
+                {{ text_en }}
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showEnglish() {
+            document.getElementById("en").style.display = "block";
+            document.getElementById("ru").style.display = "none";
+            document.getElementById("both").style.display = "none";
+        }
+
+        function showRussian() {
+            document.getElementById("en").style.display = "none";
+            document.getElementById("ru").style.display = "block";
+            document.getElementById("both").style.display = "none";
+        }
+
+        function showBoth() {
+            document.getElementById("en").style.display = "none";
+            document.getElementById("ru").style.display = "none";
+            document.getElementById("both").style.display = "block";
+        }
+
+        // Get the container element
+        var btnContainer = document.getElementById("button-container");
+
+        // Get all buttons with class="btn" inside the container
+        var btns = btnContainer.getElementsByClassName("btn");
+
+        // Loop through the buttons and add the active class to the current/clicked button
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+
+    </script>
+
+</article>

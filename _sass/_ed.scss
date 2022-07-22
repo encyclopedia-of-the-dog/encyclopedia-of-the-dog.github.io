@@ -76,11 +76,11 @@ body {
 /*
   Container
 
-  Center the page content.
+  Center the page content. (Edited for Encyclopedia of the Dog.)
 */
 
 .container {
-  max-width: 32rem;
+  max-width: 50rem;
   padding-left:  1rem;
   padding-right: 1rem;
   margin-left:  auto;
@@ -89,7 +89,7 @@ body {
 
 @media (min-width: 56em) {
   .container {
-    max-width: 38rem;
+    max-width: 52rem;
   }
 }
 
@@ -114,6 +114,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -.025rem;
   line-height: 1.25;
   text-rendering: optimizeLegibility;
+  
 }
 
 h1,
@@ -604,7 +605,7 @@ ul.poetry {
   padding-left: 10rem;
 }
 
-.poem .byline,
+.byline, .poem .byline,
 .poetry .byline {
   font-style: italic;
   font-weight: normal;
@@ -801,4 +802,126 @@ li.prose-indent {
 .theme-base-brown .sidebar-toggle,
 .theme-base-brown .related-posts li a:hover {
   color: #8f5536;
+}
+
+
+/*
+  Encyclopedia of the Dog
+
+  Adding functionality for viewing a text in two languages at once.
+*/
+
+.bilingual {
+
+    .chapter-nav {
+      max-width: 32rem;
+      margin: auto;
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-indent: 0;
+        text-align: center;
+      }
+
+      li {
+        display: inline;
+      }
+
+      li:not(:last-child) {
+        padding-right: 0.25em;
+      }
+
+      a:hover, a.active {
+        text-decoration: underline;
+      }
+
+    }
+
+    .header {
+      max-width: 32rem;
+      margin: auto;
+      text-align: center;
+    }
+
+    #button-container {
+      max-width: 32rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .panel {
+      font-size: 1em;
+      padding-top: 1em;
+      margin: auto;
+    }
+
+    .btn {
+      font-size: 16px;
+      padding: 10px;
+      text-align: center;
+      margin: auto;
+    }
+
+    .active, .btn:hover {
+
+    }
+
+    #en, #ru, #both {
+    display: block;
+    text-align: left;
+    }
+
+    #en, #ru {
+      max-width: 32rem;
+    }
+
+    #ru, #both {
+    display: none;
+    }
+
+    .left-panel, .right-panel {
+        width: 49%;
+        float: left;
+        font-size: 0.85em;
+    }
+
+    .left-panel {
+      width: 49%;
+      float: left;
+      padding-right: 1%;
+      border-right: 1px solid lighten($text-color, 60%);
+      font-size: 0.85em;
+    }
+
+    .right-panel {
+      margin-left: 1%;
+    }
+
+    p {
+      margin-left: 0;
+    }
+
+    @media only screen and (max-width: 600px) {
+      #btn-both {
+        display: none;
+      }
+    }
+  }
+
+.poem {
+
+  .panel#both {
+    margin-left: 2em;
+  }
+  
+  .left-panel {
+    padding-left: 4rem;
+  }
+
+  .right-panel {
+    padding-right: 4rem;
+  }
+
 }
