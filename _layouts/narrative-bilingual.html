@@ -27,8 +27,11 @@ layout: default
     </ul>
   </div>
   <div class="header">
-    <h1 class="text-title">{{ page.number }}. {{ title_en }} / {{ title_ru }}</h1>
+    <h1 class="text-title" id="en-title">{{ page.number }}. {{ title_en }}</h1>
+    <h1 class="text-title" id="ru-title">{{ page.number }}. {{ title_ru }}</h1>
+    <h1 class="text-title" id="both-title">{{ page.number }}. {{ title_ru }} / {{ title_en }}</h1>
     <p class="byline">by {{ page.author }}</p>
+    <p class="byline" id="translator">Translated by {{ page.translator }}</p>
   </div>
 
   <div>
@@ -58,18 +61,30 @@ layout: default
 
   <script>
     function showEnglish() {
+      document.getElementById("en-title").style.display = "block";
+      document.getElementById("ru-title").style.display = "none";
+      document.getElementById("both-title").style.display = "none";
+      document.getElementById("translator").style.display = "block";
       document.getElementById("en").style.display = "block";
       document.getElementById("ru").style.display = "none";
       document.getElementById("both").style.display = "none";
     }
 
     function showRussian() {
+      document.getElementById("en-title").style.display = "none";
+      document.getElementById("ru-title").style.display = "block";
+      document.getElementById("both-title").style.display = "none";
+      document.getElementById("translator").style.display = "none";
       document.getElementById("en").style.display = "none";
       document.getElementById("ru").style.display = "block";
       document.getElementById("both").style.display = "none";
     }
 
     function showBoth() {
+      document.getElementById("en-title").style.display = "none";
+      document.getElementById("ru-title").style.display = "none";
+      document.getElementById("both-title").style.display = "block";
+      document.getElementById("translator").style.display = "block";
       document.getElementById("en").style.display = "none";
       document.getElementById("ru").style.display = "none";
       document.getElementById("both").style.display = "block";

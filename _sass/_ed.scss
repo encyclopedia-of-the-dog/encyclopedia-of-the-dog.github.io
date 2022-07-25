@@ -224,7 +224,7 @@ tbody tr:nth-child(odd) th {
 
 .masthead {
   border-bottom: 1px solid #eee;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   padding-top: 26px;
   padding-bottom: 1rem;
   text-align: center;
@@ -611,6 +611,7 @@ ul.poetry {
   font-weight: normal;
   letter-spacing: 0;
   margin-top: -.5rem;
+  margin-bottom: .3rem;
 }
 
 /* Footnotes styles */
@@ -812,6 +813,18 @@ li.prose-indent {
 */
 
 .bilingual {
+
+  #en-title, #translator {
+    display: block;
+  }
+
+  #ru-title, #both-title {
+    display: none;
+  }
+
+  #translator {
+    margin-bottom: .5rem;
+  }
 
     .chapter-nav {
       max-width: 32rem;
