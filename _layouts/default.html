@@ -12,6 +12,17 @@
     {% include sidebar.html %}
     {% endif %}
 
+    <!-- Skip links for narrative-bilingual and poem-bilingual layouts -->
+    
+    {% if page.layout == "narrative-bilingual" or page.layout == "poem-bilingual" %}
+    <nav class="skip-links">
+      <ul>
+        <li class="skip-link"><a href="#chapter-nav" class="screen-reader-shortcut">Skip to chapter navigation</a></li>
+        <li class="skip-link"><a href="#chapter-content" class="screen-reader-shortcut">Skip to chapter content</a></li>
+      </ul>
+    </nav>
+    {% endif %}
+
     <!--
       Wrap is the content to shift when toggling the sidebar. We wrap the content to avoid any CSS
       collisions with our real content.
