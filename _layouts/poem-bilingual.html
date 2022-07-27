@@ -24,7 +24,7 @@ layout: default
     </div>
 
     <div>
-        <div id="button-container">
+        <div class="button-container">
             <button class="btn active" id="btn-en" onclick="showEnglish()">English</button>
             <button class="btn" id="btn-ru" onclick="showRussian()">Russian</button>
             <button class="btn" id="btn-both" onclick="showBoth()">Both</button>
@@ -99,7 +99,7 @@ layout: default
             this.className += " active";
         });
     }
-    
+
     // Show annotations
     function showAnnotations(){
       var divsToHide = document.getElementsByClassName("littlefoot-footnote__host"); //divsToHide is an array
