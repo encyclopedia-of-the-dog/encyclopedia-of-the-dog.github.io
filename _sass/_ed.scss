@@ -822,13 +822,13 @@ li.prose-indent {
   position: absolute;
   top: -45px;
   left: 0px;
-  color: white;
-  border-right: 1px solid white;
-  border-bottom: 1px solid white;
+  color: $text-color;
+  border-right: 1px solid $text-color;
+  border-bottom: 1px solid $text-color;
   border-bottom-right-radius: 8px;
-  background: #BF1722;
-  -webkit-transition: top 1s ease-out;
-  transition: top 1s ease-out;
+  background: white;
+  -webkit-transition: top .2s ease-out;
+  transition: top .2s ease-out;
   z-index: 100;
   }
 
@@ -837,12 +837,38 @@ li.prose-indent {
     left: 0px;
     top: 0px;
     outline-color: transparent;
-    -webkit-transition: top .1s ease-in;
-    transition: top .1s ease-in;
+    -webkit-transition: top .2s ease-in;
+    transition: top .2s ease-in;
   }
 }
 
 /* Bilingual Layouts */
+
+.chapter-nav {
+  max-width: 32rem;
+  margin: auto;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+    text-align: center;
+  }
+
+  li {
+    display: inline;
+  }
+
+  li:not(:last-child) {
+    padding-right: 0.25em;
+  }
+
+  a:hover, a.active {
+    text-decoration: underline;
+  }
+
+}
 
 .bilingual {
 
@@ -858,31 +884,18 @@ li.prose-indent {
     margin-bottom: .5rem;
   }
 
-    .chapter-nav {
-      max-width: 32rem;
-      margin: auto;
+  .littlefoot-footnote__host {
+    display: none;
+  }
 
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        text-indent: 0;
-        text-align: center;
-      }
+  #btn-hide-annotations {
+    display: none;
+  }
 
-      li {
-        display: inline;
-      }
-
-      li:not(:last-child) {
-        padding-right: 0.25em;
-      }
-
-      a:hover, a.active {
-        text-decoration: underline;
-      }
-
-    }
+  #btn-hide-annotations, #btn-show-annotations {
+    width: 10em;
+    margin-top: .3em;
+  }
 
     .header {
       max-width: 32rem;
@@ -890,7 +903,7 @@ li.prose-indent {
       text-align: center;
     }
 
-    #button-container {
+    .button-container {
       max-width: 32rem;
       margin: 0 auto;
       text-align: center;

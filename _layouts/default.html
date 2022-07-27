@@ -18,7 +18,7 @@
     <nav class="skip-links">
       <ul>
         <li class="skip-link"><a href="#chapter-nav" class="screen-reader-shortcut">Skip to chapter navigation</a></li>
-        <li class="skip-link"><a href="#chapter-content" class="screen-reader-shortcut">Skip to chapter content</a></li>
+        <li class="skip-link"><a href="#main" class="screen-reader-shortcut">Skip to main content</a></li>
       </ul>
     </nav>
     {% endif %}
@@ -36,7 +36,19 @@
           </h3>
         </div>
       </header>
-
+      {% if page.layout == "narrative-bilingual" or page.layout == "poem-bilingual" %}
+      <nav id="chapter-nav" class="chapter-nav">
+        <ul>
+          {% for item in site.chapters %}
+          {% if item.number == page.number %}
+          <li><a class="active" href="{{ site.baseurl }}{{ item.url }}">{{ item.number }}</a></li>
+          {% else %}
+          <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.number }}</a></li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
+      {% endif %}
       <main class="container content" id="main" lang="{{ page.language }}">
         {{ content }}
       </main>
