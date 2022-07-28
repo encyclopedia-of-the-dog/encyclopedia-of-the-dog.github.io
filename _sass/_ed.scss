@@ -894,6 +894,12 @@ li.prose-indent {
 
   #btn-hide-annotations, #btn-show-annotations {
     width: 10em;
+    /* position: absolute;
+    top: 5rem;
+    right: 1rem;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    z-index:1; */
     margin-top: .3em;
   }
 
@@ -907,6 +913,10 @@ li.prose-indent {
       max-width: 32rem;
       margin: 0 auto;
       text-align: center;
+    }
+
+    .btn {
+      font-family: $main-font;
     }
 
     .panel {

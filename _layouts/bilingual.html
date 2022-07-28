@@ -74,15 +74,17 @@ layout: default
   }
 </script>
 
+{% comment %}
 <script>
   $(window).scroll(function() {
     var winScrollTop = $(window).scrollTop();
     var winHeight = $(window).height();
-    var floaterHeight = $('#floater').outerHeight(true);
+    var floaterHeight = $('#btn-show-annotations').outerHeight(true);
     //true so the function takes margins into account
     var fromBottom = 20;
 
     var top = winScrollTop + winHeight - floaterHeight - fromBottom;
-    $('#floater').css({'top': top + 'px'});
+    $('#btn-show-annotations').css({'top': top + 'px'});
   });
 </script>
+{% endcomment %}
