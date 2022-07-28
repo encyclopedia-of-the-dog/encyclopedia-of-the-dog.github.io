@@ -13,8 +13,8 @@ author:
   url:               https://twitter.com/elotroalex
   email:             colibri.alex@gmail.com
 
-# Color scheme. Options: red, orange, magenta, cyan, blue, brown
-color-scheme:
+# Color scheme. Options: red, orange, magenta, cyan, blue, brown, dog
+color-scheme: dog
 
 # Permalinks
 permalink: pretty
