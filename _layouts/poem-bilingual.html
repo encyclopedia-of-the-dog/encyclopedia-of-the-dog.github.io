@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: bilingual
 ---
 
 {% assign thisChapter = site.texts | where: "chapter-number", page.number %}
@@ -51,75 +51,4 @@ layout: default
             </div>
         </div>
     </div>
-
-    <script>
-    // Language buttons
-    function showEnglish() {
-      document.getElementById("en-title").style.display = "block";
-      document.getElementById("ru-title").style.display = "none";
-      document.getElementById("both-title").style.display = "none";
-      document.getElementById("translator").style.display = "block";
-      document.getElementById("en").style.display = "block";
-      document.getElementById("ru").style.display = "none";
-      document.getElementById("both").style.display = "none";
-    }
-
-    function showRussian() {
-      document.getElementById("en-title").style.display = "none";
-      document.getElementById("ru-title").style.display = "block";
-      document.getElementById("both-title").style.display = "none";
-      document.getElementById("translator").style.display = "none";
-      document.getElementById("en").style.display = "none";
-      document.getElementById("ru").style.display = "block";
-      document.getElementById("both").style.display = "none";
-    }
-
-    function showBoth() {
-      document.getElementById("en-title").style.display = "none";
-      document.getElementById("ru-title").style.display = "none";
-      document.getElementById("both-title").style.display = "block";
-      document.getElementById("translator").style.display = "block";
-      document.getElementById("en").style.display = "none";
-      document.getElementById("ru").style.display = "none";
-      document.getElementById("both").style.display = "block";
-    }
-
-    // Active links in chapter nav
-    // Get the container element
-    var btnContainer = document.getElementById("button-container");
-
-    // Get all buttons with class="btn" inside the container
-    var btns = btnContainer.getElementsByClassName("btn");
-
-    // Loop through the buttons and add the active class to the current/clicked button
-    for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function () {
-            var current = document.getElementsByClassName("active");
-            current[0].className = current[0].className.replace(" active", "");
-            this.className += " active";
-        });
-    }
-
-    // Show annotations
-    function showAnnotations(){
-      var divsToHide = document.getElementsByClassName("littlefoot-footnote__host"); //divsToHide is an array
-      for(var i = 0; i < divsToHide.length; i++){
-          divsToHide[i].style.display = "inline";
-      }
-      // Switch button to 'Hide Annotations'
-      document.getElementById("btn-show-annotations").style.display = "none";
-      document.getElementById("btn-hide-annotations").style.display = "block";
-    }
-    // Hide annotations
-    function hideAnnotations(){
-      var divsToHide = document.getElementsByClassName("littlefoot-footnote__host"); //divsToHide is an array
-      for(var i = 0; i < divsToHide.length; i++){
-          divsToHide[i].style.display = "none";
-      }
-      // Switch button to 'Show Annotations'
-      document.getElementById("btn-show-annotations").style.display = "block";
-      document.getElementById("btn-hide-annotations").style.display = "none";
-    }
-    </script>
-
 </article>
