@@ -40,6 +40,7 @@ html {
   font-family: $main-font;
   font-size: 1em; /* 16px; specify in ems to support text resizing in all browsers */
   line-height: 1.5;
+  scroll-padding: 4rem 0 0 0;
 }
 
 @media (min-width: 38em) {
@@ -68,7 +69,8 @@ body {
 */
 
 .wrap {
-  position: relative;
+  position: absolute; 
+  top: 0;
   width: 100%;
 }
 
@@ -361,7 +363,7 @@ a.sidebar-nav-item:focus {
 
 /* Style the `label` that we use to target the `.sidebar-checkbox` */
 .sidebar-toggle {
-  position: absolute;
+  position: fixed;
   top:  .8rem;
   left: 1rem;
   display: block;
@@ -369,7 +371,8 @@ a.sidebar-nav-item:focus {
   color: #505050;
   background-color: #fff;
   border-radius: .25rem;
-  cursor: pointer;
+  cursor: pointer; 
+  z-index: 7;
 }
 
 .sidebar-toggle:before {
@@ -397,12 +400,6 @@ a.sidebar-nav-item:focus {
   background-image:    -moz-linear-gradient(to bottom, #fff, #fff 20%, #555 20%, #555 40%, #fff 40%, #fff 60%, #555 60%, #555 80%, #fff 80%, #fff 100%);
   background-image:     -ms-linear-gradient(to bottom, #fff, #fff 20%, #555 20%, #555 40%, #fff 40%, #fff 60%, #555 60%, #555 80%, #fff 80%, #fff 100%);
   background-image:         linear-gradient(to bottom, #fff, #fff 20%, #555 20%, #555 40%, #fff 40%, #fff 60%, #555 60%, #555 80%, #fff 80%, #fff 100%);
-}
-
-@media (min-width: 30.1em) {
-  .sidebar-toggle {
-    position: fixed;
-  }
 }
 
 @media print {
@@ -844,9 +841,67 @@ li.prose-indent {
 
 /* Bilingual Layouts */
 
+.view-options-bar {
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: lighten($text-color, 60%);
+  left: 0;
+  right: 0;
+  top: 0;
+  display: block;
+  text-align: center;
+  padding: .75rem .75rem .5rem;
+  z-index: 6;
+
+  .button-container {
+    display: inline;
+    text-align: center;
+  }
+
+  .btn {
+    font-family: $main-font;
+    font-size: 16px;
+    height: 2rem;
+    text-align: center;
+    background-color: white;
+    border: none;
+    border-radius: .25rem;
+    padding: 10px;
+    margin: auto;
+  }
+
+  .active, .btn:hover {
+    color: white;
+    background-color: #555;
+  }
+
+  #btn-hide-annotations {
+    display: none;
+    color: white;
+    background-color: #555;
+  }
+
+  #btn-show-annotations:hover {
+    color: $text-color;
+    background-color: white;
+  }
+
+  #btn-hide-annotations, #btn-show-annotations {
+    width: 10em;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .view-options-bar {
+    text-align: right;
+  }
+}
+
 .chapter-nav {
   max-width: 32rem;
   margin: auto;
+  padding-top: .5rem;
 
   ul {
     list-style-type: none;
@@ -870,7 +925,15 @@ li.prose-indent {
 
 }
 
+div.bilingual {
+  margin-top: 3.5rem;
+}
+
 .bilingual {
+
+  .text-title {
+    margin-top: .5rem;
+  }
 
   #en-title, #translator {
     display: block;
@@ -888,100 +951,58 @@ li.prose-indent {
     display: none;
   }
 
-  #btn-hide-annotations {
-    display: none;
+  .header {
+    max-width: 32rem;
+    margin: auto;
+    text-align: center;
   }
 
-  #btn-hide-annotations, #btn-show-annotations {
-    width: 10em;
-    /* position: fixed;
-    top: 0;
-    right: 0;
-    margin-top: 2.5rem;
-    margin-right: .5rem; */
-    /* position: absolute;
-    top: 5rem;
-    right: 1rem;
-    -webkit-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
-    z-index:1; */
-    margin-top: .3em;
+  .panel {
+    font-size: 1em;
+    margin: auto;
   }
 
-    .header {
-      max-width: 32rem;
-      margin: auto;
-      text-align: center;
-    }
-
-    .button-container {
-      max-width: 32rem;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .btn {
-      font-family: $main-font;
-    }
-
-    .panel {
-      font-size: 1em;
-      padding-top: 1em;
-      margin: auto;
-    }
-
-    .btn {
-      font-size: 16px;
-      padding: 10px;
-      text-align: center;
-      margin: auto;
-    }
-
-    .active, .btn:hover {
-
-    }
-
-    #en, #ru, #both {
+  #en, #ru, #both {
     display: block;
     text-align: left;
     }
+  
+  #en, #ru {
+    max-width: 32rem;
+  }
 
-    #en, #ru {
-      max-width: 32rem;
-    }
+  #ru, #both {
+  display: none;
+  }
 
-    #ru, #both {
-    display: none;
-    }
-
-    .left-panel, .right-panel {
-        width: 49%;
-        float: left;
-        font-size: 0.85em;
-    }
-
-    .left-panel {
+  .left-panel, .right-panel {
       width: 49%;
       float: left;
-      padding-right: 1%;
-      border-right: 1px solid lighten($text-color, 60%);
       font-size: 0.85em;
-    }
+  }
 
-    .right-panel {
-      margin-left: 1%;
-    }
+  .left-panel {
+    width: 49%;
+    float: left;
+    padding-right: 1%;
+    border-right: 1px solid lighten($text-color, 60%);
+    font-size: 0.85em;
+  }
 
-    p {
-      margin-left: 0;
-    }
+  .right-panel {
+    margin-left: 1%;
+  }
 
-    @media only screen and (max-width: 600px) {
-      #btn-both {
-        display: none;
-      }
+  p {
+    margin-left: 0;
+  }
+
+  @media only screen and (max-width: 600px) {
+    #btn-both {
+      display: none;
     }
   }
+}
 
 .poem {
 
