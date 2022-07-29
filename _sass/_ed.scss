@@ -809,6 +809,9 @@ li.prose-indent {
   Adding functionality for viewing a text in two languages at once.
 */
 
+/* Bilingual Layouts */
+
+/* Skip Links */
 .skip-links {
   ul {
     list-style: none;
@@ -839,8 +842,7 @@ li.prose-indent {
   }
 }
 
-/* Bilingual Layouts */
-
+/* Bar for Language and Annotation Buttons */
 .view-options-bar {
   position: fixed;
   margin-left: auto;
@@ -898,6 +900,7 @@ li.prose-indent {
   }
 }
 
+/* Chapter Navigation  */
 .chapter-nav {
   max-width: 32rem;
   margin: auto;
@@ -925,6 +928,7 @@ li.prose-indent {
 
 }
 
+/* Text content on pages with a bilingual layout */
 div.bilingual {
   margin-top: 3.5rem;
 }
@@ -1004,6 +1008,7 @@ div.bilingual {
   }
 }
 
+/* Override default poem styles */
 .poem {
 
   .panel#both {
