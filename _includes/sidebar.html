@@ -5,8 +5,12 @@
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
 
 <!-- Toggleable sidebar -->
-<aside class="sidebar" id="sidebar" aria-hidden="true">
-  <div class="sidebar-item">
+<aside class="sidebar"  id="sidebar" aria-hidden="true">
+  <div class="sidebar-title">
+    <p>{{ site.title }}</p>
+  </div>
+
+  <div class="sidebar-description">
     <p>{{ site.description }}</p>
   </div>
 
@@ -27,15 +31,15 @@
       {% endif %}
     {% endfor %}
 
-    <!-- The code below is used for manually entered links  -->
-    <span style='cursor:pointer;' onclick="javascript:var hypothesis = document.createElement('script');
+     <!-- The code below is used for manually entered links  -->
+    <!-- <span style='cursor:pointer;' onclick="javascript:var hypothesis = document.createElement('script');
       hypothesis.setAttribute('src','https://hypothes.is/embed.js');
-      document.head.appendChild(hypothesis);"><a class="sidebar-nav-item">Annotate me</a></span>
+      document.head.appendChild(hypothesis);"><a class="sidebar-nav-item">Annotate me</a></span> 
 
-  <!--
+
     <a class="sidebar-nav-item" href="https://via.hypothes.is/{{ site.url }}{{ site.baseurl }}{{page.url}}/" data-proofer-ignore>Annotate me</a>
     <script src="https://hypothes.is/embed.js" async></script>
-  -->
+  
 
     <a class="sidebar-nav-item" href="https://github.com/minicomp/ed" target="_blank">GitHub project</a>
   </nav>
@@ -44,5 +48,5 @@
     <p>
       Built with <a href="https://minicomp.github.io/ed/">Ed.</a> Distributed under an MIT license.
     </p>
-  </div>
+  </div> -->
 </aside>
