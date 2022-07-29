@@ -21,28 +21,32 @@
     }
   }
   
-  /* Sidebar content */
+  /* Sidebar content 
+  Dimensions of the sidebar image are set to 375x570,
+  crop to make it longer if more than 5 side nav items
+  are added so it does not obscure the lecturer */
+
   .sidebar-title {
-      color: #505050;
+      color: #212b37;
       font-family: $main-font;
       font-size: 1.8rem;
-      line-height: .777em;
+      line-height: 1em;
       margin-top: .5em;
       margin-bottom: 0;
       margin-right: 0;
-      margin-left: 1em;
+      margin-left: .75em;
       text-align: left;
   }
 
   .sidebar-description {
-      color: #505050;
+      color: #212b37;
       font-weight: normal;
       font-size: .8rem;
-      line-height: .777rem;
+      line-height: 1rem;
       margin-top: .5em;
       margin-bottom: 0;
-      margin-right: 0;
-      margin-left: 1em;
+      margin-right: 2em;
+      margin-left: 2em;
       text-align: left;
   }
 
@@ -65,13 +69,17 @@
   
   /* Sidebar nav */
   .sidebar-nav {
-    border-bottom: 1px solid rgba(255,255,255,.1);
+    border-bottom: none;
   }
   
   .sidebar-nav-item {
     display: block;
     padding: .5rem 1rem;
-    border-top: 1px solid rgba(255,255,255,.1);
+    height: 15%;
+    width: 85%;
+    margin-left: 7.5%;
+    border: 1px solid #212b37;
+    background-color: #a9b9ca;
   }
   
   a.sidebar-nav-item-toc {
@@ -81,11 +89,11 @@
   .sidebar-nav-item.active,
   a.sidebar-nav-item:hover,
   a.sidebar-nav-item:focus {
-    text-decoration: none;
-    background-color: rgba(255,255,255,.1);
-    border-color: transparent;
+    background-color: #7c91a8;
+    border: 1px solid #212b37;
   }
-  
+ 
+
   @media (min-width: 48em) {
     .sidebar-item {
       padding: 1.5rem;
@@ -105,11 +113,11 @@
   /* Style the `label` that we use to target the `.sidebar-checkbox` */
   .sidebar-toggle {
     position: absolute;
-    margin-left: 2rem;
-    top:  .8rem;
-    left: 1rem;
+    margin-left: 1.5em;
+    top:  1.5rem;
+    left: .75rem;
     display: block;
-    padding: .25rem .75rem;
+    padding: .10rem;
     color: #505050;
     background-color: #fff;
     border-radius: .25rem;
@@ -118,8 +126,9 @@
   
   .sidebar-toggle:before {
     display: inline-block;
-    width: 1rem;
-    height: .75rem;
+    width: .75rem;
+    height: .5rem;
+    padding: .10rem;
     content: "";
     background-image: -webkit-linear-gradient(to bottom, #555, #555 20%, #fff 20%, #fff 40%, #555 40%, #555 60%, #fff 60%, #fff 80%, #555 80%, #555 100%);
     background-image:    -moz-linear-gradient(to bottom, #555, #555 20%, #fff 20%, #fff 40%, #555 40%, #555 60%, #fff 60%, #fff 80%, #555 80%, #555 100%);
@@ -145,7 +154,28 @@
   
   @media (min-width: 30.1em) {
     .sidebar-toggle {
-      position: fixed;
+      position: absolute;
+      margin-left: 1.5em;
+      top:  1.5rem;
+      left: .75rem;
+      display: block;
+      padding: .30rem;
+      color: #505050;
+      background-color: #fff;
+      border-radius: .25rem;
+      cursor: pointer;
+    }
+
+    .sidebar-toggle:before {
+      display: inline-block;
+      width: 1rem;
+      height: .75rem;
+      padding: .10rem;
+      content: "";
+      background-image: -webkit-linear-gradient(to bottom, #555, #555 20%, #fff 20%, #fff 40%, #555 40%, #555 60%, #fff 60%, #fff 80%, #555 80%, #555 100%);
+      background-image:    -moz-linear-gradient(to bottom, #555, #555 20%, #fff 20%, #fff 40%, #555 40%, #555 60%, #fff 60%, #fff 80%, #555 80%, #555 100%);
+      background-image:     -ms-linear-gradient(to bottom, #555, #555 20%, #fff 20%, #fff 40%, #555 40%, #555 60%, #fff 60%, #fff 80%, #555 80%, #555 100%);
+      background-image:         linear-gradient(to bottom, #555, #555 20%, #fff 20%, #fff 40%, #555 40%, #555 60%, #fff 60%, #fff 80%, #555 80%, #555 100%);
     }
   }
   

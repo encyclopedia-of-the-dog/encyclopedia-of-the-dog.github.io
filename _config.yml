@@ -1,9 +1,9 @@
 # Built with Jekyll 3.6.0
 
 # Setup
-title:               Ed.
+title:               Encyclopedia of the Dog.
 tagline:             'a jekyll theme for minimal editions'
-description:         'Ed is a Jekyll theme designed for textual editors based on minimal computing principles, and focused on legibility and flexibility.'
+description:         'A bilingual digital edition of Between Dog and Wolf'
 url:                 'http://minicomp.github.io'
 baseurl:             '/ed'
 
