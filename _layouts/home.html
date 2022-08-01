@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
+  <div class="topnav">
+    <a href="http://127.0.0.1:4000/ed/">Home</a>
+    <a href= "http://127.0.0.1:4000/ed/about/">About</a>
+    <a href="#http://127.0.0.1:4000/ed/credits/">Credits</a>
+    <a href="#http://127.0.0.1:4000/ed/documentation/">Documentation</a>
+    <a href="#http://127.0.0.1:4000/ed/search/">Search</a>
+    <a href="#annotations">Annotate Me</a>
+    <a href="#https://github.com/minicomp/ed">Github Project</a>
+  
+  </div>
+
   {% include head.html %}
+
 
   <body class="theme-base-{{site.color-scheme}}">
 
@@ -27,15 +39,21 @@
       Wrap is the content to shift when toggling the sidebar. We wrap the content to avoid any CSS
       collisions with our real content.
     -->
+   
     <div class="wrap">
+      <div class="imgcontainer"></div>
       <header class="masthead">
         <div class="container">
           <h3 class="masthead-title">
-            <a title="Home">ENCYCLOPEDIA OF THE DOG</a>
+            <br/>
+            <div id="dogTitle">
+            <a href="#home"title="Home">ENCYCLOPEDIA OF THE DOG </a>
+            </div>
             <!-- <br><small>{{ site.tagline }}</small> -->
           </h3>
         </div>
       </header>
+     </div>
 
       <main class="container content" id="main" lang="{{ page.language }}">
         {{ content }}

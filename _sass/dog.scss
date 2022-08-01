@@ -1,0 +1,94 @@
+/* Red */
+.theme-base-dog .sidebar,
+.theme-base-dog .sidebar-toggle:active,
+.theme-base-dog #sidebar-checkbox:checked ~ .sidebar-toggle {
+  background-color:#9A8D84;
+}
+// .theme-base-dog .container a,
+.theme-base-dog .sidebar-toggle,
+.theme-base-dog .related-posts li a:hover {
+  color:  #66605B;
+}
+
+body{
+    background-color: #66605B;
+}
+
+#dogTitle {
+    text-align: left-justify;
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    text-shadow: 3px 3px 3px #9A8D84;
+    font-size: 45px;
+
+  :hover{
+    text-decoration: none;
+  }
+}
+
+.chapter-nav{
+  color: white;
+
+  a:hover, a.active {
+    text-decoration: underline;
+    color: black;
+  
+  }
+}
+
+#en{
+  background-color: white;
+  padding: 2em;
+  padding-top: none;
+  border-radius: 3px;
+}
+
+#ru{
+  background-color: white;
+  padding: 2em;
+  padding-top: none;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+
+#en{
+  background-color: white;
+  padding: 2em;
+  padding-top: none;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+
+.right-panel{
+  background-color: white;
+  padding: 2em;
+  padding-top: none;
+  border-radius: 3px;
+  margin-top: 5px;
+}
+
+.left-panel{
+  background-color: white;
+  padding: 2em;
+  padding-top: none;
+  border-radius: 3px;
+  margin-top: 5px;
+}
+
+#button-container {
+
+  :hover{
+    background-color: black;
+    color: white;
+    transition-duration: 0.4s;
+  }
+  .active{
+    background-color:black;
+    color: white;
+    }
+  
+}
+.byline{
+  color: black;
+}
