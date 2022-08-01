@@ -10,6 +10,11 @@
     font-family: "PT Sans", Helvetica, Arial, sans-serif;
     font-size: .875rem;/* 15px*/
     background-image: url(doglecture.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 100%;
+    
+
     color: rgba(255,255,255,.6);
     -webkit-transition: all .3s ease-in-out;
             transition: all .3s ease-in-out;
