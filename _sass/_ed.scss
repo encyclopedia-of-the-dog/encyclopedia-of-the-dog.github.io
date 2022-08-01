@@ -865,6 +865,7 @@ li.prose-indent {
 
   .btn {
     font-family: $main-font;
+    color: $text-color;
     font-size: 16px;
     height: 2rem;
     text-align: center;
@@ -873,6 +874,7 @@ li.prose-indent {
     border-radius: .25rem;
     padding: 10px;
     margin: auto;
+    cursor: pointer;
   }
 
   .active {
