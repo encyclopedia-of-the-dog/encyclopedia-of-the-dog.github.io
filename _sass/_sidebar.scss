@@ -3,7 +3,7 @@
     position: fixed;
     top: 0;
     bottom: 0;
-    left: -14rem;
+    left: -16rem;
     width: 16rem;
     visibility: hidden;
     overflow-y: auto;
@@ -146,9 +146,9 @@
   #sidebar-checkbox:checked ~ .sidebar,
   #sidebar-checkbox:checked ~ .wrap,
   #sidebar-checkbox:checked ~ .sidebar-toggle {
-    -webkit-transform: translateX(14rem);
-        -ms-transform: translateX(14rem);
-            transform: translateX(14rem);
+    -webkit-transform: translateX(16rem);
+        -ms-transform: translateX(16rem);
+            transform: translateX(16rem);
   }
   
   
