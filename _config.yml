@@ -1,9 +1,9 @@
 # Built with Jekyll 3.6.0
 
 # Setup
-title:               Ed.
+title:               Encyclopedia of the Dog.
 tagline:             'a jekyll theme for minimal editions'
-description:         'Ed is a Jekyll theme designed for textual editors based on minimal computing principles, and focused on legibility and flexibility.'
+description:         'A bilingual digital edition of Between Dog and Wolf'
 url:                 'http://minicomp.github.io'
 baseurl:             '/ed'
 
@@ -13,8 +13,8 @@ author:
   url:               https://twitter.com/elotroalex
   email:             colibri.alex@gmail.com
 
-# Color scheme. Options: red, orange, magenta, cyan, blue, brown
-color-scheme:
+# Color scheme. Options: red, orange, magenta, cyan, blue, brown, dog
+color-scheme: dog
 
 # Permalinks
 permalink: pretty
@@ -26,7 +26,7 @@ encoding: utf-8
 # Collections for texts
 collections:
   texts:
-    output: true
+    output: false
   chapters:
     output: true
 

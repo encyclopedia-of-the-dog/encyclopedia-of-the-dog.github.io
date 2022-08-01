@@ -40,6 +40,7 @@ html {
   font-family: $main-font;
   font-size: 1em; /* 16px; specify in ems to support text resizing in all browsers */
   line-height: 1.5;
+  scroll-padding: 4rem 0 0 0;
 }
 
 @media (min-width: 38em) {
@@ -68,7 +69,8 @@ body {
 */
 
 .wrap {
-  position: relative;
+  position: absolute; 
+  top: 0;
   width: 100%;
 }
 
@@ -361,21 +363,24 @@ a.sidebar-nav-item:focus {
 
 /* Style the `label` that we use to target the `.sidebar-checkbox` */
 .sidebar-toggle {
-  position: absolute;
-  top:  .8rem;
+  position: fixed;
+  top:  .75rem;
   left: 1rem;
   display: block;
-  padding: .25rem .75rem;
+  padding: .5rem .75rem;
   color: #505050;
   background-color: #fff;
+  border: none;
   border-radius: .25rem;
-  cursor: pointer;
+  cursor: pointer; 
+  z-index: 7;
 }
 
 .sidebar-toggle:before {
   display: inline-block;
   width: 1rem;
   height: .75rem;
+  margin-top: .1rem;
   content: "";
   background-image: -webkit-linear-gradient(to bottom, #555, #555 20%, #fff 20%, #fff 40%, #555 40%, #555 60%, #fff 60%, #fff 80%, #555 80%, #555 100%);
   background-image:    -moz-linear-gradient(to bottom, #555, #555 20%, #fff 20%, #fff 40%, #555 40%, #555 60%, #fff 60%, #fff 80%, #555 80%, #555 100%);
@@ -397,12 +402,6 @@ a.sidebar-nav-item:focus {
   background-image:    -moz-linear-gradient(to bottom, #fff, #fff 20%, #555 20%, #555 40%, #fff 40%, #fff 60%, #555 60%, #555 80%, #fff 80%, #fff 100%);
   background-image:     -ms-linear-gradient(to bottom, #fff, #fff 20%, #555 20%, #555 40%, #fff 40%, #fff 60%, #555 60%, #555 80%, #fff 80%, #fff 100%);
   background-image:         linear-gradient(to bottom, #fff, #fff 20%, #555 20%, #555 40%, #fff 40%, #fff 60%, #555 60%, #555 80%, #fff 80%, #fff 100%);
-}
-
-@media (min-width: 30.1em) {
-  .sidebar-toggle {
-    position: fixed;
-  }
 }
 
 @media print {
@@ -812,7 +811,137 @@ li.prose-indent {
   Adding functionality for viewing a text in two languages at once.
 */
 
+/* Bilingual Layouts */
+
+/* Skip Links */
+.skip-links {
+  ul {
+    list-style: none;
+  }
+
+  a {
+  padding: 6px;
+  position: absolute;
+  top: -45px;
+  left: 0px;
+  color: $text-color;
+  border-right: 1px solid $text-color;
+  border-bottom: 1px solid $text-color;
+  border-bottom-right-radius: 8px;
+  background: white;
+  -webkit-transition: top .2s ease-out;
+  transition: top .2s ease-out;
+  z-index: 100;
+  }
+
+  a:focus {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    outline-color: transparent;
+    -webkit-transition: top .2s ease-in;
+    transition: top .2s ease-in;
+  }
+}
+
+/* Bar for Language and Annotation Buttons */
+.view-options-bar {
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: lighten($text-color, 60%);
+  left: 0;
+  right: 0;
+  top: 0;
+  display: block;
+  text-align: center;
+  padding: .75rem .75rem .5rem;
+  z-index: 6;
+
+  .button-container {
+    display: inline;
+    text-align: center;
+  }
+
+  .btn {
+    font-family: $main-font;
+    color: $text-color;
+    font-size: 16px;
+    height: 2rem;
+    text-align: center;
+    background-color: white;
+    border: none;
+    border-radius: .25rem;
+    padding: 10px;
+    margin: auto;
+    cursor: pointer;
+  }
+
+  .active {
+    color: white;
+    background-color: #555;
+  }
+
+  #btn-hide-annotations {
+    display: none;
+    color: white;
+    background-color: #555;
+  }
+
+  #btn-show-annotations:hover {
+    color: $text-color;
+    background-color: white;
+  }
+
+  #btn-hide-annotations, #btn-show-annotations {
+    width: 10em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .view-options-bar {
+    text-align: right;
+  }
+}
+
+/* Chapter Navigation  */
+.chapter-nav {
+  max-width: 32rem;
+  margin: auto;
+  padding-top: .5rem;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+    text-align: center;
+  }
+
+  li {
+    display: inline;
+  }
+
+  li:not(:last-child) {
+    padding-right: 0.25em;
+  }
+
+  a:hover, a.active {
+    text-decoration: underline;
+  }
+
+}
+
+/* Text content on pages with a bilingual layout */
+div.bilingual {
+  margin-top: 3.5rem;
+}
+
 .bilingual {
+
+  .text-title {
+    margin-top: .5rem;
+  }
 
   #en-title, #translator {
     display: block;
@@ -826,103 +955,64 @@ li.prose-indent {
     margin-bottom: .5rem;
   }
 
-    .chapter-nav {
-      max-width: 32rem;
-      margin: auto;
+  .littlefoot-footnote__host {
+    display: none;
+  }
 
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        text-indent: 0;
-        text-align: center;
-      }
+  .header {
+    max-width: 32rem;
+    margin: auto;
+    text-align: center;
+  }
 
-      li {
-        display: inline;
-      }
+  .panel {
+    font-size: 1em;
+    margin: auto;
+  }
 
-      li:not(:last-child) {
-        padding-right: 0.25em;
-      }
-
-      a:hover, a.active {
-        text-decoration: underline;
-      }
-
-    }
-
-    .header {
-      max-width: 32rem;
-      margin: auto;
-      text-align: center;
-    }
-
-    #button-container {
-      max-width: 32rem;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .panel {
-      font-size: 1em;
-      padding-top: 1em;
-      margin: auto;
-    }
-
-    .btn {
-      font-size: 16px;
-      padding: 10px;
-      text-align: center;
-      margin: auto;
-    }
-
-    .active, .btn:hover {
-
-    }
-
-    #en, #ru, #both {
+  #en, #ru, #both {
     display: block;
     text-align: left;
     }
-
-    #en, #ru {
-      max-width: 32rem;
-    }
-
-    #ru, #both {
-    display: none;
-    }
-
-    .left-panel, .right-panel {
-        width: 49%;
-        float: left;
-        font-size: 0.85em;
-    }
-
-    .left-panel {
-      width: 49%;
-      float: left;
-      padding-right: 1%;
-      border-right: 1px solid lighten($text-color, 60%);
-      font-size: 0.85em;
-    }
-
-    .right-panel {
-      margin-left: 1%;
-    }
-
-    p {
-      margin-left: 0;
-    }
-
-    @media only screen and (max-width: 600px) {
-      #btn-both {
-        display: none;
-      }
-    }
+  
+  #en, #ru {
+    max-width: 32rem;
   }
 
+  #ru, #both {
+  display: none;
+  }
+
+  .left-panel, .right-panel {
+      width: 49%;
+      float: left;
+      font-size: 0.85em;
+  }
+
+  .left-panel {
+    width: 49%;
+    float: left;
+    padding-right: 1%;
+    border-right: 1px solid lighten($text-color, 60%);
+    font-size: 0.85em;
+  }
+
+  .right-panel {
+    margin-left: 1%;
+  }
+
+  p {
+    margin-left: 0;
+  }
+
+  @media only screen and (max-width: 600px) {
+    #btn-both {
+      display: none;
+    }
+  }
+}
+
+/* Override default poem styles */
 .poem {
 
   .panel#both {
@@ -937,4 +1027,9 @@ li.prose-indent {
     padding-right: 4rem;
   }
 
+}
+
+/* Hide footnotes at bottom of page */
+.footnotes {
+  display: none;
 }
