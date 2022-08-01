@@ -61,7 +61,7 @@ layout: default
     document.getElementById("both").style.display = "block";
   }
 
-  // Active links in chapter nav
+  // Add and remove active class from buttons
   // Get the container element
   var btnContainer = document.getElementById("language-buttons");
 
@@ -98,17 +98,3 @@ layout: default
     document.getElementById("btn-hide-annotations").style.display = "none";
   }
 </script>
-{% comment %}
-<script>
-  $(window).scroll(function() {
-    var winScrollTop = $(window).scrollTop();
-    var winHeight = $(window).height();
-    var floaterHeight = $('#btn-show-annotations').outerHeight(true);
-    //true so the function takes margins into account
-    var fromBottom = 20;
-
-    var top = winScrollTop + winHeight - floaterHeight - fromBottom;
-    $('#btn-show-annotations').css({'top': top + 'px'});
-  });
-</script>
-{% endcomment %}
