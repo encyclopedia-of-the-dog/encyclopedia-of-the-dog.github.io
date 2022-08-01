@@ -1,0 +1,100 @@
+---
+layout: default
+---
+<div class="bilingual">
+  <nav id="chapter-nav" class="chapter-nav">
+    <ul>
+      {% for item in site.chapters %}
+      {% if item.number == page.number %}
+      <li><a class="active" href="{{ site.baseurl }}{{ item.url }}">{{ item.number }}</a></li>
+      {% else %}
+      <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.number }}</a></li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+  <div class="view-options-bar" id="text-options">
+    <div class="button-container" id="language-buttons">
+      <button class="btn active" id="btn-en" onclick="showEnglish()">English</button>
+      <button class="btn" id="btn-ru" onclick="showRussian()">Russian</button>
+      <button class="btn" id="btn-both" onclick="showBoth()">Both</button>
+    </div>
+    <div class="button-container" id="annotation-buttons">
+      <button class="btn" id="btn-show-annotations" onclick="showAnnotations()">Show Annotations</button>
+      <button class="btn" id="btn-hide-annotations" onclick="hideAnnotations()">Hide Annotations</button>
+    </div>
+  </div>
+
+  {{ content }}
+
+</div>
+
+<script>
+  // Language buttons
+  function showEnglish() {
+    document.getElementById("en-title").style.display = "block";
+    document.getElementById("ru-title").style.display = "none";
+    document.getElementById("both-title").style.display = "none";
+    document.getElementById("translator").style.display = "block";
+    document.getElementById("en").style.display = "block";
+    document.getElementById("ru").style.display = "none";
+    document.getElementById("both").style.display = "none";
+  }
+
+  function showRussian() {
+    document.getElementById("en-title").style.display = "none";
+    document.getElementById("ru-title").style.display = "block";
+    document.getElementById("both-title").style.display = "none";
+    document.getElementById("translator").style.display = "none";
+    document.getElementById("en").style.display = "none";
+    document.getElementById("ru").style.display = "block";
+    document.getElementById("both").style.display = "none";
+  }
+
+  function showBoth() {
+    document.getElementById("en-title").style.display = "none";
+    document.getElementById("ru-title").style.display = "none";
+    document.getElementById("both-title").style.display = "block";
+    document.getElementById("translator").style.display = "block";
+    document.getElementById("en").style.display = "none";
+    document.getElementById("ru").style.display = "none";
+    document.getElementById("both").style.display = "block";
+  }
+
+  // Add and remove active class from buttons
+  // Get the container element
+  var btnContainer = document.getElementById("language-buttons");
+
+  // Get all buttons with class="btn" inside the container
+  var btns = btnContainer.getElementsByClassName("btn");
+
+  // Loop through the buttons and add the active class to the current/clicked button
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function () {
+      var current = btnContainer.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+
+  // Show annotations
+  function showAnnotations(){
+    var divsToHide = document.getElementsByClassName("littlefoot-footnote__host"); //divsToHide is an array
+    for(var i = 0; i < divsToHide.length; i++){
+        divsToHide[i].style.display = "inline";
+    }
+    // Switch button to 'Hide Annotations'
+    document.getElementById("btn-show-annotations").style.display = "none";
+    document.getElementById("btn-hide-annotations").style.display = "inline";
+  }
+  // Hide annotations
+  function hideAnnotations(){
+    var divsToHide = document.getElementsByClassName("littlefoot-footnote__host"); //divsToHide is an array
+    for(var i = 0; i < divsToHide.length; i++){
+        divsToHide[i].style.display = "none";
+    }
+    // Switch button to 'Show Annotations'
+    document.getElementById("btn-show-annotations").style.display = "inline";
+    document.getElementById("btn-hide-annotations").style.display = "none";
+  }
+</script>

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: bilingual
 ---
 
 {% assign thisChapter = site.texts | where: "chapter-number", page.number %}
@@ -14,18 +14,7 @@ layout: default
 {% assign text_ru = i.content %}
 {% endfor %}
 
-<article class="bilingual poem poetry">
-    <div class="chapter-nav">
-        <ul>
-            {% for item in site.chapters %}
-            {% if item.number == page.number %}
-            <li><a class="active" href="{{ site.baseurl }}{{ item.url }}">{{ item.number }}</a></li>
-            {% else %}
-            <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.number }}</a></li>
-            {% endif %}
-            {% endfor %}
-        </ul>
-    </div>
+<article class="bilingual poem poetry" id="chapter-content">
     <div class="header">
         <h1 class="text-title" id="en-title">{{ page.number }}. {{ title_en }}</h1>
         <h1 class="text-title" id="ru-title">{{ page.number }}. {{ title_ru }}</h1>
@@ -35,12 +24,6 @@ layout: default
     </div>
 
     <div>
-        <div id="button-container">
-            <button class="btn active" id="btn-en" onclick="showEnglish()">English</button>
-            <button class="btn" id="btn-ru" onclick="showRussian()">Russian</button>
-            <button class="btn" id="btn-both" onclick="showBoth()">Both</button>
-        </div>
-
         <div class="panel" id="en" markdown="1">
             {{ text_en }}
         </div>
@@ -58,53 +41,4 @@ layout: default
             </div>
         </div>
     </div>
-
-    <script>
-    function showEnglish() {
-      document.getElementById("en-title").style.display = "block";
-      document.getElementById("ru-title").style.display = "none";
-      document.getElementById("both-title").style.display = "none";
-      document.getElementById("translator").style.display = "block";
-      document.getElementById("en").style.display = "block";
-      document.getElementById("ru").style.display = "none";
-      document.getElementById("both").style.display = "none";
-    }
-
-    function showRussian() {
-      document.getElementById("en-title").style.display = "none";
-      document.getElementById("ru-title").style.display = "block";
-      document.getElementById("both-title").style.display = "none";
-      document.getElementById("translator").style.display = "none";
-      document.getElementById("en").style.display = "none";
-      document.getElementById("ru").style.display = "block";
-      document.getElementById("both").style.display = "none";
-    }
-
-    function showBoth() {
-      document.getElementById("en-title").style.display = "none";
-      document.getElementById("ru-title").style.display = "none";
-      document.getElementById("both-title").style.display = "block";
-      document.getElementById("translator").style.display = "block";
-      document.getElementById("en").style.display = "none";
-      document.getElementById("ru").style.display = "none";
-      document.getElementById("both").style.display = "block";
-    }
-
-        // Get the container element
-        var btnContainer = document.getElementById("button-container");
-
-        // Get all buttons with class="btn" inside the container
-        var btns = btnContainer.getElementsByClassName("btn");
-
-        // Loop through the buttons and add the active class to the current/clicked button
-        for (var i = 0; i < btns.length; i++) {
-            btns[i].addEventListener("click", function () {
-                var current = document.getElementsByClassName("active");
-                current[0].className = current[0].className.replace(" active", "");
-                this.className += " active";
-            });
-        }
-
-    </script>
-
 </article>
