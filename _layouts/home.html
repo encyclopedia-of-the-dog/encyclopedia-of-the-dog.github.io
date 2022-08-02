@@ -1,20 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-  <div class="topnav">
-    <a href="http://127.0.0.1:4000/ed/">Home</a>
-    <a href= "http://127.0.0.1:4000/ed/about/">About</a>
-    <a href="#http://127.0.0.1:4000/ed/credits/">Credits</a>
-    <a href="#http://127.0.0.1:4000/ed/documentation/">Documentation</a>
-    <a href="#http://127.0.0.1:4000/ed/search/">Search</a>
-    <a href="#annotations">Annotate Me</a>
-    <a href="#https://github.com/minicomp/ed">Github Project</a>
-  
-  </div>
 
   {% include head.html %}
-
-
+   
   <body class="theme-base-{{site.color-scheme}}">
 
     <!-- This if statement decides which sidebar to use -->
@@ -40,21 +29,23 @@
       collisions with our real content.
     -->
    
+    <div class="imgcontainer" alt="A painting of Hunters in the snow"></div>
     <div class="wrap">
-      <div class="imgcontainer"></div>
+      
       <header class="masthead">
+        
         <div class="container">
-          <h3 class="masthead-title">
-            <br/>
-            <div id="dogTitle">
-            <a href="#home"title="Home">ENCYCLOPEDIA OF THE DOG </a>
-            </div>
-            <!-- <br><small>{{ site.tagline }}</small> -->
+            <h3 class="masthead-title">
           </h3>
         </div>
       </header>
      </div>
 
+     <div class="dogTitle">
+      <a href="{{ site.baseurl }}/" title="Home">{{ site.title | newline_to_br }}</a>
+      <br><small>{{ site.tagline }}</small>
+      </div>
+    </br>
       <main class="container content" id="main" lang="{{ page.language }}">
         {{ content }}
       </main>
@@ -125,3 +116,57 @@
   </script>
   </body>
 </html>
+
+<style>
+
+  body , html {
+  height: 100%;
+}
+.imgcontainer {
+  position: relative;
+  background-image: url("assets/hunters.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+  width: 100vw;
+  padding-left:0;
+  padding-right:0;
+  left:0;
+  margin-top: 30px;
+
+  
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+background-color: #9A8D84;
+overflow: hidden;
+padding-left: 65px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+float: left;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 25px;
+
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+background-color: #ddd;
+color: #9A8D84;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+background-color: #9A8D84;
+color: white;
+}
+
+
+</style>
