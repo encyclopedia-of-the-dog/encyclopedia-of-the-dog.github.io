@@ -7,7 +7,8 @@
     width: 16rem;
     visibility: hidden;
     overflow-y: auto;
-    font-family: "PT Sans", Helvetica, Arial, sans-serif;
+    /* font-family: "PT Sans", Helvetica, Arial, sans-serif; */
+    font-family: $heading-font;
     font-size: .875rem;/* 15px*/
     background-image: url(doglecture.jpg);
     background-repeat: no-repeat;
@@ -32,27 +33,27 @@
   are added so it does not obscure the lecturer */
 
   .sidebar-title {
-      color: #212b37;
-      font-family: $main-font;
-      font-size: 1.8rem;
-      line-height: 1em;
-      margin-top: .5em;
-      margin-bottom: 0;
-      margin-right: 0;
-      margin-left: .75em;
-      text-align: left;
+    color: #212b37;
+    font-family: $main-font;
+    font-size: 1.8rem;
+    line-height: 1em;
+    margin-top: .5em;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-left: .75em;
+    text-align: left;
   }
 
   .sidebar-description {
-      color: #212b37;
-      font-weight: normal;
-      font-size: .8rem;
-      line-height: 1rem;
-      margin-top: .5em;
-      margin-bottom: 0;
-      margin-right: 2em;
-      margin-left: 2em;
-      text-align: left;
+    color: #212b37;
+    font-weight: normal;
+    font-size: .8rem;
+    line-height: 1rem;
+    margin-top: .5em;
+    margin-bottom: 0;
+    margin-right: 2em;
+    margin-left: 2em;
+    text-align: left;
   }
 
   .sidebar {
@@ -62,6 +63,11 @@
   .sidebar a {
     font-weight: normal;
     color: #fff;
+  }
+
+  #sidebar-title-link {
+    color: #212b37;
+    text-decoration: none;
   }
   
   .sidebar-item {
@@ -80,11 +86,14 @@
   .sidebar-nav-item {
     display: block;
     padding: .5rem 1rem;
+    margin-bottom: .2rem;
     height: 15%;
     width: 85%;
     margin-left: 7.5%;
-    border: 1px solid #212b37;
-    background-color: #a9b9ca;
+    /* border: 1px solid #212b37; */
+    border-radius: .25rem;
+    background-color: transparentize($text-color, 0.35);
+    text-decoration: none;
   }
   
   a.sidebar-nav-item-toc {
@@ -93,11 +102,15 @@
   
   .sidebar-nav-item.active,
   a.sidebar-nav-item:hover,
-  a.sidebar-nav-item:focus {
-    background-color: #7c91a8;
-    border: 1px solid #212b37;
+  /* a.sidebar-nav-item:focus */ {
+    background-color: transparentize($text-color, 0.2);
+    text-decoration: none;
+    /* border: 1px solid #212b37; */
   }
- 
+
+  a.sidebar-nav-item:focus {
+    text-decoration: none;
+  }
 
   @media (min-width: 48em) {
     .sidebar-item {
@@ -207,6 +220,8 @@
     box-shadow: -.25rem 0 .5rem rgba(0,0,0,.1);
   }
  
+
+
 /*Custom Dogopedia "Dog" Theme*/
 /*  .theme-base-dog .sidebar,
 .theme-base-dog .sidebar-toggle:active {

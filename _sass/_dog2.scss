@@ -1,0 +1,155 @@
+/* dog theme*/
+.theme-base-dog .sidebar,
+.theme-base-dog .sidebar-toggle:active,
+.theme-base-dog #sidebar-checkbox:checked ~ .sidebar-toggle {
+  background-color:#9A8D84;
+}
+// .theme-base-dog .container a,
+.theme-base-dog .sidebar-toggle,
+.theme-base-dog .related-posts li a:hover {
+  color:  #66605B;
+}
+
+body{
+    background-color: #FFFFFF;
+    color: $text-color;
+}
+
+.panel {
+  padding: 0;
+}
+
+.byline{
+  color: #767769;
+}
+
+.text-title{
+  color: $heading-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font;
+  margin-bottom: .5rem;
+  font-weight: normal;
+  /* color:  #66605B; */
+  color: $heading-color;
+  letter-spacing: -.025rem;
+  line-height: 1.25;
+  text-rendering: optimizeLegibility;
+  
+}
+h2{
+  font-family: $heading-font;
+  margin-bottom: .5rem;
+  font-weight: normal;
+  color: $text-color;
+  letter-spacing: -.025rem;
+  line-height: 1.25;
+  text-rendering: optimizeLegibility;
+}
+#chapter-heading{
+  font-family: $heading-font;
+  font-weight: normal;
+  /* color: #ebeced; */
+  color: $heading-color;
+  /* text-shadow: 1px 1px 1px $text-color; */
+  letter-spacing: -.025rem;
+  line-height: 1.25;
+  text-rendering: optimizeLegibility;
+}
+
+.theme-base-dog .toc a,
+.theme-base-dog .sidebar-toggle,
+.theme-base-dog .related-posts li a:hover {
+  /* color:#e1ecf7; */
+  color: $heading-color;
+  /* text-shadow: 1px 1px 2px $text-color; */
+
+}
+
+a, .text-title a {
+  /* color:#a9b9ca; */
+  color: $link-color;
+  text-decoration: none;
+}
+
+#dogTitle {
+  font-family: $main-font;
+  text-decoration: none;
+  font-size: 2.5rem;
+  /* text-shadow: 3px 3px 3px $text-color; */
+  text-align: left;
+
+  a {
+    color: #767769;
+  }
+  
+  :hover{
+    text-decoration: none;
+  }
+}
+
+  //the hero background image on the landing page
+  .imgcontainer {
+    position: relative;
+    background-image:url(hunters.jpg);
+    background-position:center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    width: 100vw;
+    padding-left: 0;
+    padding-right: 0;
+    left: 0;
+}
+
+// for iphones
+@media screen and (max-width: 500px) {
+  h2{
+    padding-top:0px;
+  }
+
+  .imgcontainer {
+    height: 200px;
+  }
+}
+// for ipads or tablets
+@media only screen 
+  and (min-device-width: 501px) 
+  and (max-device-width: 820px) {
+  
+    h2{
+      padding-top:0px;
+    }
+
+    .imgcontainer {
+      height: 300px;
+    }
+  }
+
+// Menu Bar
+.menu-bar {
+  background-color: #9C9D90;
+}
+
+// Home Page
+.homeTitle p {
+  color: $text-color;
+}
+div.toc {
+  margin-bottom: 4rem;
+
+  ul {
+    list-style: none;
+    text-indent: -1rem;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+
+$text-color: #1C1815;
+$heading-color: #404040;
+$link-color: #9A8D84;

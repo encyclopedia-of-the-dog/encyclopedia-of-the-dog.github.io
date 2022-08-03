@@ -15,6 +15,15 @@ body{
     color:#e1ecf7;
 }
 
+.chapter-nav{
+  color: white;
+
+  a:hover, a.active {
+    text-decoration: underline;
+    color: black;
+  
+  }
+}
 // the background colors of the panels for english,russian and both panels
 #en{
   background-color: white;
@@ -58,8 +67,20 @@ body{
   margin-top: 5px;
   color: black;
 }
+// the buttons for text
+#button-container {
 
-
+  :hover{
+    background-color: black;
+    color: white;
+    transition-duration: 0.4s;
+  }
+  .active{
+    background-color:black;
+    color: white;
+    }
+  
+}
 .byline{
   color: black;
 }
@@ -97,7 +118,9 @@ h2{
   text-rendering: optimizeLegibility;
 }
 
-.theme-base-dog .toc a,
+
+
+.theme-base-dog .container a,
 .theme-base-dog .sidebar-toggle,
 .theme-base-dog .related-posts li a:hover {
   color:#e1ecf7;
@@ -112,7 +135,7 @@ h2{
   text-align: center;
   position:relative;
 }
-
+//   border-bottom: 1px solid#cfc5be;
 
 a, .text-title a {
   color:#a9b9ca;
@@ -120,17 +143,19 @@ a, .text-title a {
 }
 
 #dogTitle {
-  font-family: $main-font;
+
   text-decoration: none;
-  color: #9A8D84;
+  color: #9A8D84 ;
   font-size: 2rem;
   text-shadow: 3px 3px 3px black;
   font-size: 45px;
   text-align: left;
+  padding-bottom: 1px;
   
-  :hover{
-    text-decoration: none;
-  }
+  
+:hover{
+  text-decoration: none;
+}
 }
 
   //the hero background image on the landing page
@@ -150,10 +175,8 @@ a, .text-title a {
 // for iphones
 @media screen and (max-width: 500px) {
   #dogTitle{
-    font-size: 36px;
+    font-size:36px;
     text-align: left;
-    padding-left: 7px;
-    padding-bottom: 0px;
   }
 
   h2{
@@ -167,8 +190,6 @@ a, .text-title a {
     #dogTitle{
       font-size:40px;
       text-align: left;
-      padding-left:15px;
-      padding-bottom:0px;
      
     }
   
