@@ -41,9 +41,11 @@
       </header>
      </div>
 
-     <div class="dogTitle">
+     <div class="container">
+      <div id="dogTitle">
       <a href="{{ site.baseurl }}/" title="Home">{{ site.title | newline_to_br }}</a>
       <br><small>{{ site.tagline }}</small>
+    </div>
       </div>
     </br>
       <main class="container content" id="main" lang="{{ page.language }}">
@@ -121,23 +123,7 @@
 
   body , html {
   height: 100%;
-}
-.imgcontainer {
-  position: relative;
-  background-image: url("assets/hunters.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 550px;
-  width: 100vw;
-  padding-left:0;
-  padding-right:0;
-  left:0;
-  margin-top: 30px;
-
-  
-}
-
+  }
 /* Add a black background color to the top navigation */
 .topnav {
 background-color: #9A8D84;

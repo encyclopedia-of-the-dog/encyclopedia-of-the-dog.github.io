@@ -1,4 +1,4 @@
-/* dog */
+/* dog theme*/
 .theme-base-dog .sidebar,
 .theme-base-dog .sidebar-toggle:active,
 .theme-base-dog #sidebar-checkbox:checked ~ .sidebar-toggle {
@@ -12,6 +12,7 @@
 
 body{
     background-color: #66605B;
+    color:#e1ecf7;
 }
 
 .chapter-nav{
@@ -23,7 +24,7 @@ body{
   
   }
 }
-
+// the background colors of the panels for english,russian and both panels
 #en{
   background-color: white;
   padding: 2em;
@@ -37,6 +38,7 @@ body{
   padding-top: none;
   border-radius: 3px;
   margin-top: 10px;
+  color: black;
 }
 
 #en{
@@ -45,6 +47,7 @@ body{
   padding-top: none;
   border-radius: 3px;
   margin-top: 10px;
+  color: black;
 }
 
 .right-panel{
@@ -53,6 +56,7 @@ body{
   padding-top: none;
   border-radius: 3px;
   margin-top: 5px;
+  color: black;
 }
 
 .left-panel{
@@ -61,8 +65,9 @@ body{
   padding-top: none;
   border-radius: 3px;
   margin-top: 5px;
+  color: black;
 }
-
+// the buttons for text
 #button-container {
 
   :hover{
@@ -88,7 +93,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $heading-font;
   margin-bottom: .5rem;
   font-weight: normal;
-  color: #decabd;
+  color:  #66605B;
   letter-spacing: -.025rem;
   line-height: 1.25;
   text-rendering: optimizeLegibility;
@@ -98,12 +103,22 @@ h2{
   font-family: $heading-font;
   margin-bottom: .5rem;
   font-weight: normal;
-  color: #e2d8be;
-  text-shadow: 1px 1px 2px black;
+  color: black;
   letter-spacing: -.025rem;
   line-height: 1.25;
   text-rendering: optimizeLegibility;
 }
+#chapter-heading{
+  font-family: $heading-font;
+  font-weight: normal;
+  color: #ebeced;
+  text-shadow: 1px 1px 1px black;
+  letter-spacing: -.025rem;
+  line-height: 1.25;
+  text-rendering: optimizeLegibility;
+}
+
+
 
 .theme-base-dog .container a,
 .theme-base-dog .sidebar-toggle,
@@ -124,11 +139,10 @@ h2{
 
 a, .text-title a {
   color:#a9b9ca;
-  text-shadow: black;
   text-decoration: none;
 }
 
-.dogTitle {
+#dogTitle {
 
   text-decoration: none;
   color: #9A8D84 ;
@@ -137,51 +151,54 @@ a, .text-title a {
   font-size: 45px;
   padding-top: 53px;
   text-align: left;
-  padding-left: 440px;
-  padding-bottom: 2px;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-bottom: 1px;
   
   
 :hover{
   text-decoration: none;
 }
 }
-// for iphones
-@media screen and (max-width: 500px) {
-  .dogTitle{
-    font-size:36px;
-    text-align: left;
-    padding-left:15px;
-    padding-bottom:0px;
-  }
 
-  h2{
-    padding-top:0px;
-  }
-
+  //the hero background image on the landing page
   .imgcontainer {
     position: relative;
-    background-image: url(assets/hunters.jpg);
-    background-position-x: left;
+    background-image:url(hunters.jpg);
+    background-position:center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 150px;
-    width: 100%;
+    height: 400px;
+    width: 100vw;
     padding-left: 0;
     padding-right: 0;
     left: 0;
     margin-top: 30px;
 }
 
+// for iphones
+@media screen and (max-width: 500px) {
+  #dogTitle{
+    font-size:36px;
+    text-align: left;
+    padding-left:7px;
+    padding-bottom:0px;
+  }
+
+  h2{
+    padding-top:0px;
+  }
 }
-// for ipads?
+// for ipads or tablets
 @media only screen 
   and (min-device-width: 501px) 
   and (max-device-width: 820px) {
-    .dogTitle{
+    #dogTitle{
       font-size:40px;
       text-align: left;
       padding-left:15px;
       padding-bottom:0px;
+     
     }
   
     h2{
@@ -189,6 +206,7 @@ a, .text-title a {
     }
   
   }
+
 
 
 
