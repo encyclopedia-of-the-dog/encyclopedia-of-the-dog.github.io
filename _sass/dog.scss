@@ -1,0 +1,215 @@
+/* dog theme*/
+.theme-base-dog .sidebar,
+.theme-base-dog .sidebar-toggle:active,
+.theme-base-dog #sidebar-checkbox:checked ~ .sidebar-toggle {
+  background-color:#9A8D84;
+}
+// .theme-base-dog .container a,
+.theme-base-dog .sidebar-toggle,
+.theme-base-dog .related-posts li a:hover {
+  color:  #66605B;
+}
+
+body{
+    background-color: #66605B;
+    color:#e1ecf7;
+}
+
+.chapter-nav{
+  color: white;
+
+  a:hover, a.active {
+    text-decoration: underline;
+    color: black;
+  
+  }
+}
+// the background colors of the panels for english,russian and both panels
+#en{
+  background-color: white;
+  padding: 2em;
+  padding-top: none;
+  border-radius: 3px;
+}
+
+#ru{
+  background-color: white;
+  padding: 2em;
+  padding-top: none;
+  border-radius: 3px;
+  margin-top: 10px;
+  color: black;
+}
+
+#en{
+  background-color: white;
+  padding: 2em;
+  padding-top: none;
+  border-radius: 3px;
+  margin-top: 10px;
+  color: black;
+}
+
+.right-panel{
+  background-color: white;
+  padding: 2em;
+  padding-top: none;
+  border-radius: 3px;
+  margin-top: 5px;
+  color: black;
+}
+
+.left-panel{
+  background-color: white;
+  padding: 2em;
+  padding-top: none;
+  border-radius: 3px;
+  margin-top: 5px;
+  color: black;
+}
+// the buttons for text
+#button-container {
+
+  :hover{
+    background-color: black;
+    color: white;
+    transition-duration: 0.4s;
+  }
+  .active{
+    background-color:black;
+    color: white;
+    }
+  
+}
+.byline{
+  color: black;
+}
+
+.text-title{
+  color:white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font;
+  margin-bottom: .5rem;
+  font-weight: normal;
+  color:  #66605B;
+  letter-spacing: -.025rem;
+  line-height: 1.25;
+  text-rendering: optimizeLegibility;
+  
+}
+h2{
+  font-family: $heading-font;
+  margin-bottom: .5rem;
+  font-weight: normal;
+  color: black;
+  letter-spacing: -.025rem;
+  line-height: 1.25;
+  text-rendering: optimizeLegibility;
+}
+#chapter-heading{
+  font-family: $heading-font;
+  font-weight: normal;
+  color: #ebeced;
+  text-shadow: 1px 1px 1px black;
+  letter-spacing: -.025rem;
+  line-height: 1.25;
+  text-rendering: optimizeLegibility;
+}
+
+
+
+.theme-base-dog .container a,
+.theme-base-dog .sidebar-toggle,
+.theme-base-dog .related-posts li a:hover {
+  color:#e1ecf7;
+  text-shadow: 1px 1px 2px black;
+
+}
+.masthead {
+  border-bottom: none;
+  margin-bottom: 1.5rem;
+  padding-top: 26px;
+  padding-bottom: 1rem;
+  text-align: center;
+  position:relative;
+}
+//   border-bottom: 1px solid#cfc5be;
+
+a, .text-title a {
+  color:#a9b9ca;
+  text-decoration: none;
+}
+
+#dogTitle {
+
+  text-decoration: none;
+  color: #9A8D84 ;
+  font-size: 2rem;
+  text-shadow: 3px 3px 3px black;
+  font-size: 45px;
+  padding-top: 53px;
+  text-align: left;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-bottom: 1px;
+  
+  
+:hover{
+  text-decoration: none;
+}
+}
+
+  //the hero background image on the landing page
+  .imgcontainer {
+    position: relative;
+    background-image:url(hunters.jpg);
+    background-position:center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    width: 100vw;
+    padding-left: 0;
+    padding-right: 0;
+    left: 0;
+    margin-top: 30px;
+}
+
+// for iphones
+@media screen and (max-width: 500px) {
+  #dogTitle{
+    font-size:36px;
+    text-align: left;
+    padding-left:7px;
+    padding-bottom:0px;
+  }
+
+  h2{
+    padding-top:0px;
+  }
+}
+// for ipads or tablets
+@media only screen 
+  and (min-device-width: 501px) 
+  and (max-device-width: 820px) {
+    #dogTitle{
+      font-size:40px;
+      text-align: left;
+      padding-left:15px;
+      padding-bottom:0px;
+     
+    }
+  
+    h2{
+      padding-top:0px;
+    }
+  
+  }
+
+
+
+
+$text-color: black;
+$heading-color: #404040;
+$link-color: #9A8D84;
