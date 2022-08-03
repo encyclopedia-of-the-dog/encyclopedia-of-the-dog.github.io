@@ -844,8 +844,8 @@ li.prose-indent {
   }
 }
 
-/* Bar for Language and Annotation Buttons */
-.view-options-bar {
+/* Menu Bar */
+.menu-bar {
   position: fixed;
   margin-left: auto;
   margin-right: auto;
@@ -858,9 +858,18 @@ li.prose-indent {
   padding: .75rem .75rem .5rem;
   z-index: 6;
 
+  ul {
+    list-style: none;
+  }
+
+  li {
+    display: inline;
+  }
+
   .button-container {
     display: inline;
     text-align: center;
+    vertical-align: middle;
   }
 
   .btn {
@@ -868,19 +877,71 @@ li.prose-indent {
     color: $text-color;
     font-size: 16px;
     height: 2rem;
+    min-width: 5rem;
+    padding: 0 .5rem;
     text-align: center;
+    vertical-align: middle;
     background-color: white;
     border: none;
     border-radius: .25rem;
-    padding: 10px;
     margin: auto;
     cursor: pointer;
   }
 
-  .active {
-    color: white;
-    background-color: #555;
+  .dropdown{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    min-width: 5rem;
   }
+
+  #btn-show-chapters {
+    min-width: 5rem;
+  }
+
+  #language-buttons {
+    min-width: 5rem;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    margin: .25rem 0 0;
+    padding: .25rem 0;
+    min-width: inherit;
+    background-color: transparentize(white, 0.05);
+    border-radius: .25rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  a.chapter-link {
+    display: block;
+    color: $text-color !important;
+    text-decoration: none;
+    min-width: inherit;
+  }
+
+  .chapter-link:hover, .chapter-link:focus {
+    background-color: transparentize(#dedede, 0.5);
+  }
+
+  #language-list {
+    .btn {
+      width: 100%;
+      border-radius: 0% !important;
+      background-color: #ffffff00;
+    }
+
+    .btn:hover, .btn:focus {
+    background-color: transparentize(#dedede, 0.5);
+    }
+  }
+
+  .show {
+    display: block;
+  }
+
 
   #btn-hide-annotations {
     display: none;
@@ -894,42 +955,24 @@ li.prose-indent {
   }
 
   #btn-hide-annotations, #btn-show-annotations {
-    width: 10em;
+    vertical-align: middle;
+    min-width: 8rem;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .view-options-bar {
+  .menu-bar {
     text-align: right;
+  }
+  #btn-both {
+    display: none;
   }
 }
 
-/* Chapter Navigation  */
-.chapter-nav {
-  max-width: 32rem;
-  margin: auto;
-  padding-top: .5rem;
-
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-indent: 0;
-    text-align: center;
+@media only screen and (max-width: 450px) {
+  #chapter-menu {
+    display: none;
   }
-
-  li {
-    display: inline;
-  }
-
-  li:not(:last-child) {
-    padding-right: 0.25em;
-  }
-
-  a:hover, a.active {
-    text-decoration: underline;
-  }
-
 }
 
 /* Text content on pages with a bilingual layout */
@@ -941,6 +984,7 @@ div.bilingual {
 
   .text-title {
     margin-top: .5rem;
+    padding-top: 0.25rem;
   }
 
   #en-title, #translator {
@@ -1004,12 +1048,6 @@ div.bilingual {
   p {
     margin-left: 0;
   }
-
-  @media only screen and (max-width: 600px) {
-    #btn-both {
-      display: none;
-    }
-  }
 }
 
 /* Override default poem styles */
@@ -1033,3 +1071,33 @@ div.bilingual {
 .footnotes {
   display: none;
 }
+
+/* can be safely removed if we're keeping the new chapter nav in menu bar
+/ Chapter Navigation /
+.chapter-nav {
+  max-width: 32rem;
+  margin: auto;
+  padding-top: .5rem;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+    text-align: center;
+  }
+
+  li {
+    display: inline;
+  }
+
+  li:not(:last-child) {
+    padding-right: 0.25em;
+  }
+
+  a:hover, a.active {
+    text-decoration: underline;
+  }
+
+}
+*/

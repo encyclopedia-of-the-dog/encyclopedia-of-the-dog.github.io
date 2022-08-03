@@ -2,7 +2,7 @@
 layout: default
 ---
 <div class="bilingual">
-  <nav id="chapter-nav" class="chapter-nav">
+<!--  <nav id="chapter-nav" class="chapter-nav">
     <ul>
       {% for item in site.chapters %}
       {% if item.number == page.number %}
@@ -12,22 +12,92 @@ layout: default
       {% endif %}
       {% endfor %}
     </ul>
-  </nav>
-  <div class="view-options-bar" id="text-options">
-    <div class="button-container" id="language-buttons">
-      <button class="btn active" id="btn-en" onclick="showEnglish()">English</button>
-      <button class="btn" id="btn-ru" onclick="showRussian()">Russian</button>
-      <button class="btn" id="btn-both" onclick="showBoth()">Both</button>
-    </div>
-    <div class="button-container" id="annotation-buttons">
-      <button class="btn" id="btn-show-annotations" onclick="showAnnotations()">Show Annotations</button>
-      <button class="btn" id="btn-hide-annotations" onclick="hideAnnotations()">Hide Annotations</button>
-    </div>
-  </div>
+  </nav> -->
+  <ul class="menu-bar" id="text-options">
+    <li class="button-container dropdown" id="chapter-menu">
+      <button class="btn dropbtn" id="btn-show-chapters" onclick="showChapters()">Chapter {{ page.number }} ▾</button>
+      <div class="dropdown-content" id="chapter-list">
+        {% for item in site.chapters %}
+        {% if item.number == page.number %}
+        <a class="chapter-link active" href="{{ site.baseurl }}{{ item.url }}">{{ item.number }}</a>
+        {% else %}
+        <a class="chapter-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.number }}</a>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </li>
+    <li class="button-container dropdown" id="language-buttons">
+      <button class="btn dropbtn" id="btn-show-languages" onclick="showLanguages()">Language ▾</button>
+      <div class="dropdown-content" id="language-list">
+        <button class="btn active" id="btn-en" onclick="showEnglish()">English</button>
+        <button class="btn" id="btn-ru" onclick="showRussian()">Russian</button>
+        <button class="btn" id="btn-both" onclick="showBoth()">Both</button>
+    </li>
+    <li class="button-container" id="annotation-buttons">
+      <button class="btn" id="btn-show-annotations" onclick="showAnnotations()">Annotations: Off</button>
+      <button class="btn" id="btn-hide-annotations" onclick="hideAnnotations()">Annotations: On</button>
+    </li>
+  </ul>
 
   {{ content }}
 
 </div>
+<!--
+<script>
+  // Chapter Menu
+  function showChapters() {
+    document.getElementById("chapter-list").style.display = "block";
+    document.getElementById("btn-show-chapters").style.display = "none";
+    document.getElementById("btn-hide-chapters").style.display = "inline";
+  }
+  function hideChapters() {
+    document.getElementById("chapter-list").style.display = "none";
+    document.getElementById("btn-show-chapters").style.display = "inline";
+    document.getElementById("btn-hide-chapters").style.display = "none";
+  }
+  </script>
+-->
+// Chapter List Dropdown
+<script>
+  function showChapters() {
+  document.getElementById("chapter-list").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+// Language List Dropdown
+<script>
+  function showLanguages() {
+  document.getElementById("language-list").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 
 <script>
   // Language buttons

@@ -24,11 +24,17 @@ index.addDoc({
 console.log( jQuery.type(index) );
 
 // Builds reference data (maybe not necessary for us, to check)
-var store = [{% for text in site.texts %}{
-  "title": {{text.title | jsonify}},
+var store = [{% for text in site.texts %}
+  {% for chapter in site.chapters%}
+    {% if chapter.number == text.chapter-number %}
+      {% assign thisChapter = chapter %}
+      {% assign thisTitle = thisChapter.number | append: ". " | append: text.title %}
+    {% endif %}
+  {% endfor %}{
+  "title": {{thisTitle | jsonify}},
   "author": {{text.author | jsonify}},
-  "layout": {{ text.layout | jsonify }},
-  "link": {{text.url | jsonify}},
+  "layout": {{text.layout | jsonify }},
+  "link": {{thisChapter.url | jsonify}},
 }
 {% unless forloop.last %},{% endunless %}{% endfor %}]
 
