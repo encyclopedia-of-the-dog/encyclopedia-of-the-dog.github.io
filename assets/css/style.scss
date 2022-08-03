@@ -21,11 +21,11 @@ $regular-font-size: 1.25em; /* 20px / 16px = 1.25em; support text resizing in al
   Make sure to leave color-scheme in `_config.yml` file empty for granular control
 */
 
-$text-color: black;
+$text-color: #1C1815;
 $heading-color: #404040;
 $link-color: #841212;
 
 @import "ed";
 @import "syntax";
 @import "sidebar";
-@import "dog";
+@import "dog2";
