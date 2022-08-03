@@ -33,7 +33,8 @@
   are added so it does not obscure the lecturer */
 
   .sidebar-title {
-    color: #212b37;
+    /* color: #212b37; */
+    color: $heading-color;
     font-family: $main-font;
     font-size: 1.8rem;
     line-height: 1em;
@@ -45,7 +46,7 @@
   }
 
   .sidebar-description {
-    color: #212b37;
+    color: $text-color;
     font-weight: normal;
     font-size: .8rem;
     line-height: 1rem;
@@ -66,7 +67,8 @@
   }
 
   #sidebar-title-link {
-    color: #212b37;
+    /* color: #212b37; */
+    color: $heading-color;
     text-decoration: none;
   }
   
