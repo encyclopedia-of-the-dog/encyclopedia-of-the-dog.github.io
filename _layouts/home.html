@@ -28,32 +28,22 @@
       Wrap is the content to shift when toggling the sidebar. We wrap the content to avoid any CSS
       collisions with our real content.
     -->
-   
-    <div class="imgcontainer" alt="A painting of Hunters in the snow"></div>
+  
     <div class="wrap">
-      
-      <header class="masthead">
-        
-        <div class="container">
-            <h3 class="masthead-title">
-          </h3>
-        </div>
-      </header>
-     </div>
-
-     <div class="container">
-      <div id="dogTitle">
-      <a href="{{ site.baseurl }}/" title="Home">{{ site.title | newline_to_br }}</a>
-      <br><small>{{ site.tagline }}</small>
-    </div>
+      <button class="sidebar-toggle"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="sidebar">
+    </button>
+      <div class="imgcontainer" alt="A painting of Hunters in the snow"></div>
+        <main class="container content" id="main" lang="{{ page.language }}">
+          <div>
+            <h1 id="dogTitle"><a href="{{ site.baseurl }}/">{{ site.title | newline_to_br }}</a></h1>
+            <p markdown="1">{{ site.tagline }}</p>
+          </div>
+          {{ content }}
+        </main>
       </div>
-    </br>
-      <main class="container content" id="main" lang="{{ page.language }}">
-        {{ content }}
-      </main>
-    </div>
-
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
     <script>
 
@@ -71,22 +61,32 @@
         document.getElementById("main").innerHTML = content.replace(regex, "<mark>$1</mark>");
       }
 
-      // Toggle sidebar
+      // Support sidebar toggle
       (function(document) {
         var toggle = document.querySelector('.sidebar-toggle');
         var sidebar = document.querySelector('#sidebar');
+        var sidebarNavLink = document.querySelector('.sidebar-nav-item');
         var checkbox = document.querySelector('#sidebar-checkbox');
-
-        document.addEventListener('click', function(e) {
-          var target = e.target;
-
-          if(!checkbox.checked ||
-             !sidebar.contains(target) ||
-             (target === checkbox || target === toggle)) return;
-
+        
+        // Toggle sidebar
+        toggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          checkbox.checked = !checkbox.checked;
+          toggle.setAttribute('aria-expanded', checkbox.checked);
+          sidebar.setAttribute('aria-hidden', !checkbox.checked);
+        });
+        
+        // Make sure we focus on the menu once it opens to aid tab navigation
+        sidebar.addEventListener('transitionend', function() {sidebarNavLink.focus()});
+        
+        // Clicking anywhere in the sidebar should close the menu
+        sidebar.addEventListener('click', function(e) {
           checkbox.checked = false;
-        }, false);
+          toggle.setAttribute('aria-expanded', false);
+          sidebar.setAttribute('aria-hidden', true);
+        })
       })(document);
+  
     </script>
 
 <!-- Facebook SDK for JavaScript -->
