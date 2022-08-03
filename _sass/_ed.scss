@@ -878,6 +878,7 @@ li.prose-indent {
     font-size: 16px;
     height: 2rem;
     min-width: 5rem;
+    padding: 0 .5rem;
     text-align: center;
     vertical-align: middle;
     background-color: white;
@@ -929,6 +930,7 @@ li.prose-indent {
     .btn {
       width: 100%;
       border-radius: 0% !important;
+      background-color: #ffffff00;
     }
 
     .btn:hover, .btn:focus {
@@ -954,7 +956,7 @@ li.prose-indent {
 
   #btn-hide-annotations, #btn-show-annotations {
     vertical-align: middle;
-    width: 8.5rem;
+    min-width: 8rem;
   }
 }
 
