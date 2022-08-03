@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+
+  {% include head.html %}
+   
+  <body class="theme-base-{{site.color-scheme}}">
+
+    <!-- This if statement decides which sidebar to use -->
+    {% if page.toc %}
+    {% include sidebar-toc.html %}
+    {% else %}
+    {% include sidebar.html %}
+    {% endif %}
+
+    <!-- Skip links for narrative-bilingual and poem-bilingual layouts -->
+    
+    {% if page.layout == "narrative-bilingual" or page.layout == "poem-bilingual" %}
+    <nav class="skip-links">
+      <ul>
+        <li class="skip-link"><a href="#chapter-nav" class="screen-reader-shortcut">Skip to chapter navigation</a></li>
+        <li class="skip-link"><a href="#chapter-content" class="screen-reader-shortcut">Skip to chapter content</a></li>
+      </ul>
+    </nav>
+    {% endif %}
+
+    <!--
+      Wrap is the content to shift when toggling the sidebar. We wrap the content to avoid any CSS
+      collisions with our real content.
+    -->
+   
+    <div class="imgcontainer" alt="A painting of Hunters in the snow"></div>
+    <div class="wrap">
+      
+      <header class="masthead">
+        
+        <div class="container">
+            <h3 class="masthead-title">
+          </h3>
+        </div>
+      </header>
+     </div>
+
+     <div class="container">
+      <div id="dogTitle">
+      <a href="{{ site.baseurl }}/" title="Home">{{ site.title | newline_to_br }}</a>
+      <br><small>{{ site.tagline }}</small>
+    </div>
+      </div>
+    </br>
+      <main class="container content" id="main" lang="{{ page.language }}">
+        {{ content }}
+      </main>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+
+    // Highlight search Query
+    var url = window.location.href;
+      if (url.lastIndexOf("?q=") > 0) {
+        // get the index of the parameter, add three (to account for length)
+        var stringloc = url.lastIndexOf("?q=") + 3;
+        // get the substring (query) and decode
+        var searchquery = decodeURIComponent(url.substr(stringloc));
+        // regex matches at beginning of line, end of line or word boundary, useful for poetry
+        var regex = new RegExp("(?:^|\\b)(" + searchquery + ")(?:$|\\b)", "gim");
+        // get, add mark and then set content
+        var content = document.getElementById("main").innerHTML;
+        document.getElementById("main").innerHTML = content.replace(regex, "<mark>$1</mark>");
+      }
+
+      // Toggle sidebar
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             !sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+
+<!-- Facebook SDK for JavaScript -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '589495744558280',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+  <!-- Littlefoot -->
+  <script
+    src="https://unpkg.com/littlefoot/dist/littlefoot.js"
+    type="application/javascript"
+  ></script>
+  <script type="application/javascript">
+    littlefoot.littlefoot()
+  </script>
+  </body>
+</html>
+
+<style>
+
+  body , html {
+  height: 100%;
+  }
+/* Add a black background color to the top navigation */
+.topnav {
+background-color: #9A8D84;
+overflow: hidden;
+padding-left: 65px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+float: left;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 25px;
+
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+background-color: #ddd;
+color: #9A8D84;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+background-color: #9A8D84;
+color: white;
+}
+
+
+</style>

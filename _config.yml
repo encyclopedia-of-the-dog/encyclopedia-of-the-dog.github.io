@@ -1,8 +1,8 @@
 # Built with Jekyll 3.6.0
 
 # Setup
-title:               Encyclopedia of the Dog.
-tagline:             'a jekyll theme for minimal editions'
+title:               ENCYCLOPEDIA OF THE DOG
+tagline:             ''
 description:         'A bilingual digital edition of Between Dog and Wolf'
 url:                 'http://minicomp.github.io'
 baseurl:             '/ed'
@@ -13,7 +13,7 @@ author:
   url:               https://twitter.com/elotroalex
   email:             colibri.alex@gmail.com
 
-# Color scheme. Options: red, orange, magenta, cyan, blue, brown, dog
+# Color scheme. Options: red, orange, magenta, cyan, blue, brown
 color-scheme: dog
 
 # Permalinks
