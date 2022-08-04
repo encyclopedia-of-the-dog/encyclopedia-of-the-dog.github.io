@@ -73,7 +73,6 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 100%;
 }
 
 
@@ -1036,14 +1035,9 @@ div.bilingual {
     text-align: center;
   }
 
-  .main-content {
-    height: 100rem;
-  }
-
   .panel {
     font-size: 1em;
     margin: auto;
-    height: auto;
   }
 
   #en,
@@ -1051,7 +1045,6 @@ div.bilingual {
   #both {
     display: block;
     text-align: left;
-    height: fit-content;
   }
 
   #en,
@@ -1067,7 +1060,6 @@ div.bilingual {
   .left-panel,
   .right-panel {
     width: 49%;
-    height: max-content;
     float: left;
     font-size: 0.85em;
   }
@@ -1109,29 +1101,6 @@ div.bilingual {
 /* Hide footnotes at bottom of page */
 .footnotes {
   display: none;
-}
-
-
-/* Footer */
-footer {
-  background-color: #737368;
-  height: 5rem;
-  font-family: $heading-font;
-  color: white;
-  font-size: .75rem;
-  padding: 1.5rem 4rem;
-
-  p {
-    margin: 0 0 .25rem 0;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 32rem;
-  }
-
-  a {
-    color: white;
-    text-decoration: underline;
-  }
 }
 
 /* can be safely removed if we're keeping the new chapter nav in menu bar
