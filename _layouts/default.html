@@ -44,14 +44,12 @@
       {% endif %}
 
       <main class="container content" id="main" lang="{{ page.language }}">
-        {{ content }}      
+        {{ content }}     
       </main>
-      <!--  Fix the footer later
       <footer> 
         <p>Text content is in copyright: used with permission of Columbia UP (English) & Azbuka Press (Russian).</p>
         <p>Site built with <a href="https://elotroalex.github.io/ed/">Ed.</a></p>
-      </footer>
-      --> 
+      </footer> 
     </div>
 
 
@@ -127,4 +125,52 @@
     littlefoot.littlefoot()
   </script>
   </body>
+
+<style>
+  /* darken littlefoot buttons */
+  .littlefoot-footnote__button {
+    -webkit-font-smoothing: antialiased;
+    backface-visibility: hidden;
+    background-color: #949688;
+    border-radius: .5em;
+    border: 0;
+    box-sizing: border-box;
+    color: #949688;
+    cursor: pointer;
+    display: inline-block;
+    font-size: .9em;
+    font-weight: bold;
+    height: 1em;
+    line-height: 1;
+    margin: 0 .1em 0 .2em;
+    min-width: 1.5em;
+    padding: 0 .5em;
+    position: relative;
+    text-decoration: none;
+    top: -.1em;
+    transition-duration: .25s;
+    transition-property: background-color color;
+    transition-timing-function: ease;
+    vertical-align: middle;
+    z-index: 5
+  }
+
+  .littlefoot-footnote__button:hover,
+  .littlefoot-footnote__button:focus {
+    background-color: #55564E;
+    color: white
+  }
+  
+  .littlefoot-footnote__button:active {
+    background-color: #55564E;
+    color: white
+  }
+  
+  .littlefoot-footnote__button.is-active {
+    background-color: #55564E;
+    color: white;
+    transition-delay: .1s
+  }
+</style>
+
 </html>
