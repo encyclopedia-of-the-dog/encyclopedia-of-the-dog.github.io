@@ -3,31 +3,64 @@ layout: page
 title: Credits
 ---
 
-### [Susanna Allés Torrent](http://susannalles.github.io/) | Hyper philologist
+### [José Vergara](link) | Project Director
 
-Susanna teaches Digital Humanities in the Department of Latin American and Iberian Cultures. She earned her Ph.D in Romance Studies at the University of Barcelona in 2012, and completed a M.A. in «Nouvelles technologies appliquées à l’histoire» at the École Nationale des Chartes (Paris). She has taught at the University of Barcelona and she has been a postdoctoral fellow at the Spanish National Research Council (CSIC). Her research explores several aspects of digital humanities, especially, scholarly digital editions, electronic text analysis, intertextuality and text reuse, and digital lexicography. She also works with the intersection of the Iberian Peninsula and Italy in the Middle Ages and the Renaissance, reconstructing cultural and literary networks between the two.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et netus et malesuada fames ac turpis egestas maecenas. Cras semper auctor neque vitae tempus quam pellentesque nec nam. Ultrices in iaculis nunc sed augue. Dolor purus non enim praesent elementum facilisis leo. Facilisis mauris sit amet massa vitae tortor condimentum lacinia quis. Faucibus turpis in eu mi bibendum neque egestas congue quisque. Elementum facilisis leo vel fringilla est ullamcorper. Sed ullamcorper morbi tincidunt ornare massa. Nec nam aliquam sem et tortor consequat.
 
 
-### [Terry Catapano](https://github.com/tcatapano) | Metadata ninja
+### [Martina Napolitano](link) | University of Udine
 
-Terry Catapano is a Librarian in Columbia University Libraries' Digital Program Division. He was Chair of the Society of American Archivists' Schema Development Team, responsible for the development of Encoded Archival Description version 3, and is a member of the ArchivesSpace Technical Advisory Group and the Editorial Board for the Metadata Encoding and Transmission Standard (METS). As Vice President of Plazi Verein, he leads the development of the TaxPub extension of the National Library of Medicine/National Center for Biotechnology Information Journal Publishing DTD, and has worked on digitizing, text mining, and providing open access to the literature of biological systematics, including collaborations with WikiData, the Encylopedia of Life, the Global Biodiversity Information Facility (GBIF), ZooBank, and CERN.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et netus et malesuada fames ac turpis egestas maecenas. Cras semper auctor neque vitae tempus quam pellentesque nec nam. Ultrices in iaculis nunc sed augue. Dolor purus non enim praesent elementum facilisis leo. Facilisis mauris sit amet massa vitae tortor condimentum lacinia quis. Faucibus turpis in eu mi bibendum neque egestas congue quisque. Elementum facilisis leo vel fringilla est ullamcorper. Sed ullamcorper morbi tincidunt ornare massa. Nec nam aliquam sem et tortor consequat.
 
-### [Alex Gil](http://www.elotroalex.com/) | Resident minimalist
+### [Alice McGrath](link) | Technical Lead
 
-Alex is the Digital Scholarship Coordinator for the Humanities and History at Columbia University. He is vice chair of the [Global Outlook::Digital Humanities](http://www.globaloutlookdh.org/) initiative focusing on minimal computing and translation, is one of the founders and directors of [Columbia's Group for Experimental Methods in the Humanities](http://xpmethod.plaintext.in/) and the [Studio@Butler](https://studio.cul.columbia.edu/), and is actively engaged in several digital humanities projects at Columbia and around the world.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et netus et malesuada fames ac turpis egestas maecenas. Cras semper auctor neque vitae tempus quam pellentesque nec nam. Ultrices in iaculis nunc sed augue. Dolor purus non enim praesent elementum facilisis leo. Facilisis mauris sit amet massa vitae tortor condimentum lacinia quis. Faucibus turpis in eu mi bibendum neque egestas congue quisque. Elementum facilisis leo vel fringilla est ullamcorper. Sed ullamcorper morbi tincidunt ornare massa. Nec nam aliquam sem et tortor consequat.
 
-### [Johann Gillium](https://github.com/JohannGillium) | Search master
+### [Andy Janco](link) | Consultant
 
-After having studied digital humanities at the Ecole nationale des Chartes in Paris, Johann has worked in France as a librarian at the Bibliothèque interuniversaire de Santé, where he most notably contributed to the [Vesalius project](http://www3.biusante.parisdescartes.fr/vesale/debut.htm), the digital edition of several works by the great anatomist Andreas Vesalius.
+### [Maria Ocando-Finol](link) | Coordinator 
 
+### [Chris Boyland](link) | Coordinator 
+
+### [Camilla McKay](link) | Consultant 
+
+### [Sasha Sokolov](link) | Author 
+
+### [Karina Gonzalez](link) | EaST Assistant and Critical Web Design Project Manager 
+--- 
+# Student project assistants (TBD) 
+
+## Digital Scholarship Project Assistants
+
+### [Cameron Boucher](link) | DSPA Spring 2022
+
+### [Jackie Toben](link) | DSPA Spring 2022
+
+## Digital Scholarship Summer Fellows
+
+### Adrianna Morsey | Site Developer
+
+### Arlowe Willingham | Site Developer
+
+### Cameron Boucher | Site Developer
+
+### Rafiun Haque | Site Developer
+
+--- 
+## Annotation Collaborators
+
+### Noemi Albanese, University of Rome
+
+### Peter Baumann, Swarthmore College
+
+### Stephen Dodson, Independent Translator/Editor
+
+### S.A. Karpukhin, University of Wisconsin-Madison 
 
 ---
 
 ## Acknowledgments
 
-As many open source projects, Ed is the work of community. The project starts with the open web, and everything in between leading to [Jekyll](https://jekyllrb.com/) and the wonderful team who wrangled that Ruby in our favor. The theme stylesheets are built on top of [Lanyon](https://github.com/poole/lanyon), a Jekyll theme based on [Poole](http://getpoole.com), "the Jekyll butler," both created by [Mark Otto](https://github.com/mdo) and distributed with an MIT license. Thanks, Mark, for your helpful streamlining! Special hat tips to brother-in-markdown-arms, [Chris Forster](https://github.com/c-forster), and the generous [Sylvester Keil](https://github.com/inukshuk/) for his work on Jekyll Scholar.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna fermentum iaculis eu non. Vulputate enim nulla aliquet porttitor lacus. Molestie a iaculis at erat. Nulla aliquet enim tortor at auctor urna nunc id. Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque sit. Tristique risus nec feugiat in fermentum posuere urna. Faucibus ornare suspendisse sed nisi lacus sed viverra tellus. Vitae elementum curabitur vitae nunc sed. Volutpat blandit aliquam etiam erat velit scelerisque. In hendrerit gravida rutrum quisque non tellus orci ac. Nunc sed id semper risus in hendrerit gravida rutrum quisque. Ac tortor dignissim convallis aenean et tortor at risus. Porta lorem mollis aliquam ut porttitor leo a diam sollicitudin.
 
-
-We are strongly indebted to the research work and conversations stemming out of our [Columbia's Group for Experimental Methods in the Humanities](http://xpmethod.plaintext.in/)—or as we like to call it: #xpmethod; the wonderful international comradery of [GO::DH](http://www.globaloutlookdh.org/); and of course, the support of our [Columbia University Libraries](http://library.columbia.edu/) and its cozy [Studio@Butler](https://studio.cul.columbia.edu/).
-
-...and to the writers that inspire us to scribble notes on the margins we protect with our work. Thank you.
+Id porta nibh venenatis cras sed felis eget velit. In nulla posuere sollicitudin aliquam ultrices sagittis. Mattis rhoncus urna neque viverra justo nec. Et netus et malesuada fames. 
