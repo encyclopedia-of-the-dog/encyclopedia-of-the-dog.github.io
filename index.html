@@ -17,7 +17,7 @@ title: "Encyclopedia of the Dog."
           {% assign title_ru = russianMatch.title %}
             <li class="text-title">
               <a href="{{ site.baseurl }}{{ item.url }}">
-                {{ item.number }}. {{ title_en }} / {{ title_ru }}
+                {{ item.number }}. {{ title_en }}<span class="toc-ru"> / {{ title_ru }}</span>
               </a>
             </li>
     {% endif %}

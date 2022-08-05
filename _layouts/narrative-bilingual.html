@@ -18,7 +18,7 @@ layout: bilingual
   <div class="header">
     <h1 class="text-title" id="en-title">{{ page.number }}. {{ title_en }}</h1>
     <h1 class="text-title" id="ru-title">{{ page.number }}. {{ title_ru }}</h1>
-    <h1 class="text-title" id="both-title">{{ page.number }}. {{ title_ru }} / {{ title_en }}</h1>
+    <h1 class="text-title" id="both-title">{{ page.number }}. {{ title_en }} / {{ title_ru }}</h1>
     <p class="byline">by {{ page.author }}</p>
     <p class="byline" id="translator">Translated by {{ page.translator }}</p>
   </div>
@@ -34,10 +34,10 @@ layout: bilingual
 
     <div class="panel" id="both">
       <div class="left-panel" markdown="1">
-        {{ text_ru }}
+        {{ text_en }}
       </div>
       <div class="right-panel" markdown="1">
-        {{ text_en }}
+        {{ text_ru }}
       </div>
     </div>
   </div>
