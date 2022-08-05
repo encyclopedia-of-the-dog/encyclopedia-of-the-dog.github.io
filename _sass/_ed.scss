@@ -831,6 +831,14 @@ li.prose-indent {
   Adding functionality for viewing a text in two languages at once.
 */
 
+/* Home Page */
+
+@media only screen and (max-width: 600px) {
+  .toc-ru {
+    display: none;
+  }
+}
+
 /* Bilingual Layouts */
 
 /* Skip Links */
@@ -1089,11 +1097,12 @@ div.bilingual {
   }
 
   .left-panel {
-    padding-left: 4rem;
+    padding-left: 2rem;
+    margin-left: -1rem;
   }
 
   .right-panel {
-    padding-right: 4rem;
+    padding-right: 2rem;
   }
 
 }
