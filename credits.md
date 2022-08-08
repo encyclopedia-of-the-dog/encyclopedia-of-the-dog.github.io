@@ -3,38 +3,31 @@ layout: page
 title: Credits
 ---
 
-### [José Vergara](link) | Project Director
+### José Vergara | Project Director
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et netus et malesuada fames ac turpis egestas maecenas. Cras semper auctor neque vitae tempus quam pellentesque nec nam. Ultrices in iaculis nunc sed augue. Dolor purus non enim praesent elementum facilisis leo. Facilisis mauris sit amet massa vitae tortor condimentum lacinia quis. Faucibus turpis in eu mi bibendum neque egestas congue quisque. Elementum facilisis leo vel fringilla est ullamcorper. Sed ullamcorper morbi tincidunt ornare massa. Nec nam aliquam sem et tortor consequat.
+### Martina Napolitano | University of Udine
 
+### Alice McGrath | Technical Lead
 
-### [Martina Napolitano](link) | University of Udine
+### Andy Janco | Consultant
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et netus et malesuada fames ac turpis egestas maecenas. Cras semper auctor neque vitae tempus quam pellentesque nec nam. Ultrices in iaculis nunc sed augue. Dolor purus non enim praesent elementum facilisis leo. Facilisis mauris sit amet massa vitae tortor condimentum lacinia quis. Faucibus turpis in eu mi bibendum neque egestas congue quisque. Elementum facilisis leo vel fringilla est ullamcorper. Sed ullamcorper morbi tincidunt ornare massa. Nec nam aliquam sem et tortor consequat.
+### Maria Ocando-Finol | Coordinator 
 
-### [Alice McGrath](link) | Technical Lead
+### Chris Boyland | Coordinator 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et netus et malesuada fames ac turpis egestas maecenas. Cras semper auctor neque vitae tempus quam pellentesque nec nam. Ultrices in iaculis nunc sed augue. Dolor purus non enim praesent elementum facilisis leo. Facilisis mauris sit amet massa vitae tortor condimentum lacinia quis. Faucibus turpis in eu mi bibendum neque egestas congue quisque. Elementum facilisis leo vel fringilla est ullamcorper. Sed ullamcorper morbi tincidunt ornare massa. Nec nam aliquam sem et tortor consequat.
+### Camilla McKay | Consultant 
 
-### [Andy Janco](link) | Consultant
+### Sasha Sokolov | Author 
 
-### [Maria Ocando-Finol](link) | Coordinator 
-
-### [Chris Boyland](link) | Coordinator 
-
-### [Camilla McKay](link) | Consultant 
-
-### [Sasha Sokolov](link) | Author 
-
-### [Karina Gonzalez](link) | EaST Assistant and Critical Web Design Project Manager 
+### Karina Gonzalez | EaST Assistant and Critical Web Design Project Manager 
 --- 
 # Student project assistants (TBD) 
 
 ## Digital Scholarship Project Assistants
 
-### [Cameron Boucher](link) | DSPA Spring 2022
+### Cameron Boucher | DSPA Spring 2022
 
-### [Jackie Toben](link) | DSPA Spring 2022
+### Jackie Toben | DSPA Spring 2022
 
 ## Digital Scholarship Summer Fellows
 
@@ -59,8 +52,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ---
 
-## Acknowledgments
+## Image Credits
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna fermentum iaculis eu non. Vulputate enim nulla aliquet porttitor lacus. Molestie a iaculis at erat. Nulla aliquet enim tortor at auctor urna nunc id. Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque sit. Tristique risus nec feugiat in fermentum posuere urna. Faucibus ornare suspendisse sed nisi lacus sed viverra tellus. Vitae elementum curabitur vitae nunc sed. Volutpat blandit aliquam etiam erat velit scelerisque. In hendrerit gravida rutrum quisque non tellus orci ac. Nunc sed id semper risus in hendrerit gravida rutrum quisque. Ac tortor dignissim convallis aenean et tortor at risus. Porta lorem mollis aliquam ut porttitor leo a diam sollicitudin.
 
-Id porta nibh venenatis cras sed felis eget velit. In nulla posuere sollicitudin aliquam ultrices sagittis. Mattis rhoncus urna neque viverra justo nec. Et netus et malesuada fames. 
