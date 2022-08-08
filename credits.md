@@ -55,7 +55,7 @@ title: Credits
 ## Image Credits
 
 ### [*The Hunters in the Snow*](https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_Hunters_in_the_Snow_(Winter)_-_Google_Art_Project.jpg)
-Bruegel the Elder, Pieter. Hunters in the Snow (Winter), 1565, oil on wood, 118 x 161 cm (Kunsthistorisches Museum, Vienna)
+Bruegel the Elder, Pieter. *Hunters in the Snow (Winter)*, 1565, oil on wood, 118 x 161 cm (Kunsthistorisches Museum, Vienna)
 
 ### *Man lecturing to wolves*
 Komar, Vitaly. 
