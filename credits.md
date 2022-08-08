@@ -20,15 +20,15 @@ title: Credits
 ### Sasha Sokolov | Author 
 
 ### Karina Gonzalez | EaST Assistant and Critical Web Design Project Manager 
---- 
-# Student project assistants (TBD) 
 
+---
 ## Digital Scholarship Project Assistants
 
 ### Cameron Boucher | DSPA Spring 2022
 
 ### Jackie Toben | DSPA Spring 2022
 
+---
 ## Digital Scholarship Summer Fellows
 
 ### Adrianna Morsey | Site Developer
