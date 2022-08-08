@@ -3,57 +3,25 @@ layout: page
 title: About
 ---
 
-One of our most pressing and ever-evolving needs as scholars is to pass on our textual artifacts
-from one generation to another. The art of textual editing, among other practices, has helped many
-cultures to remember and interpret for centuries. Alas, that art is practiced and encouraged in its
-highest form by a dwindling number of scholars. In a digital environment the problem is compounded
-by the difficulties of the medium. While vast repositories and "e-publications" appear on the
-online scene yearly, very few manifest a textual scholar's disciplined attention to detail. In
-contrast, most textual scholars who have made the leap to a rigorous digital practice have focused
-on markup, relying on technical teams to deploy and maintain their work. This makes your average
-scholarly digital edition a very costly and therefore limited affair.
+Sasha Sokolov is one of the best-known Russian authors of the second half of the twentieth century. His work has significantly influenced the development of contemporary Russian literature, and most authors openly recognize the role Sokolov’s oeuvre has played on their creative formation and maturation. His three novels—A School for Fools (1976), Between Dog and Wolf (1980), and Palisandriia (1985, translated as Astrophobia)—embody the author’s idiosyncratic and peculiar style, a feature that has challenged translators and critics for decades. 
 
-As we see it, a minimal edition is one that aims to reduce the size and complexity of the back and
-front end while flattening the learning curves for the user and the producer. Out of the box, the Ed
-theme can help you build a simple reading edition, or a traditional scholarly edition with footnotes
-and a bibliography, without breaking the bank. In our estimate, these are the two most immediately
-useful type of editions for editors and readers. An edition produced with Ed consists of static
-pages whose rate of decay is substantially lower than database-driven systems. As an added bonus,
-these static pages require less bandwidth. Our hope is that our approach can help beginners and
-veterans deploy beautiful editions with less effort, and that it can help us teach a 'full stack'
-[in one academic semester](https://github.com/susannalles/MinimalEditions/blob/master/README.md),
-while allowing us to care for our projects at less cost, and perhaps, just perhaps, to generate
-high-quality editions on github.io in large quantities based on the
-[git-lit](http://jonreeve.com/2015/09/introducing-git-lit/) model by Jonathan Reeve. We're coming
-for you, Kindle!
+His second novel, for example, had to wait until 2017 to appear in English, thanks to the efforts of Alexander Boguslawski. Perceiving the amount of what was lost in the process of rendering Sokolov’s text into another language, the translator felt the need to include selected explanatory endnotes; these notes range from comments on the original Russian to explanations of wine varieties mentioned in the text. More recently, Boris Ostanin has authored a [Russian-language glossary](https://www.labirint.ru/books/763563/) to the novel, which provides useful, if idiosyncratic, interpretations of many critical semantic points.  
 
+However, both projects have serious limitations. Ostanin’s glossary, which was published in a very small run, is intended for a highly educated Russian reader, and it’s not suitable for use in the classroom or, of course, for a non- Russian audience. On the other hand, Boguslawski’s commentary is clearly meant for a general reader, but for this reason, it also lacks the depth of analysis and breadth of approach that a student, for example, would need in approaching the novel in either language. In some cases, as Sokolov himself has noted, there are factual and interpretive errors in both of these volumes. 
 
-## Sample Ed editions.
-
-- [Our sample site](http://minicomp.github.io/ed/) is the first edition built with Ed.
-- [Fugitive Verses](http://fugitiverses.viraltexts.org/): Popular Reprinted Poetry from Nineteenth Century Newspapers
-- [mini lazarillo](http://minilazarillo.github.io/): A minimal edition of the *Lazarillo de Tormes*
-- [Making and Knowing](https://cu-mkp.github.io/GR8975-edition/): The BnF Ms Fr 640 in Translation
-- [Daisy Miller: A Comedy in Three Acts](https://britaneeelizabeth.github.io/ed/texts/DaisyMillerPlay/)
-
+The *Encyclopedia of the Dog* project aims to overcome the lack of suitable tools necessary to enter Sokolov’s complex literary world by providing a complete and freely accessible bilingual digital edition of *Between Dog and Wolf*. This digital edition displays Sokolov's novel in both Russian and English, accompanied by multiple layers of annotation to help readers grasp the various meanings, allusions, and layers of the text. 
 
 ## Current Features
 
-- Templates for narrative, drama and poetry
-- Responsive design for mobile phones, tablets and PCs.
-- Relatively easy to learn and teach
-- Works well in high- or low- bandwidth scenarios
-- Easier for digital archives and libraries to preserve
-- Open source, open access
-- Unobtrusive footnotes
-- Metadata in Dublin Core and OpenGraph to play nice with Zotero, libraries and social media.
-- Automatic table of content generation
-- Simple search functionality
-- Annotations via [hypothes.is](https://hypothes.is/)
-- Optional: Ability to generate well-formatted bibliographies and linked citations
+- Freely accessible digital texts in Russian and English of *Between Dog and Wolf* 
 
+- Toggle options for viewing the Russian version, the English version, or both side-by-side 
 
-## Installing and using Ed
+- Annotation button to turn the annotations on and off 
 
-To learn how to install and begin using Ed, please visit our
-[documentation page](http://minicomp.github.io/ed/documentation).
+- Website interface navigable by tabs and accessible to those with disabilities 
+
+- Responsive for phones and tablets (feature to view Russian & English side-by-side is removed on smaller screens)
+
+- Contextual materials on the novel
+
