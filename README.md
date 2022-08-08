@@ -1,67 +1,29 @@
-# Ed: A Jekyll Theme for Minimal Editions
+# Encyclopedia of the Dog Development Site
 
-[![Build Status](https://travis-ci.org/minicomp/ed.svg?branch=master)](https://travis-ci.org/minicomp/ed) [![Gem Version](https://badge.fury.io/rb/ed..svg)](https://badge.fury.io/rb/ed.)
+## End of Summer 2022 Note
 
-![Sample Ed screenshot](https://github.com/minicomp/ed/blob/master/assets/screenshot-home.png)
+### Site Prototype
 
+In developing the prototype for the Encyclopedia of the Dog website, we, the 2022 DSSFs, focused on designing an interface that was clean, intuitive, and accessible. We kept the project's intended audience, primarily students and Russian language learners, in mind throughout the design process, and we also wanted the design to reflect the aesthetics and themes of *Between Dog and Wolf*. We looked at existing annotated and/or multilingual digital editions of other texts to see how their websites are designed and to get a sense both of features that we liked and may consider implementing on the Dog site and of features that we do not like and want to improve upon or steer clear of. We aimed to create a site with all the necessary functionality for an annotated, bilingual digital edition of a text, without making it clunky, difficult, or irritating to use.
 
-## Introduction
+Moreover, we have designed the website with sustainability in mind, and we have been committed to reducing the website's carbon footprint. The website is built using [Ed.](https://minicomp.github.io/ed/), a Jekyll theme for minimal digital editions that is based on minimal computing principles. According to the [Website Carbon Calculator](https://www.websitecarbon.com), as of August 5, 2022, the Encyclopedia of the Dog prototype site runs cleaner than 95% of websites tested.
 
-Ed is a [Jekyll](https://jekyllrb.com/) theme designed for textual editors based on
-[minimal computing](http://go-dh.github.io/mincomp/) principles, and focused on legibility,
-durability, ease and flexibility.
+Also as of August 5, 2022, the Encyclopedia of the Dog prototype site is deployed at https://digbmc.github.io/dogopedia-dev/, though it may be taken down by the time the project is finished and the official project site is live.
 
-One of our most pressing and ever-evolving needs as scholars is to pass on our textual artifacts
-from one generation to another. The art of textual editing, among other practices, has helped many
-cultures to remember and interpret for centuries. Alas, that art is practiced and encouraged in its
-highest form by a dwindling number of scholars. In a digital environment the problem is compounded
-by the difficulties of the medium. While vast repositories and "e-publications" appear on the
-online scene yearly, very few manifest a textual scholar's disciplined attention to detail. In
-contrast, most textual scholars who have made the leap to a rigorous digital practice have focused
-on markup, relying on technical teams to deploy and maintain their work. This makes your average
-scholarly digital edition a very costly and therefore limited affair.
+### Still to Be Done / Next Steps
 
-As we see it, a minimal edition is one that aims to reduce the size and complexity of the back and
-front end while flattening the learning curves for the user and the producer. Out of the box, the Ed
-theme can help you build a simple reading edition, or a traditional scholarly edition with footnotes
-and a bibliography, without breaking the bank. In our estimate, these are the two most immediately
-useful type of editions for editors and readers. An edition produced with Ed consists of static
-pages whose rate of decay is substantially lower than database-driven systems. As an added bonus,
-these static pages require less bandwidth. Our hope is that our approach can help beginners and
-veterans deploy beautiful editions with less effort, and that it can help us teach a 'full stack'
-[in one academic semester](https://github.com/susannalles/MinimalEditions/blob/master/README.md),
-while allowing us to care for our projects at less cost, and perhaps, just perhaps, to generate
-high-quality editions on github.io in large quantities based on the
-[git-lit](http://jonreeve.com/2015/09/introducing-git-lit/) model by Jonathan Reeve. We're coming
-for you, Kindle!
+As the Encyclopedia of the Dog project team moves forward, here are some possible next steps and things to keep in mind:
 
-
-## Sample Ed editions.
-
-- [Our sample site](http://minicomp.github.io/ed/) is the first edition built with Ed.
-- [Fugitive Verses](http://fugitiverses.viraltexts.org/): Popular Reprinted Poetry from Nineteenth Century Newspapers
-- [mini lazarillo](http://minilazarillo.github.io/): A minimal edition of the *Lazarillo de Tormes*
-- [Making and Knowing](https://cu-mkp.github.io/GR8975-edition/): The BnF Ms Fr 640 in Translation
-- [Daisy Miller: A Comedy in Three Acts](https://britaneeelizabeth.github.io/ed/texts/DaisyMillerPlay/)
-
-
-## Current Features
-
-- Templates for narrative, drama and poetry
-- Responsive design for mobile phones, tablets and PCs.
-- Relatively easy to learn and teach
-- Works well in high- or low- bandwidth scenarios
-- Easier for digital archives and libraries to preserve
-- Open source, open access
-- Unobtrusive footnotes
-- Metadata in Dublin Core and OpenGraph to play nice with Zotero, libraries and social media.
-- Automatic table of content generation
-- Simple search functionality
-- Annotations via [hypothes.is](https://hypothes.is/)
-- Optional: Ability to generate well-formatted bibliographies and linked citations
-
-
-## Installing and using Ed
-
-To learn how to install and begin using Ed, please visit our
-[documentation page](http://minicomp.github.io/ed/documentation).
+- Annotations:
+    - fully add / install Littlefoot 
+    - edit / improve functionality of footnotes / annotations
+    - ensure readability of annotations by screen readers
+    - explore ways of including other media types such as images in annotations
+    - automate the addition of annotation to the texts
+    - add functionality for viewing different "layers" of annotations, allowing the user to select which kinds of annotations are visible by tags
+- Proofreading:
+    - after annotation is complete and all annotations have been added to the site, proofread the texts again
+- Metadata:
+    - include metadata for the images on the site, including the image on the homepage
+- Search:
+    - expand search functionality so that search works in Russian as well as in English by adding the [Lunr Languages](https://github.com/MihaiValentin/lunr-languages) plugin to the site
