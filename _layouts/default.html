@@ -52,125 +52,69 @@
       </footer> 
     </div>
 
+  <script>
+    // Highlight search Query
+    var url = window.location.href;
+      if (url.lastIndexOf("?q=") > 0) {
+        // get the index of the parameter, add three (to account for length)
+        var stringloc = url.lastIndexOf("?q=") + 3;
+        // get the substring (query) and decode
+        var searchquery = decodeURIComponent(url.substr(stringloc));
+        // regex matches at beginning of line, end of line or word boundary, useful for poetry
+        var regex = new RegExp("(?:^|\\b)(" + searchquery + ")(?:$|\\b)", "gim");
+        // get, add mark and then set content
+        var content = document.getElementById("main").innerHTML;
+        document.getElementById("main").innerHTML = content.replace(regex, "<mark>$1</mark>");
+    }
 
-<script>
-
-  // Highlight search Query
-  var url = window.location.href;
-    if (url.lastIndexOf("?q=") > 0) {
-      // get the index of the parameter, add three (to account for length)
-      var stringloc = url.lastIndexOf("?q=") + 3;
-      // get the substring (query) and decode
-      var searchquery = decodeURIComponent(url.substr(stringloc));
-      // regex matches at beginning of line, end of line or word boundary, useful for poetry
-      var regex = new RegExp("(?:^|\\b)(" + searchquery + ")(?:$|\\b)", "gim");
-      // get, add mark and then set content
-      var content = document.getElementById("main").innerHTML;
-      document.getElementById("main").innerHTML = content.replace(regex, "<mark>$1</mark>");
-  }
-
-  // Support sidebar toggle
-  (function(document) {
-    var toggle = document.querySelector('.sidebar-toggle');
-    var sidebar = document.querySelector('#sidebar');
-    var sidebarNavLink = document.querySelector('.sidebar-nav-item');
-    var checkbox = document.querySelector('#sidebar-checkbox');
-    
-    // Toggle sidebar
-    toggle.addEventListener('click', function(e) {
-      e.preventDefault();
-      checkbox.checked = !checkbox.checked;
-      toggle.setAttribute('aria-expanded', checkbox.checked);
-      sidebar.setAttribute('aria-hidden', !checkbox.checked);
-    });
-    
-    // Make sure we focus on the menu once it opens to aid tab navigation
-    sidebar.addEventListener('transitionend', function() {sidebarNavLink.focus()});
-    
-    // Clicking anywhere in the sidebar should close the menu
-    sidebar.addEventListener('click', function(e) {
-      checkbox.checked = false;
-      toggle.setAttribute('aria-expanded', false);
-      sidebar.setAttribute('aria-hidden', true);
-    })
-  })(document);
-  
-</script>
-
-<!-- Facebook SDK for JavaScript -->
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '589495744558280',
-      xfbml      : true,
-      version    : 'v2.6'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-
-  <!-- Littlefoot -->
-  <script
-    src="https://unpkg.com/littlefoot/dist/littlefoot.js"
-    type="application/javascript"
-  ></script>
-  <script type="application/javascript">
-    littlefoot.littlefoot()
+    // Support sidebar toggle
+    (function(document) {
+      var toggle = document.querySelector('.sidebar-toggle');
+      var sidebar = document.querySelector('#sidebar');
+      var sidebarNavLink = document.querySelector('.sidebar-nav-item');
+      var checkbox = document.querySelector('#sidebar-checkbox');
+      
+      // Toggle sidebar
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        checkbox.checked = !checkbox.checked;
+        toggle.setAttribute('aria-expanded', checkbox.checked);
+        sidebar.setAttribute('aria-hidden', !checkbox.checked);
+      });
+      
+      // Make sure we focus on the menu once it opens to aid tab navigation
+      sidebar.addEventListener('transitionend', function() {sidebarNavLink.focus()});
+      
+      // Clicking anywhere in the sidebar should close the menu
+      sidebar.addEventListener('click', function(e) {
+        checkbox.checked = false;
+        toggle.setAttribute('aria-expanded', false);
+        sidebar.setAttribute('aria-hidden', true);
+      })
+    })(document);
   </script>
-  </body>
 
-<style>
-  /* darken littlefoot buttons */
-  .littlefoot-footnote__button {
-    -webkit-font-smoothing: antialiased;
-    backface-visibility: hidden;
-    background-color: #A9AAA1;
-    border-radius: .5em;
-    border: 0;
-    box-sizing: border-box;
-    color: #A9AAA1;
-    cursor: pointer;
-    display: inline-block;
-    font-size: .9em;
-    font-weight: bold;
-    height: 1em;
-    line-height: 1;
-    margin: 0 .1em 0 .2em;
-    min-width: 1.5em;
-    padding: 0 .5em;
-    position: relative;
-    text-decoration: none;
-    top: -.1em;
-    transition-duration: .25s;
-    transition-property: background-color color;
-    transition-timing-function: ease;
-    vertical-align: middle;
-    z-index: 5
-  }
+  <!-- Facebook SDK for JavaScript -->
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '589495744558280',
+        xfbml      : true,
+        version    : 'v2.6'
+      });
+    };
 
-  .littlefoot-footnote__button:hover,
-  .littlefoot-footnote__button:focus {
-    background-color: #8A8B80;
-    color: white
-  }
-  
-  .littlefoot-footnote__button:active {
-    background-color: #8A8B80;
-    color: white
-  }
-  
-  .littlefoot-footnote__button.is-active {
-    background-color: #8A8B80;
-    color: white;
-    transition-delay: .1s
-  }
-</style>
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+  {% include littlefoot.html %}
+
+</body>
 
 </html>
