@@ -15,7 +15,7 @@
     height: 1em;
     line-height: 1;
     margin: 0 .1em 0 .2em;
-    min-width: 1.5em;
+    min-width: 1em;
     padding: 0 .5em;
     position: relative;
     text-decoration: none;
@@ -51,11 +51,14 @@
   }
   
   .littlefoot-footnote__button__ellipsis {
-    padding: .35em .5em
+    padding: .35em .35em
   }
   
   .littlefoot-footnote__button__ellipsis svg {
-    float: left;
+    float: none;
+    position: relative;
+    top: -.5em;
+    text-align: center;
     height: .3em
   }
   
