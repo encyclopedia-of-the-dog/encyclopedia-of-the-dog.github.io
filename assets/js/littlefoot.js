@@ -845,7 +845,7 @@
     var z = {
         activateDelay: 100,
         activateOnHover: !1,
-        allowDuplicates: !0,
+        allowDuplicates: !1,
         allowMultiple: !1,
         anchorParentSelector: "sup",
         anchorPattern: /(fn|footnote|note)[:\-_\d]/gi,
