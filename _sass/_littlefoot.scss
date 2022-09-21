@@ -303,7 +303,7 @@
 
 /* Override to make all annotations appear at bottom of screen,
 regardless of screen width */
-
+/*
 .littlefoot-footnote {
   border-radius: 0;
   border-width: 1px 0 0;
@@ -338,11 +338,26 @@ regardless of screen width */
 .littlefoot-footnote .littlefoot-footnote__tooltip {
   display: none
 }
-
+*/
 /* Center images in footnotes */
 .littlefoot-footnote__content {
   img {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+/* Format linked text */
+
+button.littlefoot-footnote__button__text {
+  background-color: #00000000;
+  border: #00000000;
+  font-family: $main-font;
+  font-size: inherit;
+  color: $text-color;
+  text-decoration: underline dotted;
+}
+
+button.littlefoot-footnote__button__text.is-active {
+  text-decoration: underline;
 }
