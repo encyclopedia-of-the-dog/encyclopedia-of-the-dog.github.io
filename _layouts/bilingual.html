@@ -2,17 +2,6 @@
 layout: default
 ---
 <div class="bilingual">
-<!--  <nav id="chapter-nav" class="chapter-nav">
-    <ul>
-      {% for item in site.chapters %}
-      {% if item.number == page.number %}
-      <li><a class="active" href="{{ site.baseurl }}{{ item.url }}">{{ item.number }}</a></li>
-      {% else %}
-      <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.number }}</a></li>
-      {% endif %}
-      {% endfor %}
-    </ul>
-  </nav> -->
   <ul class="menu-bar" id="text-options">
     <li class="button-container dropdown" id="chapter-menu">
       <button class="btn dropbtn" id="btn-show-chapters" onclick="showChapters()">Chapter {{ page.number }} ▾</button>
@@ -42,21 +31,6 @@ layout: default
   {{ content }}
 
 </div>
-<!--
-<script>
-  // Chapter Menu
-  function showChapters() {
-    document.getElementById("chapter-list").style.display = "block";
-    document.getElementById("btn-show-chapters").style.display = "none";
-    document.getElementById("btn-hide-chapters").style.display = "inline";
-  }
-  function hideChapters() {
-    document.getElementById("chapter-list").style.display = "none";
-    document.getElementById("btn-show-chapters").style.display = "inline";
-    document.getElementById("btn-hide-chapters").style.display = "none";
-  }
-  </script>
--->
 
 {% include littlefoot.html %}
 
@@ -66,74 +40,80 @@ layout: default
   document.getElementById("chapter-list").classList.toggle("show");
 }
 
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
       }
     }
   }
-}
 </script>
 
 <script>
   // Language List Dropdown
   function showLanguages() {
   document.getElementById("language-list").classList.toggle("show");
-}
+  }
 
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
       }
     }
   }
-}
 </script>
 
 <script>
   // Language buttons
   function showEnglish() {
-    document.getElementById("en-title").style.display = "block";
-    document.getElementById("ru-title").style.display = "none";
-    document.getElementById("both-title").style.display = "none";
-    document.getElementById("translator").style.display = "block";
-    document.getElementById("en").style.display = "block";
-    document.getElementById("ru").style.display = "none";
-    document.getElementById("both").style.display = "none";
-  }
-
-  function showRussian() {
-    document.getElementById("en-title").style.display = "none";
-    document.getElementById("ru-title").style.display = "block";
-    document.getElementById("both-title").style.display = "none";
-    document.getElementById("translator").style.display = "none";
-    document.getElementById("en").style.display = "none";
-    document.getElementById("ru").style.display = "block";
-    document.getElementById("both").style.display = "none";
-  }
-
-  function showBoth() {
-    document.getElementById("en-title").style.display = "none";
-    document.getElementById("ru-title").style.display = "none";
-    document.getElementById("both-title").style.display = "block";
-    document.getElementById("translator").style.display = "block";
-    document.getElementById("en").style.display = "none";
-    document.getElementById("ru").style.display = "none";
-    document.getElementById("both").style.display = "block";
-  }
-
+      document.getElementById("en-title").style.display = "block";
+      document.getElementById("ru-title").style.display = "none";
+      document.getElementById("both-title").style.display = "none";
+      document.getElementById("translator").style.display = "block";
+      var element = document.getElementById("texts");
+        element.classList.remove("english");
+        element.classList.remove("russian");
+        element.classList.remove("both");
+        element.classList.add("english");
+    }
+  
+    function showRussian() {
+      document.getElementById("en-title").style.display = "none";
+      document.getElementById("ru-title").style.display = "block";
+      document.getElementById("both-title").style.display = "none";
+      document.getElementById("translator").style.display = "none";
+      var element = document.getElementById("texts");
+        element.classList.remove("english");
+        element.classList.remove("russian");
+        element.classList.remove("both");
+        element.classList.add("russian");
+    }
+  
+    function showBoth() {
+      document.getElementById("en-title").style.display = "none";
+      document.getElementById("ru-title").style.display = "none";
+      document.getElementById("both-title").style.display = "block";
+      document.getElementById("translator").style.display = "block";
+      var element = document.getElementById("texts");
+        element.classList.remove("english");
+        element.classList.remove("russian");
+        element.classList.remove("both");
+        element.classList.add("both");
+    }
+    
   // Add and remove active class from buttons
   // Get the container element
   var btnContainer = document.getElementById("language-buttons");

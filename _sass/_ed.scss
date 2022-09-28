@@ -1042,70 +1042,66 @@ div.bilingual {
     text-align: center;
   }
 
-  .panel {
-    font-size: 1em;
+  .text-container {
     overflow-y: auto;
-    /*overflow-x: hidden;*/
     margin: auto;
   }
 
-  #en,
-  #ru,
-  #both {
-    display: block;
-    text-align: left;
-  }
-
-  #en,
-  #ru {
+  .english {
     max-width: 32rem;
+    font-size: 1em;
+    #en {
+      display: block;
+      width: 100%;
+    }
+    #ru {
+      display: none;
+    }
   }
 
-  #ru,
-  #both {
-    display: none;
+  .russian {
+    max-width: 32rem;
+    font-size: 1em;
+    #en {
+      display: none;
+    }
+    #ru {
+      display: block;
+      width: 100%
+    }
   }
 
-  .left-panel,
-  .right-panel {
-    width: 49%;
-    float: left;
+  .both {
+    max-width: 52rem;
     font-size: 0.85em;
+    #en {
+      display: block;
+      float: left;
+      width: 49%;
+      padding-right: 1%;
+      border-right: 1px solid lighten($text-color, 70%);
+    }
+    #ru {
+      display: block;
+      float: left;
+      width: 49%;
+      margin-left: 1%;
+    }
   }
 
-  .left-panel {
-    width: 49%;
-    float: left;
-    padding-right: 1%;
-    border-right: 1px solid lighten($text-color, 70%);
-    font-size: 0.85em;
-  }
-
-  .right-panel {
-    margin-left: 1%;
-  }
-
-  p {
-    margin-left: 0;
-  }
 }
-
-/* Override default poem styles */
+/* Poem-specific styles for bilingual view */
 .poem {
-
-  .panel#both {
+  .both {
     margin-left: 2em;
+    #en {
+      padding-left: 2rem;
+    }
+    #ru {
+      padding-left: 0.5rem;
+      padding-right: 2rem;
+    }
   }
-
-  .left-panel {
-    padding-left: 2rem;
-    margin-left: -1rem;
-  }
-
-  .right-panel {
-    padding-right: 2rem;
-  }
-
 }
 
 /* Hide footnotes at bottom of page except for print */
@@ -1138,34 +1134,3 @@ footer {
     color: $text-color;
   }
 }
-
-
-/* can be safely removed if we're keeping the new chapter nav in menu bar
-/ Chapter Navigation /
-.chapter-nav {
-  max-width: 32rem;
-  margin: auto;
-  padding-top: .5rem;
-
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-indent: 0;
-    text-align: center;
-  }
-
-  li {
-    display: inline;
-  }
-
-  li:not(:last-child) {
-    padding-right: 0.25em;
-  }
-
-  a:hover, a.active {
-    text-decoration: underline;
-  }
-
-}
-*/
