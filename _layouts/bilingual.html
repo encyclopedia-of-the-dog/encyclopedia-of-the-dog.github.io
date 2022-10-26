@@ -29,7 +29,7 @@ layout: default
   </ul>
 
   {{ content }}
-
+  
 </div>
 
 {% include littlefoot.html %}
@@ -132,7 +132,11 @@ layout: default
 
   // Show annotations
   function showAnnotations(){
-    var divsToHide = document.getElementsByClassName("littlefoot-footnote__host"); //divsToHide is an array
+   // var divsToHide = document.getElementsByClassName("littlefoot-footnote__host"); //divsToHide is an array
+   // for(var i = 0; i < divsToHide.length; i++){
+   //     divsToHide[i].style.display = "inline";
+   // }
+    var divsToHide = document.getElementsByClassName("annotation-iframe"); //divsToHide is an array
     for(var i = 0; i < divsToHide.length; i++){
         divsToHide[i].style.display = "inline";
     }
@@ -142,7 +146,11 @@ layout: default
   }
   // Hide annotations
   function hideAnnotations(){
-    var divsToHide = document.getElementsByClassName("littlefoot-footnote__host"); //divsToHide is an array
+  //  var divsToHide = document.getElementsByClassName("littlefoot-footnote__host"); //divsToHide is an array
+  //  for(var i = 0; i < divsToHide.length; i++){
+  //      divsToHide[i].style.display = "none";
+  //  }
+    var divsToHide = document.getElementsByClassName("annotation-iframe"); //divsToHide is an array
     for(var i = 0; i < divsToHide.length; i++){
         divsToHide[i].style.display = "none";
     }

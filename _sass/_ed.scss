@@ -1134,3 +1134,26 @@ footer {
     color: $text-color;
   }
 }
+
+/* annotation iframe */
+
+.annotation-iframe {
+  width: 100%;
+  height: 10rem;
+  position: fixed;
+  bottom: 0;
+  border:rgba(0, 0, 0, .1);
+  border-width: 1px 0 0;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  display: none;
+  border-top: 1px solid #c3c3c3;;
+}
+
+.annotation-page {
+  padding: 1rem 2rem;
+  background: #fafafa;
+}
+
+.highlighted {
+  text-decoration: underline;
+}
