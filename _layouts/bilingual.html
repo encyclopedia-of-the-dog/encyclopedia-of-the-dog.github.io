@@ -136,24 +136,40 @@ layout: default
    // for(var i = 0; i < divsToHide.length; i++){
    //     divsToHide[i].style.display = "inline";
    // }
-    var divsToHide = document.getElementsByClassName("annotation-iframe"); //divsToHide is an array
-    for(var i = 0; i < divsToHide.length; i++){
-        divsToHide[i].style.display = "inline";
-    }
+
+    var content = document.getElementById("chapter-content");
+      content.classList.remove("annotations-hidden");
+      content.classList.add("annotations-visible");
+    // Add hidden links to tab navigation
+    var divsToHide = document.getElementsByClassName("annotation-link"); //divsToHide is an array
+      for(var i = 0; i < divsToHide.length; i++){
+        divsToHide[i].setAttribute ("tabindex", "");
+      }
+    // Show iframe
+    document.getElementById("annotation-iframe").style.display = "block";
     // Switch button to 'Hide Annotations'
     document.getElementById("btn-show-annotations").style.display = "none";
     document.getElementById("btn-hide-annotations").style.display = "inline";
+
   }
+ 
+
   // Hide annotations
   function hideAnnotations(){
   //  var divsToHide = document.getElementsByClassName("littlefoot-footnote__host"); //divsToHide is an array
   //  for(var i = 0; i < divsToHide.length; i++){
   //      divsToHide[i].style.display = "none";
   //  }
-    var divsToHide = document.getElementsByClassName("annotation-iframe"); //divsToHide is an array
-    for(var i = 0; i < divsToHide.length; i++){
-        divsToHide[i].style.display = "none";
-    }
+    var content = document.getElementById("chapter-content");
+      content.classList.remove("annotations-visible");
+      content.classList.add("annotations-hidden");
+    // Remove hidden links from tab navigation
+    var divsToHide = document.getElementsByClassName("annotation-link"); //divsToHide is an array
+      for(var i = 0; i < divsToHide.length; i++){
+        divsToHide[i].setAttribute ("tabindex", "-1");
+      }
+    // Hide iframe
+    document.getElementById("annotation-iframe").style.display = "none";
     // Switch button to 'Show Annotations'
     document.getElementById("btn-show-annotations").style.display = "inline";
     document.getElementById("btn-hide-annotations").style.display = "none";
