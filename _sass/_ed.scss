@@ -975,7 +975,7 @@ li.prose-indent {
 
   #btn-hide-annotations {
     display: none;
-    background-color: #DCDCDA;
+    background-color: #e7e7e7;
   }
 
   #btn-show-annotations:hover {
@@ -1152,6 +1152,33 @@ footer {
 .annotation-page {
   padding: 1rem 2rem;
   background: #fafafa;
+
+  .tag {
+    font-size: 0.85rem;
+    background-color: slategray;
+    color: white;
+    border-radius: 5px;
+    padding: 2px 5px;
+  }
+
+  .tag-style {
+    background-color: rgb(101, 108, 79);
+  }
+  .tag-intertextuality {
+    background-color: rgb(166, 152, 119);
+  }
+  .tag-language {
+    background-color: rgb(158, 83, 31);
+  }
+  .tag-symbol {
+    background-color: rgb(85, 65, 40);
+  }
+  .tag-explanatory {
+    background-color: rgb(197, 134, 64);
+  }
+  .tag-expand, .tag-error {
+    background-color: #AA3232;
+  }
 }
 
 .highlighted {
@@ -1171,5 +1198,6 @@ footer {
 .annotations-visible {
   a.annotation-link {
     color: $link-color;
+    text-decoration: underline;
   }
 }
