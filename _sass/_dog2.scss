@@ -1,6 +1,6 @@
 /* dog theme*/
 
-$text-color: #1C1815;
+$text-color: #151515;
 $heading-color: #404040;
 $link-color: #9A8D84;
 
@@ -25,7 +25,7 @@ body{
 }
 
 .byline{
-  color: #767769;
+  color: lighten($text-color, 40%);
 }
 
 .text-title{
@@ -134,7 +134,7 @@ a, .text-title a {
 
 // Menu Bar
 .menu-bar {
-  background-color: #9C9D90;
+  background-color: rgb(137, 148, 160);
 }
 
 // Home Page
