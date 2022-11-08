@@ -1,4 +1,9 @@
 /* dog theme*/
+
+$text-color: black;
+$heading-color: #404040;
+$link-color: #9A8D84;
+
 .theme-base-dog .sidebar,
 .theme-base-dog .sidebar-toggle:active,
 .theme-base-dog #sidebar-checkbox:checked ~ .sidebar-toggle {
@@ -198,10 +203,3 @@ a, .text-title a {
     }
   
   }
-
-
-
-
-$text-color: black;
-$heading-color: #404040;
-$link-color: #9A8D84;

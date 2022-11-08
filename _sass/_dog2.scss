@@ -1,4 +1,9 @@
 /* dog theme*/
+
+$text-color: #1C1815;
+$heading-color: #404040;
+$link-color: #9A8D84;
+
 .theme-base-dog .sidebar,
 .theme-base-dog .sidebar-toggle:active,
 .theme-base-dog #sidebar-checkbox:checked ~ .sidebar-toggle {
@@ -148,8 +153,3 @@ div.toc {
     text-decoration: underline;
   }
 }
-
-
-$text-color: #1C1815;
-$heading-color: #404040;
-$link-color: #9A8D84;
