@@ -18,8 +18,8 @@ layout: default
     <li class="button-container dropdown" id="language-buttons">
       <button class="btn dropbtn" id="btn-show-languages" onclick="showLanguages()">Language ▾</button>
       <div class="dropdown-content" id="language-list">
-        <button class="btn active" id="btn-en" onclick="showEnglish()">English</button>
-        <button class="btn" id="btn-ru" onclick="showRussian()">Russian</button>
+        <button class="btn active" id="btn-en" onclick="showEnglish(); enIframe()">English</button>
+        <button class="btn" id="btn-ru" onclick="showRussian(); ruIframe()">Russian</button>
         <button class="btn" id="btn-both" onclick="showBoth()">Both</button>
     </li>
     <li class="button-container" id="annotation-buttons">
@@ -77,59 +77,6 @@ layout: default
 </script>
 
 <script>
-  // Language buttons
-  function showEnglish() {
-      document.getElementById("en-title").style.display = "block";
-      document.getElementById("ru-title").style.display = "none";
-      document.getElementById("both-title").style.display = "none";
-      document.getElementById("translator").style.display = "block";
-      var element = document.getElementById("texts");
-        element.classList.remove("english");
-        element.classList.remove("russian");
-        element.classList.remove("both");
-        element.classList.add("english");
-    }
-  
-    function showRussian() {
-      document.getElementById("en-title").style.display = "none";
-      document.getElementById("ru-title").style.display = "block";
-      document.getElementById("both-title").style.display = "none";
-      document.getElementById("translator").style.display = "none";
-      var element = document.getElementById("texts");
-        element.classList.remove("english");
-        element.classList.remove("russian");
-        element.classList.remove("both");
-        element.classList.add("russian");
-    }
-  
-    function showBoth() {
-      document.getElementById("en-title").style.display = "none";
-      document.getElementById("ru-title").style.display = "none";
-      document.getElementById("both-title").style.display = "block";
-      document.getElementById("translator").style.display = "block";
-      var element = document.getElementById("texts");
-        element.classList.remove("english");
-        element.classList.remove("russian");
-        element.classList.remove("both");
-        element.classList.add("both");
-    }
-    
-  // Add and remove active class from buttons
-  // Get the container element
-  var btnContainer = document.getElementById("language-buttons");
-
-  // Get all buttons with class="btn" inside the container
-  var btns = btnContainer.getElementsByClassName("btn");
-
-  // Loop through the buttons and add the active class to the current/clicked button
-  for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function () {
-      var current = btnContainer.getElementsByClassName("active");
-      current[0].className = current[0].className.replace(" active", "");
-      this.className += " active";
-    });
-  }
-
   // Show annotations
   function showAnnotations(){
    // var divsToHide = document.getElementsByClassName("littlefoot-footnote__host"); //divsToHide is an array
