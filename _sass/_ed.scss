@@ -1193,6 +1193,28 @@ footer {
   }
 }
 
+#expand-annotations {
+  width: 5rem;
+  height: 1.25rem;
+  position: fixed;
+  bottom: 9.95rem;
+  left: 50%;
+  margin-left: -2.5rem;
+  background: #fafafa;
+  border: 1px solid #c3c3c3;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: #fafafa;
+}
+
+#annotation-text.expanded {
+  height: 25rem !important;
+}
+
+#expand-annotations.expanded {
+  bottom: 24.95rem !important;
+}
+
 .highlighted {
   text-decoration: underline;
 }
