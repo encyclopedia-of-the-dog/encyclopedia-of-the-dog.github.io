@@ -18,8 +18,8 @@ layout: default
     <li class="button-container dropdown" id="language-buttons">
       <button class="btn dropbtn" id="btn-show-languages" onclick="showLanguages()">Language ▾</button>
       <div class="dropdown-content" id="language-list">
-        <button class="btn active" id="btn-en" onclick="showEnglish(); enIframe()">English</button>
-        <button class="btn" id="btn-ru" onclick="showRussian(); ruIframe()">Russian</button>
+        <button class="btn active" id="btn-en" onclick="showEnglish()">English</button>
+        <button class="btn" id="btn-ru" onclick="showRussian()">Russian</button>
         <button class="btn" id="btn-both" onclick="showBoth()">Both</button>
     </li>
     <li class="button-container" id="annotation-buttons">
@@ -83,7 +83,7 @@ layout: default
    // for(var i = 0; i < divsToHide.length; i++){
    //     divsToHide[i].style.display = "inline";
    // }
-
+    document.getElementById("annotation-text").style.display = "block";
     var content = document.getElementById("chapter-content");
       content.classList.remove("annotations-hidden");
       content.classList.add("annotations-visible");
@@ -92,12 +92,9 @@ layout: default
       for(var i = 0; i < divsToHide.length; i++){
         divsToHide[i].setAttribute ("tabindex", "");
       }
-    // Show iframe
-    document.getElementById("annotation-iframe").style.display = "block";
     // Switch button to 'Hide Annotations'
     document.getElementById("btn-show-annotations").style.display = "none";
     document.getElementById("btn-hide-annotations").style.display = "inline";
-
   }
  
 
@@ -107,6 +104,7 @@ layout: default
   //  for(var i = 0; i < divsToHide.length; i++){
   //      divsToHide[i].style.display = "none";
   //  }
+    document.getElementById("annotation-text").style.display = "none";
     var content = document.getElementById("chapter-content");
       content.classList.remove("annotations-visible");
       content.classList.add("annotations-hidden");
@@ -115,8 +113,6 @@ layout: default
       for(var i = 0; i < divsToHide.length; i++){
         divsToHide[i].setAttribute ("tabindex", "-1");
       }
-    // Hide iframe
-    document.getElementById("annotation-iframe").style.display = "none";
     // Switch button to 'Show Annotations'
     document.getElementById("btn-show-annotations").style.display = "inline";
     document.getElementById("btn-hide-annotations").style.display = "none";

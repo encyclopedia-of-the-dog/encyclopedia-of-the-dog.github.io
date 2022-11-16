@@ -46,11 +46,11 @@
       <main class="container content" id="main" lang="{{ page.language }}">
         {{ content }}     
       </main>
-
+<!--
       {% if page.number %}
           <iframe id="annotation-iframe" src="{{ site.baseurl }}/annotations{{ page.number }}" name="annotations"></iframe>
       {% endif %}
-
+-->
       <footer> 
         <p>Text content is in copyright: used with permission of Columbia UP (English) & Azbuka Press (Russian).</p>
         <p>Site built with <a href="https://elotroalex.github.io/ed/">Ed.</a></p>
@@ -140,19 +140,6 @@
           element.classList.add("both");
         document.getElementById("annotations-en").style.display = "block";
         document.getElementById("annotations-ru").style.display = "block";
-      }
-    
-      function enIframe() {
-        var iframe = document.getElementById("annotation-iframe");
-        var iframeContent = iframe.contentWindow.document;
-        iframeContent.getElementById("annotations-en").style.display = "block";
-        iframeContent.getElementById("annotations-ru").style.display = "none";
-      }
-      function ruIframe() {
-        var iframe = document.getElementById("annotation-iframe");
-        var iframeContent = iframe.contentWindow.document;
-        iframeContent.getElementById("annotations-en").style.display = "none";
-        iframeContent.getElementById("annotations-ru").style.display = "block";
       }
 
     // Add and remove active class from buttons
