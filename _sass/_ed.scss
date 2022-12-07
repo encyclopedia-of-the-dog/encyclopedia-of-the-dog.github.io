@@ -903,7 +903,7 @@ li.prose-indent {
   .btn {
     font-family: $main-font;
     color: $text-color;
-    font-size: 16px;
+    font-size: 1rem;
     height: 2rem;
     min-width: 5rem;
     padding: 0 .5rem;
@@ -923,8 +923,16 @@ li.prose-indent {
     min-width: 5rem;
   }
 
+  #chapter-menu {
+    width: 6.75rem;
+  }
+
+  #chapter-list {
+    width: inherit;
+  }
+
   #btn-show-chapters {
-    min-width: 5rem;
+    width: 6.75rem;
   }
 
   #language-buttons {
@@ -947,7 +955,7 @@ li.prose-indent {
     display: block;
     color: $text-color  !important;
     text-decoration: none;
-    min-width: inherit;
+    width: inherit;
   }
 
   .chapter-link:hover,
@@ -966,6 +974,36 @@ li.prose-indent {
     .btn:focus {
       background-color: transparentize(#dedede, 0.5);
     }
+  }
+
+  #annotation-buttons {
+    width: 7.75rem;
+  }
+
+  #btn-show-annotations-menu {
+    width: 7.75rem;
+  }
+
+  #annotations-menu-list {
+    width: inherit;
+
+    .btn {
+      display: block;
+      width: 100%;
+      border-radius: 0% !important;
+      background-color: #ffffff00;
+    }
+
+    .btn:hover,
+    .btn:focus {
+      background-color: transparentize(#dedede, 0.5);
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.75rem;
+    }
+
   }
 
   .show {
@@ -1198,6 +1236,7 @@ footer {
 }
 
 #expand-annotations {
+  color: #a9a9a9;
   width: 5rem;
   height: 1.25rem;
   position: fixed;

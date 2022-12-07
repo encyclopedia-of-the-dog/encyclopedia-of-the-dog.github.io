@@ -22,10 +22,23 @@ layout: default
         <button class="btn" id="btn-ru" onclick="showRussian()">Russian</button>
         <button class="btn" id="btn-both" onclick="showBoth()">Both</button>
     </li>
+    <li class="button-container dropdown" id="annotation-buttons">
+      <button class="btn dropbtn" id="btn-show-annotations-menu" onclick="showAnnotationsMenu()">Annotations ▾</button>
+      <div class="dropdown-content" id="annotations-menu-list">
+        <button class="btn" id="btn-en" onclick="hideAnnotations()">Off</button>
+        <button class="btn" id="btn-en" onclick="showAnnotations(); showEnglishAnnotations()">English</button>
+        <button class="btn" id="btn-ru" onclick="showAnnotations(); showRussianAnnotations()">Russian*</button>
+        <button class="btn active" id="btn-both" onclick="showAnnotations(); showBothAnnotations()">Both*</button>
+        <p>*available for Russian text only</p>
+      </div>
+    </li>
+    <!--
+    </li>
     <li class="button-container" id="annotation-buttons">
       <button class="btn" id="btn-show-annotations" onclick="showAnnotations()">Annotations: Off</button>
       <button class="btn" id="btn-hide-annotations" onclick="hideAnnotations()">Annotations: On</button>
     </li>
+    -->
   </ul>
 
   {{ content }}
@@ -77,12 +90,29 @@ layout: default
 </script>
 
 <script>
+  // Annotation Menu Dropdown
+  function showAnnotationsMenu() {
+  document.getElementById("annotations-menu-list").classList.toggle("show");
+  }
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+</script>
+
+<script>
   // Show annotations
   function showAnnotations(){
-   // var divsToHide = document.getElementsByClassName("littlefoot-footnote__host"); //divsToHide is an array
-   // for(var i = 0; i < divsToHide.length; i++){
-   //     divsToHide[i].style.display = "inline";
-   // }
     document.getElementById("annotation-text").style.display = "block";
     var content = document.getElementById("chapter-content");
       content.classList.remove("annotations-hidden");
@@ -100,10 +130,6 @@ layout: default
 
   // Hide annotations
   function hideAnnotations(){
-  //  var divsToHide = document.getElementsByClassName("littlefoot-footnote__host"); //divsToHide is an array
-  //  for(var i = 0; i < divsToHide.length; i++){
-  //      divsToHide[i].style.display = "none";
-  //  }
     document.getElementById("annotation-text").style.display = "none";
     var content = document.getElementById("chapter-content");
       content.classList.remove("annotations-visible");
@@ -116,6 +142,13 @@ layout: default
     // Switch button to 'Show Annotations'
     document.getElementById("btn-show-annotations").style.display = "inline";
     document.getElementById("btn-hide-annotations").style.display = "none";
+  }
+</script>
+
+<script>
+  var russianAnnotations = document.getElementById("annotations-ru");
+  function showEnglishAnnotations(){
+    
   }
 </script>
 
