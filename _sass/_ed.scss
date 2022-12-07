@@ -1207,6 +1207,33 @@ footer {
     display: none;
   }
 
+  #annotations-ru.lang-en {
+    .en-comment {
+      display: inline;
+    }
+    .ru-comment {
+      display: none;
+    }
+  }
+
+  #annotations-ru.lang-ru {
+    .en-comment {
+      display: none;
+    }
+    .ru-comment {
+      display: inline;
+    }
+  }
+
+  #annotations-ru.lang-both {
+    .en-comment {
+      display: inline;
+    }
+    .ru-comment {
+      display: inline;
+    }
+  }
+
   .tag {
     font-size: 0.85rem;
     background-color: slategray;

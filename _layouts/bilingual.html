@@ -26,9 +26,9 @@ layout: default
       <button class="btn dropbtn" id="btn-show-annotations-menu" onclick="showAnnotationsMenu()">Annotations ▾</button>
       <div class="dropdown-content" id="annotations-menu-list">
         <button class="btn" id="btn-en" onclick="hideAnnotations()">Off</button>
-        <button class="btn" id="btn-en" onclick="showAnnotations(); showEnglishAnnotations()">English</button>
-        <button class="btn" id="btn-ru" onclick="showAnnotations(); showRussianAnnotations()">Russian*</button>
-        <button class="btn active" id="btn-both" onclick="showAnnotations(); showBothAnnotations()">Both*</button>
+        <button class="btn" id="btn-en" onclick="showAnnotations(); showEnglishAnnotations();">English</button>
+        <button class="btn" id="btn-ru" onclick="showAnnotations(); showRussianAnnotations();">Russian*</button>
+        <button class="btn active" id="btn-both" onclick="showAnnotations(); showBothAnnotations();">Both*</button>
         <p>*available for Russian text only</p>
       </div>
     </li>
@@ -123,8 +123,8 @@ layout: default
         divsToHide[i].setAttribute ("tabindex", "");
       }
     // Switch button to 'Hide Annotations'
-    document.getElementById("btn-show-annotations").style.display = "none";
-    document.getElementById("btn-hide-annotations").style.display = "inline";
+    // document.getElementById("btn-show-annotations").style.display = "none";
+    // document.getElementById("btn-hide-annotations").style.display = "inline";
   }
  
 
@@ -140,15 +140,39 @@ layout: default
         divsToHide[i].setAttribute ("tabindex", "-1");
       }
     // Switch button to 'Show Annotations'
-    document.getElementById("btn-show-annotations").style.display = "inline";
-    document.getElementById("btn-hide-annotations").style.display = "none";
+    // document.getElementById("btn-show-annotations").style.display = "inline";
+    // document.getElementById("btn-hide-annotations").style.display = "none";
   }
 </script>
 
 <script>
   var russianAnnotations = document.getElementById("annotations-ru");
   function showEnglishAnnotations(){
-    
+    if (russianAnnotations.classList.contains("lang-ru")) {
+          russianAnnotations.classList.remove("lang-ru");
+        }
+    if (russianAnnotations.classList.contains("lang-both")) {
+          russianAnnotations.classList.remove("lang-both");
+        }
+    russianAnnotations.classList.add("lang-en");
+  }
+  function showRussianAnnotations(){
+    if (russianAnnotations.classList.contains("lang-en")) {
+          russianAnnotations.classList.remove("lang-en");
+        }
+    if (russianAnnotations.classList.contains("lang-both")) {
+          russianAnnotations.classList.remove("lang-both");
+        }
+    russianAnnotations.classList.add("lang-ru");
+  }
+  function showBothAnnotations(){
+    if (russianAnnotations.classList.contains("lang-en")) {
+          russianAnnotations.classList.remove("lang-en");
+        }
+    if (russianAnnotations.classList.contains("lang-ru")) {
+          russianAnnotations.classList.remove("lang-ru");
+        }
+    russianAnnotations.classList.add("lang-both");
   }
 </script>
 
