@@ -180,5 +180,13 @@ layout: default
   function expandAnnotations(){
   document.getElementById("annotation-text").classList.toggle("expanded");
   document.getElementById("expand-annotations").classList.toggle("expanded");
+  var btn = document.getElementById("expand-annotations");
+  if (btn.innerHTML == "▲") {
+    btn.innerHTML = "▼";
+  } else {
+    if (btn.innerHTML == "▼") {
+      btn.innerHTML = "▲";
+    }
   }
+}
 </script>
