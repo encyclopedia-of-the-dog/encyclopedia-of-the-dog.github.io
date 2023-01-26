@@ -1,137 +1,146 @@
-/* Annotations look like linked text */
+/* -------- Annotations -------- */
 
-/* annotation links */
+/* annotation links in main text */
 
 .annotations-hidden {
-    a.annotation-link {
-        color: $text-color !important;
-        text-decoration: none;
-        pointer-events: none;
-    }
+  a.annotation-link {
+    color: $text-color !important;
+    text-decoration: none;
+    pointer-events: none;
+  }
 }
 
 .annotations-visible {
-    a.annotation-link {
-        color: $link-color;
-        text-decoration: underline;
-    }
+  a.annotation-link {
+    color: $link-color;
+    text-decoration: underline;
+  }
 }
 
-/* annotation banner */
+/* annotation panel */
+
+#annotation-panel {
+  display: none;
+  width: 100%;
+  height: 10rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: auto;
+  right: auto;
+  border:rgba(0, 0, 0, .1);
+  border-width: 1px 0 0;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  border-top: 1px solid #c3c3c3;
+  padding: .5rem 1rem;
+  background: #fafafa;
+  overflow-y: scroll;
+}
 
 #annotation-text {
-    display: none;
-    width: 100%;
-    height: 10rem;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    top: auto;
-    right: auto;
-    border:rgba(0, 0, 0, .1);
-    border-width: 1px 0 0;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-    display: none;
-    border-top: 1px solid #c3c3c3;
-    padding: 1rem 2rem;
-    background: #fafafa;
-    overflow-y: scroll;
+  font-size: 0.85em;
   
-    img {
-      max-width: 20rem;
-      margin-left: auto;
-      margin-right: auto;
+  img {
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .ru-comment {
+    display: inline;
+  }
+
+  #annotations-ru {
+    display: none;
+  }
+
+  #annotations-ru.lang-en {
+    .en-comment {
+      display: inline;
     }
-    
+    .ru-comment {
+      display: none;
+    }
+  }
+
+  #annotations-ru.lang-ru {
+    .en-comment {
+      display: none;
+    }
     .ru-comment {
       display: inline;
     }
-  
-    #annotations-ru {
-      display: none;
+  }
+
+  #annotations-ru.lang-both {
+    .en-comment {
+      display: inline;
     }
-  
-    #annotations-ru.lang-en {
-      .en-comment {
-        display: inline;
-      }
-      .ru-comment {
-        display: none;
-      }
+    .ru-comment {
+      display: inline-block;
+      margin-top: 0.5rem;
     }
-  
-    #annotations-ru.lang-ru {
-      .en-comment {
-        display: none;
-      }
-      .ru-comment {
-        display: inline;
-      }
-    }
-  
-    #annotations-ru.lang-both {
-      .en-comment {
-        display: inline;
-      }
-      .ru-comment {
-        display: inline-block;
-        margin-top: 0.5rem;
-      }
-    }
-  
-    .tag {
-      font-size: 0.85rem;
-      background-color: slategray;
-      color: white;
-      border-radius: 5px;
-      padding: 2px 5px;
-    }
-  
-    .tag-style {
-      background-color: rgb(101, 108, 79);
-    }
-    .tag-intertextuality {
-      background-color: rgb(166, 152, 119);
-    }
-    .tag-language {
-      background-color: rgb(158, 83, 31);
-    }
-    .tag-symbol {
-      background-color: rgb(85, 65, 40);
-    }
-    .tag-explanatory {
-      background-color: rgb(197, 134, 64);
-    }
-    .tag-expand, .tag-error {
-      background-color: #AA3232;
-    }
-}
-  
-#expand-annotations {
-color: #a9a9a9;
-width: 5rem;
-height: 1.25rem;
-position: fixed;
-bottom: 9.95rem;
-left: 50%;
-margin-left: -2.5rem;
-background: #fafafa;
-border: 1px solid #c3c3c3;
-border-top-left-radius: 5px;
-border-top-right-radius: 5px;
-border-bottom: #fafafa;
+  }
+
+  .tag {
+    font-size: 0.85rem;
+    background-color: slategray;
+    color: white;
+    border-radius: 5px;
+    padding: 2px 5px;
+  }
+
+  .tag-style {
+    background-color: rgb(101, 108, 79);
+  }
+  .tag-intertextuality {
+    background-color: rgb(166, 152, 119);
+  }
+  .tag-language {
+    background-color: rgb(158, 83, 31);
+  }
+  .tag-symbol {
+    background-color: rgb(85, 65, 40);
+  }
+  .tag-explanatory {
+    background-color: rgb(197, 134, 64);
+  }
+  .tag-expand, .tag-error {
+    background-color: #AA3232;
+  }
 }
 
-#annotation-text.expanded {
-height: 25rem !important;
+@media only screen and (max-width: 450px) {
+  #annotation-text {
+    font-size: 1em;
+  }
+}
+  
+#btn-expand-annotations {
+  color: #a9a9a9;
+  width: 5rem;
+  height: 1.25rem;
+  position: fixed;
+  bottom: 9.95rem;
+  left: 50%;
+  margin-left: -2.5rem;
+  background: #fafafa;
+  border: 1px solid #c3c3c3;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: #fafafa;
 }
 
-#expand-annotations.expanded {
-bottom: 24.95rem !important;
+#annotation-panel.expanded {
+  height: 25rem !important;
+}
+
+#btn-expand-annotations.expanded {
+  bottom: 24.95rem !important;
 }
 
 .highlighted {
-text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* annotation menu */

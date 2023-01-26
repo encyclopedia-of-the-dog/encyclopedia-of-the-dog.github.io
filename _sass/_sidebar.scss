@@ -102,9 +102,8 @@
     color: rgba(255,255,255,.8);
   }
   
-  .sidebar-nav-item.active,
-  a.sidebar-nav-item:hover,
-  /* a.sidebar-nav-item:focus */ {
+  /* a.sidebar-nav-item:focus, */ .sidebar-nav-item.active,
+  a.sidebar-nav-item:hover {
     background-color: transparentize($text-color, 0.2);
     text-decoration: none;
     /* border: 1px solid #212b37; */
