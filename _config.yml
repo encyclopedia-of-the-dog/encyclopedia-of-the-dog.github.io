@@ -4,14 +4,14 @@
 title:               Encyclopedia of the Dog
 tagline:             'An annotated digital edition of <i>Between Dog and Wolf</i> by Sasha Sokolov'
 description:         'An annotated digital edition of Between Dog and Wolf by Sasha Sokolov'
-url:                 'http://minicomp.github.io'
+url:                 'http://digbmc.github.io'
 baseurl:             '/dogopedia-dev'
 
 # About/contact
 author:
-  name:              Alex Gil
-  url:               https://twitter.com/elotroalex
-  email:             colibri.alex@gmail.com
+  name:              Digital Scholarship at Bryn Mawr College
+  url:               https://digitalscholarship.brynmawr.edu/
+  email:             digitalscholarship@brynmawr.edu
 
 # Color scheme. Options: red, orange, magenta, cyan, blue, brown
 color-scheme: dog
