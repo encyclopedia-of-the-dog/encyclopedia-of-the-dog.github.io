@@ -29,7 +29,7 @@ collections:
     output: false
   chapters:
     output: true
-
+    
 # Markdown specs
 markdown: kramdown
 
