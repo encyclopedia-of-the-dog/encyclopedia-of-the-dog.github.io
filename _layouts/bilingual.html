@@ -122,6 +122,7 @@ layout: default
       for(var i = 0; i < divsToHide.length; i++){
         divsToHide[i].setAttribute ("tabindex", "");
       }
+    document.getElementById("texts").style.padding = "0 0 5rem";
     // Switch button to 'Hide Annotations'
     // document.getElementById("btn-show-annotations").style.display = "none";
     // document.getElementById("btn-hide-annotations").style.display = "inline";
@@ -139,6 +140,7 @@ layout: default
       for(var i = 0; i < divsToHide.length; i++){
         divsToHide[i].setAttribute ("tabindex", "-1");
       }
+    document.getElementById("texts").style.padding = "0";
     // Switch button to 'Show Annotations'
     // document.getElementById("btn-show-annotations").style.display = "inline";
     // document.getElementById("btn-hide-annotations").style.display = "none";

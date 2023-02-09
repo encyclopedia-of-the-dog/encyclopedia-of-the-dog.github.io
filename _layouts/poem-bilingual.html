@@ -29,8 +29,24 @@ layout: bilingual
             {{ text_en }}
           </div>
           <div id="ru" markdown="1">
+            {% capture annotated-text-ru %}
             {{ text_ru }}
+            {% endcapture %}
+    
+            {% for annotation in site.data.comments-03_ru %}
+                {% capture highlighted %}{{ annotation.highlighted }}{% endcapture %}
+                {% capture suffix %}{{ annotation.suffix }}{% endcapture %}
+                {% capture replaced-text %}{{ highlighted }}{{ suffix }}{% endcapture %}
+                {% capture new-text %}<a class="annotation-link" href="#{{ annotation.Id }}" tabindex="-1">{{ annotation.highlighted }}</a>{{ suffix }}{% endcapture %}
+                {% capture annotated-text-ru %}{{ annotated-text-ru | replace_first: replaced-text, new-text }}{% endcapture %}
+            {% endfor %}
+            
+            {{ annotated-text-ru }}
           </div>
         </div>
       </div>
 </article>
+
+<div id="annotation-panel">
+  {{ content }}
+</div>
