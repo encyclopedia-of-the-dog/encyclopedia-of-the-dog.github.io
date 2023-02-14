@@ -14,7 +14,7 @@ layout: bilingual
 {% assign text_ru = i.content %}
 {% endfor %}
 
-<article class="bilingual poem poetry" id="chapter-content">
+<article class="bilingual poem poetry annotations-hidden" id="chapter-content">
     <div class="header">
         <h1 class="text-title" id="en-title">{{ page.number }}. {{ title_en }}</h1>
         <h1 class="text-title" id="ru-title">{{ page.number }}. {{ title_ru }}</h1>
@@ -23,22 +23,14 @@ layout: bilingual
         <p class="byline" id="translator">Translated by {{ page.translator }}</p>
     </div>
 
-    <div>
-        <div class="panel" id="en" markdown="1">
+    <div class="main-content">
+        <div class="text-container english" id="texts">
+          <div id="en" markdown="1">
             {{ text_en }}
-        </div>
-
-        <div class="panel" id="ru" markdown="1">
+          </div>
+          <div id="ru" markdown="1">
             {{ text_ru }}
+          </div>
         </div>
-
-        <div class="panel" id="both">
-            <div class="left-panel" markdown="1">
-                {{ text_en }}
-            </div>
-            <div class="right-panel" markdown="1">
-                {{ text_ru }}
-            </div>
-        </div>
-    </div>
+      </div>
 </article>

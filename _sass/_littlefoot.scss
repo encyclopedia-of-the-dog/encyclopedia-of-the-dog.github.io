@@ -15,7 +15,7 @@
     height: 1em;
     line-height: 1;
     margin: 0 .1em 0 .2em;
-    min-width: 1.5em;
+    min-width: 1em;
     padding: 0 .5em;
     position: relative;
     text-decoration: none;
@@ -51,11 +51,14 @@
   }
   
   .littlefoot-footnote__button__ellipsis {
-    padding: .35em .5em
+    padding: .35em .35em
   }
   
   .littlefoot-footnote__button__ellipsis svg {
-    float: left;
+    float: none;
+    position: relative;
+    top: -.525em;
+    text-align: center;
     height: .3em
   }
   
@@ -295,3 +298,66 @@
   .is-positioned-top .littlefoot-footnote__tooltip {
     bottom: -0.65em
   }
+
+
+
+/* Override to make all annotations appear at bottom of screen,
+regardless of screen width */
+
+.littlefoot-footnote {
+  border-radius: 0;
+  border-width: 1px 0 0;
+  bottom: 0;
+  left: 0 !important;
+  margin: 0;
+  opacity: 1;
+  position: fixed;
+  right: auto;
+  top: auto;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  width: 100%
+}
+
+.littlefoot-footnote.is-active {
+  transform: translateY(0)
+}
+
+.littlefoot-footnote .littlefoot-footnote__wrapper {
+  margin: 0;
+  max-width: 100% !important;
+  transform: none;
+  width: 100%
+}
+
+.littlefoot-footnote .littlefoot-footnote__wrapper,
+.littlefoot-footnote .littlefoot-footnote__content {
+  border-radius: 0
+}
+
+.littlefoot-footnote .littlefoot-footnote__tooltip {
+  display: none
+}
+
+/* Center images in footnotes */
+.littlefoot-footnote__content {
+  img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Format linked text */
+
+button.littlefoot-footnote__button__text {
+  background-color: #00000000;
+  border: #00000000;
+  font-family: $main-font;
+  font-size: inherit;
+  color: $text-color;
+  text-decoration: underline dotted;
+}
+
+button.littlefoot-footnote__button__text.is-active {
+  text-decoration: underline;
+}

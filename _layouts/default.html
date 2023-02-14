@@ -46,131 +46,139 @@
       <main class="container content" id="main" lang="{{ page.language }}">
         {{ content }}     
       </main>
+<!--
+      {% if page.number %}
+          <iframe id="annotation-iframe" src="{{ site.baseurl }}/annotations{{ page.number }}" name="annotations"></iframe>
+      {% endif %}
+-->
       <footer> 
         <p>Text content is in copyright: used with permission of Columbia UP (English) & Azbuka Press (Russian).</p>
         <p>Site built with <a href="https://elotroalex.github.io/ed/">Ed.</a></p>
       </footer> 
     </div>
 
+  <script>
+    // Highlight search Query
+    var url = window.location.href;
+      if (url.lastIndexOf("?q=") > 0) {
+        // get the index of the parameter, add three (to account for length)
+        var stringloc = url.lastIndexOf("?q=") + 3;
+        // get the substring (query) and decode
+        var searchquery = decodeURIComponent(url.substr(stringloc));
+        // regex matches at beginning of line, end of line or word boundary, useful for poetry
+        var regex = new RegExp("(?:^|\\b)(" + searchquery + ")(?:$|\\b)", "gim");
+        // get, add mark and then set content
+        var content = document.getElementById("main").innerHTML;
+        document.getElementById("main").innerHTML = content.replace(regex, "<mark>$1</mark>");
+    }
 
-<script>
-
-  // Highlight search Query
-  var url = window.location.href;
-    if (url.lastIndexOf("?q=") > 0) {
-      // get the index of the parameter, add three (to account for length)
-      var stringloc = url.lastIndexOf("?q=") + 3;
-      // get the substring (query) and decode
-      var searchquery = decodeURIComponent(url.substr(stringloc));
-      // regex matches at beginning of line, end of line or word boundary, useful for poetry
-      var regex = new RegExp("(?:^|\\b)(" + searchquery + ")(?:$|\\b)", "gim");
-      // get, add mark and then set content
-      var content = document.getElementById("main").innerHTML;
-      document.getElementById("main").innerHTML = content.replace(regex, "<mark>$1</mark>");
-  }
-
-  // Support sidebar toggle
-  (function(document) {
-    var toggle = document.querySelector('.sidebar-toggle');
-    var sidebar = document.querySelector('#sidebar');
-    var sidebarNavLink = document.querySelector('.sidebar-nav-item');
-    var checkbox = document.querySelector('#sidebar-checkbox');
-    
-    // Toggle sidebar
-    toggle.addEventListener('click', function(e) {
-      e.preventDefault();
-      checkbox.checked = !checkbox.checked;
-      toggle.setAttribute('aria-expanded', checkbox.checked);
-      sidebar.setAttribute('aria-hidden', !checkbox.checked);
-    });
-    
-    // Make sure we focus on the menu once it opens to aid tab navigation
-    sidebar.addEventListener('transitionend', function() {sidebarNavLink.focus()});
-    
-    // Clicking anywhere in the sidebar should close the menu
-    sidebar.addEventListener('click', function(e) {
-      checkbox.checked = false;
-      toggle.setAttribute('aria-expanded', false);
-      sidebar.setAttribute('aria-hidden', true);
-    })
-  })(document);
-  
-</script>
-
-<!-- Facebook SDK for JavaScript -->
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '589495744558280',
-      xfbml      : true,
-      version    : 'v2.6'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-
-  <!-- Littlefoot -->
-  <script
-    src="https://unpkg.com/littlefoot/dist/littlefoot.js"
-    type="application/javascript"
-  ></script>
-  <script type="application/javascript">
-    littlefoot.littlefoot()
+    // Support sidebar toggle
+    (function(document) {
+      var toggle = document.querySelector('.sidebar-toggle');
+      var sidebar = document.querySelector('#sidebar');
+      var sidebarNavLink = document.querySelector('.sidebar-nav-item');
+      var checkbox = document.querySelector('#sidebar-checkbox');
+      
+      // Toggle sidebar
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        checkbox.checked = !checkbox.checked;
+        toggle.setAttribute('aria-expanded', checkbox.checked);
+        sidebar.setAttribute('aria-hidden', !checkbox.checked);
+      });
+      
+      // Make sure we focus on the menu once it opens to aid tab navigation
+      sidebar.addEventListener('transitionend', function() {sidebarNavLink.focus()});
+      
+      // Clicking anywhere in the sidebar should close the menu
+      sidebar.addEventListener('click', function(e) {
+        checkbox.checked = false;
+        toggle.setAttribute('aria-expanded', false);
+        sidebar.setAttribute('aria-hidden', true);
+      })
+    })(document);
   </script>
-  </body>
+  <script>
+    // Language buttons
+    function showEnglish() {
+        document.getElementById("en-title").style.display = "block";
+        document.getElementById("ru-title").style.display = "none";
+        document.getElementById("both-title").style.display = "none";
+        document.getElementById("translator").style.display = "block";
+        var element = document.getElementById("texts");
+          element.classList.remove("english");
+          element.classList.remove("russian");
+          element.classList.remove("both");
+          element.classList.add("english");
+        document.getElementById("annotations-en").style.display = "block";
+        document.getElementById("annotations-ru").style.display = "none";
+      }
+    
+      function showRussian() {
+        document.getElementById("en-title").style.display = "none";
+        document.getElementById("ru-title").style.display = "block";
+        document.getElementById("both-title").style.display = "none";
+        document.getElementById("translator").style.display = "none";
+        var element = document.getElementById("texts");
+          element.classList.remove("english");
+          element.classList.remove("russian");
+          element.classList.remove("both");
+          element.classList.add("russian");
+        document.getElementById("annotations-en").style.display = "none";
+        document.getElementById("annotations-ru").style.display = "block";
+      }
+    
+      function showBoth() {
+        document.getElementById("en-title").style.display = "none";
+        document.getElementById("ru-title").style.display = "none";
+        document.getElementById("both-title").style.display = "block";
+        document.getElementById("translator").style.display = "block";
+        var element = document.getElementById("texts");
+          element.classList.remove("english");
+          element.classList.remove("russian");
+          element.classList.remove("both");
+          element.classList.add("both");
+        document.getElementById("annotations-en").style.display = "block";
+        document.getElementById("annotations-ru").style.display = "block";
+      }
 
-<style>
-  /* darken littlefoot buttons */
-  .littlefoot-footnote__button {
-    -webkit-font-smoothing: antialiased;
-    backface-visibility: hidden;
-    background-color: #A9AAA1;
-    border-radius: .5em;
-    border: 0;
-    box-sizing: border-box;
-    color: #A9AAA1;
-    cursor: pointer;
-    display: inline-block;
-    font-size: .9em;
-    font-weight: bold;
-    height: 1em;
-    line-height: 1;
-    margin: 0 .1em 0 .2em;
-    min-width: 1.5em;
-    padding: 0 .5em;
-    position: relative;
-    text-decoration: none;
-    top: -.1em;
-    transition-duration: .25s;
-    transition-property: background-color color;
-    transition-timing-function: ease;
-    vertical-align: middle;
-    z-index: 5
-  }
+    // Add and remove active class from buttons
+    // Get the container element
+    var btnContainer = document.getElementById("language-buttons");
 
-  .littlefoot-footnote__button:hover,
-  .littlefoot-footnote__button:focus {
-    background-color: #8A8B80;
-    color: white
-  }
-  
-  .littlefoot-footnote__button:active {
-    background-color: #8A8B80;
-    color: white
-  }
-  
-  .littlefoot-footnote__button.is-active {
-    background-color: #8A8B80;
-    color: white;
-    transition-delay: .1s
-  }
-</style>
+    // Get all buttons with class="btn" inside the container
+    var btns = btnContainer.getElementsByClassName("btn");
+
+    // Loop through the buttons and add the active class to the current/clicked button
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function () {
+        var current = btnContainer.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+  </script>
+
+
+  <!-- Facebook SDK for JavaScript -->
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '589495744558280',
+        xfbml      : true,
+        version    : 'v2.6'
+      });
+    };
+
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+</body>
 
 </html>
