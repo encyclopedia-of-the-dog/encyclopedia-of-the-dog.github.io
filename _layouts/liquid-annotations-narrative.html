@@ -35,7 +35,7 @@ layout: bilingual
 
         {% for annotation in site.data.comments-02_ru %}
             {% capture highlighted %}{{ annotation.highlighted }}{% endcapture %}
-            {% capture suffix %}{{ annotation.suffix }}{% endcapture %}
+            {% capture suffix %}{{ annotation.suffix | rstrip }}{% endcapture %}
             {% capture replaced-text %}{{ highlighted }}{{ suffix }}{% endcapture %}
             {% capture new-text %}<a class="annotation-link" href="#{{ annotation.Id }}" tabindex="-1">{{ annotation.highlighted }}</a>{{ suffix }}{% endcapture %}
             {% capture annotated-text-ru %}{{ annotated-text-ru | replace_first: replaced-text, new-text }}{% endcapture %}
