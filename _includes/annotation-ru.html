@@ -1,6 +1,6 @@
-<div id="{{ annotation.Id }}">
+<div id="{{ annotation.Id }}" class="annotation">
     <p markdown="1">
-        <span class="highlighted">{{ annotation.highlighted }}</span> - <span class="en-comment">{{ annotation.text }}</span>{% if annotation.ru_trans %}<span class="ru-comment"> {{ annotation.ru_trans }}</span>{% endif %}
+        <span class="highlighted">{{ annotation.highlighted }}</span><span class="en-comment">{{ annotation.text }}</span>{% if annotation.ru_trans %}<span class="ru-comment"> {{ annotation.ru_trans }}</span>{% endif %}
         {% assign list = annotation.tags %}
         {% assign tags = list | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
         {% for tag in tags -%}
