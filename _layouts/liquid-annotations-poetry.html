@@ -33,7 +33,7 @@ layout: bilingual
             {{ text_ru }}
             {% endcapture %}
     
-            {% for annotation in site.data.comments-03_ru reversed %}
+            {% for annotation in site.data.comments-03_ru %}
                 {% capture highlighted %}{{ annotation.highlighted }}{% endcapture %}
                 {% capture suffix %}{{ annotation.suffix | newline_to_br | split: "<br />" | first | rstrip }}{% endcapture %}
                 {% capture prefix %}{{ annotation.prefix | newline_to_br | split: "<br />" | last | lstrip }}{% endcapture %}
@@ -51,13 +51,13 @@ layout: bilingual
                       {% capture replaced-line %}{{ line | strip }}{% endcapture %}
                     {% endif %}
                     {% comment %}{{ replaced-line }}<br />{% endcomment %}
-                    {% capture new-line %}<a class="annotation-link" href="#{{ annotation.Id }}" tabindex="-1">{{ replaced-line }}</a>{% endcapture %}
+                    {% capture new-line %}<span class="annotation-link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1">{{ replaced-line }}</span>{% endcapture %}
                     {% capture annotated-text-ru %}{{ annotated-text-ru | replace_first: replaced-line, new-line }}{% endcapture %}
                   {% endfor %}
                 {% else %}
                   {% capture replaced-line %}{{ prefix }}{{ highlighted }}{{ suffix }}{% endcapture %}
                   {% comment %}{{ replaced-line }}<br />{% endcomment %}
-                  {% capture new-line %}<a class="annotation-link" href="#{{ annotation.Id }}" tabindex="-1">{{ replaced-line }}</a>{% endcapture %}
+                  {% capture new-line %}<span class="annotation-link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1">{{ replaced-line }}</span>{% endcapture %}
                   {% capture annotated-text-ru %}{{ annotated-text-ru | replace_first: replaced-line, new-line }}{% endcapture %}
                 {% endif %}
             {% endfor %}

@@ -35,10 +35,16 @@ layout: bilingual
 
         {% for annotation in site.data.comments-02_ru %}
             {% capture highlighted %}{{ annotation.highlighted }}{% endcapture %}
-            {% capture suffix %}{{ annotation.suffix | rstrip }}{% endcapture %}
+            {% capture suffix %}{{ annotation.suffix | rstrip | truncate: 5, "" }}{% endcapture %}
             {% capture replaced-text %}{{ highlighted }}{{ suffix }}{% endcapture %}
-            {% capture new-text %}<a class="annotation-link" href="#{{ annotation.Id }}" tabindex="-1">{{ annotation.highlighted }}</a>{{ suffix }}{% endcapture %}
+            {% comment %}
+            {{ replaced-text }}<br />
+            <br />
+            {% endcomment %}
+            {% unless replaced-text == "." %}  {% comment %} This is to prevent issues caused by the annotation of the last period of the chapter. {% endcomment %}
+            {% capture new-text %}<span class="annotation-link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1">{{ annotation.highlighted }}</span>{{ suffix }}{% endcapture %}
             {% capture annotated-text-ru %}{{ annotated-text-ru | replace_first: replaced-text, new-text }}{% endcapture %}
+            {% endunless %}
         {% endfor %}
         
         {{ annotated-text-ru }}
