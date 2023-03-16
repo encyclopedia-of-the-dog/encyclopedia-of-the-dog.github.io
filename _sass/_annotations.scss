@@ -45,6 +45,7 @@
 .highlighted {
   display: block;
   text-decoration: underline;
+  margin: 0 0 0.5rem 0;
 }
 
 #annotation-text {
@@ -59,11 +60,13 @@
   .en-comment{
     display: inline-block;
     height: fit-content;
+    margin: 0 0 0.5rem 0;
   }
 
   .ru-comment {
     display: inline-block;
     height: fit-content;
+    margin: 0 0 0.5rem 0;
   }
 
   #annotations-ru {
@@ -114,7 +117,6 @@
     }
     .ru-comment {
       display: inline-block;
-      margin-top: 0.5rem;
       
       img {
         display: inline-block;

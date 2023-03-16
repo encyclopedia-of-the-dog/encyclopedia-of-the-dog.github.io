@@ -1,7 +1,7 @@
 <div id="{{ annotation.Id }}" class="annotation">
-    <p markdown="1">
-        <span class="highlighted">{{ annotation.highlighted }}</span>
-        {{ annotation.text }}
+    <span class="highlighted">{{ annotation.highlighted }}</span>
+    <p class="en-comment" markdown="1">{{ annotation.text }}</p>
+    <p>
         {% assign list = annotation.tags %}
         {% assign tags = list | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
         {% for tag in tags -%}

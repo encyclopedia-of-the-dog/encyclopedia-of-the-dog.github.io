@@ -26,15 +26,107 @@ layout: bilingual
     <div class="main-content">
         <div class="text-container english" id="texts">
           <div id="en" markdown="1">
+            {% capture annotated-text-en %}
             {{ text_en }}
+            {% endcapture %}
+    
+            {% assign annotations-en = site.data.comments-all | where: "lang", "en" %}
+            {% for annotation in annotations-en %}
+                {% assign chapter = annotation.chapter | truncate: 2, "" %}
+                {% if chapter == page.number %}
+                  {% capture highlighted %}{{ annotation.highlighted }}{% endcapture %}
+                  {% capture suffix %}{{ annotation.suffix | newline_to_br | split: "<br />" | first | rstrip }}{% endcapture %}
+                  {% capture prefix %}{{ annotation.prefix | newline_to_br | split: "<br />" | last | lstrip }}{% endcapture %}
+                  {% assign highlighted-array = highlighted | newline_to_br | split: "<br />" %}
+                  {% assign highlighted-size = highlighted-array | size %}
+                  {% if highlighted-size > 1 %}
+                    {% assign first-line = highlighted-array | first %}
+                    {% assign last-line = highlighted-array | last %}
+                    {% for line in highlighted-array %}
+                      {% if line == first-line %}
+                        {% capture replaced-line %}{{ prefix }}{{ line | rstrip }}{% endcapture %}
+                      {% elsif line == last-line %}
+                        {% capture replaced-line %}{{ line | lstrip }}{{ suffix }}{% endcapture %}
+                      {% else %}
+                        {% capture replaced-line %}{{ line | strip }}{% endcapture %}
+                      {% endif %}
+                      {% comment %}{{ replaced-line }}<br />{% endcomment %}
+                      {% capture new-line %}<span class="annotation-link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1">{{ replaced-line }}</span>{% endcapture %}
+                      {% capture annotated-text-en %}{{ annotated-text-en | replace_first: replaced-line, new-line }}{% endcapture %}
+                    {% endfor %}
+                  {% else %}
+                    {% capture replaced-line %}{{ prefix }}{{ highlighted }}{{ suffix }}{% endcapture %}
+                    {% comment %}{{ replaced-line }}<br />{% endcomment %}
+                    {% capture new-line %}<span class="annotation-link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1">{{ replaced-line }}</span>{% endcapture %}
+                    {% capture annotated-text-en %}{{ annotated-text-en | replace_first: replaced-line, new-line }}{% endcapture %}
+                  {% endif %}
+                {% endif %}
+            {% endfor %}
+            
+            {{ annotated-text-en }}
           </div>
           <div id="ru" markdown="1">
+            {% capture annotated-text-ru %}
             {{ text_ru }}
+            {% endcapture %}
+    
+            {% assign annotations-ru = site.data.comments-all | where: "lang", "ru" %}
+            {% for annotation in annotations-ru %}
+                {% assign chapter = annotation.chapter | truncate: 2, "" %}
+                {% if chapter == page.number %}
+                  {% capture highlighted %}{{ annotation.highlighted }}{% endcapture %}
+                  {% capture suffix %}{{ annotation.suffix | newline_to_br | split: "<br />" | first | rstrip }}{% endcapture %}
+                  {% capture prefix %}{{ annotation.prefix | newline_to_br | split: "<br />" | last | lstrip }}{% endcapture %}
+                  {% assign highlighted-array = highlighted | newline_to_br | split: "<br />" %}
+                  {% assign highlighted-size = highlighted-array | size %}
+                  {% if highlighted-size > 1 %}
+                    {% assign first-line = highlighted-array | first %}
+                    {% assign last-line = highlighted-array | last %}
+                    {% for line in highlighted-array %}
+                      {% if line == first-line %}
+                        {% capture replaced-line %}{{ prefix }}{{ line | rstrip }}{% endcapture %}
+                      {% elsif line == last-line %}
+                        {% capture replaced-line %}{{ line | lstrip }}{{ suffix }}{% endcapture %}
+                      {% else %}
+                        {% capture replaced-line %}{{ line | strip }}{% endcapture %}
+                      {% endif %}
+                      {% comment %}{{ replaced-line }}<br />{% endcomment %}
+                      {% capture new-line %}<span class="annotation-link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1">{{ replaced-line }}</span>{% endcapture %}
+                      {% capture annotated-text-ru %}{{ annotated-text-ru | replace_first: replaced-line, new-line }}{% endcapture %}
+                    {% endfor %}
+                  {% else %}
+                    {% capture replaced-line %}{{ prefix }}{{ highlighted }}{{ suffix }}{% endcapture %}
+                    {% comment %}{{ replaced-line }}<br />{% endcomment %}
+                    {% capture new-line %}<span class="annotation-link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1">{{ replaced-line }}</span>{% endcapture %}
+                    {% capture annotated-text-ru %}{{ annotated-text-ru | replace_first: replaced-line, new-line }}{% endcapture %}
+                  {% endif %}
+                {% endif %}
+            {% endfor %}
+            
+            {{ annotated-text-ru }}
           </div>
         </div>
       </div>
 </article>
 
 <div id="annotation-panel">
-  {{ content }}
+  <button class="expbtn" id="btn-expand-annotations" onclick="expandAnnotations()">▲</button>
+  <div id="annotation-text">
+      <div id="annotations-en">
+          {% for annotation in annotations-en %}
+            {% assign chapter = annotation.chapter | truncate: 2, "" %}
+            {% if chapter == page.number %}
+              {% include annotation-en.html %}
+            {% endif %}
+          {% endfor %}
+      </div>
+      <div id="annotations-ru">
+          {% for annotation in annotations-ru %}
+            {% assign chapter = annotation.chapter | truncate: 2, "" %}
+            {% if chapter == page.number %}
+              {% include annotation-ru.html %}
+            {% endif %}
+          {% endfor %}
+      </div>
+  </div>
 </div>
