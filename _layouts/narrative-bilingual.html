@@ -79,24 +79,4 @@ layout: bilingual
   </div>
 </article>
 
-<div id="annotation-panel">
-  <button class="expbtn" id="btn-expand-annotations" onclick="expandAnnotations()">▲</button>
-  <div id="annotation-text">
-      <div id="annotations-en">
-          {% for annotation in annotations-en %}
-            {% assign chapter = annotation.chapter | truncate: 2, "" %}
-            {% if chapter == page.number %}
-              {% include annotation-en.html %}
-            {% endif %}
-          {% endfor %}
-      </div>
-      <div id="annotations-ru">
-          {% for annotation in annotations-ru %}
-            {% assign chapter = annotation.chapter | truncate: 2, "" %}
-            {% if chapter == page.number %}
-              {% include annotation-ru.html %}
-            {% endif %}
-          {% endfor %}
-      </div>
-  </div>
-</div>
+{{ content }}
