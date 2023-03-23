@@ -1,0 +1,46 @@
+<div id="annotation-panel">
+    <button class="expbtn" id="btn-expand-annotations" onclick="expandAnnotations()">▲</button>
+    <div id="annotation-text">
+        <div id="annotations-en">
+            {% assign annotations-en = site.data.comments-all | where: "lang", "en" %}
+            {% for annotation in annotations-en %}
+              {% assign chapter = annotation.chapter | truncate: 2, "" %}
+              {% if chapter == page.number %}
+                <div id="{{ annotation.Id }}" class="annotation">
+                    <span class="highlighted">{{ annotation.highlighted }}</span>
+                    <p class="en-comment" markdown="1">{{ annotation.text }}</p>
+                    <p>
+                        {% assign list = annotation.tags %}
+                        {% assign tags = list | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
+                        {% for tag in tags -%}
+                            <span class="tag tag-{{ tag }}">{{ tag }}</span> 
+                        {% endfor %}
+                    </p>
+                </div>
+              {% endif %}
+            {% endfor %}
+        </div>
+        <div id="annotations-ru">
+            {% assign annotations-ru = site.data.comments-all | where: "lang", "ru" %}
+            {% for annotation in annotations-ru %}
+              {% assign chapter = annotation.chapter | truncate: 2, "" %}
+              {% if chapter == page.number %}
+                <div id="{{ annotation.Id }}" class="annotation">
+                    <span class="highlighted">{{ annotation.highlighted }}</span>
+                    <p class="en-comment" markdown="1">{{ annotation.text }}</p>
+                    {% if annotation.ru_trans %}
+                    <p class="ru-comment" markdown="1"> {{ annotation.ru_trans }}</p>
+                    {% endif %}
+                    <p>
+                        {% assign list = annotation.tags %}
+                        {% assign tags = list | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
+                        {% for tag in tags -%}
+                            <span class="tag tag-{{ tag }}">{{ tag }}</span> 
+                        {% endfor %}
+                    </p>
+                </div>
+              {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

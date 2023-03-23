@@ -26,15 +26,57 @@ layout: bilingual
   <div class="main-content">
     <div class="text-container english" id="texts">
       <div id="en" markdown="1">
+        {% capture annotated-text-en %}
         {{ text_en }}
+        {% endcapture %}
+
+        {% assign annotations-en = site.data.comments-all | where: "lang", "en" %}
+        {% for annotation in annotations-en %}
+            {% assign chapter = annotation.chapter | truncate: 2, "" %}
+            {% if chapter == page.number %}
+              {% capture highlighted %}{{ annotation.highlighted }}{% endcapture %}
+              {% capture suffix %}{{ annotation.suffix | rstrip | truncate: 5, "" }}{% endcapture %}
+              {% capture replaced-text %}{{ highlighted }}{{ suffix }}{% endcapture %}
+              {% comment %}
+              {{ replaced-text }}<br />
+              <br />
+              {% endcomment %}
+              {% unless replaced-text == "." %}  {% comment %} This is to prevent issues caused by the annotation of the last period of the chapter. {% endcomment %}
+              {% capture new-text %}<span class="annotation-link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1">{{ annotation.highlighted }}</span>{{ suffix }}{% endcapture %}
+              {% capture annotated-text-en %}{{ annotated-text-en | replace_first: replaced-text, new-text }}{% endcapture %}
+              {% endunless %}
+            {% endif %}
+        {% endfor %}
+        
+        {{ annotated-text-en }}
       </div>
       <div id="ru" markdown="1">
+        {% capture annotated-text-ru %}
         {{ text_ru }}
+        {% endcapture %}
+
+        {% assign annotations-ru = site.data.comments-all | where: "lang", "ru" %}
+        {% for annotation in annotations-ru %}
+            {% assign chapter = annotation.chapter | truncate: 2, "" %}
+            {% if chapter == page.number %}
+              {% capture highlighted %}{{ annotation.highlighted }}{% endcapture %}
+              {% capture suffix %}{{ annotation.suffix | rstrip | truncate: 5, "" }}{% endcapture %}
+              {% capture replaced-text %}{{ highlighted }}{{ suffix }}{% endcapture %}
+              {% comment %}
+              {{ replaced-text }}<br />
+              <br />
+              {% endcomment %}
+              {% unless replaced-text == "." %}  {% comment %} This is to prevent issues caused by the annotation of the last period of the chapter. {% endcomment %}
+              {% capture new-text %}<span class="annotation-link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1">{{ annotation.highlighted }}</span>{{ suffix }}{% endcapture %}
+              {% capture annotated-text-ru %}{{ annotated-text-ru | replace_first: replaced-text, new-text }}{% endcapture %}
+              {% endunless %}
+            {% endif %}
+        {% endfor %}
+        
+        {{ annotated-text-ru }}
       </div>
     </div>
   </div>
 </article>
 
-<div id="annotation-panel">
-  {{ content }}
-</div>
+{{ content }}
