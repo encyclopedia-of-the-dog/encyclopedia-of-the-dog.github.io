@@ -44,9 +44,9 @@ layout: bilingual
                     {% assign last-line = highlighted-array | last %}
                     {% for line in highlighted-array %}
                       {% if line == first-line %}
-                        {% capture replaced-line %}{{ prefix }}{{ line | rstrip }}{% endcapture %}
+                        {% capture replaced-line %}{{ line | rstrip }}{% endcapture %}
                       {% elsif line == last-line %}
-                        {% capture replaced-line %}{{ line | lstrip }}{{ suffix }}{% endcapture %}
+                        {% capture replaced-line %}{{ line | lstrip }}{% endcapture %}
                       {% else %}
                         {% capture replaced-line %}{{ line | strip }}{% endcapture %}
                       {% endif %}
@@ -55,9 +55,15 @@ layout: bilingual
                       {% capture annotated-text-en %}{{ annotated-text-en | replace_first: replaced-line, new-line }}{% endcapture %}
                     {% endfor %}
                   {% else %}
-                    {% capture replaced-line %}{{ prefix }}{{ highlighted }}{{ suffix }}{% endcapture %}
-                    {% comment %}{{ replaced-line }}<br />{% endcomment %}
-                    {% capture new-line %}<span class="annotation-link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1">{{ replaced-line }}</span>{% endcapture %}
+                    {% assign highlighted-length = highlighted | size %}
+                    {% if highlighted-length < 2 %}
+                      {% capture prefix %}{{ prefix | split: " " | last }}{% endcapture %}
+                      {% capture replaced-line %}{{ prefix }}{{ highlighted }}{{ suffix }}{% endcapture %}
+                      {% capture new-line %}{{ prefix }}<span class="annotation-link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1">{{ highlighted }}</span>{{ suffix }}{% endcapture %}
+                    {% else %}
+                      {% capture replaced-line %}{{ highlighted }}{{ suffix }}{% endcapture %}
+                      {% capture new-line %}<span class="annotation-link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1">{{ highlighted }}</span>{{ suffix }}{% endcapture %}
+                    {% endif %}
                     {% capture annotated-text-en %}{{ annotated-text-en | replace_first: replaced-line, new-line }}{% endcapture %}
                   {% endif %}
                 {% endif %}
@@ -84,9 +90,9 @@ layout: bilingual
                     {% assign last-line = highlighted-array | last %}
                     {% for line in highlighted-array %}
                       {% if line == first-line %}
-                        {% capture replaced-line %}{{ prefix }}{{ line | rstrip }}{% endcapture %}
+                        {% capture replaced-line %}{{ line | rstrip }}{% endcapture %}
                       {% elsif line == last-line %}
-                        {% capture replaced-line %}{{ line | lstrip }}{{ suffix }}{% endcapture %}
+                        {% capture replaced-line %}{{ line | lstrip }}{% endcapture %}
                       {% else %}
                         {% capture replaced-line %}{{ line | strip }}{% endcapture %}
                       {% endif %}
@@ -95,14 +101,20 @@ layout: bilingual
                       {% capture annotated-text-ru %}{{ annotated-text-ru | replace_first: replaced-line, new-line }}{% endcapture %}
                     {% endfor %}
                   {% else %}
-                    {% capture replaced-line %}{{ prefix }}{{ highlighted }}{{ suffix }}{% endcapture %}
-                    {% comment %}{{ replaced-line }}<br />{% endcomment %}
-                    {% capture new-line %}<span class="annotation-link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1">{{ replaced-line }}</span>{% endcapture %}
+                    {% assign highlighted-length = highlighted | size %}
+                    {% if highlighted-length < 2 %}
+                      {% capture prefix %}{{ prefix | split: " " | last }}{% endcapture %}
+                      {% capture replaced-line %}{{ prefix }}{{ highlighted }}{{ suffix }}{% endcapture %}
+                      {% capture new-line %}{{ prefix }}<span class="annotation-link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1">{{ highlighted }}</span>{{ suffix }}{% endcapture %}
+                    {% else %}
+                      {% capture replaced-line %}{{ highlighted }}{{ suffix }}{% endcapture %}
+                      {% capture new-line %}<span class="annotation-link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1">{{ highlighted }}</span>{{ suffix }}{% endcapture %}
+                    {% endif %}
                     {% capture annotated-text-ru %}{{ annotated-text-ru | replace_first: replaced-line, new-line }}{% endcapture %}
                   {% endif %}
                 {% endif %}
             {% endfor %}
-            
+
             {{ annotated-text-ru }}
           </div>
         </div>
