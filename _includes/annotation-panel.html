@@ -7,15 +7,15 @@
               {% assign chapter = annotation.chapter | truncate: 2, "" %}
               {% if chapter == page.number %}
                 <div id="{{ annotation.Id }}" class="annotation">
-                    {% assign image-list = annotation.image %}
-                    {% if image-list != "[]" %}
-                        {% assign image-list-size = image-list | size %}
-                        {% assign image-list-size-minus-one = image-list-size | minus: 1 %}
-                        {% assign image-list = image-list | truncate: image-list-size-minus-one, "" | remove_first: "[" %}
-                        {% assign images = image-list | remove: "'![](" | remove: ")'" | split: ", " -%}
+                    {% assign image-src = annotation.img_src %}
+                    {% assign alt-text-list-en = annotation.alt_text_eng %}
+                    {% assign alt-text-en = alt-text-list-en | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
+                    {% if image-src != "[]" %}
+                        {% assign images = image-src | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
                         <div class="annotation-img-container">
                             {% for img in images -%}
-                                <img src="{{ img }}">
+                                {% assign this-alt-text-en = alt-text-en[forloop.index] %}
+                                <img src="{{ img }}" alt="{{ this-alt-text-en }}">
                             {% endfor %}
                         </div>
                         <div class="annotation-text-container with-img">
@@ -52,15 +52,15 @@
               {% assign chapter = annotation.chapter | truncate: 2, "" %}
               {% if chapter == page.number %}
                 <div id="{{ annotation.Id }}" class="annotation">
-                    {% assign image-list = annotation.image %}
-                    {% if image-list != "[]" %}
-                        {% assign image-list-size = image-list | size %}
-                        {% assign image-list-size-minus-one = image-list-size | minus: 1 %}
-                        {% assign image-list = image-list | truncate: image-list-size-minus-one, "" | remove_first: "[" %}
-                        {% assign images = image-list | remove: "'![](" | remove: ")'" | split: ", " -%}
+                    {% assign image-src = annotation.img_src %}
+                    {% assign alt-text-list-en = annotation.alt_text_eng %}
+                    {% assign alt-text-en = alt-text-list-en | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
+                    {% if image-src != "[]" %}
+                        {% assign images = image-src | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
                         <div class="annotation-img-container">
                             {% for img in images -%}
-                                <img src="{{ img }}">
+                                {% assign this-alt-text-en = alt-text-en[forloop.index] %}
+                                <img src="{{ img }}" alt="{{ this-alt-text-en }}">
                             {% endfor %}
                         </div>
                         <div class="annotation-text-container with-img">
