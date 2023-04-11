@@ -14,7 +14,7 @@
                         {% assign images = image-src | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
                         <div class="annotation-img-container">
                             {% for img in images -%}
-                                {% assign this-alt-text-en = alt-text-en[forloop.index] %}
+                                {% assign this-alt-text-en = alt-text-en[forloop.index0] %}
                                 <img src="{{ img }}" alt="{{ this-alt-text-en }}">
                             {% endfor %}
                         </div>
@@ -59,7 +59,7 @@
                         {% assign images = image-src | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
                         <div class="annotation-img-container">
                             {% for img in images -%}
-                                {% assign this-alt-text-en = alt-text-en[forloop.index] %}
+                                {% assign this-alt-text-en = alt-text-en[forloop.index0] %}
                                 <img src="{{ img }}" alt="{{ this-alt-text-en }}">
                             {% endfor %}
                         </div>
