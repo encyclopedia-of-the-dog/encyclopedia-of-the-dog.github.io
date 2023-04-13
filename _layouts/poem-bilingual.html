@@ -51,7 +51,7 @@ layout: bilingual
                         {% capture replaced-line %}{{ line | strip }}{% endcapture %}
                       {% endif %}
                       {% comment %}{{ replaced-line }}<br />{% endcomment %}
-                      {% capture new-line %}<span class="annotation-link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1">{{ replaced-line }}</span>{% endcapture %}
+                      {% capture new-line %}<span class="annotation-link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ replaced-line }}</span>{% endcapture %}
                       {% capture annotated-text-en %}{{ annotated-text-en | replace_first: replaced-line, new-line }}{% endcapture %}
                     {% endfor %}
                   {% else %}
@@ -59,10 +59,10 @@ layout: bilingual
                     {% if highlighted-length < 2 %}
                       {% capture prefix %}{{ prefix | split: " " | last }}{% endcapture %}
                       {% capture replaced-line %}{{ prefix }}{{ highlighted }}{{ suffix }}{% endcapture %}
-                      {% capture new-line %}{{ prefix }}<span class="annotation-link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1">{{ highlighted }}</span>{{ suffix }}{% endcapture %}
+                      {% capture new-line %}{{ prefix }}<span class="annotation-link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ highlighted }}</span>{{ suffix }}{% endcapture %}
                     {% else %}
                       {% capture replaced-line %}{{ highlighted }}{{ suffix }}{% endcapture %}
-                      {% capture new-line %}<span class="annotation-link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1">{{ highlighted }}</span>{{ suffix }}{% endcapture %}
+                      {% capture new-line %}<span class="annotation-link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ highlighted }}</span>{{ suffix }}{% endcapture %}
                     {% endif %}
                     {% capture annotated-text-en %}{{ annotated-text-en | replace_first: replaced-line, new-line }}{% endcapture %}
                   {% endif %}
@@ -107,8 +107,9 @@ layout: bilingual
                       {% capture replaced-line %}{{ prefix }}{{ highlighted }}{{ suffix }}{% endcapture %}
                       {% capture new-line %}{{ prefix }}<span class="annotation-link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1">{{ highlighted }}</span>{{ suffix }}{% endcapture %}
                     {% else %}
-                      {% capture replaced-line %}{{ highlighted }}{{ suffix }}{% endcapture %}
-                      {% capture new-line %}<span class="annotation-link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1">{{ highlighted }}</span>{{ suffix }}{% endcapture %}
+                      {% capture prefix %}{{ prefix | split: "" | reverse | join: "" | truncate: 1, "" }}{% endcapture %}
+                      {% capture replaced-line %}{{ prefix }}{{ highlighted }}{{ suffix }}{% endcapture %}
+                      {% capture new-line %}{{ prefix }}<span class="annotation-link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1">{{ highlighted }}</span>{{ suffix }}{% endcapture %}
                     {% endif %}
                     {% capture annotated-text-ru %}{{ annotated-text-ru | replace_first: replaced-line, new-line }}{% endcapture %}
                   {% endif %}
