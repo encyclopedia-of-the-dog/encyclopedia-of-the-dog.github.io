@@ -13,6 +13,7 @@
 .annotations-visible {
   span.annotation-link {
     background-color: #778eac5f;
+    cursor: pointer;
   }
 }
 
@@ -34,6 +35,11 @@
   padding: .5rem 1rem;
   background: #fafafa;
   overflow-y: scroll;
+
+  a {
+    color: $link-color;
+    text-decoration: underline;
+  }
 }
 
 #annotation-container {
@@ -67,7 +73,9 @@
   }
   
   .highlighted {
-    display: block;
+    display: inline-block;
+    cursor: pointer;
+    color: $link-color;
     text-decoration: underline;
     margin: 0 0 0.5rem 0;
   }
