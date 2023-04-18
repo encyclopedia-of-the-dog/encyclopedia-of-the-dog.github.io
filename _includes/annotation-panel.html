@@ -19,7 +19,7 @@
                             {% endfor %}
                         </div>
                         <div class="annotation-text-container with-img">
-                            <span class="highlighted" onclick="window.location.href='#highlight-{{ annotation.Id }}';" tabindex="-1">{{ annotation.highlighted }}</span>
+                            <span class="highlighted" role="doc-backlink" onclick="window.location.href='#highlight-{{ annotation.Id }}';" tabindex="-1">{{ annotation.highlighted }}</span><br>
                             <p class="en-comment" markdown="1">{{ annotation.text }}</p>
                             <div class="annotation-tag-container">
                                 {% assign list = annotation.tags %}
@@ -31,7 +31,7 @@
                         </div>                        
                     {% else %}
                         <div class="annotation-text-container">
-                            <span class="highlighted" onclick="window.location.href='#highlight-{{ annotation.Id }}';" tabindex="-1">{{ annotation.highlighted }}</span>
+                            <span class="highlighted" role="doc-backlink" onclick="window.location.href='#highlight-{{ annotation.Id }}';" tabindex="-1">{{ annotation.highlighted }}</span><br>
                             <p class="en-comment" markdown="1">{{ annotation.text }}</p>
                             <div class="annotation-tag-container">
                                 {% assign list = annotation.tags %}
@@ -64,7 +64,7 @@
                             {% endfor %}
                         </div>
                         <div class="annotation-text-container with-img">
-                            <span class="highlighted" onclick="window.location.href='#highlight-{{ annotation.Id }}';" tabindex="-1">{{ annotation.highlighted }}</span>
+                            <span class="highlighted" role="doc-backlink" onclick="window.location.href='#highlight-{{ annotation.Id }}';" tabindex="-1">{{ annotation.highlighted }}</span><br>
                             <p class="en-comment" markdown="1">{{ annotation.text }}</p>
                             {% if annotation.ru_trans %}
                                 <p class="ru-comment" markdown="1"> {{ annotation.ru_trans }}</p>
@@ -79,7 +79,7 @@
                         </div>                        
                     {% else %}
                         <div class="annotation-text-container">
-                            <span class="highlighted" onclick="window.location.href='#highlight-{{ annotation.Id }}';" tabindex="-1">{{ annotation.highlighted }}</span>
+                            <span class="highlighted" role="doc-backlink" onclick="window.location.href='#highlight-{{ annotation.Id }}';" tabindex="-1">{{ annotation.highlighted }}</span><br>
                             <p class="en-comment" markdown="1">{{ annotation.text }}</p>
                             {% if annotation.ru_trans %}
                                 <p class="ru-comment" markdown="1"> {{ annotation.ru_trans }}</p>

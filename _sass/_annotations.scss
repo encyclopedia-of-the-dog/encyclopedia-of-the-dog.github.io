@@ -34,6 +34,11 @@
   padding: .5rem 1rem;
   background: #fafafa;
   overflow-y: scroll;
+
+  a {
+    color: $link-color;
+    text-decoration: underline;
+  }
 }
 
 #annotation-container {
@@ -67,8 +72,8 @@
   }
   
   .highlighted {
-    display: block;
-    /* color: $link-color; */
+    display: inline-block;
+    color: $link-color;
     text-decoration: underline;
     margin: 0 0 0.5rem 0;
   }

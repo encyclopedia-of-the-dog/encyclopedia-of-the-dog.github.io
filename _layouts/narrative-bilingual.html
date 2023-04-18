@@ -42,7 +42,7 @@ layout: bilingual
               <br />
               {% endcomment %}
               {% unless replaced-text == "." %}  {% comment %} This is to prevent issues caused by the annotation of the last period of the chapter. {% endcomment %}
-              {% capture new-text %}<span id="highlight-{{ annotation.Id }}" class="annotation-link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ annotation.highlighted }}</span>{{ suffix }}{% endcapture %}
+              {% capture new-text %}<span id="highlight-{{ annotation.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ annotation.highlighted }}</span>{{ suffix }}{% endcapture %}
               {% capture annotated-text-en %}{{ annotated-text-en | replace_first: replaced-text, new-text }}{% endcapture %}
               {% endunless %}
             {% endif %}
@@ -67,7 +67,7 @@ layout: bilingual
               <br />
               {% endcomment %}
               {% unless replaced-text == "." %}  {% comment %} This is to prevent issues caused by the annotation of the last period of the chapter. {% endcomment %}
-              {% capture new-text %}<span id="highlight-{{ annotation.Id }}" class="annotation-link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ annotation.highlighted }}</span>{{ suffix }}{% endcapture %}
+              {% capture new-text %}<span id="highlight-{{ annotation.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ annotation.highlighted }}</span>{{ suffix }}{% endcapture %}
               {% capture annotated-text-ru %}{{ annotated-text-ru | replace_first: replaced-text, new-text }}{% endcapture %}
               {% endunless %}
             {% endif %}
