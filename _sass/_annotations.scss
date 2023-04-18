@@ -13,6 +13,7 @@
 .annotations-visible {
   span.annotation-link {
     background-color: #778eac5f;
+    cursor: pointer;
   }
 }
 
@@ -73,6 +74,7 @@
   
   .highlighted {
     display: inline-block;
+    cursor: pointer;
     color: $link-color;
     text-decoration: underline;
     margin: 0 0 0.5rem 0;
