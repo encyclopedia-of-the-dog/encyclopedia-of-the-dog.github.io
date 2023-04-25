@@ -1,4 +1,4 @@
-# Dogopedia Spring 2023 Notes
+# Dogopedia End of Spring 2023 Notes
 
 Chapter pages build from .md files in _chapters. They use the layouts narrative-bilingual.html and poem-bilingual.html.
 

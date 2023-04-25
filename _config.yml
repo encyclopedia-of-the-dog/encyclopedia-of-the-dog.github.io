@@ -51,7 +51,7 @@ exclude:
   - Gemfile.lock
   - backstop_data
   - backstop.json
-  - dog-spring-2023-notes.md
+  - notes
 
 # Theme
 # (Used for local or custom-server deployments)
