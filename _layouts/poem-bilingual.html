@@ -45,13 +45,15 @@ layout: bilingual
                     {% for line in highlighted-array %}
                       {% if line == first-line %}
                         {% capture replaced-line %}{{ line | rstrip }}{% endcapture %}
-                      {% elsif line == last-line %}
-                        {% capture replaced-line %}{{ line | lstrip }}{% endcapture %}
+                        {% capture new-line %}<span id="highlight-{{ annotation.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ replaced-line }}</span>{% endcapture %}
                       {% else %}
-                        {% capture replaced-line %}{{ line | strip }}{% endcapture %}
-                      {% endif %}
-                      {% comment %}{{ replaced-line }}<br />{% endcomment %}
-                      {% capture new-line %}<span id="highlight-{{ annotation.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ replaced-line }}</span>{% endcapture %}
+                        {% if line == last-line %}
+                          {% capture replaced-line %}{{ line | lstrip }}{% endcapture %}
+                        {% else %}
+                          {% capture replaced-line %}{{ line | strip }}{% endcapture %}
+                        {% endif %}
+                        {% capture new-line %}<span id="highlight-{{ annotation.Id }}-{{ forloop.index0 }}" class="annotation-link" role="link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ replaced-line }}</span>{% endcapture %}
+                      {% endif %} 
                       {% capture annotated-text-en %}{{ annotated-text-en | replace_first: replaced-line, new-line }}{% endcapture %}
                     {% endfor %}
                   {% else %}
@@ -91,13 +93,15 @@ layout: bilingual
                     {% for line in highlighted-array %}
                       {% if line == first-line %}
                         {% capture replaced-line %}{{ line | rstrip }}{% endcapture %}
-                      {% elsif line == last-line %}
-                        {% capture replaced-line %}{{ line | lstrip }}{% endcapture %}
+                        {% capture new-line %}<span id="highlight-{{ annotation.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ replaced-line }}</span>{% endcapture %}
                       {% else %}
-                        {% capture replaced-line %}{{ line | strip }}{% endcapture %}
-                      {% endif %}
-                      {% comment %}{{ replaced-line }}<br />{% endcomment %}
-                      {% capture new-line %}<span id="highlight-{{ annotation.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1">{{ replaced-line }}</span>{% endcapture %}
+                        {% if line == last-line %}
+                          {% capture replaced-line %}{{ line | lstrip }}{% endcapture %}
+                        {% else %}
+                          {% capture replaced-line %}{{ line | strip }}{% endcapture %}
+                        {% endif %}
+                        {% capture new-line %}<span id="highlight-{{ annotation.Id }}-{{ forloop.index0 }}" class="annotation-link" role="link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ replaced-line }}</span>{% endcapture %}
+                      {% endif %} 
                       {% capture annotated-text-ru %}{{ annotated-text-ru | replace_first: replaced-line, new-line }}{% endcapture %}
                     {% endfor %}
                   {% else %}
