@@ -47,8 +47,10 @@ Repeated lines of poetry are causing problems. In chapter 11, “Ламп сво
 
 ## 04/25/23
 
-Ch 3:
+Ch 3 ru:
 - “потатуй” = part of a word, highlighted; full word “потатуйка” is also annotated, but back link does not work bc full word is not highlighted/linked.
 - Similar issue with “Падеспанец хорошенький танец”, “Падеспанец” is highlighted, which breaks the longer highlight (or rather, causes the liquid to not find a match for the longer annotation)
-- Interestingly, between “потатуй” and “потатуйка”, the shorter annotation is marked as having a “full” overlap, while the longer has “none” (this could be very helpful). On the other hand, with “Падеспанец” and “Падеспанец хорошенький танец”, it is the longer annotation that is marked as having a “full” overlap, while the shorter one has “none.” Why is this the case? Is it something that can be adjusted so that the smaller annotation inside a longer one is always the one that is marked as “full” overlap?
-- annotation of “грифом” and “грифом срочно, То ли с грифоном” appears to be broken because of the italicized word “срочно”
+- Interestingly, between “потатуй” and “потатуйка”, the shorter annotation is marked as having a “full” overlap, while the longer has “none” (this could be very helpful). On the other hand, with “Падеспанец” and “Падеспанец хорошенький танец”, it is the longer annotation that is marked as having a “full” overlap, while the shorter one has “none.” Why is this the case? Is it something that can be adjusted so that the smaller annotation inside a longer one is always the one that is marked as “full” overlap? If liquid is used to skip over annotations marked with "full" overlap when adding highlights, then it may cause issues.
+    - For example, with the “потатуй” issue above, if the liquid skips “потатуй” for highlighting, and instead highlights the longer selection, the highlighted text will link to the annotation for the longer selection, and users would have to scroll UP to see the shorter one. This feels less than ideal. On the other hand, if there is a way to subtract from/truncate the longer selection, it could be split into several links. Liquid's "split" filter could be useful for this and may even work for overlaps in the middle of long selections. It may be tricky though, depending on the order of annotations in the data.
+
+- annotation of “грифом” and “грифом срочно, То ли с грифоном” appears to be broken because of the italicized word “срочно”; it will probably also be broken because of the overlap
