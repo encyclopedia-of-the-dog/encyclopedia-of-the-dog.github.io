@@ -54,3 +54,32 @@ Ch 3 ru:
     - For example, with the “потатуй” issue above, if the liquid skips “потатуй” for highlighting, and instead highlights the longer selection, the highlighted text will link to the annotation for the longer selection, and users would have to scroll UP to see the shorter one. This feels less than ideal. On the other hand, if there is a way to subtract from/truncate the longer selection, it could be split into several links. Liquid's "split" filter could be useful for this and may even work for overlaps in the middle of long selections. It may be tricky though, depending on the order of annotations in the data.
 
 - annotation of “грифом” and “грифом срочно, То ли с грифоном” appears to be broken because of the italicized word “срочно”; it will probably also be broken because of the overlap
+
+## 05/22/23
+
+- Should adjust annotation panel so that there is always a break between english and russian annotations and russian annotations always start on a new line, regardless of the size of the window
+- Fix the site for smaller screens. The annotation panel resize button is invisible on Safari on my iPhone.
+- For chapter 15 (ru) there is an annotation in comments-all.csv that has nothing in the "highlighted" column. Here is its ID: zc5mkpv4Ee26cXfA4TDVxg. The text of the annotation still appears in the annotation panel, but it has no highlighted text. The highlighted text should be "перемет". The annotation is also not visible on the annotation site. Perhaps it was deleted?
+- Also in chapter 15, the accented letter in "отчаи́ньи" is marked as an error, but it appears this way in the Azbooka PDF. (Full sentence: "Кто же взвоет в отчаи́ньи?") It may be a misspelling (spelled correctly the word is "отча́яние", meaning despair), but perhaps it is intentional. Is this alternative spelling used in other editions of the text, or is it a mistake in the PDF? Annotation ID: y1TK9JyyEe25zGOqeqyNNA.
+
+## 05/25/22
+
+Dogopedia, Ch 6, ru
+- “с белого моего плеча” at the end of the first paragraph should be highlighted, but it is not. probably for the same reason that highlights at the ends of chapters used to be broken
+- ешь-пей-ночуй (annotation id: yZBzbIeQEe2bwRvMVA9bhA) misspelling in comment. should be “enumeration”
+
+## 05/26/22
+
+If using find and replace to add highlights, the best approach to make sure maximum amount are added (and overlapping/darkening highlights are preserved) is to add the highlights that encompass/contain other ones first, then add the ones inside (but only match the words in the highlight, not the prefix or suffix). However, highlights that overlap only partially present their own issue. They could be combined into one link, but it would get rid of the overlapped look of the highlights. This aesthetic issue (although I would argue it's probably rather important since the darkening highlights help indicate the existence of multiple annotations tied to the same word(s)) could potentially be remedied by creating three spans (rather than two): the first section (annotated once, so lighter), the overlapping section (annotated twice, so darker), and the final section (annotated once, so lighter). (Picture a venn diagram.)
+
+Or all overlapping highlights could be combined into one link, preserving individual hypothesis IDs for reference but linking to one annotation, meaning that users will have to scroll down to see all annotations (which they already have to do in the case of overlapping annotations that do work if they're using mouse/click navigation) and overlaps will not display as darkened/overlapped highlights.
+
+Idea for dealing with overlaps:
+- extract comment data separately from each chapter in each language
+- determine overlap based on position_start and position_end values, find a way to compare the ranges of each annotation to determine overlap (how?)
+
+Weird things I've noticed:
+- annotations with the same start position aren't ordered in any specific way, might be nice to order them from longest to shortest
+
+Other notes/ideas:
+- What if i used liquid to add longer annotations first, then shorter annotations? Might it then be able to capture all nested annotations?

@@ -60,7 +60,7 @@ layout: bilingual
             {% assign chapter = annotation.chapter | truncate: 2, "" %}
             {% if chapter == page.number %}
               {% capture highlighted %}{{ annotation.highlighted }}{% endcapture %}
-              {% capture suffix %}{{ annotation.suffix | rstrip | truncate: 5, "" }}{% endcapture %}
+              {% capture suffix %}{{ annotation.suffix | newline_to_br | split: "<br />" | first | rstrip | truncate: 5, "" }}{% endcapture %}
               {% capture replaced-text %}{{ highlighted }}{{ suffix }}{% endcapture %}
               {% comment %}
               {{ replaced-text }}<br />
