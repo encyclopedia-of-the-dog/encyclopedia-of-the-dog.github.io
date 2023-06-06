@@ -60,7 +60,7 @@ Ch 3 ru:
 - Should adjust annotation panel so that there is always a break between english and russian annotations and russian annotations always start on a new line, regardless of the size of the window
 - Fix the site for smaller screens. The annotation panel resize button is invisible on Safari on my iPhone.
 - For chapter 15 (ru) there is an annotation in comments-all.csv that has nothing in the "highlighted" column. Here is its ID: zc5mkpv4Ee26cXfA4TDVxg. The text of the annotation still appears in the annotation panel, but it has no highlighted text. The highlighted text should be "перемет". The annotation is also not visible on the annotation site. Perhaps it was deleted?
-- Also in chapter 15, the accented letter in "отчаи́ньи" is marked as an error, but it appears this way in the Azbooka PDF. (Full sentence: "Кто же взвоет в отчаи́ньи?") It may be a misspelling (spelled correctly the word is "отча́яние", meaning despair), but perhaps it is intentional. Is this alternative spelling used in other editions of the text, or is it a mistake in the PDF? Annotation ID: y1TK9JyyEe25zGOqeqyNNA.
+- Also in chapter 15, the accented letter и́ in "отчаи́ньи" is marked as an error, but it appears this way in the Azbooka PDF. (Full sentence: "Кто же взвоет в отчаи́ньи?") It may be a misspelling (spelled correctly the word is "отча́яние", meaning despair), but perhaps it is intentional. Is this alternative spelling used in other editions of the text, or is it a mistake in the PDF? Annotation ID: y1TK9JyyEe25zGOqeqyNNA.
 
 ## 05/25/22
 
@@ -80,6 +80,8 @@ Idea for dealing with overlaps:
 
 Weird things I've noticed:
 - annotations with the same start position aren't ordered in any specific way, might be nice to order them from longest to shortest
+    - Update: Actually, annotations with the same start position are listed in order of end position, so short annotations come first. It would be great if for annotations with the same start position the longest one is listed first in the annotation panel. I wonder if I can do something with liquid to sort that out.
 
 Other notes/ideas:
 - What if i used liquid to add longer annotations first, then shorter annotations? Might it then be able to capture all nested annotations?
+    - Update: I tried it and it looks promising, but needs some adjustments.
