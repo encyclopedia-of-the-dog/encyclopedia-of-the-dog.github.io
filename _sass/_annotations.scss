@@ -22,7 +22,7 @@
 #annotation-panel {
   display: none;
   width: 100%;
-  height: 10rem;
+  height: 200px;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -39,6 +39,15 @@
   a {
     color: $link-color;
     text-decoration: underline;
+  }
+
+  .panel-mask {
+    width: 100%;
+    height: 15px;
+    position: fixed;
+    bottom: 184px;
+    z-index: 1;
+    background-image: linear-gradient(#fafafa, #fafafa, #fafafa8e, #fafafa00)
   }
 }
 
@@ -181,7 +190,7 @@
   width: 5rem;
   height: 1.25rem;
   position: fixed;
-  bottom: 9.95rem;
+  bottom: 199px;
   left: 50%;
   margin-left: -2.5rem;
   background: #fafafa;
@@ -189,14 +198,19 @@
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom: #fafafa;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
 
 #annotation-panel.expanded {
-  height: 25rem !important;
+  height: 400px !important;
+
+  .panel-mask {
+    bottom: 384px !important;
+  }
 }
 
 #btn-expand-annotations.expanded {
-  bottom: 24.95rem !important;
+  bottom: 399px !important;
 }
 
 /* annotation menu */
