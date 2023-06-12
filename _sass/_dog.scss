@@ -380,14 +380,7 @@ div.bilingual {
 /* Poem-specific styles for bilingual view */
 .poem {
   .both {
-    margin-left: 2em;
-    #en {
-      padding-left: 2rem;
-    }
-    #ru {
-      padding-left: 0.5rem;
-      padding-right: 2rem;
-    }
+    max-width: 44rem;
   }
 }
 
