@@ -1,5 +1,6 @@
 <div id="annotation-panel" aria-hidden="true">
     <button class="expbtn" id="btn-expand-annotations" onclick="expandAnnotations()">▲</button>
+    <div class="panel-mask"></div>
     <div id="annotation-container">
         <div id="annotations-en">
             {% assign annotations-en = site.data.comments-all | where: "lang", "en" %}
