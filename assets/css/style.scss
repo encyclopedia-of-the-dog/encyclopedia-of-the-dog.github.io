@@ -23,11 +23,10 @@ $regular-font-size: 1.25em; /* 20px / 16px = 1.25em; support text resizing in al
 
 $text-color: #151515;
 $heading-color: #404040;
-$link-color: #9A8D84;
+$link-color: #3E5B7A;
 
 @import "ed";
 @import "syntax";
 @import "sidebar";
 @import "dog";
 @import "annotations";
-@import "littlefoot";

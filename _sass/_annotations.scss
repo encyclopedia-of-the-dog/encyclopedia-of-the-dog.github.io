@@ -3,17 +3,17 @@
 /* annotation links in main text */
 
 .annotations-hidden {
-  a.annotation-link {
-    color: $text-color !important;
+  span.annotation-link {
+    color: $text-color;
     text-decoration: none;
     pointer-events: none;
   }
 }
 
 .annotations-visible {
-  a.annotation-link {
-    color: $link-color;
-    text-decoration: underline;
+  span.annotation-link {
+    background-color: #778eac5f;
+    cursor: pointer;
   }
 }
 
@@ -22,7 +22,7 @@
 #annotation-panel {
   display: none;
   width: 100%;
-  height: 10rem;
+  height: 200px;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -35,19 +35,78 @@
   padding: .5rem 1rem;
   background: #fafafa;
   overflow-y: scroll;
+
+  a {
+    color: $link-color;
+    text-decoration: underline;
+  }
+
+  .panel-mask {
+    width: 100%;
+    height: 15px;
+    position: fixed;
+    bottom: 184px;
+    z-index: 1;
+    background-image: linear-gradient(#fafafa, #fafafa, #fafafa8e, #fafafa00)
+  }
 }
 
-#annotation-text {
+#annotation-container {
   font-size: 0.85em;
   
-  img {
-    max-width: 20rem;
-    margin-left: auto;
-    margin-right: auto;
+  .annotation {
+    width: 100%;
+    overflow-y: auto;
+    padding: .75rem 0 0 0;
+    border-bottom: 1px solid #c8c8c8;
+  }
+
+  .annotation-text-container {
+    width: 100%;
+  }
+
+  .annotation-text-container.with-img {
+    width: 75%;
+    float: left;
+    padding-right: 1rem;
+  }
+
+  .annotation-img-container {
+    width: 25%;
+    float: right;
+
+    img {
+      display: block;
+      width: 100%;
+    }
   }
   
+  .highlighted {
+    display: inline-block;
+    cursor: pointer;
+    color: $link-color;
+    text-decoration: underline;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .en-comment{
+    display: inline-block;
+    height: fit-content;
+    margin: 0 0 0.5rem 0;
+
+    img {
+      display: none;
+    }
+  }
+
   .ru-comment {
-    display: inline;
+    display: inline-block;
+    height: fit-content;
+    margin: 0 0 0.5rem 0;
+
+    img {
+      display: none;
+    }
   }
 
   #annotations-ru {
@@ -56,10 +115,14 @@
 
   #annotations-ru.lang-en {
     .en-comment {
-      display: inline;
+      display: inline-block;
     }
     .ru-comment {
       display: none;
+      
+      img {
+        display: none;
+      }
     }
   }
 
@@ -74,12 +137,18 @@
 
   #annotations-ru.lang-both {
     .en-comment {
-      display: inline;
+      display: inline-block;
     }
     .ru-comment {
       display: inline-block;
-      margin-top: 0.5rem;
     }
+  }
+
+  .annotation-tag-container {
+    width: 100%;
+    display: block;
+    text-align: left;
+    margin: 0 0 1rem 0;
   }
 
   .tag {
@@ -121,7 +190,7 @@
   width: 5rem;
   height: 1.25rem;
   position: fixed;
-  bottom: 9.95rem;
+  bottom: 199px;
   left: 50%;
   margin-left: -2.5rem;
   background: #fafafa;
@@ -129,18 +198,19 @@
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom: #fafafa;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
 
 #annotation-panel.expanded {
-  height: 25rem !important;
+  height: 400px !important;
+
+  .panel-mask {
+    bottom: 384px !important;
+  }
 }
 
 #btn-expand-annotations.expanded {
-  bottom: 24.95rem !important;
-}
-
-.highlighted {
-  text-decoration: underline;
+  bottom: 399px !important;
 }
 
 /* annotation menu */

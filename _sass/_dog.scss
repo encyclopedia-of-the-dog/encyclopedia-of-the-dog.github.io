@@ -323,10 +323,6 @@ div.bilingual {
     margin-bottom: .5rem;
   }
 
-  .littlefoot-footnote__host {
-    display: none;
-  }
-
   .header {
     max-width: 32rem;
     margin: auto;
@@ -384,14 +380,7 @@ div.bilingual {
 /* Poem-specific styles for bilingual view */
 .poem {
   .both {
-    margin-left: 2em;
-    #en {
-      padding-left: 2rem;
-    }
-    #ru {
-      padding-left: 0.5rem;
-      padding-right: 2rem;
-    }
+    max-width: 44rem;
   }
 }
 
@@ -431,7 +420,7 @@ footer {
 
 $text-color: #151515;
 $heading-color: #404040;
-$link-color: #9A8D84;
+$link-color: #3E5B7A;
 
 .theme-base-dog .sidebar,
 .theme-base-dog .sidebar-toggle:active,

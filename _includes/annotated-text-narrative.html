@@ -1,0 +1,112 @@
+{% if include.lang == "en" %}
+    {% capture chapter-title %}{% if page.number == "01" %}{{ page.number }}. DISCORDS BEYOND THE ITIL{% else %}{{ page.number }}. {{ title_ru }}{% endif %}{% endcapture %}
+    {% capture annotated-text %}{{ text_en }}{% endcapture %}
+{% elsif include.lang == "ru" %}
+    {% capture chapter-title %}{% if page.number == "01" %}{{ page.number }}. ЗАИТИЛЫЦИНА{% else %}{{ page.number }}. {{ title_ru }}{% endif %}{% endcapture %}
+    {% capture annotated-text %}{{ text_ru }}{% endcapture %}
+{% endif %}
+
+{% assign annotations = site.data.comments-all | where: "chapter", chapter-title %}
+{% for annotation in annotations %}
+    {% capture highlighted %}{{ annotation.highlighted }}{% endcapture %}
+    {% assign thisIndex = forloop.index %}
+    {% assign nestedAnnos = "" %}
+    {% assign overlappedAnnos = "" %}
+    {% for nextAnno in annotations offset:thisIndex %}
+        {% if nextAnno.position_start == annotation.position_start and nextAnno.position_end >= annotation.position_end %}
+            {% assign nextIndex = thisIndex | plus: 1 %}
+            {% assign longerHighlighted = nextAnno.highlighted %}
+            {% capture replaced-text %}{{ longerHighlighted }}{% endcapture %}
+            {% capture new-highlighted %}<span id="highlight-{{ annotation.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ highlighted }}</span>{% endcapture %}
+            {% capture new-text %}<span id="highlight-{{ nextAnno.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ longerHighlighted | replace: highlighted, new-highlighted }}</span>{% endcapture %}
+            {% capture annotated-text %}{{ annotated-text | replace_first: replaced-text, new-text }}{% endcapture %}
+            {% assign highlighted = new-text %}
+            {% for nextNextAnno in annotations offset:nextIndex %}
+                {% if nextNextAnno.position_start == nextAnno.position_start and nextNextAnno.position_end >= nextAnno.position_end %}
+                    {% assign evenLongerHighlighted = nextNextAnno.highlighted %}
+                    {% capture replaced-text %}{{ evenLongerHighlighted | replace_first: replaced-text, new-text }}{% endcapture %}
+                    {% capture new-text %}<span id="highlight-{{ nextNextAnno.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ replaced-text }}</span>{% endcapture %}
+                    {% capture annotated-text %}{{ annotated-text | replace_first: replaced-text, new-text }}{% endcapture %}
+                    {% assign highlighted = new-text %}
+                {% elsif nextNextAnno.position_start <= nextAnno.position_end and nextNextAnno.position_end <= nextAnno.position_end %}
+                    {% capture nextId %}{{ nextNextAnno.Id }}, {% endcapture %}
+                    {% assign nestedAnnos = nestedAnnos | append: nextId %}
+                {% elsif nextNextAnno.position_start < nextAnno.position_end and nextNextAnno.position_end > nextAnno.position_end %}
+                    {% assign overlap-length = nextAnno.position_end | minus: nextNextAnno.position_start %}
+                    {% assign overlap-highlight = nextNextAnno.highlighted | truncate: overlap-length, "" %}
+                    {% assign second-highlight = nextNextAnno.highlighted | replace_first: overlap-highlight, "" %}
+                    {% unless second-highlight == nextNextAnno.highlighted second-highlight == " " or second-highlight == "." or second-highlight == "," %}
+                        {% assign second-suffix = nextNextAnno.suffix | truncate: 1, "" %}
+                        {% capture replaced-text %}{{ second-highlight }}{{ second-suffix }}{% endcapture %}
+                        {% capture new-text %}<span id="highlight-{{ nextNextAnno.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ nextNextAnno.Id }}';" tabindex="-1" aria-hidden="true">{{ second-highlight }}</span>{{ second-suffix }}{% endcapture %}
+                        {% capture annotated-text %}{{ annotated-text | replace_first: replaced-text, new-text }}{% endcapture %}
+                    {% endunless %}
+                {% else %}
+                    {% break %}
+                {% endif %}
+            {% endfor %}
+            {% if nestedAnnos != "" %}
+                {% assign nestedAnnos = nestedAnnos | split: ", " %}
+                {% assign replaced-highlighted = highlighted %}
+                {% for nestedAnno in nestedAnnos %}
+                    {% assign thisNestedAnno = annotations | where: "Id", nestedAnno | first %}
+                    {% capture new-highlighted %}<span id="highlight-{{ thisNestedAnno.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ thisNestedAnno.Id }}';" tabindex="-1" aria-hidden="true">{{ thisNestedAnno.highlighted }}</span>{% endcapture %}
+                    {% capture replaced-highlighted %}{{ replaced-highlighted | replace_first: thisNestedAnno.highlighted, new-highlighted }}{% endcapture %}
+                {% endfor %}
+                {% capture replaced-text %}{{ highlighted }}{% endcapture %}
+                {% capture new-text %}{{ replaced-highlighted }}{% endcapture %}
+                {% unless replaced-text == "." %}  {% comment %} This is to prevent issues caused by the annotation of the last period of the chapter. {% endcomment %}
+                {% capture annotated-text %}{{ annotated-text | replace_first: replaced-text, new-text }}{% endcapture %}
+                {% endunless %}
+            {% else %}
+                {% capture suffix %}{{ annotation.suffix | newline_to_br | split: "<br />" | first | rstrip | truncate: 5, "" }}{% endcapture %}
+                {% capture replaced-text %}{{ highlighted }}{{ suffix }}{% endcapture %}
+                {% comment %}{{ replaced-text }}<br>{% endcomment %}
+                {% unless replaced-text == "." %}  {% comment %} This is to prevent issues caused by the annotation of the last period of the chapter. {% endcomment %}
+                {% capture new-text %}<span id="highlight-{{ annotation.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ annotation.highlighted }}</span>{{ suffix }}{% endcapture %}
+                {% capture annotated-text %}{{ annotated-text | replace_first: replaced-text, new-text }}{% endcapture %}
+                {% endunless %}
+            {% endif %}
+        {% elsif nextAnno.position_start <= annotation.position_end and nextAnno.position_end <= annotation.position_end %}
+            {% capture nextId %}{{ nextAnno.Id }}, {% endcapture %}
+            {% assign nestedAnnos = nestedAnnos | append: nextId %}
+        {% elsif nextAnno.position_start < annotation.position_end and nextAnno.position_end > annotation.position_end %}
+            {% assign overlap-length = annotation.position_end | minus: nextAnno.position_start %}
+            {% assign overlap-highlight = nextAnno.highlighted | truncate: overlap-length, "" %}
+            {% assign second-highlight = nextAnno.highlighted | replace_first: overlap-highlight, "" %}
+            {% unless second-highlight == nextAnno.highlighted or second-highlight == " " or second-highlight == "." or second-highlight == "," %}
+                {% assign second-suffix = nextAnno.suffix | truncate: 1, "" %}
+                {% capture replaced-text %}{{ second-highlight }}{{ second-suffix }}{% endcapture %}
+                {% capture new-text %}<span id="highlight-{{ nextAnno.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ nextAnno.Id }}';" tabindex="-1" aria-hidden="true">{{ second-highlight }}</span>{{ second-suffix }}{% endcapture %}
+                {% capture annotated-text %}{{ annotated-text | replace_first: replaced-text, new-text }}{% endcapture %}
+            {% endunless %}
+        {% else %}
+            {% break %}
+        {% endif %}
+    {% endfor %}
+    {% if nestedAnnos != "" %}
+        {% assign nestedAnnos = nestedAnnos | split: ", " %}
+        {% for nestedAnno in nestedAnnos %}
+            {% assign thisNestedAnno = annotations | where: "Id", nestedAnno | first %}
+            {% assign replaced-text = thisNestedAnno.highlighted %}
+            {% capture new-text %}<span id="highlight-{{ thisNestedAnno.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ thisNestedAnno.Id }}';" tabindex="-1" aria-hidden="true">{{ thisNestedAnno.highlighted }}</span>{% endcapture %}
+            {% capture new-highlighted %}{{ highlighted | replace_first: replaced-text, new-text }}{% endcapture %}
+        {% endfor %}
+        {% capture replaced-text %}{{ highlighted }}{% endcapture %}
+        {% comment %}{{ replaced-text }}<br>{% endcomment %}
+        {% unless replaced-text == "." %}  {% comment %} This is to prevent issues caused by the annotation of the last period of the chapter. {% endcomment %}
+        {% capture new-text %}<span id="highlight-{{ annotation.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ new-highlighted }}</span>{% endcapture %}
+        {% capture annotated-text %}{{ annotated-text | replace_first: replaced-text, new-text }}{% endcapture %}
+        {% endunless %}
+    {% else %}
+        {% capture suffix %}{{ annotation.suffix | newline_to_br | split: "<br />" | first | rstrip | truncate: 5, "" }}{% endcapture %}
+        {% capture replaced-text %}{{ highlighted }}{{ suffix }}{% endcapture %}
+        {% comment %}{{ replaced-text }}<br>{% endcomment %}
+        {% unless replaced-text == "." %}  {% comment %} This is to prevent issues caused by the annotation of the last period of the chapter. {% endcomment %}
+        {% capture new-text %}<span id="highlight-{{ annotation.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ annotation.highlighted }}</span>{{ suffix }}{% endcapture %}
+        {% capture annotated-text %}{{ annotated-text | replace_first: replaced-text, new-text }}{% endcapture %}
+        {% endunless %}
+    {% endif %}
+{% endfor %}
+
+{{ annotated-text }}

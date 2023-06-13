@@ -45,8 +45,6 @@ layout: default
   
 </div>
 
-{% include littlefoot.html %}
-
 <script>
   // Chapter List Dropdown
   function showChapters() {
@@ -114,14 +112,22 @@ layout: default
   // Show annotations
   function showAnnotations(){
     document.getElementById("annotation-panel").style.display = "block";
+    document.getElementById("annotation-panel").setAttribute ("aria-hidden", "false");
     var content = document.getElementById("chapter-content");
       content.classList.remove("annotations-hidden");
       content.classList.add("annotations-visible");
     // Add hidden links to tab navigation
-    var divsToHide = document.getElementsByClassName("annotation-link"); //divsToHide is an array
-      for(var i = 0; i < divsToHide.length; i++){
-        divsToHide[i].setAttribute ("tabindex", "");
+    var spansToHide = document.getElementsByClassName("annotation-link"); //spansToHide is an array
+      for(var i = 0; i < spansToHide.length; i++){
+        spansToHide[i].setAttribute ("tabindex", "0");
+        spansToHide[i].setAttribute ("aria-hidden", "false");
       }
+    var spansToHide = document.getElementsByClassName("highlighted"); //spansToHide is an array
+      for(var i = 0; i < spansToHide.length; i++){
+        spansToHide[i].setAttribute ("tabindex", "0");
+        spansToHide[i].setAttribute ("aria-hidden", "false");
+      }
+    document.getElementById("texts").style.padding = "0 0 5rem";
     // Switch button to 'Hide Annotations'
     // document.getElementById("btn-show-annotations").style.display = "none";
     // document.getElementById("btn-hide-annotations").style.display = "inline";
@@ -135,10 +141,17 @@ layout: default
       content.classList.remove("annotations-visible");
       content.classList.add("annotations-hidden");
     // Remove hidden links from tab navigation
-    var divsToHide = document.getElementsByClassName("annotation-link"); //divsToHide is an array
-      for(var i = 0; i < divsToHide.length; i++){
-        divsToHide[i].setAttribute ("tabindex", "-1");
+    var spansToHide = document.getElementsByClassName("annotation-link"); //spansToHide is an array
+      for(var i = 0; i < spansToHide.length; i++){
+        spansToHide[i].setAttribute ("tabindex", "-1");
+        spansToHide[i].setAttribute ("aria-hidden", "true");
       }
+      var spansToHide = document.getElementsByClassName("highlighted"); //spansToHide is an array
+      for(var i = 0; i < spansToHide.length; i++){
+        spansToHide[i].setAttribute ("tabindex", "-1");
+        spansToHide[i].setAttribute ("aria-hidden", "true");
+      }
+    document.getElementById("texts").style.padding = "0";
     // Switch button to 'Show Annotations'
     // document.getElementById("btn-show-annotations").style.display = "inline";
     // document.getElementById("btn-hide-annotations").style.display = "none";
@@ -189,4 +202,26 @@ layout: default
     }
   }
 }
+</script>
+
+<script>
+  // Make clickable spans keyboard accessible
+  var clickableSpansText = document.getElementsByClassName("annotation-link");
+  for (let i = 0; i < clickableSpansText.length; i++) {
+    clickableSpansText[i].addEventListener("keyup", function(event) {
+        event.preventDefault();
+        if (event.keyCode === 13 || event.keyCode === 32) {
+          clickableSpansText[i].click();
+        }
+    });
+  }
+  var clickableSpansPanel = document.getElementsByClassName("highlighted");
+  for (let i = 0; i < clickableSpansPanel.length; i++) {
+    clickableSpansPanel[i].addEventListener("keyup", function(event) {
+        event.preventDefault();
+        if (event.keyCode === 13 || event.keyCode === 32) {
+          clickableSpansPanel[i].click();
+        }
+    });
+  }
 </script>

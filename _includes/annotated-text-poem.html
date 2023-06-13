@@ -1,0 +1,47 @@
+{% if include.lang == "en" %}
+    {% capture chapter-title %}{% if page.number == "01" %}{{ page.number }}. DISCORDS BEYOND THE ITIL{% else %}{{ page.number }}. {{ title_ru }}{% endif %}{% endcapture %}
+    {% capture annotated-text %}{{ text_en }}{% endcapture %}
+{% elsif include.lang == "ru" %}
+    {% capture chapter-title %}{% if page.number == "01" %}{{ page.number }}. ЗАИТИЛЫЦИНА{% else %}{{ page.number }}. {{ title_ru }}{% endif %}{% endcapture %}
+    {% capture annotated-text %}{{ text_ru }}{% endcapture %}
+{% endif %}
+
+{% assign annotations = site.data.comments-all | where: "chapter", chapter-title %}
+{% for annotation in annotations %}
+    {% capture highlighted %}{{ annotation.highlighted }}{% endcapture %}
+    {% capture suffix %}{{ annotation.suffix | newline_to_br | split: "<br />" | first | rstrip }}{% endcapture %}
+    {% capture prefix %}{{ annotation.prefix | newline_to_br | split: "<br />" | last | lstrip }}{% endcapture %}
+    {% assign highlighted-array = highlighted | newline_to_br | split: "<br />" %}
+    {% assign highlighted-size = highlighted-array | size %}
+    {% if highlighted-size > 1 %}
+    {% assign first-line = highlighted-array | first %}
+    {% assign last-line = highlighted-array | last %}
+    {% for line in highlighted-array %}
+        {% if line == first-line %}
+        {% capture replaced-line %}{{ line | rstrip }}{% endcapture %}
+        {% capture new-line %}<span id="highlight-{{ annotation.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ replaced-line }}</span>{% endcapture %}
+        {% else %}
+        {% if line == last-line %}
+            {% capture replaced-line %}{{ line | lstrip }}{% endcapture %}
+        {% else %}
+            {% capture replaced-line %}{{ line | strip }}{% endcapture %}
+        {% endif %}
+        {% capture new-line %}<span id="highlight-{{ annotation.Id }}-{{ forloop.index0 }}" class="annotation-link" role="link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ replaced-line }}</span>{% endcapture %}
+        {% endif %} 
+        {% capture annotated-text %}{{ annotated-text | replace_first: replaced-line, new-line }}{% endcapture %}
+    {% endfor %}
+    {% else %}
+    {% assign highlighted-length = highlighted | size %}
+    {% if highlighted-length < 2 %}
+        {% capture prefix %}{{ prefix | split: " " | last }}{% endcapture %}
+        {% capture replaced-line %}{{ prefix }}{{ highlighted }}{{ suffix }}{% endcapture %}
+        {% capture new-line %}{{ prefix }}<span id="highlight-{{ annotation.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ highlighted }}</span>{{ suffix }}{% endcapture %}
+    {% else %}
+        {% capture replaced-line %}{{ highlighted }}{{ suffix }}{% endcapture %}
+        {% capture new-line %}<span id="highlight-{{ annotation.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ highlighted }}</span>{{ suffix }}{% endcapture %}
+    {% endif %}
+    {% capture annotated-text %}{{ annotated-text | replace_first: replaced-line, new-line }}{% endcapture %}
+    {% endif %}
+{% endfor %}
+
+{{ annotated-text }}

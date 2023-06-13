@@ -34,7 +34,7 @@ collections:
 markdown: kramdown
 
 kramdown:
-  auto_ids:       true
+  auto_ids:       false
   footnote_nr:    1
   entity_output:  as_char
   footnote_backlink: "&#x21a9;&#xfe0e;"
@@ -51,6 +51,7 @@ exclude:
   - Gemfile.lock
   - backstop_data
   - backstop.json
+  - dev-notes
 
 # Theme
 # (Used for local or custom-server deployments)

@@ -26,11 +26,13 @@ layout: bilingual
     <div class="main-content">
         <div class="text-container english" id="texts">
           <div id="en" markdown="1">
-            {{ text_en }}
+            {% include annotated-text-poem.html lang="en" %}
           </div>
           <div id="ru" markdown="1">
-            {{ text_ru }}
+            {% include annotated-text-poem.html lang="ru" %}
           </div>
         </div>
       </div>
 </article>
+
+{{ content }}
