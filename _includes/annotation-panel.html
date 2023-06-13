@@ -26,7 +26,7 @@
                                 {% assign list = annotation.tags %}
                                 {% assign tags = list | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
                                 {% for tag in tags -%}
-                                    <span class="tag tag-{{ tag }}">{{ tag }}</span> 
+                                    <span class="tag tag-{{ tag | slugify }}">{{ tag }}</span> 
                                 {% endfor %}
                             </div>
                         </div>                        
@@ -38,7 +38,7 @@
                                 {% assign list = annotation.tags %}
                                 {% assign tags = list | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
                                 {% for tag in tags -%}
-                                    <span class="tag tag-{{ tag }}">{{ tag }}</span> 
+                                    <span class="tag tag-{{ tag | slugify }}">{{ tag }}</span> 
                                 {% endfor %}
                             </div>
                         </div>
@@ -74,7 +74,7 @@
                                 {% assign list = annotation.tags %}
                                 {% assign tags = list | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
                                 {% for tag in tags -%}
-                                    <span class="tag tag-{{ tag }}">{{ tag }}</span> 
+                                    <span class="tag tag-{{ tag | slugify }}">{{ tag }}</span> 
                                 {% endfor %}
                             </div>
                         </div>                        
@@ -89,7 +89,7 @@
                                 {% assign list = annotation.tags %}
                                 {% assign tags = list | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
                                 {% for tag in tags -%}
-                                    <span class="tag tag-{{ tag }}">{{ tag }}</span> 
+                                    <span class="tag tag-{{ tag | slugify }}">{{ tag }}</span> 
                                 {% endfor %}
                             </div>
                         </div>

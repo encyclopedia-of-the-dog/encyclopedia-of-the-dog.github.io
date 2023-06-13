@@ -159,23 +159,40 @@
     padding: 2px 5px;
   }
 
-  .tag-style {
-    background-color: rgb(101, 108, 79);
+  .tag-style, .tag-style-register, .tag-register-style, .tag-regyster-style, .tag-stylistic-device {
+    background-color: #4C5C47;
   }
-  .tag-intertextuality {
-    background-color: rgb(166, 152, 119);
+
+  .tag-character, .tag-motif, .tag-theme, .tag-symbol, .tag-symbols {
+    background-color: #485B59;
   }
-  .tag-language {
-    background-color: rgb(158, 83, 31);
+
+  .tag-metaphor, .tag-pun, .tag-irony, .tag-ironic, .tag-structure, .tag-poetic-device {
+    background-color: #44576F;
   }
-  .tag-symbol {
-    background-color: rgb(85, 65, 40);
+
+  .tag-language, .tag-archaism, .tag-phraseologism, .tag-neologism, .tag-foreign {
+    background-color: #524875;
   }
-  .tag-explanatory {
-    background-color: rgb(197, 134, 64);
+
+  .tag-Russia, .tag-russia, .tag-soviet, .tag-folklore, .tag-religion, .tag-bible {
+    background-color: #635167;
   }
-  .tag-expand, .tag-error {
-    background-color: #AA3232;
+
+  .tag-author, .tag-self-reference, .tag-thematic-self-reference, .tag-intertextuality, .tag-intratextuality, .tag-explanatory {
+    background-color: #932A52;
+  }
+
+  .tag-music, .tag-sound-play, .tag-rhythm, .tag-metrical-pattern {
+    background-color: #953904;
+  }
+
+  .tag-setting, .tag-location, .tag-time {
+    background-color: #6D4D08;
+  }
+
+  .tag-error, .tag-expand {
+    background-color: #000000;
   }
 }
 
