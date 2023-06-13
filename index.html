@@ -3,36 +3,13 @@ layout: home
 title: "Encyclopedia of the Dog."
 ---
 
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula eu nulla et consectetur. In efficitur leo sit amet elit dapibus, ut consequat libero convallis. Mauris bibendum ante et libero euismod iaculis. Sed quis risus tortor. Curabitur mollis massa nulla, egestas vehicula sem cursus vel. Cras ex metus, venenatis eu orci nec, interdum efficitur leo. Nam elementum, nisl ut placerat pulvinar, libero magna rutrum augue, quis interdum purus enim sed neque. Morbi eu consequat lacus.</p>
 
+<h2>About the Edition</h2>
+<p>Suspendisse pellentesque, nisl sed scelerisque ornare, mi ligula ornare elit, nec egestas diam magna id quam. Pellentesque nec neque felis. Suspendisse posuere lacinia diam, et gravida odio efficitur semper. Vivamus ultricies odio nec velit fermentum, in tempor eros accumsan. Proin in consequat metus. Curabitur varius lobortis dolor, sit amet accumsan mi congue eu. Nam quis vestibulum metus, sit amet euismod metus. Integer sit amet dui congue, mollis neque a, semper mi. Vestibulum vestibulum nibh nec elit auctor luctus ac eu lectus. Aliquam sollicitudin pellentesque risus eu pretium. Morbi tincidunt ante consequat scelerisque suscipit. Ut libero metus, scelerisque sed nunc eget, imperdiet vehicula eros.</p>
+<p>Aliquam eget neque ut sapien condimentum efficitur. Suspendisse imperdiet mollis finibus. Integer in mauris a dolor convallis venenatis. Fusce id ipsum id arcu vestibulum gravida at quis urna. Donec nulla nunc, aliquam id sagittis in, dapibus in mi. Quisque nec lobortis urna. Phasellus sed posuere magna. Suspendisse quis eros a dolor suscipit ultricies. Suspendisse ut sapien sed arcu tempor pretium nec in ipsum. Duis iaculis commodo mauris vel lobortis. Fusce quis mi sit amet sem dapibus finibus auctor in nunc. Vivamus interdum hendrerit erat, ac feugiat ipsum scelerisque vitae.</p>
 
-<div class="toc">
-  <h2 id="chapter-heading">Chapters</h2>
-  <ul class="texts">
-  {% for item in site.chapters %}
-    {% if item.number %}
-      {% assign chapterMatch = site.texts | where: "chapter-number", item.number %}
-        {% assign englishMatch = chapterMatch | where: "language", "en" | first %}
-          {% assign title_en = englishMatch.title %}
-        {% assign russianMatch = chapterMatch | where: "language", "ru" | first %}
-          {% assign title_ru = russianMatch.title %}
-            <li class="text-title">
-              <a href="{{ site.baseurl }}{{ item.url }}">
-                {{ item.number }}. {{ title_en }}<span class="toc-ru"> / {{ title_ru }}</span>
-              </a>
-            </li>
-    {% endif %}
-  {% endfor %}
-  </ul>
-</div>
+<h2>How to Use</h2>
+<p>Phasellus imperdiet tellus tempus, gravida velit id, ullamcorper felis. Nullam venenatis quam consectetur eros luctus, quis congue nisi vulputate. Donec quis justo in velit porta suscipit a sed lorem. Praesent malesuada est et libero imperdiet, et dictum dolor placerat. Sed tempus faucibus dolor imperdiet tristique. Donec malesuada, mi at porttitor dignissim, quam quam dictum nisl, vitae tincidunt velit eros ac quam. Nunc sed nisi pharetra, vehicula sem et, mollis mauris. Curabitur molestie laoreet accumsan. Praesent sit amet nisi est. Vivamus convallis egestas lectus. Cras commodo at arcu at porttitor. Donec congue nunc ut sem malesuada fringilla in et lectus.</p>
 
-
-
-
- 
-
-  
-  
-  
-
-  
-  
+<div class="call-to-action"><a href="{{ site.baseurl }}/toc">Start Reading</a></div>

@@ -77,6 +77,25 @@ div.toc {
   }
 }
 
+.call-to-action {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  
+  a {
+    padding: .75rem;
+    color: white;
+    background-color: #4F5763;
+    border-radius: .25rem;
+    text-align: center;
+  }
+
+  a:hover {
+    text-decoration: none;
+    background-color: #444C55
+  }
+}
+
 /* -------- Bilingual Layouts -------- */
 
 /* Skip Links */
