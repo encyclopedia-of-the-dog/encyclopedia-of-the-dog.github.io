@@ -235,6 +235,8 @@ tbody tr:nth-child(odd) th {
 */
 
 .masthead {
+  position: relative;
+  top: -40px;
   border-bottom: 1px solid #eee;
   margin-bottom: 1.5rem;
   padding-top: 26px;
@@ -376,7 +378,8 @@ a.sidebar-nav-item:focus {
 
 /* Style the `label` that we use to target the `.sidebar-checkbox` */
 .sidebar-toggle {
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   top: .75rem;
   left: 1rem;
   display: block;

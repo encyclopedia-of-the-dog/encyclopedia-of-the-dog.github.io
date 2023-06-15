@@ -6,41 +6,154 @@
 
 /* -------- Home Page -------- */
 
-.homeTitle p {
-  color: $text-color;
-}
+/* header on landing page */
+.hero-header {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: -200px;
+  left: 0;
+  background-image:url(hunters.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 350px;
 
-#dogTitle {
-  font-family: $main-font;
-  text-decoration: none;
-  font-size: 2.5rem;
-  /* text-shadow: 3px 3px 3px $text-color; */
-  text-align: left;
-  margin: .5rem 0;
-
-  a {
-    color: #767769;
-  }
-  
-  :hover{
-    text-decoration: none;
-  }
-}
-
-/* hero background image on the landing page */
-  .imgcontainer {
-    position: relative;
-    background-image:url(hunters.jpg);
-    background-position:center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 400px;
-    width: 100vw;
-    padding-left: 0;
-    padding-right: 0;
+  .dark-banner {
+    color: white;
+    text-shadow: 0 0 7px #231e18e1;
+    font-family: $heading-font;
+    background-image: linear-gradient(#231e1800, #231e18);
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
     left: 0;
+    width: 100%;
+    height: 280px;
+  }
+
+  .title-container {
+    max-width: 50rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 4rem;
+
+    #dogTitle {
+      font-size: 5.25vw;
+      margin-top: 1rem;
+      margin-bottom: 0;
+      text-align: left;
+      
+      a {
+        font-family: $main-font;
+        text-decoration: none;
+        /* text-shadow: 3px 3px 3px $text-color; */
+        color: white;
+      }
+        
+      a:hover{
+        text-decoration: none;
+      }
+    }
+    
+    .subheading {
+      font-size: 2.25vw;
+      display: block;
+      float: left;
+      width: 75%;
+      text-align: left;
+    }
+
+    .header-link {
+      font-size: 2.25vw;
+      display: block;
+      float: right;
+      width: 25%;
+      text-align: right;
+
+      a {
+        color: #E6DABD;
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
+.homepage-content {
+  padding: 1rem 4rem 0;
+}
+
+.homepage-footer {
+  padding: 1rem 4rem;
+}
+
+@media only screen and (min-width: 900px) {
+  .hero-header .dark-banner .title-container #dogTitle {
+    font-size: 48px;
+  }
+
+  .hero-header .dark-banner .title-container .subheading, 
+  .hero-header .dark-banner .title-container .header-link {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 56em) {
+  .hero-header .title-container {
+    max-width: 52rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-header {
+    height: 300px;
+    top: -150px;
+  }
+
+  .hero-header .title-container .subheading {
+    width: 100%;
+  }
+
+  .hero-header .title-container .header-link {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .hero-header {
+    height: 200px;
+    top: -50px;
+  }
+
+  .hero-header .dark-banner .title-container #dogTitle {
+    font-size: 26px;
+  }
+
+  .hero-header .title-container .subheading,
+  .hero-header .title-container .header-link {
+    font-size: 12px;
+  }
+
+  .hero-header .dark-banner .title-container {
+    padding: 0 1rem;
+  }
+
+  .homepage-content {
+    padding: 1rem 1rem 0;
+  }
+
+  .homepage-footer {
+    padding: 1rem;
+  }
+
+}
+
+/* -------- Table of Contents Page -------- */
 
 div.toc {
   margin-bottom: 2rem;
@@ -55,44 +168,9 @@ div.toc {
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .imgcontainer {
-    max-height: 15rem;
-    width: 100%;
-  }
-
+@media only screen and (max-width: 768px) {
   .toc-ru {
     display: none;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .imgcontainer {
-    max-height: 10rem;
-    width: 100%;
-  }
-
-  #dogTitle {
-    font-size: 2rem;
-  }
-}
-
-.call-to-action {
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  
-  a {
-    padding: .75rem;
-    color: white;
-    background-color: #4F5763;
-    border-radius: .25rem;
-    text-align: center;
-  }
-
-  a:hover {
-    text-decoration: none;
-    background-color: #444C55
   }
 }
 
@@ -130,15 +208,21 @@ div.toc {
 }
 
 /* Menu Bar */
-
-.menu-bar {
-  position: fixed;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: rgb(137, 148, 160);
+.menu-bar-container {
+  position: -webkit-sticky;
+  position: sticky;
   left: 0;
   right: 0;
   top: 0;
+  height: 3.5rem;
+  width: 100%;
+}
+
+.menu-bar {
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  background-color: rgb(137, 148, 160);
   display: block;
   text-align: center;
   padding: .75rem .75rem .5rem;
@@ -155,7 +239,6 @@ div.toc {
   .button-container {
     display: inline;
     text-align: center;
-    vertical-align: middle;
   }
 
   .btn {
@@ -176,6 +259,7 @@ div.toc {
 
   .dropdown {
     position: relative;
+    left: -1.5rem;
     display: inline-block;
     text-align: center;
     min-width: 5rem;
@@ -286,14 +370,9 @@ div.toc {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .menu-bar {
     text-align: right;
-  }
-
-  .imgcontainer {
-    max-height: 15rem;
-    width: 100%;
   }
 
   #btn-both {
@@ -301,14 +380,9 @@ div.toc {
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 576px) {
   #chapter-menu {
     display: none;
-  }
-
-  .imgcontainer {
-    max-height: 10rem;
-    width: 100%;
   }
 
   #dogTitle {
@@ -317,10 +391,6 @@ div.toc {
 }
 
 /* Text content on pages with a bilingual layout */
-div.bilingual {
-  margin-top: 3.5rem;
-}
-
 .bilingual {
 
   .text-title {
@@ -423,10 +493,6 @@ footer {
   margin-left: auto;
   margin-right: auto;
   border-top: 1px solid lighten($text-color, 70%);
-  
-  a {
-    color: #9A8D84;
-  }
 
   p {
     margin: 0 0 .25rem 0;
@@ -440,17 +506,6 @@ footer {
 $text-color: #151515;
 $heading-color: #404040;
 $link-color: #3E5B7A;
-
-.theme-base-dog .sidebar,
-.theme-base-dog .sidebar-toggle:active,
-.theme-base-dog #sidebar-checkbox:checked ~ .sidebar-toggle {
-  background-color:#9A8D84;
-}
-// .theme-base-dog .container a,
-.theme-base-dog .sidebar-toggle,
-.theme-base-dog .related-posts li a:hover {
-  color:  #66605B;
-}
 
 body{
     background-color: #FFFFFF;
