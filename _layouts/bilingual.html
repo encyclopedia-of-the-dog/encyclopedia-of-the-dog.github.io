@@ -268,6 +268,10 @@
       function showAnnotations(){
         document.getElementById("annotation-panel").style.display = "block";
         document.getElementById("annotation-panel").setAttribute ("aria-hidden", "false");
+        document.getElementById("btn-expand-annotations").style.display = "block";
+        document.getElementById("btn-expand-annotations").setAttribute ("aria-hidden", "false");
+        document.getElementById("panel-mask").style.display = "block";
+        document.getElementById("panel-mask").setAttribute ("aria-hidden", "false");
         var content = document.getElementById("chapter-content");
           content.classList.remove("annotations-hidden");
           content.classList.add("annotations-visible");
@@ -292,6 +296,11 @@
       // Hide annotations
       function hideAnnotations(){
         document.getElementById("annotation-panel").style.display = "none";
+        document.getElementById("annotation-panel").setAttribute ("aria-hidden", "true");
+        document.getElementById("btn-expand-annotations").style.display = "none";
+        document.getElementById("btn-expand-annotations").setAttribute ("aria-hidden", "true");
+        document.getElementById("panel-mask").style.display = "none";
+        document.getElementById("panel-mask").setAttribute ("aria-hidden", "true");
         var content = document.getElementById("chapter-content");
           content.classList.remove("annotations-visible");
           content.classList.add("annotations-hidden");
