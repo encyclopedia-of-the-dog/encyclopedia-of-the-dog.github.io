@@ -40,19 +40,6 @@
     color: $link-color;
     text-decoration: underline;
   }
-
-  .panel-mask {
-    width: calc(100% - 2rem);
-    height: 15px;
-    position: fixed;
-    bottom: 184px;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: 1;
-    background-image: linear-gradient(#fafafa, #fafafa, #fafafa8e, #fafafa00)
-  }
 }
 
 #annotation-container {
@@ -222,18 +209,32 @@
   border-top-right-radius: 5px;
   border-bottom: #fafafa;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  z-index: 3;
+}
+
+#panel-mask {
+  width: calc(100% - 2rem);
+  height: 15px;
+  position: fixed;
+  bottom: 184px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 4;
+  background-image: linear-gradient(#fafafa, #fafafa, #fafafa8e, #fafafa00)
 }
 
 #annotation-panel.expanded {
   height: 400px !important;
-
-  .panel-mask {
-    bottom: 384px !important;
-  }
 }
 
 #btn-expand-annotations.expanded {
   bottom: 399px !important;
+}
+
+#panel-mask.expanded {
+  bottom: 384px !important;
 }
 
 /* annotation menu */
