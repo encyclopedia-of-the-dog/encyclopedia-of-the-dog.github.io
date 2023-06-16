@@ -8,8 +8,9 @@
 
 /* header on landing page */
 .hero-header {
-  position: -webkit-sticky; /* Safari */
   position: sticky;
+  position: -webkit-sticky; /* Safari */
+  display: block;
   top: -200px;
   left: 0;
   background-image:url(hunters.jpg);
@@ -209,8 +210,9 @@ div.toc {
 
 /* Menu Bar */
 .menu-bar-container {
-  position: -webkit-sticky;
   position: sticky;
+  position: -webkit-sticky;
+  display: block;
   left: 0;
   right: 0;
   top: 0;
@@ -219,11 +221,10 @@ div.toc {
 }
 
 .menu-bar {
-  position: -webkit-sticky;
-  position: sticky;
+  position: relative;
+  display: block;
   width: 100%;
   background-color: rgb(137, 148, 160);
-  display: block;
   text-align: center;
   padding: .75rem .75rem .5rem;
   z-index: 6;

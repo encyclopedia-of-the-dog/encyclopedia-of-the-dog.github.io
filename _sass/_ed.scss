@@ -378,8 +378,8 @@ a.sidebar-nav-item:focus {
 
 /* Style the `label` that we use to target the `.sidebar-checkbox` */
 .sidebar-toggle {
-  position: -webkit-sticky;
   position: sticky;
+  position: -webkit-sticky;
   top: .75rem;
   left: 1rem;
   display: block;
