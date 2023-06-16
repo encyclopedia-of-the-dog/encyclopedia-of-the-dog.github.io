@@ -209,6 +209,7 @@
   border-top-right-radius: 5px;
   border-bottom: #fafafa;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  display: none;
   z-index: 3;
 }
 
@@ -221,6 +222,7 @@
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  display: none;
   z-index: 4;
   background-image: linear-gradient(#fafafa, #fafafa, #fafafa8e, #fafafa00)
 }
