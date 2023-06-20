@@ -35,6 +35,7 @@
   padding: .5rem 1rem;
   background: #fafafa;
   overflow-y: scroll;
+  scroll-behavior: smooth;
 
   a {
     color: $link-color;
