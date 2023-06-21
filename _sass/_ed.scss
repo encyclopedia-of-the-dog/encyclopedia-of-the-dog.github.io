@@ -33,7 +33,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 html {
@@ -41,7 +40,7 @@ html {
   font-size: 1em;
   /* 16px; specify in ems to support text resizing in all browsers */
   line-height: 1.5;
-  scroll-padding: 4rem 0 0 0;
+  scroll-behavior: smooth;
 }
 
 @media (min-width: 38em) {
@@ -235,6 +234,8 @@ tbody tr:nth-child(odd) th {
 */
 
 .masthead {
+  position: relative;
+  top: -40px;
   border-bottom: 1px solid #eee;
   margin-bottom: 1.5rem;
   padding-top: 26px;
@@ -376,7 +377,8 @@ a.sidebar-nav-item:focus {
 
 /* Style the `label` that we use to target the `.sidebar-checkbox` */
 .sidebar-toggle {
-  position: fixed;
+  position: sticky;
+  position: -webkit-sticky;
   top: .75rem;
   left: 1rem;
   display: block;
