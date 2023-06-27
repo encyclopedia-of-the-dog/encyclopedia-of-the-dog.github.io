@@ -7,7 +7,7 @@ This project is supported by the Digital Scholarship program at Bryn Mawr Colleg
 
 ## Contributors
 
-José Vergara, Project Director
+José Vergara, Project Director & Annotation Editor
 
 Alice McGrath, Technical Lead
 
@@ -17,7 +17,7 @@ Martina Napolitano, Annotation Editor
 
 Noemi Albanese, Annotation Collaborator
 
-Angelina Rogatch, Translator, Digital Scholarship Project Assistant
+Angelina Rogatch, Translator & Digital Scholarship Project Assistant
 
 Jackie Toben, Digital Scholarship Project Assistant
 
