@@ -280,6 +280,12 @@ tbody tr:nth-child(odd) th {
   }
 }
 
+@media (max-width: 420px) {
+  .masthead-title {
+    line-height: 1.1em;
+  }
+}
+
 /*
   Sidebar
 
@@ -390,6 +396,7 @@ a.sidebar-nav-item:focus {
   border-radius: .25rem;
   cursor: pointer;
   z-index: 7;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
 
 .sidebar-toggle:before {
