@@ -82,7 +82,7 @@
   }
 
   .en-comment{
-    display: inline-block;
+    display: block;
     height: fit-content;
     margin: 0 0 0.5rem 0;
 
@@ -92,7 +92,7 @@
   }
 
   .ru-comment {
-    display: inline-block;
+    display: block;
     height: fit-content;
     margin: 0 0 0.5rem 0;
 
@@ -107,7 +107,7 @@
 
   #annotations-ru.lang-en {
     .en-comment {
-      display: inline-block;
+      display: block;
     }
     .ru-comment {
       display: none;
@@ -129,10 +129,10 @@
 
   #annotations-ru.lang-both {
     .en-comment {
-      display: inline-block;
+      display: block;
     }
     .ru-comment {
-      display: inline-block;
+      display: block;
     }
   }
 
