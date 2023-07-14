@@ -5,12 +5,9 @@
 
   <body class="theme-base-{{site.color-scheme}}">
 
-    <!-- This if statement decides which sidebar to use -->
-    {% if page.toc %}
-    {% include sidebar-toc.html %}
-    {% else %}
     {% include sidebar.html %}
-    {% endif %}
+
+    {% include chapter-notes-sidebar.html %}
 
     <nav class="skip-links">
       <ul>
@@ -63,6 +60,10 @@
               </div>
             </li>
           </ul>
+          <button id="ch-notes-toggle" class="ch-notes-toggle" onclick="expandChapterNotes()"
+          aria-label="Open chapter notes sidebar"
+          aria-expanded="false"
+          aria-controls="sidebar">Chapter Notes</button>
         </div>
         <main class="container content" id="main" lang="{{ page.language }}">
           <div class="bilingual">
@@ -205,37 +206,9 @@
         document.getElementById("chapter-list").classList.toggle("show");
       }
 
-      // Close the dropdown if the user clicks outside of it
-      window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn')) {
-          var dropdowns = document.getElementsByClassName("dropdown-content");
-          var i;
-          for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-              openDropdown.classList.remove('show');
-            }
-          }
-        }
-      }
-
       // Language List Dropdown
       function showLanguages() {
         document.getElementById("language-list").classList.toggle("show");
-      }
-
-      // Close the dropdown if the user clicks outside of it
-      window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn')) {
-          var dropdowns = document.getElementsByClassName("dropdown-content");
-          var i;
-          for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-              openDropdown.classList.remove('show');
-            }
-          }
-        }
       }
 
       // Annotation Menu Dropdown
@@ -243,7 +216,7 @@
         document.getElementById("annotations-menu-list").classList.toggle("show");
       }
 
-      // Close the dropdown if the user clicks outside of it
+      // Close the dropdowns if the user clicks outside of them
       window.onclick = function(event) {
         if (!event.target.matches('.dropbtn')) {
           var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -265,6 +238,9 @@
         document.getElementById("btn-expand-annotations").setAttribute ("aria-hidden", "false");
         document.getElementById("panel-mask").style.display = "block";
         document.getElementById("panel-mask").setAttribute ("aria-hidden", "false");
+        document.getElementById("ch-notes-toggle").style.display = "block";
+        document.getElementById("ch-notes-toggle").setAttribute ("aria-hidden", "false");
+
         var content = document.getElementById("chapter-content");
         content.classList.remove("annotations-hidden");
         content.classList.add("annotations-visible");
@@ -290,6 +266,9 @@
         document.getElementById("btn-expand-annotations").setAttribute ("aria-hidden", "true");
         document.getElementById("panel-mask").style.display = "none";
         document.getElementById("panel-mask").setAttribute ("aria-hidden", "true");
+        document.getElementById("ch-notes-toggle").style.display = "none";
+        document.getElementById("ch-notes-toggle").setAttribute ("aria-hidden", "true");
+
         var content = document.getElementById("chapter-content");
         content.classList.remove("annotations-visible");
         content.classList.add("annotations-hidden");
@@ -350,6 +329,11 @@
             btn.innerHTML = "▲";
           }
         }
+      }
+
+      // Chapter note sidebar toggle
+      function expandChapterNotes(){
+        document.getElementById("ch-notes-sidebar").classList.toggle("expanded");
       }
 
       // Make clickable spans keyboard accessible

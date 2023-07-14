@@ -1,0 +1,90 @@
+/* Style and "hide" the sidebar */
+.ch-notes-sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: auto;
+    right: -18rem;
+    width: 18rem;
+    padding: 0.5rem;
+    visibility: hidden;
+    overflow-y: auto;
+    /* font-family: "PT Sans", Helvetica, Arial, sans-serif; */
+    font-family: $main-font;
+    font-size: .875rem;/* 15px*/
+    background-color: #CDD5E0;
+    
+    -webkit-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+  }
+  
+  @media (min-width: 30em) {
+    .ch-notes-sidebar {
+      font-size: .75rem;/* 14px */
+    }
+  }
+  
+  .ch-notes-sidebar a {
+    font-weight: normal;
+    color: $link-color;
+  }
+
+  
+  #ch-notes-toggle {
+    position: absolute;
+    top: 100px;
+    left: auto;
+    right: -4px;
+    display: none;
+    padding: .5rem;
+    height: fit-content;
+    color: #505050;
+    background-color: #CDD5E0;
+    writing-mode: vertical-rl;
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer;
+    z-index: 7;
+    // box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /*
+    Slide effect
+  
+    Handle the sliding effects of the sidebar and content in one spot, separate from the default
+    styles.
+  
+    As a heads-up, we don't use `transform: translate3d()` here because, when mixed with
+    `position: fixed;` for the sidebar toggle, it creates a new containing block. Put simply, the
+    fixed sidebar toggle behaves like `position: absolute;` when transformed.
+  
+    Read more about it at http://meyerweb.com/eric/thoughts/2011/09/12/.
+  */
+  
+  .wrap,
+  .ch-notes-sidebar,
+  .ch-notes-toggle {
+    -webkit-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+  
+  .wrap,
+  .ch-notes-toggle {
+    -webkit-transition: -webkit-transform .3s ease-in-out;
+            transition: transform .3s ease-in-out;
+  }
+  
+  .ch-notes-sidebar.expanded {
+    z-index: 10;
+    visibility: visible;
+  }
+  
+  #ch-notes-sidebar.expanded,
+  #ch-notes-sidebar.expanded ~ .wrap,
+  #ch-notes-sidebar.expanded ~ .ch-notes-toggle {
+    -webkit-transform: translateX(-18rem);
+        -ms-transform: translateX(-18rem);
+            transform: translateX(-18rem);
+  }
+ 
