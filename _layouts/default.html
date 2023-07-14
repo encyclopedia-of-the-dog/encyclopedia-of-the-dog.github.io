@@ -46,11 +46,7 @@
       <main class="container content" id="main" lang="{{ page.language }}">
         {{ content }}     
       </main>
-<!--
-      {% if page.number %}
-          <iframe id="annotation-iframe" src="{{ site.baseurl }}/annotations{{ page.number }}" name="annotations"></iframe>
-      {% endif %}
--->
+
       <footer> 
         <p>Text content is in copyright: used with permission of Columbia UP (English) & Azbuka Press (Russian).</p>
         <p>Site built with <a href="https://elotroalex.github.io/ed/">Ed.</a></p>
@@ -98,67 +94,6 @@
       })
     })(document);
   </script>
-  <script>
-    // Language buttons
-    function showEnglish() {
-        document.getElementById("en-title").style.display = "block";
-        document.getElementById("ru-title").style.display = "none";
-        document.getElementById("both-title").style.display = "none";
-        document.getElementById("translator").style.display = "block";
-        var element = document.getElementById("texts");
-          element.classList.remove("english");
-          element.classList.remove("russian");
-          element.classList.remove("both");
-          element.classList.add("english");
-        document.getElementById("annotations-en").style.display = "block";
-        document.getElementById("annotations-ru").style.display = "none";
-      }
-    
-      function showRussian() {
-        document.getElementById("en-title").style.display = "none";
-        document.getElementById("ru-title").style.display = "block";
-        document.getElementById("both-title").style.display = "none";
-        document.getElementById("translator").style.display = "none";
-        var element = document.getElementById("texts");
-          element.classList.remove("english");
-          element.classList.remove("russian");
-          element.classList.remove("both");
-          element.classList.add("russian");
-        document.getElementById("annotations-en").style.display = "none";
-        document.getElementById("annotations-ru").style.display = "block";
-      }
-    
-      function showBoth() {
-        document.getElementById("en-title").style.display = "none";
-        document.getElementById("ru-title").style.display = "none";
-        document.getElementById("both-title").style.display = "block";
-        document.getElementById("translator").style.display = "block";
-        var element = document.getElementById("texts");
-          element.classList.remove("english");
-          element.classList.remove("russian");
-          element.classList.remove("both");
-          element.classList.add("both");
-        document.getElementById("annotations-en").style.display = "block";
-        document.getElementById("annotations-ru").style.display = "block";
-      }
-
-    // Add and remove active class from buttons
-    // Get the container element
-    var btnContainer = document.getElementById("language-buttons");
-
-    // Get all buttons with class="btn" inside the container
-    var btns = btnContainer.getElementsByClassName("btn");
-
-    // Loop through the buttons and add the active class to the current/clicked button
-    for (var i = 0; i < btns.length; i++) {
-      btns[i].addEventListener("click", function () {
-        var current = btnContainer.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-      });
-    }
-  </script>
-
 
   <!-- Facebook SDK for JavaScript -->
   <script>
