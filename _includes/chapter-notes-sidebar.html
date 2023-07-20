@@ -6,7 +6,7 @@
 <!-- Toggleable sidebar -->
 <aside class="ch-notes-sidebar"  id="ch-notes-sidebar" aria-hidden="true">
     <div class="ch-notes-sidebar-title">
-        <h3>Chapter {{ page.number }} Notes</h3>
+        <h3 id="chapter-notes">Chapter {{ page.number }} Notes</h3>
     </div>
 
     <div id="chapter-notes-container">
@@ -31,7 +31,7 @@
                 {% else %}
                     <div class="annotation-text-container">
                 {% endif %}
-                        <span class="highlighted" role="doc-backlink" onclick="window.location.href='#highlight-{{ annotation.Id }}';" tabindex="-1">{{ annotation.highlighted }}</span><br>
+                        <span class="ch-notes-highlighted">{{ annotation.highlighted }}</span><br>
                         <p class="en-comment" markdown="1">{{ annotation.text }}</p>
                         <div class="annotation-tag-container">
                             {% assign list = annotation.tags %}
@@ -66,7 +66,7 @@
                 {% else %}
                     <div class="annotation-text-container">
                 {% endif %}
-                        <span class="highlighted" role="doc-backlink" onclick="window.location.href='#highlight-{{ annotation.Id }}';" tabindex="-1">{{ annotation.highlighted }}</span><br>
+                        <span class="ch-notes-highlighted">{{ annotation.highlighted }}</span><br>
                         <p class="en-comment" markdown="1">{{ annotation.text }}</p>
                         {% if annotation.ru_trans %}
                             <p class="ru-comment" markdown="1"> {{ annotation.ru_trans }}</p>

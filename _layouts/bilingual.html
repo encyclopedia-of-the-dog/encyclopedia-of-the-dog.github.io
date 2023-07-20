@@ -7,7 +7,7 @@
 
     {% include sidebar.html %}
 
-    {% include chapter-notes-sidebar.html %}
+    <!-- {% include chapter-notes-sidebar.html %} -->
 
     <nav class="skip-links">
       <ul>
@@ -31,7 +31,11 @@
               </button>
             </li>
             <li class="button-container dropdown" id="chapter-menu">
-              <button class="btn dropbtn" id="btn-show-chapters" onclick="showChapters()">Chapter {{ page.number }} ▾</button>
+              <button class="btn dropbtn" 
+                id="btn-show-chapters" 
+                onclick="showChapters()">Chapter {{ page.number }}
+                <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+              </button>
               <div class="dropdown-content" id="chapter-list">
                 {% for item in site.chapters %}
                 {% if item.number == page.number %}
@@ -43,14 +47,22 @@
               </div>
             </li>
             <li class="button-container dropdown" id="language-buttons">
-              <button class="btn dropbtn" id="btn-show-languages" onclick="showLanguages()">Language ▾</button>
+              <button class="btn dropbtn" 
+                id="btn-show-languages" 
+                onclick="showLanguages()">Language 
+                <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+              </button>
               <div class="dropdown-content" id="language-list">
                 <button class="btn active" id="btn-en" onclick="showEnglish()">English</button>
                 <button class="btn" id="btn-ru" onclick="showRussian()">Russian</button>
                 <button class="btn" id="btn-both" onclick="showBoth()">Both</button>
             </li>
             <li class="button-container dropdown" id="annotation-buttons">
-              <button class="btn dropbtn" id="btn-show-annotations-menu" onclick="showAnnotationsMenu()">Annotations ▾</button>
+              <button class="btn dropbtn" 
+              id="btn-show-annotations-menu" 
+              onclick="showAnnotationsMenu()">Annotations 
+              <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+            </button>
               <div class="dropdown-content" id="annotations-menu-list">
                 <button class="btn" id="btn-en" onclick="hideAnnotations()">Off</button>
                 <button class="btn" id="btn-en" onclick="showAnnotations(); showEnglishAnnotations();">English</button>
@@ -60,17 +72,19 @@
               </div>
             </li>
           </ul>
-          <button id="ch-notes-toggle" class="ch-notes-toggle" onclick="expandChapterNotes()"
-          aria-label="Open chapter notes sidebar"
-          aria-expanded="false"
-          aria-controls="sidebar">Chapter Notes</button>
+          <!-- <button id="ch-notes-toggle" class="ch-notes-toggle" onclick="expandChapterNotes()"
+            aria-label="Open chapter notes sidebar"
+            aria-expanded="false"
+            aria-controls="sidebar">
+            <svg height="12" width="12">
+              <polygon points="0,6 11,0 11,12" />
+            </svg>
+          </button> -->
         </div>
         <main class="container content" id="main" lang="{{ page.language }}">
-          <div class="bilingual">
           
             {{ content }}
-            
-          </div>  
+        
         </main>
         <footer> 
           <p>Text content is in copyright: used with permission of Columbia UP (English) & Azbuka Press (Russian).</p>
@@ -144,45 +158,27 @@
     <script>
       // Language buttons
       function showEnglish() {
-          document.getElementById("en-title").style.display = "block";
-          document.getElementById("ru-title").style.display = "none";
-          document.getElementById("both-title").style.display = "none";
-          document.getElementById("translator").style.display = "block";
-          var element = document.getElementById("texts");
+          var element = document.getElementById("chapter-content");
             element.classList.remove("english");
             element.classList.remove("russian");
             element.classList.remove("both");
             element.classList.add("english");
-          document.getElementById("annotations-en").style.display = "block";
-          document.getElementById("annotations-ru").style.display = "none";
         }
       
         function showRussian() {
-          document.getElementById("en-title").style.display = "none";
-          document.getElementById("ru-title").style.display = "block";
-          document.getElementById("both-title").style.display = "none";
-          document.getElementById("translator").style.display = "none";
-          var element = document.getElementById("texts");
+          var element = document.getElementById("chapter-content");
             element.classList.remove("english");
             element.classList.remove("russian");
             element.classList.remove("both");
             element.classList.add("russian");
-          document.getElementById("annotations-en").style.display = "none";
-          document.getElementById("annotations-ru").style.display = "block";
         }
       
         function showBoth() {
-          document.getElementById("en-title").style.display = "none";
-          document.getElementById("ru-title").style.display = "none";
-          document.getElementById("both-title").style.display = "block";
-          document.getElementById("translator").style.display = "block";
-          var element = document.getElementById("texts");
+          var element = document.getElementById("chapter-content");
             element.classList.remove("english");
             element.classList.remove("russian");
             element.classList.remove("both");
             element.classList.add("both");
-          document.getElementById("annotations-en").style.display = "block";
-          document.getElementById("annotations-ru").style.display = "block";
         }
 
       // Add and remove active class from buttons
@@ -232,14 +228,11 @@
 
       // Show annotations
       function showAnnotations(){
-        document.getElementById("annotation-panel").style.display = "block";
         document.getElementById("annotation-panel").setAttribute ("aria-hidden", "false");
-        document.getElementById("btn-expand-annotations").style.display = "block";
         document.getElementById("btn-expand-annotations").setAttribute ("aria-hidden", "false");
-        document.getElementById("panel-mask").style.display = "block";
         document.getElementById("panel-mask").setAttribute ("aria-hidden", "false");
-        document.getElementById("ch-notes-toggle").style.display = "block";
-        document.getElementById("ch-notes-toggle").setAttribute ("aria-hidden", "false");
+        // document.getElementById("ch-notes-toggle").style.display = "block";
+        // document.getElementById("ch-notes-toggle").setAttribute ("aria-hidden", "false");
 
         var content = document.getElementById("chapter-content");
         content.classList.remove("annotations-hidden");
@@ -260,14 +253,11 @@
 
       // Hide annotations
       function hideAnnotations(){
-        document.getElementById("annotation-panel").style.display = "none";
         document.getElementById("annotation-panel").setAttribute ("aria-hidden", "true");
-        document.getElementById("btn-expand-annotations").style.display = "none";
         document.getElementById("btn-expand-annotations").setAttribute ("aria-hidden", "true");
-        document.getElementById("panel-mask").style.display = "none";
         document.getElementById("panel-mask").setAttribute ("aria-hidden", "true");
-        document.getElementById("ch-notes-toggle").style.display = "none";
-        document.getElementById("ch-notes-toggle").setAttribute ("aria-hidden", "true");
+        // document.getElementById("ch-notes-toggle").style.display = "none";
+        // document.getElementById("ch-notes-toggle").setAttribute ("aria-hidden", "true");
 
         var content = document.getElementById("chapter-content");
         content.classList.remove("annotations-visible");
@@ -318,23 +308,13 @@
 
       // Expand and collapse the annotation panel
       function expandAnnotations(){
-      document.getElementById("annotation-panel").classList.toggle("expanded");
-      document.getElementById("btn-expand-annotations").classList.toggle("expanded");
-      document.getElementById("panel-mask").classList.toggle("expanded");
-      var btn = document.getElementById("btn-expand-annotations");
-        if (btn.innerHTML == "▲") {
-          btn.innerHTML = "▼";
-        } else {
-          if (btn.innerHTML == "▼") {
-            btn.innerHTML = "▲";
-          }
-        }
+        document.getElementById("panel-btn-container").classList.toggle("expanded");
       }
 
-      // Chapter note sidebar toggle
-      function expandChapterNotes(){
-        document.getElementById("ch-notes-sidebar").classList.toggle("expanded");
-      }
+      // Chapter notes sidebar toggle
+      // function expandChapterNotes(){
+      //   document.getElementById("ch-notes-sidebar").classList.toggle("expanded");
+      // }
 
       // Make clickable spans keyboard accessible
       var clickableSpansText = document.getElementsByClassName("annotation-link");
