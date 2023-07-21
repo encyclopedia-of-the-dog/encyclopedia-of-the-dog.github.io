@@ -428,6 +428,7 @@ div.toc {
     margin: auto;
   }
 
+  /* Styles for language toggle on chapter content and annotation panel */
   #chapter-content.english {
     max-width: 32rem;
     font-size: 1em;
@@ -443,13 +444,15 @@ div.toc {
 
     #en-title,
     #translator,
-    #annotations-en {
+    ~ #annotation-panel #ch-notes-en,
+    ~ #annotation-panel #annotations-en {
       display: block;
     }
 
     #ru-title,
     #both-title,
-    #annotations-ru {
+    ~ #annotation-panel #ch-notes-ru,
+    ~ #annotation-panel #annotations-ru {
       display: none;
     }
   }
@@ -470,12 +473,14 @@ div.toc {
     #en-title,
     #both-title,
     #translator,
-    #annotations-en {
+    ~ #annotation-panel #ch-notes-en,
+    ~ #annotation-panel #annotations-en {
       display: none;
     }
 
     #ru-title,
-    #annotations-ru {
+    ~ #annotation-panel #ch-notes-ru,
+    ~ #annotation-panel #annotations-ru {
       display: block;
     }
   }
@@ -506,13 +511,15 @@ div.toc {
 
     #both-title,
     #translator,
-    #annotations-en,
-    #annotations-ru {
+    ~ #annotation-panel #ch-notes-en,
+    ~ #annotation-panel #ch-notes-ru,
+    ~ #annotation-panel #annotations-en,
+    ~ #annotation-panel #annotations-ru {
       display: block;
     }
   }
-
 }
+
 /* Poem-specific styles for bilingual view */
 .poem {
   .both {
