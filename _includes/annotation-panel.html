@@ -29,7 +29,7 @@
                     <div class="annotation-text-container">
                 {% endif %}
                         <span class="ch-notes-highlighted">{{ annotation.highlighted }}</span><br>
-                        <p class="en-comment" markdown="1">{{ annotation.text }}</p>
+                        <div class="en-comment">{{ annotation.text | markdownify }}</div>
                         <div class="annotation-tag-container">
                             {% assign list = annotation.tags %}
                             {% assign tags = list | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
@@ -64,9 +64,9 @@
                     <div class="annotation-text-container">
                 {% endif %}
                         <span class="ch-notes-highlighted">{{ annotation.highlighted }}</span><br>
-                        <p class="en-comment" markdown="1">{{ annotation.text }}</p>
+                        <div class="en-comment">{{ annotation.text | markdownify }}</div>
                         {% if annotation.ru_trans %}
-                            <p class="ru-comment" markdown="1"> {{ annotation.ru_trans }}</p>
+                            <div class="ru-comment">{{ annotation.ru_trans | markdownify }}</div>
                          {% endif %}
                          <div class="annotation-tag-container">
                              {% assign list = annotation.tags %}
@@ -102,7 +102,7 @@
                         </div>
                         <div class="annotation-text-container with-img">
                             <span class="highlighted" role="doc-backlink" onclick="window.location.href='#highlight-{{ annotation.Id }}';" tabindex="-1">{{ annotation.highlighted }}</span><br>
-                            <p class="en-comment" markdown="1">{{ annotation.text }}</p>
+                            <div class="en-comment">{{ annotation.text | markdownify }}</div>
                             <div class="annotation-tag-container">
                                 {% assign list = annotation.tags %}
                                 {% assign tags = list | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
@@ -114,7 +114,7 @@
                     {% else %}
                         <div class="annotation-text-container">
                             <span class="highlighted" role="doc-backlink" onclick="window.location.href='#highlight-{{ annotation.Id }}';" tabindex="-1">{{ annotation.highlighted }}</span><br>
-                            <p class="en-comment" markdown="1">{{ annotation.text }}</p>
+                            <div class="en-comment">{{ annotation.text | markdownify }}</div>
                             <div class="annotation-tag-container">
                                 {% assign list = annotation.tags %}
                                 {% assign tags = list | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
@@ -147,9 +147,9 @@
                         </div>
                         <div class="annotation-text-container with-img">
                             <span class="highlighted" role="doc-backlink" onclick="window.location.href='#highlight-{{ annotation.Id }}';" tabindex="-1">{{ annotation.highlighted }}</span><br>
-                            <p class="en-comment" markdown="1">{{ annotation.text }}</p>
+                            <div class="en-comment">{{ annotation.text | markdownify }}</div>
                             {% if annotation.ru_trans %}
-                                <p class="ru-comment" markdown="1"> {{ annotation.ru_trans }}</p>
+                                <div class="ru-comment">{{ annotation.ru_trans | markdownify }}</div>
                             {% endif %}
                             <div class="annotation-tag-container">
                                 {% assign list = annotation.tags %}
@@ -162,9 +162,9 @@
                     {% else %}
                         <div class="annotation-text-container">
                             <span class="highlighted" role="doc-backlink" onclick="window.location.href='#highlight-{{ annotation.Id }}';" tabindex="-1">{{ annotation.highlighted }}</span><br>
-                            <p class="en-comment" markdown="1">{{ annotation.text }}</p>
+                            <div class="en-comment">{{ annotation.text | markdownify }}</div>
                             {% if annotation.ru_trans %}
-                                <p class="ru-comment" markdown="1"> {{ annotation.ru_trans }}</p>
+                                <div class="ru-comment">{{ annotation.ru_trans | markdownify }}</div>
                             {% endif %}
                             <div class="annotation-tag-container">
                                 {% assign list = annotation.tags %}

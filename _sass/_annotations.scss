@@ -55,6 +55,14 @@
     color: $link-color;
     text-decoration: underline;
   }
+
+  p {
+    margin: 0 0 0.5rem 0;
+  }
+
+  h2 {
+    margin-bottom: 0;
+  }
 }
 
 #annotation-container, #chapter-notes-container {
@@ -98,7 +106,6 @@
   .en-comment{
     display: inline-block;
     height: fit-content;
-    margin: 0 0 0.5rem 0;
 
     img {
       display: none;
@@ -108,7 +115,6 @@
   .ru-comment {
     display: inline-block;
     height: fit-content;
-    margin: 0 0 0.5rem 0;
 
     img {
       display: none;
