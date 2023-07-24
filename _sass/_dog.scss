@@ -224,7 +224,7 @@ div.toc {
   position: relative;
   display: block;
   width: 100%;
-  background-color: rgb(137, 148, 160);
+  background-color: #99AAC1;
   text-align: center;
   padding: .75rem .75rem .5rem;
   z-index: 6;
@@ -268,6 +268,14 @@ div.toc {
     display: inline-block;
     text-align: center;
     min-width: 5rem;
+  }
+
+  .dropdown-icon {
+    height: 1rem;
+    position: relative;
+    top: 2px;
+    fill: $text-color;
+    pointer-events: none;
   }
 
   #chapter-menu {
@@ -397,20 +405,12 @@ div.toc {
 
 /* Text content on pages with a bilingual layout */
 .bilingual {
+  margin-left: auto;
+  margin-right: auto;
 
   .text-title {
     margin-top: .5rem;
     padding-top: 0.5rem;
-  }
-
-  #en-title,
-  #translator {
-    display: block;
-  }
-
-  #ru-title,
-  #both-title {
-    display: none;
   }
 
   #translator {
@@ -428,33 +428,67 @@ div.toc {
     margin: auto;
   }
 
-  .english {
+  /* Styles for language toggle on chapter content and annotation panel */
+  #chapter-content.english {
     max-width: 32rem;
     font-size: 1em;
+
     #en {
       display: block;
       width: 100%;
     }
+
     #ru {
+      display: none;
+    }
+
+    #en-title,
+    #translator,
+    ~ #annotation-panel #ch-notes-en,
+    ~ #annotation-panel #annotations-en {
+      display: block;
+    }
+
+    #ru-title,
+    #both-title,
+    ~ #annotation-panel #ch-notes-ru,
+    ~ #annotation-panel #annotations-ru {
       display: none;
     }
   }
 
-  .russian {
+  #chapter-content.russian {
     max-width: 32rem;
     font-size: 1em;
+
     #en {
       display: none;
     }
+    
     #ru {
       display: block;
       width: 100%
     }
+
+    #en-title,
+    #both-title,
+    #translator,
+    ~ #annotation-panel #ch-notes-en,
+    ~ #annotation-panel #annotations-en {
+      display: none;
+    }
+
+    #ru-title,
+    ~ #annotation-panel #ch-notes-ru,
+    ~ #annotation-panel #annotations-ru {
+      display: block;
+    }
   }
 
-  .both {
+  #chapter-content.both {
     max-width: 52rem;
     font-size: 0.85em;
+    
     #en {
       display: block;
       float: left;
@@ -462,15 +496,30 @@ div.toc {
       padding-right: 1%;
       border-right: 1px solid lighten($text-color, 70%);
     }
+
     #ru {
       display: block;
       float: left;
       width: 49%;
       margin-left: 1%;
     }
-  }
 
+    #en-title,
+    #ru-title {
+      display: none;
+    }
+
+    #both-title,
+    #translator,
+    ~ #annotation-panel #ch-notes-en,
+    ~ #annotation-panel #ch-notes-ru,
+    ~ #annotation-panel #annotations-en,
+    ~ #annotation-panel #annotations-ru {
+      display: block;
+    }
+  }
 }
+
 /* Poem-specific styles for bilingual view */
 .poem {
   .both {

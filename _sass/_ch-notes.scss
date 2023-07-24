@@ -1,0 +1,122 @@
+/* Style and "hide" the sidebar */
+.ch-notes-sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: auto;
+    right: -18rem;
+    width: 18rem;
+    padding: .25rem;
+    // border-left: 1px solid #c3c3c3;
+    overflow-y: auto;
+    /* font-family: "PT Sans", Helvetica, Arial, sans-serif; */
+    font-family: $main-font;
+    background-color: #CDD5E0; // #fafafa
+    
+    -webkit-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+  }
+
+  .ch-notes-highlighted {
+    display: inline-block;
+    text-decoration: underline;
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .ch-notes-sidebar a {
+    font-weight: normal;
+    color: $link-color;
+  }
+
+  
+  .ch-notes-toggle {
+    position: absolute;
+    top: 100px;
+    left: auto;
+    right: 0;
+    display: none;
+    height: 5rem;
+    width: 1.25rem;
+    background-color: #CDD5E0; // #fafafa;
+    border: none; // 1px solid #c3c3c3
+    border-right: none;
+    border-radius: .25rem 0 0 .25rem;
+    cursor: pointer;
+    z-index: 7;
+    // box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+
+    svg {
+      fill: #5D7798;
+    }
+  }
+  
+  /*
+    Slide effect
+  
+    Handle the sliding effects of the sidebar and content in one spot, separate from the default
+    styles.
+  
+    As a heads-up, we don't use `transform: translate3d()` here because, when mixed with
+    `position: fixed;` for the sidebar toggle, it creates a new containing block. Put simply, the
+    fixed sidebar toggle behaves like `position: absolute;` when transformed.
+  
+    Read more about it at http://meyerweb.com/eric/thoughts/2011/09/12/.
+  */
+  
+  .wrap,
+  .ch-notes-sidebar,
+  .ch-notes-toggle {
+    -webkit-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+  
+  .wrap,
+  .ch-notes-toggle {
+    -webkit-transition: -webkit-transform .3s ease-in-out;
+            transition: transform .3s ease-in-out;
+  }
+  
+  .ch-notes-sidebar.expanded {
+    z-index: 10;
+    // visibility: visible;
+  }
+  
+  #ch-notes-sidebar.expanded,
+  #ch-notes-sidebar.expanded ~ .wrap {
+    -webkit-transform: translateX(-18rem);
+        -ms-transform: translateX(-18rem);
+            transform: translateX(-18rem);
+  }
+ 
+  /*
+    Overlay sidebar
+  
+    Make the sidebar content overlay the viewport content instead of pushing it aside when toggled.
+  */
+  
+  #ch-notes-sidebar.overlay.expanded ~ .wrap {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  #ch-notes-sidebar.overlay.expanded ~ .wrap .ch-notes-toggle {
+    -webkit-transform: translateX(-18rem);
+        -ms-transform: translateX(-18rem);
+            transform: translateX(-18rem);
+  }
+
+  // #ch-notes-sidebar.overlay.expanded ~ .sidebar-toggle {
+  //   box-shadow: 0 0 0 .25rem #fff;
+  // }
+  
+  #ch-notes-sidebar.overlay.expanded {
+    box-shadow: -.25rem 0 .5rem rgba(0,0,0,.1);
+  }
+
+  /* #chapter-notes-container {
+    h2#chapter-notes {
+      margin-top: 0.5rem;
+    }
+  } */

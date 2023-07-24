@@ -14,7 +14,7 @@ layout: bilingual
 {% assign text_ru = i.content %}
 {% endfor %}
 
-<article class="narrative bilingual annotations-hidden" id="chapter-content">
+<article id="chapter-content" class="narrative bilingual annotations-hidden english">
   <div class="header">
     <h1 class="text-title" id="en-title">{{ page.number }}. {{ title_en }}</h1>
     <h1 class="text-title" id="ru-title">{{ page.number }}. {{ title_ru }}</h1>
@@ -24,7 +24,7 @@ layout: bilingual
   </div>
 
   <div class="main-content">
-    <div class="text-container english" id="texts">
+    <div id="texts" class="text-container">
       <div id="en" markdown="1">
         {% include annotated-text-narrative.html lang="en" %}
       </div>
@@ -36,3 +36,5 @@ layout: bilingual
 </article>
 
 {{ content }}
+
+{% include annotation-panel.html %}

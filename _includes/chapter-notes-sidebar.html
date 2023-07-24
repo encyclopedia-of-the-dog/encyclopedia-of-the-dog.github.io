@@ -1,0 +1,88 @@
+<!--
+  Target for toggling the sidebar `.ch-notes-checkbox` is for regular styles, `#ch-notes-checkbox` for
+  behavior.
+-->
+
+<!-- Toggleable sidebar -->
+<aside class="ch-notes-sidebar"  id="ch-notes-sidebar" aria-hidden="true">
+    <div class="ch-notes-sidebar-title">
+        <h3 id="chapter-notes">Chapter {{ page.number }} Notes</h3>
+    </div>
+
+    <div id="chapter-notes-container">
+        <div id="ch-notes-en">
+            {% assign annotations-en = site.data.comments-chap-notes | where: "lang", "en" %}
+            {% for annotation in annotations-en %}
+            {% assign chapter = annotation.chapter | truncate: 2, "" %}
+            {% if chapter == page.number %}
+                <div id="{{ annotation.Id }}" class="annotation">
+                {% assign image-src = annotation.img_src %}
+                {% assign alt-text-list-en = annotation.alt_text_eng %}
+                {% assign alt-text-en = alt-text-list-en | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
+                {% if image-src != "[]" %}
+                    {% assign images = image-src | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
+                    <div class="annotation-img-container">
+                        {% for img in images -%}
+                            {% assign this-alt-text-en = alt-text-en[forloop.index0] %}
+                            <img src="{{ img }}" alt="{{ this-alt-text-en }}">
+                        {% endfor %}
+                    </div>
+                    <div class="annotation-text-container with-img">                    
+                {% else %}
+                    <div class="annotation-text-container">
+                {% endif %}
+                        <span class="ch-notes-highlighted">{{ annotation.highlighted }}</span><br>
+                        <p class="en-comment" markdown="1">{{ annotation.text }}</p>
+                        <div class="annotation-tag-container">
+                            {% assign list = annotation.tags %}
+                            {% assign tags = list | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
+                            {% for tag in tags -%}
+                                <span class="tag tag-{{ tag | slugify }}">{{ tag }}</span> 
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+        <div id="ch-notes-ru">
+            {% assign annotations-ru = site.data.comments-chap-notes | where: "lang", "ru" %}
+            {% for annotation in annotations-ru %}
+            {% assign chapter = annotation.chapter | truncate: 2, "" %}
+            {% if chapter == page.number %}
+                <div id="{{ annotation.Id }}" class="annotation">
+                {% assign image-src = annotation.img_src %}
+                {% assign alt-text-list-en = annotation.alt_text_eng %}
+                {% assign alt-text-en = alt-text-list-en | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
+                {% if image-src != "[]" %}
+                    {% assign images = image-src | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
+                    <div class="annotation-img-container">
+                        {% for img in images -%}
+                            {% assign this-alt-text-en = alt-text-en[forloop.index0] %}
+                            <img src="{{ img }}" alt="{{ this-alt-text-en }}">
+                        {% endfor %}
+                    </div>
+                    <div class="annotation-text-container with-img">                     
+                {% else %}
+                    <div class="annotation-text-container">
+                {% endif %}
+                        <span class="ch-notes-highlighted">{{ annotation.highlighted }}</span><br>
+                        <p class="en-comment" markdown="1">{{ annotation.text }}</p>
+                        {% if annotation.ru_trans %}
+                            <p class="ru-comment" markdown="1"> {{ annotation.ru_trans }}</p>
+                         {% endif %}
+                         <div class="annotation-tag-container">
+                             {% assign list = annotation.tags %}
+                             {% assign tags = list | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
+                             {% for tag in tags -%}
+                                <span class="tag tag-{{ tag | slugify }}">{{ tag }}</span> 
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+</aside>

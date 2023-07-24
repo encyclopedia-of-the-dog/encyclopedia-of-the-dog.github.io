@@ -1,12 +1,18 @@
 /* -------- Annotations -------- */
 
-/* annotation links in main text */
+/* visibility of annotation panel and annotation links in main text */
 
 .annotations-hidden {
   span.annotation-link {
     color: $text-color;
     text-decoration: none;
     pointer-events: none;
+  }
+
+  ~ #annotation-panel,
+  ~ #panel-btn-container,
+  ~ #panel-mask {
+    display: none;
   }
 }
 
@@ -15,12 +21,17 @@
     background-color: #778eac5f;
     cursor: pointer;
   }
+
+  ~ #annotation-panel,
+  ~ #panel-btn-container,
+  ~ #panel-mask {
+    display: block;
+  }
 }
 
 /* annotation panel */
 
 #annotation-panel {
-  display: none;
   width: 100%;
   height: 200px;
   position: fixed;
@@ -37,14 +48,25 @@
   overflow-y: scroll;
   scroll-behavior: smooth;
 
+  -webkit-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
+
   a {
     color: $link-color;
     text-decoration: underline;
   }
+
+  p {
+    margin: 0 0 0.5rem 0;
+  }
+
+  h2 {
+    margin-bottom: 0;
+  }
 }
 
-#annotation-container {
-  font-size: 0.85em;
+#annotation-container, #chapter-notes-container {
+  font-size: 16px;
   
   .annotation {
     width: 100%;
@@ -84,7 +106,6 @@
   .en-comment{
     display: block;
     height: fit-content;
-    margin: 0 0 0.5rem 0;
 
     img {
       display: none;
@@ -94,15 +115,10 @@
   .ru-comment {
     display: block;
     height: fit-content;
-    margin: 0 0 0.5rem 0;
 
     img {
       display: none;
     }
-  }
-
-  #annotations-ru {
-    display: none;
   }
 
   #annotations-ru.lang-en {
@@ -135,6 +151,8 @@
       display: block;
     }
   }
+
+  /* tags */
 
   .annotation-tag-container {
     width: 100%;
@@ -193,6 +211,8 @@
     font-size: 1em;
   }
 }
+
+/* panel button and mask */
   
 #btn-expand-annotations {
   color: #a9a9a9;
@@ -210,8 +230,20 @@
   border-top-right-radius: 5px;
   border-bottom: #fafafa;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-  display: none;
   z-index: 3;
+  cursor: pointer;
+
+  -webkit-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
+
+  #panel-btn-icon {
+    height: 1rem;
+    fill: #949494;
+    rotate: 180deg;
+    position: relative;
+    top: 1px;
+    pointer-events: none;
+  }
 }
 
 #panel-mask {
@@ -223,23 +255,29 @@
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  display: none;
   z-index: 4;
-  background-image: linear-gradient(#fafafa, #fafafa, #fafafa8e, #fafafa00)
+  background-image: linear-gradient(#fafafa, #fafafa, #fafafa8e, #fafafa00);
+
+  -webkit-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
 }
 
-#annotation-panel.expanded {
-  height: 400px !important;
+/* styles for expanded annotation panel, button, and mask */
+
+#panel-btn-container.expanded {
+  #btn-expand-annotations {
+    bottom: 399px !important;
+  
+    #panel-btn-icon {
+      rotate: 0deg;
+    }
+  }
+
+  ~ #panel-mask {
+    bottom: 384px !important;
+  }
+
+  ~ #annotation-panel {
+    height: 400px !important;
+  }
 }
-
-#btn-expand-annotations.expanded {
-  bottom: 399px !important;
-}
-
-#panel-mask.expanded {
-  bottom: 384px !important;
-}
-
-/* annotation menu */
-
-/* tag visibility */
