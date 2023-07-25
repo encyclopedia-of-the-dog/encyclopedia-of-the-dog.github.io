@@ -413,8 +413,16 @@ div.toc {
     padding-top: 0.5rem;
   }
 
-  #translator {
+  .byline-container {
     margin-bottom: .5rem;
+  }
+
+  .byline {
+    font-style: italic;
+    font-weight: normal;
+    letter-spacing: 0;
+    margin-top: -.5rem;
+    margin-bottom: 0;
   }
 
   .header {
@@ -446,11 +454,11 @@ div.toc {
     #translator,
     ~ #annotation-panel #ch-notes-en,
     ~ #annotation-panel #annotations-en {
-      display: block;
+      display: inline-block;
     }
 
     #ru-title,
-    #both-title,
+    #title-divider,
     ~ #annotation-panel #ch-notes-ru,
     ~ #annotation-panel #annotations-ru {
       display: none;
@@ -471,7 +479,7 @@ div.toc {
     }
 
     #en-title,
-    #both-title,
+    #title-divider,
     #translator,
     ~ #annotation-panel #ch-notes-en,
     ~ #annotation-panel #annotations-en {
@@ -481,7 +489,7 @@ div.toc {
     #ru-title,
     ~ #annotation-panel #ch-notes-ru,
     ~ #annotation-panel #annotations-ru {
-      display: block;
+      display: inline-block;
     }
   }
 
@@ -505,17 +513,14 @@ div.toc {
     }
 
     #en-title,
-    #ru-title {
-      display: none;
-    }
-
-    #both-title,
+    #title-divider,
+    #ru-title,
     #translator,
     ~ #annotation-panel #ch-notes-en,
     ~ #annotation-panel #ch-notes-ru,
     ~ #annotation-panel #annotations-en,
     ~ #annotation-panel #annotations-ru {
-      display: block;
+      display: inline-block;
     }
   }
 }

@@ -28,7 +28,13 @@
                 {% else %}
                     <div class="annotation-text-container">
                 {% endif %}
-                        <span class="ch-notes-highlighted">{{ annotation.highlighted }}</span><br>
+                    {% comment %} annotations attached to the chapter number are not linked {% endcomment %}
+                    {% assign first-letter = annotation.highlighted | truncate: 1, "" %}
+                    {% if first-letter == "0" or first-letter == "1" %}
+                        <span class="ch-notes-highlighted not-linked">{{ annotation.highlighted }}</span><br>
+                    {% else %}
+                        <span class="ch-notes-highlighted linked-highlighted" role="doc-backlink" onclick="window.location.href='#highlight-{{ annotation.Id }}';" tabindex="-1">{{ annotation.highlighted }}</span><br>
+                    {% endif %}
                         <div class="en-comment">{{ annotation.text | markdownify }}</div>
                         <div class="annotation-tag-container">
                             {% assign list = annotation.tags %}
@@ -63,7 +69,13 @@
                 {% else %}
                     <div class="annotation-text-container">
                 {% endif %}
-                        <span class="ch-notes-highlighted">{{ annotation.highlighted }}</span><br>
+                    {% comment %} annotations attached to the chapter number are not linked {% endcomment %}
+                    {% assign first-letter = annotation.highlighted | truncate: 1, "" %}
+                    {% if first-letter == "0" or first-letter == "1" %}
+                        <span class="ch-notes-highlighted not-linked">{{ annotation.highlighted }}</span><br>
+                    {% else %}
+                        <span class="ch-notes-highlighted linked-highlighted" role="doc-backlink" onclick="window.location.href='#highlight-{{ annotation.Id }}';" tabindex="-1">{{ annotation.highlighted }}</span><br>
+                    {% endif %}
                         <div class="en-comment">{{ annotation.text | markdownify }}</div>
                         {% if annotation.ru_trans %}
                             <div class="ru-comment">{{ annotation.ru_trans | markdownify }}</div>
@@ -93,37 +105,26 @@
                     {% assign alt-text-list-en = annotation.alt_text_eng %}
                     {% assign alt-text-en = alt-text-list-en | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
                     {% if image-src != "[]" %}
-                        {% assign images = image-src | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
-                        <div class="annotation-img-container">
-                            {% for img in images -%}
-                                {% assign this-alt-text-en = alt-text-en[forloop.index0] %}
-                                <img src="{{ img }}" alt="{{ this-alt-text-en }}">
+                    {% assign images = image-src | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
+                    <div class="annotation-img-container">
+                        {% for img in images -%}
+                            {% assign this-alt-text-en = alt-text-en[forloop.index0] %}
+                            <img src="{{ img }}" alt="{{ this-alt-text-en }}">
+                        {% endfor %}
+                    </div>               
+                    {% else %}
+                    <div class="annotation-text-container">
+                    {% endif %}
+                        <span class="highlighted linked-highlighted" role="doc-backlink" onclick="window.location.href='#highlight-{{ annotation.Id }}';" tabindex="-1">{{ annotation.highlighted }}</span><br>
+                        <div class="en-comment">{{ annotation.text | markdownify }}</div>
+                        <div class="annotation-tag-container">
+                            {% assign list = annotation.tags %}
+                            {% assign tags = list | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
+                            {% for tag in tags -%}
+                                <span class="tag tag-{{ tag | slugify }}">{{ tag }}</span> 
                             {% endfor %}
                         </div>
-                        <div class="annotation-text-container with-img">
-                            <span class="highlighted" role="doc-backlink" onclick="window.location.href='#highlight-{{ annotation.Id }}';" tabindex="-1">{{ annotation.highlighted }}</span><br>
-                            <div class="en-comment">{{ annotation.text | markdownify }}</div>
-                            <div class="annotation-tag-container">
-                                {% assign list = annotation.tags %}
-                                {% assign tags = list | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
-                                {% for tag in tags -%}
-                                    <span class="tag tag-{{ tag | slugify }}">{{ tag }}</span> 
-                                {% endfor %}
-                            </div>
-                        </div>                        
-                    {% else %}
-                        <div class="annotation-text-container">
-                            <span class="highlighted" role="doc-backlink" onclick="window.location.href='#highlight-{{ annotation.Id }}';" tabindex="-1">{{ annotation.highlighted }}</span><br>
-                            <div class="en-comment">{{ annotation.text | markdownify }}</div>
-                            <div class="annotation-tag-container">
-                                {% assign list = annotation.tags %}
-                                {% assign tags = list | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
-                                {% for tag in tags -%}
-                                    <span class="tag tag-{{ tag | slugify }}">{{ tag }}</span> 
-                                {% endfor %}
-                            </div>
-                        </div>
-                    {% endif %}
+                    </div>
                 </div>
               {% endif %}
             {% endfor %}
@@ -145,36 +146,23 @@
                                 <img src="{{ img }}" alt="{{ this-alt-text-en }}">
                             {% endfor %}
                         </div>
-                        <div class="annotation-text-container with-img">
-                            <span class="highlighted" role="doc-backlink" onclick="window.location.href='#highlight-{{ annotation.Id }}';" tabindex="-1">{{ annotation.highlighted }}</span><br>
-                            <div class="en-comment">{{ annotation.text | markdownify }}</div>
-                            {% if annotation.ru_trans %}
-                                <div class="ru-comment">{{ annotation.ru_trans | markdownify }}</div>
-                            {% endif %}
-                            <div class="annotation-tag-container">
-                                {% assign list = annotation.tags %}
-                                {% assign tags = list | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
-                                {% for tag in tags -%}
-                                    <span class="tag tag-{{ tag | slugify }}">{{ tag }}</span> 
-                                {% endfor %}
-                            </div>
-                        </div>                        
+                        <div class="annotation-text-container with-img">                  
                     {% else %}
                         <div class="annotation-text-container">
-                            <span class="highlighted" role="doc-backlink" onclick="window.location.href='#highlight-{{ annotation.Id }}';" tabindex="-1">{{ annotation.highlighted }}</span><br>
-                            <div class="en-comment">{{ annotation.text | markdownify }}</div>
-                            {% if annotation.ru_trans %}
-                                <div class="ru-comment">{{ annotation.ru_trans | markdownify }}</div>
-                            {% endif %}
-                            <div class="annotation-tag-container">
-                                {% assign list = annotation.tags %}
-                                {% assign tags = list | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
-                                {% for tag in tags -%}
-                                    <span class="tag tag-{{ tag | slugify }}">{{ tag }}</span> 
-                                {% endfor %}
-                            </div>
-                        </div>
                     {% endif %}
+                        <span class="highlighted linked-highlighted" role="doc-backlink" onclick="window.location.href='#highlight-{{ annotation.Id }}';" tabindex="-1">{{ annotation.highlighted }}</span><br>
+                        <div class="en-comment">{{ annotation.text | markdownify }}</div>
+                        {% if annotation.ru_trans %}
+                            <div class="ru-comment">{{ annotation.ru_trans | markdownify }}</div>
+                        {% endif %}
+                        <div class="annotation-tag-container">
+                            {% assign list = annotation.tags %}
+                            {% assign tags = list | remove: "[" | remove: "]" | remove: "'" | split: ", " -%}
+                            {% for tag in tags -%}
+                                <span class="tag tag-{{ tag | slugify }}">{{ tag }}</span> 
+                            {% endfor %}
+                        </div>
+                    </div>
                 </div>
               {% endif %}
             {% endfor %}

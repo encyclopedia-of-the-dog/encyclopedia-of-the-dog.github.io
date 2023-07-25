@@ -16,11 +16,15 @@ layout: bilingual
 
 <article class="bilingual poem poetry annotations-hidden english" id="chapter-content">
     <div class="header">
-        <h1 class="text-title" id="en-title">{{ page.number }}. {{ title_en }}</h1>
-        <h1 class="text-title" id="ru-title">{{ page.number }}. {{ title_ru }}</h1>
-        <h1 class="text-title" id="both-title">{{ page.number }}. {{ title_en }} / {{ title_ru }}</h1>
-        <p class="byline">by {{ page.author }}</p>
+      <h1 class="text-title">{{ page.number }}. 
+        <span id="en-title">{% include annotated-title.html lang="en" %}</span>
+        <span id="title-divider"> / </span>
+        <span id="ru-title">{% include annotated-title.html lang="ru" %}</span>
+      </h1>
+      <div class="byline-container">
+        <p class="byline" id="author">by {{ page.author }}</p>
         <p class="byline" id="translator">Translated by {{ page.translator }}</p>
+      </div>
     </div>
 
     <div class="main-content">

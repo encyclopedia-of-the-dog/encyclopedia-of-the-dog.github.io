@@ -19,8 +19,15 @@
 
   .ch-notes-highlighted {
     display: inline-block;
+    cursor: pointer;
+    color: $link-color;
     text-decoration: underline;
     margin: 0 0 0.5rem 0;
+  }
+
+  .ch-notes-highlighted.not-linked {
+    cursor: initial;
+    color: $text-color;
   }
   
   .ch-notes-sidebar a {
