@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Table of Contents
+sort-order: 2
 ---
 
 <div class="toc">
