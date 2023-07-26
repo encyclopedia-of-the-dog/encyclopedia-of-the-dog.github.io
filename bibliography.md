@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Bibliography
+sort-order: 3
 ---
 
 1. Aksenov, Vasilii. 1983. "Nenuzhnoe zacherknut': Zametki o proze Sashi Sokolova." *Russkaia mysl*', June 16, 1983.

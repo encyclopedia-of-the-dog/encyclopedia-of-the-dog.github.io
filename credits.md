@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Credits
+sort-order: 4
 ---
 
 This project is supported by the Digital Scholarship program at Bryn Mawr College (Library & Information Technology Services) and by a Digital Bryn Mawr Project Grant.
