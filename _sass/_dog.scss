@@ -175,6 +175,14 @@ div.toc {
   }
 }
 
+/* -------- Other Pages -------- */
+
+article.page {
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* -------- Bilingual Layouts -------- */
 
 /* Skip Links */
@@ -565,7 +573,7 @@ footer {
   text-align: center;
 
   iframe {
-    width: 90%;
+    width: 100%;
     height: 1000px;
   }
 }
