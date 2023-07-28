@@ -154,7 +154,7 @@
 
 }
 
-/* -------- Table of Contents Page -------- */
+/* -------- Table of Contents -------- */
 
 div.toc {
   margin-bottom: 2rem;
@@ -175,12 +175,16 @@ div.toc {
   }
 }
 
-/* -------- Other Pages -------- */
+/* -------- Pages -------- */
 
 article.page {
   max-width: 32rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+article.page.toc-page {
+  max-width: 36rem;
 }
 
 /* -------- Bilingual Layouts -------- */
