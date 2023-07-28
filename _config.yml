@@ -2,8 +2,8 @@
 
 # Setup
 title:               Encyclopedia of the Dog
-tagline:             'An annotated digital edition of <i>Between Dog and Wolf</i> by Sasha Sokolov'
-description:         'An annotated digital edition of Between Dog and Wolf by Sasha Sokolov'
+tagline:             "An annotated edition of Sasha Sokolov's <i>Between Dog and Wolf</i>"
+description:         "An annotated edition of Sasha Sokolov's Between Dog and Wolf"
 url:                 'http://digbmc.github.io'
 baseurl:             '/dogopedia-dev'
 
