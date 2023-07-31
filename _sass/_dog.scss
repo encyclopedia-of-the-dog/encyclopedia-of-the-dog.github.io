@@ -88,8 +88,13 @@
   padding: 1rem 4rem 0;
 }
 
-.homepage-footer {
+footer.homepage-footer {
   padding: 1rem 4rem;
+  max-width: 52rem;
+
+  p {
+    max-width: 52rem;
+  }
 }
 
 @media only screen and (min-width: 900px) {
