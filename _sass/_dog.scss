@@ -89,10 +89,12 @@
 }
 
 footer.homepage-footer {
-  padding: 1rem 4rem;
+  padding: 1rem 0;
   max-width: 52rem;
 
   p {
+    margin: 0 auto 0.25rem;
+    padding: 0 4rem;
     max-width: 52rem;
   }
 }
@@ -154,7 +156,9 @@ footer.homepage-footer {
   }
 
   .homepage-footer {
-    padding: 1rem;
+    p {
+      padding: 0 1rem;
+    }
   }
 
 }
@@ -572,7 +576,7 @@ footer {
 
   p {
     margin: 0 auto .25rem;
-    max-width: 36rem;
+    max-width: 34rem;
     color: $text-color;
   }
 }
