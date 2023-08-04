@@ -41,8 +41,10 @@ As the Encyclopedia of the Dog project team moves forward, here are some possibl
 - Content:
     - update About page
     - update Bibliography
+    - update comments data from Hypothesis as more work is done
 - Annotations:
     - add functionality for viewing different "layers" of annotations, allowing the user to select which kinds of annotations are visible by tags
+    - remove comments with editorial tags from the data used on the site
 - Proofreading:
     - after annotation is complete and all annotations have been added to the site, proofread the texts again
 - Metadata:
