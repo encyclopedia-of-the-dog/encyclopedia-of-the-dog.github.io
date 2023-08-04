@@ -305,27 +305,60 @@ tbody tr:nth-child(odd) th {
   position: fixed;
   top: 0;
   bottom: 0;
-  left: -14rem;
-  width: 14rem;
+  left: -16rem;
+  width: 16rem;
   visibility: hidden;
   overflow-y: auto;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
-  font-size: .875rem;
-  /* 15px*/
-  color: rgba(255, 255, 255, .6);
-  background-color: #202020;
+  /* font-family: "PT Sans", Helvetica, Arial, sans-serif; */
+  font-family: $heading-font;
+  font-size: .875rem;/* 15px*/
+  background-image: url(doglecture.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 100%;
+  
+
+  color: rgba(255,255,255,.6);
   -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
 }
 
 @media (min-width: 30em) {
   .sidebar {
-    font-size: .75rem;
-    /* 14px */
+    font-size: .75rem;/* 14px */
   }
 }
 
-/* Sidebar content */
+/* Sidebar content 
+  Dimensions of the sidebar image are set to 375x570,
+  crop to make it longer if more than 5 side nav items
+  are added so it does not obscure the lecturer */
+
+.sidebar-title {
+  /* color: #212b37; */
+  color: $heading-color;
+  font-family: $main-font;
+  font-size: 1.8rem;
+  line-height: 1em;
+  margin-top: .5em;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: .75em;
+  text-align: left;
+}
+
+.sidebar-description {
+  color: $text-color;
+  font-weight: normal;
+  font-size: .8rem;
+  line-height: 1rem;
+  margin-top: .5em;
+  margin-bottom: 0;
+  margin-right: 2em;
+  margin-left: 2em;
+  text-align: left;
+}
+
 .sidebar {
   background-color: $link-color;
 }
@@ -333,6 +366,12 @@ tbody tr:nth-child(odd) th {
 .sidebar a {
   font-weight: normal;
   color: #fff;
+}
+
+#sidebar-title-link {
+  /* color: #212b37; */
+  color: $heading-color;
+  text-decoration: none;
 }
 
 .sidebar-item {
@@ -345,26 +384,36 @@ tbody tr:nth-child(odd) th {
 
 /* Sidebar nav */
 .sidebar-nav {
-  border-bottom: 1px solid rgba(255, 255, 255, .1);
+  border-bottom: none;
 }
 
 .sidebar-nav-item {
   display: block;
   padding: .5rem 1rem;
-  border-top: 1px solid rgba(255, 255, 255, .1);
+  margin-bottom: .2rem;
+  height: 15%;
+  width: 85%;
+  margin-left: 7.5%;
+  /* border: 1px solid #212b37; */
+  border-radius: .25rem;
+  background-color: transparentize($text-color, 0.35);
+  text-decoration: none;
 }
 
 a.sidebar-nav-item-toc {
-  color: rgba(255, 255, 255, .8);
+  color: rgba(255,255,255,.8);
 }
 
-/* .sidebar-nav-item.active,
-a.sidebar-nav-item:hover,
+/* a.sidebar-nav-item:focus, */ .sidebar-nav-item.active,
+a.sidebar-nav-item:hover {
+  background-color: transparentize($text-color, 0.2);
+  text-decoration: none;
+  /* border: 1px solid #212b37; */
+}
+
 a.sidebar-nav-item:focus {
   text-decoration: none;
-  background-color: rgba(255, 255, 255, .1);
-  border-color: transparent;
-} */
+}
 
 @media (min-width: 48em) {
   .sidebar-item {
@@ -372,7 +421,7 @@ a.sidebar-nav-item:focus {
   }
 
   .sidebar-nav-item {
-    padding-left: 1.5rem;
+    padding-left:  1.5rem;
     padding-right: 1.5rem;
   }
 }
@@ -451,14 +500,14 @@ a.sidebar-nav-item:focus {
 .sidebar,
 .sidebar-toggle {
   -webkit-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .wrap,
 .sidebar-toggle {
   -webkit-transition: -webkit-transform .3s ease-in-out;
-  transition: transform .3s ease-in-out;
+          transition: transform .3s ease-in-out;
 }
 
 #sidebar-checkbox:checked+.sidebar {
@@ -469,9 +518,9 @@ a.sidebar-nav-item:focus {
 #sidebar-checkbox:checked~.sidebar,
 #sidebar-checkbox:checked~.wrap,
 #sidebar-checkbox:checked~.sidebar-toggle {
-  -webkit-transform: translateX(14rem);
-  -ms-transform: translateX(14rem);
-  transform: translateX(14rem);
+  -webkit-transform: translateX(16rem);
+      -ms-transform: translateX(16rem);
+          transform: translateX(16rem);
 }
 
 
@@ -495,8 +544,8 @@ a.sidebar-nav-item:focus {
 .layout-reverse #sidebar-checkbox:checked~.wrap,
 .layout-reverse #sidebar-checkbox:checked~.sidebar-toggle {
   -webkit-transform: translateX(-14rem);
-  -ms-transform: translateX(-14rem);
-  transform: translateX(-14rem);
+      -ms-transform: translateX(-14rem);
+          transform: translateX(-14rem);
 }
 
 
@@ -508,8 +557,8 @@ a.sidebar-nav-item:focus {
 
 .sidebar-overlay #sidebar-checkbox:checked~.wrap {
   -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
-  transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .sidebar-overlay #sidebar-checkbox:checked~.sidebar-toggle {
