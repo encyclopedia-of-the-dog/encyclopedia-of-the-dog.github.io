@@ -1,38 +1,12 @@
 ---
 layout: home
-title: "Encyclopedia of the Dog."
+title: "Encyclopedia of the Dog"
 ---
 
+<p><em>The Encyclopedia of the Dog</em> is a complete and freely accessible bilingual digital edition of Sasha Sokolov’s 1980 novel <em>Between Dog and Wolf</em>. This digital edition features both the original Russian text and Alexander Boguslawski’s English translation as well as multiple kinds of annotation that will help readers grasp the various meanings, allusions, and layers of the text.</p>
 
+<h2>How to Use</h2>
 
-<div class="toc">
-  <h2 id="chapter-heading">Chapters</h2>
-  <ul class="texts">
-  {% for item in site.chapters %}
-    {% if item.number %}
-      {% assign chapterMatch = site.texts | where: "chapter-number", item.number %}
-        {% assign englishMatch = chapterMatch | where: "language", "en" | first %}
-          {% assign title_en = englishMatch.title %}
-        {% assign russianMatch = chapterMatch | where: "language", "ru" | first %}
-          {% assign title_ru = russianMatch.title %}
-            <li class="text-title">
-              <a href="{{ site.baseurl }}{{ item.url }}">
-                {{ item.number }}. {{ title_en }}<span class="toc-ru"> / {{ title_ru }}</span>
-              </a>
-            </li>
-    {% endif %}
-  {% endfor %}
-  </ul>
-</div>
+<p>The Table of Contents can be accessed from the sidebar by clicking the menu icon in the top left corner of any page. Links to all chapters can be found in the Table of Contents and in the menu bar at the top of chapter pages on computers and tablets. The menu bar also contains “Language” and “Annotations” dropdowns which can be used to toggle the language of the text (English, Russian, or both side by side) and the visibility of annotations, respectively.</p>
 
-
-
-
- 
-
-  
-  
-  
-
-  
-  
+<p>The “Annotations” dropdown in the menu bar allows readers to select the language of the annotation panel, which will appear at the bottom of the screen when a language is selected. Please note that the annotations for the English text are only available in English. Highlights will also appear in the novel to indicate available annotations. Clicking on these highlights will scroll the annotation panel to the location of the corresponding annotation. In the case of nested and overlapping annotations, clicking on the highlights will scroll the annotation panel to the location of the first annotation in the group. The annotation panel itself can then be scrolled down to reveal subsequent annotations. Finally, the backlink at the top of each annotation will scroll the main text to the location of the corresponding highlight.</p>

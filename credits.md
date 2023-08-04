@@ -1,62 +1,41 @@
 ---
 layout: page
 title: Credits
+sort-order: 4
 ---
 
-### José Vergara | Project Director
+This project is supported by the Digital Scholarship program at Bryn Mawr College (Library & Information Technology Services) and by a Digital Bryn Mawr Project Grant.
 
-### Martina Napolitano | University of Udine
+## Contributors
 
-### Alice McGrath | Technical Lead
+José Vergara, Project Director & Annotation Editor
 
-### Andy Janco | Consultant
+Alice McGrath, Technical Lead
 
-### Maria Ocando-Finol | Coordinator 
+Cameron Boucher, Front-end Developer & Digital Scholarship Project Assistant
 
-### Chris Boyland | Coordinator 
+Martina Napolitano, Annotation Editor
 
-### Camilla McKay | Consultant 
+Noemi Albanese, Annotation Collaborator
 
-### Sasha Sokolov | Author 
+Angelina Rogatch, Translator & Digital Scholarship Project Assistant
 
-### Karina Gonzalez | EaST Assistant and Critical Web Design Project Manager 
+Jackie Toben, Digital Scholarship Project Assistant
 
----
-## Digital Scholarship Project Assistants
+Site developers & Digital Scholarship Summer Fellows: Adrianna Morsey, Arlowe Willingham, Rafiun Haque
 
-### Cameron Boucher | DSPA Spring 2022
+Consultants: Andy Janco, Maria Ocando-Finol, Chris Boyland, Camilla McKay
 
-### Jackie Toben | DSPA Spring 2022
+## Special Thanks
 
----
-## Digital Scholarship Summer Fellows
+Karina Gonzalez, Educational and Scholarly Technology Assistant
 
-### Adrianna Morsey | Site Developer
-
-### Arlowe Willingham | Site Developer
-
-### Cameron Boucher | Site Developer
-
-### Rafiun Haque | Site Developer
-
---- 
-## Annotation Collaborators
-
-### Noemi Albanese, University of Rome
-
-### Peter Baumann, Swarthmore College
-
-### Stephen Dodson, Independent Translator/Editor
-
-### S.A. Karpukhin, University of Wisconsin-Madison 
-
----
+Stella Fritzell, Digital Scholarship Graduate Assistant
 
 ## Image Credits
 
-### [*The Hunters in the Snow*](https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_Hunters_in_the_Snow_(Winter)_-_Google_Art_Project.jpg)
-Bruegel the Elder, Pieter. *Hunters in the Snow (Winter)*, 1565, oil on wood, 118 x 161 cm (Kunsthistorisches Museum, Vienna)
-
-### *Man lecturing to wolves*
-Komar, Vitaly. 
+- [*The Hunters in the Snow*](https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_Hunters_in_the_Snow_(Winter)_-_Google_Art_Project.jpg)
+    Bruegel the Elder, Pieter. *Hunters in the Snow (Winter)*, 1565, oil on wood, 118 x 161 cm (Kunsthistorisches Museum, Vienna)
+- *Man lecturing to wolves*
+    Komar, Vitaly. 
 

@@ -1,0 +1,44 @@
+---
+layout: bilingual
+---
+
+{% assign thisChapter = site.texts | where: "chapter-number", page.number %}
+{% assign thisChapter-en = thisChapter | where: "language", "en" %}
+{% for i in thisChapter-en %}
+{% assign title_en = i.title %}
+{% assign text_en = i.content %}
+{% endfor %}
+{% assign thisChapter-ru = thisChapter | where: "language", "ru" %}
+{% for i in thisChapter-ru %}
+{% assign title_ru = i.title %}
+{% assign text_ru = i.content %}
+{% endfor %}
+
+<article id="chapter-content" class="narrative bilingual annotations-hidden english">
+  <div class="header">
+    <h1 class="text-title">{{ page.number }}. 
+      <span id="en-title">{% include annotated-title.html lang="en" %}</span>
+      <span id="title-divider"> / </span>
+      <span id="ru-title">{% include annotated-title.html lang="ru" %}</span>
+    </h1>
+    <div class="byline-container">
+      <p class="byline" id="author">by {{ page.author }}</p>
+      <p class="byline" id="translator">Translated by {{ page.translator }}</p>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div id="texts" class="text-container">
+      <div id="en" markdown="1">
+        {% include annotated-prose.html lang="en" %}
+      </div>
+      <div id="ru" markdown="1">
+        {% include annotated-prose.html lang="ru" %}
+      </div>
+    </div>
+  </div>
+</article>
+
+{{ content }}
+
+{% include annotation-panel.html %}

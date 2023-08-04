@@ -14,25 +14,31 @@ layout: bilingual
 {% assign text_ru = i.content %}
 {% endfor %}
 
-<article class="bilingual poem poetry annotations-hidden" id="chapter-content">
+<article class="bilingual poem poetry annotations-hidden english" id="chapter-content">
     <div class="header">
-        <h1 class="text-title" id="en-title">{{ page.number }}. {{ title_en }}</h1>
-        <h1 class="text-title" id="ru-title">{{ page.number }}. {{ title_ru }}</h1>
-        <h1 class="text-title" id="both-title">{{ page.number }}. {{ title_en }} / {{ title_ru }}</h1>
-        <p class="byline">by {{ page.author }}</p>
+      <h1 class="text-title">{{ page.number }}. 
+        <span id="en-title">{% include annotated-title.html lang="en" %}</span>
+        <span id="title-divider"> / </span>
+        <span id="ru-title">{% include annotated-title.html lang="ru" %}</span>
+      </h1>
+      <div class="byline-container">
+        <p class="byline" id="author">by {{ page.author }}</p>
         <p class="byline" id="translator">Translated by {{ page.translator }}</p>
+      </div>
     </div>
 
     <div class="main-content">
-        <div class="text-container english" id="texts">
+        <div class="text-container" id="texts">
           <div id="en" markdown="1">
-            {% include annotated-text-poem.html lang="en" %}
+            {% include annotated-poetry.html lang="en" %}
           </div>
           <div id="ru" markdown="1">
-            {% include annotated-text-poem.html lang="ru" %}
+            {% include annotated-poetry.html lang="ru" %}
           </div>
         </div>
       </div>
 </article>
 
 {{ content }}
+
+{% include annotation-panel.html %}

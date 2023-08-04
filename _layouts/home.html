@@ -30,24 +30,27 @@
     -->
   
     <div class="wrap">
-      <button class="sidebar-toggle"
-      aria-label="Open navigation menu"
-      aria-expanded="false"
-      aria-controls="sidebar">
-    </button>
-      <div class="imgcontainer" alt="A painting of Hunters in the snow"></div>
-        <main class="container content" id="main" lang="{{ page.language }}">
-          <div class="homeTitle">
-            <h1 id="dogTitle"><a href="{{ site.baseurl }}/">{{ site.title | newline_to_br }}</a></h1>
-            <p>{{ site.tagline }}</p>
+      <div class="hero-header" alt="A painting of Hunters in the snow">
+        <button class="sidebar-toggle"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="sidebar">
+        </button>
+        <div class="dark-banner">
+          <div class="title-container">
+              <h1 id="dogTitle"><a href="{{ site.baseurl }}/">{{ site.title | newline_to_br }}</a></h1>
+              <div class="subheading">{{ site.tagline }}</div>
+              <div class="header-link"><a href="{{ site.baseurl }}/toc/">Start Reading →</a></div>
           </div>
-          {{ content }}
-        </main>
-        <footer> 
-          <p>Text content is in copyright: used with permission of Columbia UP (English) & Azbuka Press (Russian).</p>
-          <p>Site built with <a href="https://elotroalex.github.io/ed/">Ed.</a></p>
-        </footer> 
+        </div>
       </div>
+      <main class="container content homepage-content" id="main" lang="{{ page.language }}">
+        {{ content }}
+      </main>
+      <footer class="homepage-footer"> 
+        <p>Copyrighted text used with permission of Columbia UP (English) & Azbuka (Russian).</p>
+      </footer> 
+    </div>
 
     <script>
 
@@ -90,26 +93,6 @@
           sidebar.setAttribute('aria-hidden', true);
         })
       })(document);
-  
-    </script>
-
-    <!-- Facebook SDK for JavaScript -->
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '589495744558280',
-          xfbml      : true,
-          version    : 'v2.6'
-        });
-      };
-
-      (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
     </script>
   </body>
 </html>

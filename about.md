@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+sort-order: 1
 ---
 
 Sasha Sokolov is one of the best-known Russian authors of the second half of the twentieth century. His work has significantly influenced the development of contemporary Russian literature, and most authors openly recognize the role Sokolov’s oeuvre has played on their creative formation and maturation. His three novels—A School for Fools (1976), Between Dog and Wolf (1980), and Palisandriia (1985, translated as Astrophobia)—embody the author’s idiosyncratic and peculiar style, a feature that has challenged translators and critics for decades. 
