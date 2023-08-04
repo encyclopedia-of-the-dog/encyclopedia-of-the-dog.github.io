@@ -14,6 +14,11 @@
 
 {% assign annotations = site.data.comments-all | where: "chapter", chapter-title %}
 {% assign annotations-length = annotations.size %}
+
+{% comment %} 
+    replacements-completed is used to offset nested forloops to avoid iterating
+    over the same annotations more than once.
+{% endcomment %}
 {% assign replacements-completed = 0 %}
 
 {% for i in (1..annotations-length) %}
