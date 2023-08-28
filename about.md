@@ -78,20 +78,4 @@ In 2011, Sokolov unexpectedly authored a new book, *Triptikh* (*Triptych*), publ
 
 *Triptych* was followed by two other short publications, the first one of which, titled "Ozarenie" (Illumination), appeared in the special issue dedicated to the ninetieth anniversary of the magazine *Oktiabr'* (*October*) in 2014. The latest publication by Sasha Sokolov was included in the *Canadian-American Slavic Studies* special issue we, Martina Napolitano and José Vergara, edited in 2021. The writer not only enthusiastically supported our work but also enriched it with a new "[proem](https://brill.com/view/journals/css/55/3-4/article-p207_4.xml)," a personal reply to Donald Barton Johnson's stimulating article "The Galoshes Manifesto" (1989).
 
----
-
-​​With reference to the metrical patterns, we have adopted the set of abbreviations commonly used by Russian scholars (see, for example, Yury Orlitsky's essays):
-
-| Russian Term | English Translation | Russian Abbreviation | English Abbreviation |
-| --- | ---| ---| ---|
-| Ямб | Iamb | Я | Ya |
-| Хорей | Trochee | Х | Kh |
-| Дактиль | Dactyl | Дак | Dak |
-| Амфибрахий | Amphibrach | Амф | Amf |
-| Анапест | Anapaest | Ан | An |
-| Мужская клаузула | Masculine clausula | М | M |
-| Женская клаузула | Feminine clausula | Ж | Zh |
-| Дактилическая клаузула | Dactylic clausula | Д | D |
-| Гипердактилическая клаузула | Hyperdactylic clausula | ГД | GD |
-
 [^1]: What follows is an abridged excerpt from the first chapter of Martina Napolitano’s monograph devoted to the author’s life and work.
