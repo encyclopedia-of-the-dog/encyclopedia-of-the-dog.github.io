@@ -130,8 +130,15 @@ h1.text-title {
   font-size: 1.4rem;
 }
 
+h1.page-title {
+  font-size: 1.6rem;
+  font-family: $main-font;
+  text-align: center;
+  margin-top: 0;
+}
+
 h2 {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   font-size: 1.2rem;
 }
 
@@ -231,7 +238,7 @@ tbody tr:nth-child(odd) th {
   position: relative;
   top: -40px;
   border-bottom: 1px solid #eee;
-  margin-bottom: 1.5rem;
+  /* margin-bottom: 1.5rem; */
   padding-top: 26px;
   padding-bottom: 1rem;
   text-align: center;
