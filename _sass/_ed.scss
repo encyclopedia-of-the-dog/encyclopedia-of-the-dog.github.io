@@ -182,22 +182,15 @@ mark {
 
 /* Quotes */
 blockquote {
-  padding: 0rem 1.5rem 0rem 2rem;
+  padding: 0rem 0rem 0rem 2rem;
   margin: 0 0 20px 0;
   color: $text-color;
   border-left: none;
-  font-style: italic;
+  /* font-style: italic; */
 }
 
 blockquote p:last-child {
   margin-bottom: 0;
-}
-
-@media (min-width: 30em) {
-  blockquote {
-    padding-right: 5rem;
-    padding-left: 1.25rem;
-  }
 }
 
 /* Images */

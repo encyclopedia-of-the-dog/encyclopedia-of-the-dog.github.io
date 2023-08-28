@@ -553,17 +553,6 @@ article.page.toc-page {
   }
 }
 
-/* Hide footnotes at bottom of page except for print */
-.footnotes {
-  display: none;
-}
-
-@media print {
-  .footnotes {
-    display: block;
-  }
-}
-
 
 /* Footer */
 footer {
