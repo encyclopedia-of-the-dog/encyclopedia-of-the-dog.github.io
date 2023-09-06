@@ -720,6 +720,14 @@ ol.bibliography {
   text-indent: -1rem;
 }
 
+.bibliography {
+  ul {
+    list-style-type: none;
+    padding-left: 1rem;
+    text-indent: -1rem;
+  }
+}
+
 /* Diplomatic editions */
 ins,
 .add {
