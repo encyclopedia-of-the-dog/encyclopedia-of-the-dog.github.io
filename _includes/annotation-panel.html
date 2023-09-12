@@ -111,7 +111,8 @@
                             {% assign this-alt-text-en = alt-text-en[forloop.index0] %}
                             <img src="{{ img }}" alt="{{ this-alt-text-en }}">
                         {% endfor %}
-                    </div>               
+                    </div>   
+                    <div class="annotation-text-container with-img">             
                     {% else %}
                     <div class="annotation-text-container">
                     {% endif %}
