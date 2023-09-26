@@ -28,6 +28,8 @@ Consultants: Andy Janco, Maria Ocando-Finol, Chris Boyland, Camilla McKay
 
 ## Special Thanks
 
+Sasha Sokolov, Author
+
 Karina Gonzalez, Educational and Scholarly Technology Assistant
 
 Stella Fritzell, Digital Scholarship Graduate Assistant
