@@ -5,7 +5,7 @@
 
 {% comment %} get chapter title from page data and language passed in include statement {% endcomment %}
 {% if include.lang == "en" %}
-    {% capture chapter-title %}{% if page.number == "01" %}{{ page.number }}. DISCORDS BEYOND THE ITIL{% else %}{{ page.number }}. {{ title_ru }}{% endif %}{% endcapture %}
+    {% capture chapter-title %}{% if page.number == "01" %}{{ page.number }}. DISCORDS BEYOND THE ITIL{% elsif page.number == "15" %}{{ page.number }}. THE BINGER’S JOURNAL{% else %}{{ page.number }}. {{ title_ru }}{% endif %}{% endcapture %}
     {% capture annotated-title %}{{ title_en }}{% endcapture %}
 {% elsif include.lang == "ru" %}
     {% capture chapter-title %}{% if page.number == "01" %}{{ page.number }}. ЗАИТИЛЫЦИНА{% else %}{{ page.number }}. {{ title_ru }}{% endif %}{% endcapture %}
