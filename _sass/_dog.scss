@@ -307,6 +307,12 @@ article.page.toc-page {
     width: inherit;
   }
 
+  #chapter-scroll {
+    max-height: 10rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
   #btn-show-chapters {
     width: 6.75rem;
   }
@@ -331,7 +337,6 @@ article.page.toc-page {
     display: block;
     color: $text-color  !important;
     text-decoration: none;
-    width: inherit;
   }
 
   .chapter-link:hover,
