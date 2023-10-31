@@ -1,0 +1,25 @@
+{% assign replaced-array = replaced-text | newline_to_br | split: "<br />" %}
+{% assign replaced-lines = replaced-array | size %}
+{% assign new-array = new-text | newline_to_br | split: "<br />" %}
+{% assign new-lines = new-array | size %}
+{% if replaced-lines > 1 and new-lines > 1 %}
+    {% assign new-multiline = new-text | replace: "</li>", "</span></li>" | split: "<li>" %}
+    {% assign new-text = "" %}
+    {% for line in new-multiline %}
+        {% if forloop.first %}
+            {% assign new-text = new-text | append: line %}
+        {% elsif forloop.last %}
+            {% assign first-3 = line | truncate: 3, "" | strip %}
+            {% if first-3 == "" %}
+                {% capture new-line %}<li><p><span id="highlight-{{ first-annotation.Id }}-{{ forloop.index0 }}" class="annotation-link" role="link" onclick="window.location.href='#{{ first-annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ line | replace: "<p>", "" }}{% endcapture %}
+            {% else %}
+                {% capture new-line %}<li><span id="highlight-{{ first-annotation.Id }}-{{ forloop.index0 }}" class="annotation-link" role="link" onclick="window.location.href='#{{ first-annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ line }}{% endcapture %}
+            {% endif %}
+            {% assign new-text = new-text | append: new-line %}
+        {% else %}
+            {% capture new-line %}<li><span id="highlight-{{ first-annotation.Id }}-{{ forloop.index0 }}" class="annotation-link" role="link" onclick="window.location.href='#{{ first-annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ line }}</span>{% endcapture %}
+            {% assign new-text = new-text | append: new-line %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+{% capture annotated-text %}{{ annotated-text | replace_first: replaced-text, new-text }}{% endcapture %}
