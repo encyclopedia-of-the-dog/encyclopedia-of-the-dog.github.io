@@ -16,7 +16,20 @@ layout: bilingual
 
 <article id="chapter-content" class="narrative bilingual annotations-hidden english">
   <div class="header">
-    <h1 class="text-title">{{ page.number }}. 
+    <ul class="ch-number-container">
+      {% assign prev = page.number | minus: 1 | append: '' %}
+      {% if prev.size == 1 %}
+        {% assign prev = prev | prepend: "0" %}
+      {% endif %}
+      {% assign next = page.number | plus: 1 | append: '' %}
+      {% if next.size == 1 %}
+        {% assign next = next | prepend: "0" %}
+      {% endif %}
+      <li class="previous-chapter" {% if page.number == "00" %}style="visibility: hidden; aria-hidden="true"{% endif %}><a href='{{ "/chapters/" | append: prev | relative_url }}'>{{ prev }}</a></li>
+      <li class="this-chapter">{{ page.number }}</li>
+      <li class="next-chapter" {% if page.number == "18" %}style="visibility: hidden; aria-hidden="true"{% endif %}><a href='{{ "/chapters/" | append: next | relative_url }}'>{{ next }}</a></li>
+    </ul>
+    <h1 class="text-title">
       <span id="en-title">{% include annotated-title.html lang="en" %}</span>
       <span id="title-divider"> / </span>
       <span id="ru-title">{% include annotated-title.html lang="ru" %}</span>

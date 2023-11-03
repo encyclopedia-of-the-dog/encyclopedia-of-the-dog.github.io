@@ -434,9 +434,31 @@ article.page.toc-page {
   margin-left: auto;
   margin-right: auto;
 
+  .ch-number-container {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-indent: 0rem;
+
+    li {
+      display: inline;
+      vertical-align: middle;
+    }
+
+    .this-chapter {
+      font-size: 2rem;
+      margin: 0 1rem;
+      color: $heading-color;
+    }
+
+    .previous-chapter a, .next-chapter a {
+      text-decoration: underline;
+    }
+  }
+
   .text-title {
-    margin-top: .5rem;
-    padding-top: 0.5rem;
+    margin-top: 0;
+    padding-top: 0;
   }
 
   .byline-container {
