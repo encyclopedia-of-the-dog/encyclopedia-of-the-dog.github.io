@@ -437,12 +437,17 @@ article.page.toc-page {
   .ch-number-container {
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 0.75rem 0 0;
     text-indent: 0rem;
 
     li {
       display: inline;
       vertical-align: middle;
+
+      svg {
+        position: relative;
+        top: 2px;
+      }
     }
 
     .this-chapter {
@@ -450,15 +455,37 @@ article.page.toc-page {
       margin: 0 1rem;
       color: $heading-color;
     }
+  }
 
-    .previous-chapter a, .next-chapter a {
-      text-decoration: underline;
+  ul.ch-number-container-bottom {
+    list-style-type: none;
+    width: 100%;
+    height: 1rem;
+    margin: 0 0 1rem;
+    text-indent: 0rem;
+    padding: 0;
+
+    li {
+      display: inline;
+      svg {
+        position: relative;
+        top: 3px;
+      }
+    }
+
+    li.previous-chapter-bottom {
+      float: left;
+    }
+    
+    li.next-chapter-bottom{
+      float: right;
     }
   }
 
   .text-title {
     margin-top: 0;
     padding-top: 0;
+    margin-bottom: 1rem;
   }
 
   .byline-container {
