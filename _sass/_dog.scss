@@ -444,8 +444,7 @@ article.page.toc-page {
       vertical-align: middle;
 
       svg {
-        position: relative;
-        top: 2px;
+        vertical-align: text-top;
       }
     }
 
@@ -467,8 +466,7 @@ article.page.toc-page {
     li {
       display: inline;
       svg {
-        position: relative;
-        top: 3px;
+        vertical-align: text-top;
       }
     }
 
