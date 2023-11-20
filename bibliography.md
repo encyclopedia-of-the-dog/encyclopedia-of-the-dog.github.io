@@ -52,6 +52,7 @@ sort-order: 3
 - Egorov, M. Iu. 2002. "O postmodernistskikh aspektakh poetiki romana Sashi Sokolova 'Shkola dlia durakov'." *Iaroslavskii pedagogicheskii vestnik* 2 (31): 38–42.
 - Egorov, M. Iu. 2002. "Spontanost’ pis’ma kak printsip produtsirovaniia teksta v romane Sashi Sokolova Shkola dlia durakov." Tezisy dokladov desiqtoi konferencii molodykh uchenykh: 64–66.
 - Egorov, Mikhail Iu'evich. 2006. "Ustanovka na indeterminirovannoe produtsirovanie teksta v romane Sashi Sokolova 'Shkola dlia durakov'." *CASS* 40 (2–4): 179-199.
+- Epshtein, M. N. *Priroda, mir, tainik vselennoi... Sistema peizazhykh obrazov v russkoi poezii*. Moskva: Vysshaia shkola, 1990.
 - Ermoshina, G. G. 1997. "Vremia ot vetra (Nekotorye problemy prostranstva vremeni v 'Shkole dlia durakov' Sashi Sokolova)." In *Literatura "Tret'ei volny,"* 195–201. Samara: Izdatel'stvo "Samarskii universitet".
 - Erofeev, Viktor. 1989. "'Vremia dlia chastnykh besed...'" Interview with Sasha Sokolov. *Oktiabr'* 8: 195–202.
 - Erzhebet, Vari. 2002. "'Literatura [...] — iskusstvo obrashcheniia so slovom'. Zametki o povesti 'Shkola dlia durakov' Sashi Sokolova." *Studia Slavic Hung* 47 (3–4): 427–450.
