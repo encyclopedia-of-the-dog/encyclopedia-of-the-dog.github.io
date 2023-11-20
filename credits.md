@@ -35,7 +35,8 @@ Karina Gonzalez, Educational and Scholarly Technology Assistant
 Stella Fritzell, Digital Scholarship Graduate Assistant
 
 ## Image Credits
+<div class="bibliography" markdown="1">
+- Bruegel the Elder, Pieter. [*The Hunters in the Snow*](https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_Hunters_in_the_Snow_(Winter)_-_Google_Art_Project.jpg). 1565. Kunsthistorisches Museum, Vienna.
 
-Bruegel the Elder, Pieter. [*The Hunters in the Snow*](https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_Hunters_in_the_Snow_(Winter)_-_Google_Art_Project.jpg). 1565. Kunsthistorisches Museum, Vienna.
-
-Komar, Vitaly. *Man lecturing to wolves*.
+- Komar, Vitaly. *Man lecturing to wolves*.
+</div>
