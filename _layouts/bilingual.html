@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  {% include head.html %}
+
+  <body class="theme-base-{{site.color-scheme}}">
+
+    {% include sidebar.html %}
+
+    <nav class="skip-links">
+      <ul>
+        <li class="skip-link"><a href="#chapter-content" class="screen-reader-shortcut">Skip to main content</a></li>
+      </ul>
+    </nav>
+
+    <!--
+      Wrap is the content to shift when toggling the sidebar. We wrap the content to avoid any CSS
+      collisions with our real content.
+    -->
+    <div class="wrap">
+      <div class="bilingual">
+        <div class="menu-bar-container">
+          <ul class="menu-bar" id="text-options">
+            <li style="float: left;">
+              <button class="sidebar-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="sidebar">
+              </button>
+            </li>
+            <li class="button-container dropdown" id="chapter-menu">
+              <button class="btn dropbtn" 
+                id="btn-show-chapters" 
+                onclick="showChapters()">Chapter {{ page.number }}
+                <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+              </button>
+              <div class="dropdown-content" id="chapter-list">
+                <div id="chapter-scroll">
+                  {% for item in site.chapters %}
+                  {% if item.number == page.number %}
+                  <a class="chapter-link active" href="{{ site.baseurl }}{{ item.url }}">{{ item.number }}</a>
+                  {% else %}
+                  <a class="chapter-link" href="{{ site.baseurl }}{{ item.url }}">{{ item.number }}</a>
+                  {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
+            </li>
+            <li class="button-container dropdown" id="language-buttons">
+              <button class="btn dropbtn" 
+                id="btn-show-languages" 
+                onclick="showLanguages()">Language 
+                <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+              </button>
+              <div class="dropdown-content" id="language-list">
+                <button class="btn active" id="btn-en" onclick="showEnglish()">English</button>
+                <button class="btn" id="btn-ru" onclick="showRussian()">Russian</button>
+                <button class="btn" id="btn-both" onclick="showBoth()">Both</button>
+            </li>
+            <li class="button-container dropdown" id="annotation-buttons">
+              <button class="btn dropbtn" 
+              id="btn-show-annotations-menu" 
+              onclick="showAnnotationsMenu()">Annotations 
+              <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+            </button>
+              <div class="dropdown-content" id="annotations-menu-list">
+                <button class="btn" id="btn-en" onclick="hideAnnotations()">Off</button>
+                <button class="btn" id="btn-en" onclick="showAnnotations(); showEnglishAnnotations();">English</button>
+                <button class="btn" id="btn-ru" onclick="showAnnotations(); showRussianAnnotations();">Russian*</button>
+                <button class="btn active" id="btn-both" onclick="showAnnotations(); showBothAnnotations();">Both*</button>
+                <p>*Russian text only</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <main class="container content" id="main" lang="{{ page.language }}">
+          
+            {{ content }}
+        
+        </main>
+        <footer>
+          <div class="byline-container-footer">
+            <p>From <em>Between Dog and Wolf</em> by Sasha Sokolov, translated by Alexander Boguslawski.</p>
+          </div>
+          <p>Copyrighted text used with permission of Columbia UP (English) & Azbuka (Russian).</p>
+        </footer>  
+      </div>
+    </div>
+
+    <script>
+      // Highlight search Query
+      var url = window.location.href;
+        if (url.lastIndexOf("?q=") > 0) {
+          // get the index of the parameter, add three (to account for length)
+          var stringloc = url.lastIndexOf("?q=") + 3;
+          // get the substring (query) and decode
+          var searchquery = decodeURIComponent(url.substr(stringloc));
+          // regex matches at beginning of line, end of line or word boundary, useful for poetry
+          var regex = new RegExp("(?:^|\\b)(" + searchquery + ")(?:$|\\b)", "gim");
+          // get, add mark and then set content
+          var content = document.getElementById("main").innerHTML;
+          document.getElementById("main").innerHTML = content.replace(regex, "<mark>$1</mark>");
+      }
+  
+      // Support sidebar toggle
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var sidebarNavLink = document.querySelector('.sidebar-nav-item');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        
+        // Toggle sidebar
+        toggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          checkbox.checked = !checkbox.checked;
+          toggle.setAttribute('aria-expanded', checkbox.checked);
+          sidebar.setAttribute('aria-hidden', !checkbox.checked);
+        });
+        
+        // Make sure we focus on the menu once it opens to aid tab navigation
+        sidebar.addEventListener('transitionend', function() {sidebarNavLink.focus()});
+        
+        // Clicking anywhere in the sidebar should close the menu
+        sidebar.addEventListener('click', function(e) {
+          checkbox.checked = false;
+          toggle.setAttribute('aria-expanded', false);
+          sidebar.setAttribute('aria-hidden', true);
+        })
+      })(document);
+    </script>
+
+    <!-- JavaScript for Encyclopedia of the Dog bilingual and annotation functionality -->
+    <script>
+      // Language buttons
+      function showEnglish() {
+          var element = document.getElementById("chapter-content");
+            element.classList.remove("english");
+            element.classList.remove("russian");
+            element.classList.remove("both");
+            element.classList.add("english");
+        }
+      
+        function showRussian() {
+          var element = document.getElementById("chapter-content");
+            element.classList.remove("english");
+            element.classList.remove("russian");
+            element.classList.remove("both");
+            element.classList.add("russian");
+        }
+      
+        function showBoth() {
+          var element = document.getElementById("chapter-content");
+            element.classList.remove("english");
+            element.classList.remove("russian");
+            element.classList.remove("both");
+            element.classList.add("both");
+        }
+
+      // Add and remove active class from buttons
+      // Get the container element
+      var btnContainer = document.getElementById("language-buttons");
+
+      // Get all buttons with class="btn" inside the container
+      var btns = btnContainer.getElementsByClassName("btn");
+
+      // Loop through the buttons and add the active class to the current/clicked button
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+          var current = btnContainer.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
+   
+      // Chapter List Dropdown
+      function showChapters() {
+        document.getElementById("chapter-list").classList.toggle("show");
+      }
+
+      // Language List Dropdown
+      function showLanguages() {
+        document.getElementById("language-list").classList.toggle("show");
+      }
+
+      // Annotation Menu Dropdown
+      function showAnnotationsMenu() {
+        document.getElementById("annotations-menu-list").classList.toggle("show");
+      }
+
+      // Close the dropdowns if the user clicks outside of them
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+
+      // Show annotations
+      function showAnnotations(){
+        document.getElementById("annotation-panel").setAttribute ("aria-hidden", "false");
+        document.getElementById("btn-expand-annotations").setAttribute ("aria-hidden", "false");
+        document.getElementById("panel-mask").setAttribute ("aria-hidden", "false");
+
+        var content = document.getElementById("chapter-content");
+        content.classList.remove("annotations-hidden");
+        content.classList.add("annotations-visible");
+        // Add hidden links to tab navigation
+        var spansToHide = document.getElementsByClassName("annotation-link"); //spansToHide is an array
+        for(var i = 0; i < spansToHide.length; i++){
+          spansToHide[i].setAttribute ("tabindex", "0");
+          spansToHide[i].setAttribute ("aria-hidden", "false");
+        }
+        var spansToHide = document.getElementsByClassName("linked-highlighted"); //spansToHide is an array
+        for(var i = 0; i < spansToHide.length; i++){
+          spansToHide[i].setAttribute ("tabindex", "0");
+          spansToHide[i].setAttribute ("aria-hidden", "false");
+        }
+        document.getElementById("texts").style.padding = "0 0 5rem";
+      }
+
+      // Hide annotations
+      function hideAnnotations(){
+        document.getElementById("annotation-panel").setAttribute ("aria-hidden", "true");
+        document.getElementById("btn-expand-annotations").setAttribute ("aria-hidden", "true");
+        document.getElementById("panel-mask").setAttribute ("aria-hidden", "true");
+
+        var content = document.getElementById("chapter-content");
+        content.classList.remove("annotations-visible");
+        content.classList.add("annotations-hidden");
+        // Remove hidden links from tab navigation
+        var spansToHide = document.getElementsByClassName("annotation-link"); //spansToHide is an array
+        for(var i = 0; i < spansToHide.length; i++){
+          spansToHide[i].setAttribute ("tabindex", "-1");
+          spansToHide[i].setAttribute ("aria-hidden", "true");
+        }
+        var spansToHide = document.getElementsByClassName("highlighted"); //spansToHide is an array
+        for(var i = 0; i < spansToHide.length; i++){
+          spansToHide[i].setAttribute ("tabindex", "-1");
+          spansToHide[i].setAttribute ("aria-hidden", "true");
+        }
+        document.getElementById("texts").style.padding = "0";
+      }
+
+      // Support language toggle in annotation panel
+      var russianAnnotations = document.getElementById("annotations-ru");
+      function showEnglishAnnotations(){
+        if (russianAnnotations.classList.contains("lang-ru")) {
+          russianAnnotations.classList.remove("lang-ru");
+        }
+        if (russianAnnotations.classList.contains("lang-both")) {
+          russianAnnotations.classList.remove("lang-both");
+        }
+        russianAnnotations.classList.add("lang-en");
+      }
+      function showRussianAnnotations(){
+        if (russianAnnotations.classList.contains("lang-en")) {
+          russianAnnotations.classList.remove("lang-en");
+        }
+        if (russianAnnotations.classList.contains("lang-both")) {
+          russianAnnotations.classList.remove("lang-both");
+        }
+        russianAnnotations.classList.add("lang-ru");
+      }
+      function showBothAnnotations(){
+        if (russianAnnotations.classList.contains("lang-en")) {
+          russianAnnotations.classList.remove("lang-en");
+        }
+        if (russianAnnotations.classList.contains("lang-ru")) {
+          russianAnnotations.classList.remove("lang-ru");
+        }
+        russianAnnotations.classList.add("lang-both");
+      }
+
+      // Expand and collapse the annotation panel
+      function expandAnnotations(){
+        document.getElementById("panel-btn-container").classList.toggle("expanded");
+      }
+
+      // Make clickable spans keyboard accessible
+      var clickableSpansText = document.getElementsByClassName("annotation-link");
+      for (let i = 0; i < clickableSpansText.length; i++) {
+        clickableSpansText[i].addEventListener("keyup", function(event) {
+          event.preventDefault();
+          if (event.keyCode === 13 || event.keyCode === 32) {
+            clickableSpansText[i].click();
+          }
+        });
+      }
+      var clickableSpansPanel = document.getElementsByClassName("highlighted");
+      for (let i = 0; i < clickableSpansPanel.length; i++) {
+        clickableSpansPanel[i].addEventListener("keyup", function(event) {
+          event.preventDefault();
+          if (event.keyCode === 13 || event.keyCode === 32) {
+            clickableSpansPanel[i].click();
+          }
+        });
+      }
+    </script>
+
+  </body>
+  
+</html>

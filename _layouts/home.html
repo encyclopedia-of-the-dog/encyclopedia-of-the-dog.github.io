@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+
+  {% include head.html %}
+   
+  <body class="theme-base-{{site.color-scheme}}">
+
+    <!-- This if statement decides which sidebar to use -->
+    {% if page.toc %}
+    {% include sidebar-toc.html %}
+    {% else %}
+    {% include sidebar.html %}
+    {% endif %}
+
+    <!-- Skip links for narrative-bilingual and poem-bilingual layouts -->
+    
+    {% if page.layout == "narrative-bilingual" or page.layout == "poem-bilingual" %}
+    <nav class="skip-links">
+      <ul>
+        <li class="skip-link"><a href="#chapter-nav" class="screen-reader-shortcut">Skip to chapter navigation</a></li>
+        <li class="skip-link"><a href="#chapter-content" class="screen-reader-shortcut">Skip to chapter content</a></li>
+      </ul>
+    </nav>
+    {% endif %}
+
+    <!--
+      Wrap is the content to shift when toggling the sidebar. We wrap the content to avoid any CSS
+      collisions with our real content.
+    -->
+  
+    <div class="wrap">
+      <div class="hero-header" alt="A painting of Hunters in the snow">
+        <button class="sidebar-toggle"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="sidebar">
+        </button>
+        <div class="dark-banner">
+          <div class="title-container">
+              <h1 id="dogTitle"><a href="{{ site.baseurl }}/">{{ site.title | newline_to_br }}</a></h1>
+              <div class="subheading">{{ site.tagline }}</div>
+              <div class="header-link"><a href="{{ site.baseurl }}/toc/">Start Reading <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512" style="fill: #E6DABD; position: relative; top: 3px;"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></a></div>
+          </div>
+        </div>
+      </div>
+      <main class="container content homepage-content" id="main" lang="{{ page.language }}">
+        {{ content }}
+      </main>
+      <footer class="homepage-footer"> 
+        <p>Copyrighted text used with permission of Columbia UP (English) & Azbuka (Russian).</p>
+      </footer> 
+    </div>
+
+    <script>
+
+    // Highlight search Query
+    var url = window.location.href;
+      if (url.lastIndexOf("?q=") > 0) {
+        // get the index of the parameter, add three (to account for length)
+        var stringloc = url.lastIndexOf("?q=") + 3;
+        // get the substring (query) and decode
+        var searchquery = decodeURIComponent(url.substr(stringloc));
+        // regex matches at beginning of line, end of line or word boundary, useful for poetry
+        var regex = new RegExp("(?:^|\\b)(" + searchquery + ")(?:$|\\b)", "gim");
+        // get, add mark and then set content
+        var content = document.getElementById("main").innerHTML;
+        document.getElementById("main").innerHTML = content.replace(regex, "<mark>$1</mark>");
+      }
+
+      // Support sidebar toggle
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var sidebarNavLink = document.querySelector('.sidebar-nav-item');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        
+        // Toggle sidebar
+        toggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          checkbox.checked = !checkbox.checked;
+          toggle.setAttribute('aria-expanded', checkbox.checked);
+          sidebar.setAttribute('aria-hidden', !checkbox.checked);
+        });
+        
+        // Make sure we focus on the menu once it opens to aid tab navigation
+        sidebar.addEventListener('transitionend', function() {sidebarNavLink.focus()});
+        
+        // Clicking anywhere in the sidebar should close the menu
+        sidebar.addEventListener('click', function(e) {
+          checkbox.checked = false;
+          toggle.setAttribute('aria-expanded', false);
+          sidebar.setAttribute('aria-hidden', true);
+        })
+      })(document);
+    </script>
+  </body>
+</html>

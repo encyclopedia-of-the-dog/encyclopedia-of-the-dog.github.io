@@ -1,0 +1,205 @@
+---
+layout: page
+title: Bibliography
+sort-order: 3
+---
+<div class="bibliography" markdown="1">
+- Adamov, S. 1989. "Sasha Sokolov: Amerikantsy ne mogut poniat' — o chem eto mozhno govorit' dva chasa." Interview with Sasha Sokolov. *Iunost'* 12: 66–67.
+- Ajimatov, Ch. 1989. "Na anketu ‘IL’ otvechaiut pisateli russkogo zarubezh'ia: Sasha Sokolov." *Inostrannaia literatura* 3: 245–246.
+- Aksenov, Vasilii. 1983. "Nenuzhnoe zacherknut': Zametki o proze Sashi Sokolova." *Russkaia mysl'*, June 16, 1983.
+- Aksenov, Vasilii. 1987. "Russkoe leto v Novoi Anglii." In *V poiskakh grustnogo bebi*, 265–269. New York: Liberty.
+- Albanese, Noemi. 2021. "'Ia vizhu svoiu zadachu v tom, chtoby podtianut' russkuiu prozu do urovnia poezzii': Metrizatsiia prozaicheskogo teksta v *Mezhdu sobakoi i volkom* Sashi Sokolova." *CASS* 55 (3–4): 317–336.
+- Aleksandrov, Nikolai. 2017. "Shkola dlia umnykh. Sasha Sokolov: spasibo, chto zhivoi." Lenta.ru. Accessed April 4, 2023. [https://lenta.ru/articles/2017/02/09/sokolov/)](https://lenta.ru/articles/2017/02/09/sokolov/).
+- Anonymous. 1977. Review of *Škola dlja durakov*, by Sasha Sokolov. *Russian Language Journal* 31 (108): 188–193.
+- Anonymous. No date. "Proiskhozhdenie familii Karabanova." Tsentra issledovanii "Analiz Familii". [https://www.analizfamilii.ru/Karabanova/proishozhdenie.html](https://www.analizfamilii.ru/Karabanova/proishozhdenie.html). Last acccessed July 14, 2023.
+- Armstrong, Edward. 1958. *The Folklore of Birds: An Enquiry into the Origin and Distribution of Some Magico-Religious Traditions*. London: Collins.
+- Ashcheulova, I.V. 1998. "Tvorchestvo Sashi Sokolova v kontekste literaturnogo protsessa 60-80-x godov." In *Russkii postmodernizm: predvaritel'nye itogi*. *Mezhvuzovskii sbornik statei*, edited by L. I. Bronskaia and L. P. Egorova, 134–140. Stavropol': Izdatel'stvo Stavropol'skogo universiteta.
+- Ashcheulova, I.V. 1999. "Motiv babochki v romane Sashi Sokolov 'Shkola dlia durakov'." In *Problemy literaturnykh zhanrov. Materialy IX Mezhdunarodnoi nauchnoi konferencii, posiashchennoi 120-letiiu so dnia osnovaniia Tomskogo gosudarstvennogo universiteta* 8-10 dekabriia 1998 g., vol. 2, edited by F.Z. Kanunova, et al., 231–235. Tomsk: Izdatel'stvo Tomskogo universiteta.
+- Astrachan, Anthony. 1979. "Alone Abroad: Soviet Artists in Exile." *The Atlantic*, Feb., 70–75. [https://cdn.theatlantic.com/media/archives/1979/02/243-2/132613332.pdf](https://cdn.theatlantic.com/media/archives/1979/02/243-2/132613332.pdf).
+- Atroshchenko, Alesia. 2010. "Ornamentalizm v romane Sashi Sokolova 'Mezhdu sobakoi i volkom'." In *Trudy VI Mezhdunarodnoi letnei shkoly na Karel'skom peresheike po russkoi literature*, 296–304. Sankt Peterburg: IRLI. [http://lib2.pushkinskijdom.ru/atroshenko2010-pdf](http://lib2.pushkinskijdom.ru/atroshenko2010-pdf).
+- Babulina, Anastasiia. 2006. "Sasha Sokolov: Osobennosti khronotopa v 'Shkole dlia durakov'." CASS 40 (2–4): 251–278.
+- Baknina, T.B. 2015. "Sasha Sokolov i Piter Breigel' Starshii: Dialog kul'tur." *Filologiia i kul'tura. Philology and Culture* 3 (41): 181–185.
+- Belov, Il'ia. 2017. *Sasha Sokolov: Poslednii russkii pisatel'*. Accessed May 11, 2023. [https://www.youtube.com/watch?v=8RoUlCN2yxk](https://www.youtube.com/watch?v=8RoUlCN2yxk).
+- Beraha, Laura. 1993. "The Last Rogue of History: Picaresque Elements in Sasha Sokolov's *Palisandriia*." *Canadian Slavonic Papers / Revue Canadienne des Slavistes* 35 (3–4): 201–220.
+- Berg, Mikhail. 1985. "Novyi zhanr (chitatel' i pisatel')." *A-Ia: Literaturnoe izdanie* 1: 4–6.
+- Berg, Mikhail. 1993. "Propushchennoe slovo." *Moskovskie novosti* 4: 7. January 24, 1993.
+- Bitov, Andrei. 1989. "Grust' vsego cheloveka." *Oktiabr'* 3: 157–158.
+- Boguslawski, Alexander. 1983. Sokolov's *A School for Fools*: An Escape from Socialist Realism. *The Slavic and East European Journal* 27 (1): 91–97.
+- Boguslawski, Alexander. 1987. "Death in the Works of Sasha Sokolov." *CASS* 21 (3–4): 231–246.
+- Boguslawski, Alexander. 2006. "How Sokolov's Mezhdu sobakoi i volkom Is Made: Structure and Design." *CASS* 40 (2–4): 201–231.
+- Boguslawski, Alexander. 2017. "Annotations." In *Between Dog and Wolf*, by Sasha Sokolov, 231–255. New York: Columbia UP. [http://cup.columbia.edu/book/between-dog-and-wolf/9780231181471](http://cup.columbia.edu/book/between-dog-and-wolf/9780231181471).
+- Boguslawskii, Aleksandr. 1989. "Vremia Palisandra Dal'berga." *Russian Language Journal* 42 (142–3): 221–229.
+- Bondarenko, Vladimir. 2006. "Sasha Sokolov." In *Zhivi opasno*, 507–532. Moskva: Izdatel'skii dom "PoRog."
+- Booker, M. Keith and Dubravka Juraga. 1995. "All-Purpose Parody: Sasha Sokolov's *Astrophobia*." In *Bakhtin, Stalin, and Modern Russian Fiction: Carnival, Dialogism, and History*, 145–165.
+- Borden, Richard C. 1987. "Time, Backward!: Sasha Sokolov and Valentin Kataev." *CASS* 21 (3–4): 247–263.
+- Borden, Richard C. 1999. "Toward a Postmodern 'Bad': Sasha Sokolov." In *The Art of Writing Badly: Valentin Kataev's Mauvism and the Rebirth of Russian Modernism*. Evanston, IL: Northwestern UP.
+- Brainina, T. D. 1996. “Iazykovaia igra v proizvedeniiakh Sashi Sokolova.” In *Iazyk kak tvorchestvo*, edited by Viktor Petrovich Grigor'ev, Iu. Petrova, and N. A. Fateeva, 276–83. Moskva: Institut russkogo iazyka RAN.
+- Brodsky, Anna. 2006. "The Death of Genius in the Works of Sasha Sokolov and Liudmila Petrushevskaia." *CASS* 40 (2–4): 279–304.
+- Brown, Clarence. 1985. Introduction to selection from *A School for Fools*. In *The Portable Twentieth-Century Russian Reader*, edited by Clarence Brown, 584–586. New Yorking: Viking.
+- Brown, Edward J. 1986. "Russian Literature Beyond the Pale." *The Slavic and East European Journal* 30 (3): 380–388. [https://www.jstor.org/stable/307890](https://www.jstor.org/stable/307890).
+- Burikhin, Igor'. 1980. "S. Sokolov. Mezhdu sobakoi i volkom." Review of *Mezhdu sobakoi i volkom*, by Sasha Sokolov. Grani 118: 273–274.
+- Caramitti, M. 2001. Strategie autofinzionali in Sinjavskij, Sokolov e Venedikt Erofeev (dissertation), Università di Roma.
+- Caramitti, Mario. 2000. "Mul'tfil'my Brejfelia i obraz Volgi v *Mezhdu sobakoi i volkom* Sashi Sokolova." *Slavica Tergestina* 8: 363–370.
+- Caramitti, Mario. 2000. Strategie autofinzionali in Sinjavskij, Sokolov e Venedikt Erofeev. Dissertation, U of Rome "La Sapienza".
+- Caramitti, Mario. 2004. "Amore e morte sotto l'incudine di Saša Sokolov: l'incubo polimorfo, endemico e misterico di ta dama, in Amore e Eros nella letteratura russa del Novecento, 113-120. Bologna: CLUEB, 2004.
+- Caramitti, Mario. 2006. "'Ia' kak igrovoe nachala iskusstva (po materialam 'Palisandrii')." CASS 40 (2–4): 305–315.
+- Caramitti, Mario. 2021. "Skaz Zynzyrely: Priem, zabluzhdenie ili metaproektsiia?" CASS 55 (3–4): 397-415.
+- Chadd, Rachel Warren and Marianne Taylor. 2016. *Birds: Myth, Lore, & Legend*. London: Bloomsbury.
+- Danilov, Dmitrii. 2017. "Shkola neopredelennosti ('Shkola dlia durakov')." Accessed April 6, 2023. [https://godliteratury.ru/articles/2017/01/19/sasha-sokolov-shkola-dlya-durakov](https://godliteratury.ru/articles/2017/01/19/sasha-sokolov-shkola-dlya-durakov).
+- Dark, Oleg. 1990. "Mir mozhet byt' liuboi: razmyshleniia o 'novoi' proze." *Druzhba narodov* 6: 223–235.
+- Donska, Mariya. "Poisk bukv: Material'nost' teksta i metareferentsiia v romane Sashi Sokolova Mezhdu sobakoi i volkom." *CASS* 55 (3–4): 295–316.
+- Efimova S., "Chetyre obraza mira i slova v romane Sashi Sokolova 'Mezhdu sobakoi i volkom'." *Izvestiia smolenskogo gosudarstvennogo universiteta* 1 (2008): 42–50.
+- Egorov, M. Iu. 2002. "O postmodernistskikh aspektakh poetiki romana Sashi Sokolova 'Shkola dlia durakov'." *Iaroslavskii pedagogicheskii vestnik* 2 (31): 38–42.
+- Egorov, M. Iu. 2002. "Spontanost’ pis’ma kak printsip produtsirovaniia teksta v romane Sashi Sokolova Shkola dlia durakov." Tezisy dokladov desiqtoi konferencii molodykh uchenykh: 64–66.
+- Egorov, Mikhail Iu'evich. 2006. "Ustanovka na indeterminirovannoe produtsirovanie teksta v romane Sashi Sokolova 'Shkola dlia durakov'." *CASS* 40 (2–4): 179-199.
+- Epshtein, M. N. *Priroda, mir, tainik vselennoi... Sistema peizazhykh obrazov v russkoi poezii*. Moskva: Vysshaia shkola, 1990.
+- Ermoshina, G. G. 1997. "Vremia ot vetra (Nekotorye problemy prostranstva vremeni v 'Shkole dlia durakov' Sashi Sokolova)." In *Literatura "Tret'ei volny,"* 195–201. Samara: Izdatel'stvo "Samarskii universitet".
+- Erofeev, Viktor. 1989. "'Vremia dlia chastnykh besed...'" Interview with Sasha Sokolov. *Oktiabr'* 8: 195–202.
+- Erzhebet, Vari. 2002. "'Literatura [...] — iskusstvo obrashcheniia so slovom'. Zametki o povesti 'Shkola dlia durakov' Sashi Sokolova." *Studia Slavic Hung* 47 (3–4): 427–450.
+- Fedotova, Natal'ia and Daniil Osipov. 2018. "Spetsifika khudozhestvennogo vremeni i prostranstva v romane Sashi Sokolova 'Mezhdu sobakoi i volkom' kak prichina ego 'neperevedimosti'." *Gymanitarnye issledovaniia* 4 (68): 61–67.
+- Freedman, John. 1987. "Memory, Imagination and the Liberating Force of Literature in Sasha Sokolov's *A School for Fools*." *CASS* 21 (3–4): 265–278.
+- Fridman, Dzhon. 1987. "Razmyshleniia nad tekstom: Iskrivlenie real'nosti i vremeni v poiske istiny v romanakh *Pushkinskii dom* i *Shkola dlia durakov*. (Nenauchnyi ocherk)." *Dvadtsat' dva* 48: 200–210.
+- Genis, Aleksandr. 2006. "'Lessons of *Shkola dlia durakova*' (Over the Barrier: A Special Broadcast in Honor of Sasha Sokolov's 60th Birthday)." Translated by Ludmilla L. Litus. *CASS* 40 (2–4): 341–349.
+- Glad, John. Interview with Sasha Sokolov. The John Glad Interviews-Conversations with Russian Writers. Middlebury College. Accessed May 11, 2023. [https://community.middlebury.edu/~beyer/ratw/glad/](https://community.middlebury.edu/~beyer/ratw/glad/). 
+- Grois, Boris. 1982. "Zhizn' kak utopiia i utopiia kak zhizn': iskusstvo sots-arta." *Sintaksis* 18: 177–178.
+- Gureev, Maksim. 2011. "Snimaetsia dokumental'noe kino: Sasha Sokolov." *Voprosy litetarury* 2: 161–172.
+- Halperin, Charles. 1985. *The Golden Horde. The Mongol Impact on Medieval Russian History*. Bloomington: Indiana UP.
+- Hill, Tom. 1985–1986. "A Novelist in Waiting." *Window of Vermont* (Winter): 69–71, 97.
+- Iablokov, E. A. 1997. "'Nashel ia nachalo dorogi otsiuda - tuda' (O motivnoi strukture romane Sashi Sokolova 'Mezhdu sobakoi i volkom)." In *Literatura "Tret'ei volny,"* 202–214. Samara: Izdatel'stvo "Samarskii universitet".
+- Ingold, Felix Philip. 1979. "Zeit und Freiheit: Zu Sascha Sokolows 'Schule der Dummen'." *Schweizer Monatshefte* 59 (1): 52–58.
+- Jackson, Robert L. 1963. "The Symbol of the Wild Duck in *Dr. Zhivago*." *Comparative Literature* 15 (1): 39–45.
+- Johnson, D. Barton. 1980. “A Structural Analysis of Sasha Sokolov’s *School for Fools*: A Paradigmatic Novel.” In *Fiction and Drama in Eastern and Southeastern Europe: Evolution and Experiment in the Postwar Period*, edited by Henrik Birnbaum and Thomas Eekman, 207–237. Columbus, OH: Slavica Publishers.
+- Johnson, D. Barton. 1982. "*Mezhdu sobakoi i volkom*: Fantasticheskoe iskusstvo Sashi Sokolova." *Vremia i my* 64: 165–175.
+- Johnson, D. Barton. 1985. "Sokolov, Sasha." In *Handbook of Russian Litrature*, edited by Victor Terras, 432-433. New Haven: Yale UP.
+- Johnson, D. Barton. 1986. "Saša Sokolov's Palisandrija." *The Slavic and East European Journal* 30 (3): 389–403.
+- Johnson, D. Barton. 1986. “Sasha Sokolov’s Twilight Cosmos: Themes and Motifs.” *Slavic Review* 45 (4): 639–649.
+- Johnson, D. Barton. 1987. "A Selected Annotated Bibliography of Works By and About Sasha Sokolov." *CASS* 21 (3–4): 411–420.
+- Johnson, D. Barton. 1987. "Književni put Saše Sokolova." *Književna smotra* 20 (65–66): 92–99.
+- Johnson, D. Barton. 1987. “Saša Sokolov and Vladimir Nabokov.” *Russian Language Journal* 41 (138–139): 153–162.
+- Johnson, D. Barton. 1987. "Sasha Sokolov: A Literary Biography." *CASS* 21 (3–4): 203–230.
+- Johnson, D. Barton. 1987. Review of *Palisandriia* by Sasha Sokolov. *The Slavic and East European Journal* 31 (2): 292–293.
+- Johnson, D. Barton. 1988. Introduction to *A School for Fools*, by Sasha Sokolov, 5-10. New York: Four Walls Eight Windows.
+- Johnson, D. Barton. 1989. "Sasha Sokolov: The New Russian Avant Garde." Critique: Studies in Modern Fiction 30 (3): 163–178.
+- Johnson, D. Barton. 1989. “The Galoshes Manifesto: A Motif in the Novels of Sasha Sokolov.” *Oxford Slavonic Papers* 22: 155–179.
+- Johnson, D. Barton. 2006. "Background Notes on Sokolov's *School for Fools* and *Between Dog and Wolf*: Conversations with the Author." *CASS* 40 (2–4): 331–339.
+- Johnson, D. Barton. 2006. "Sasha Sokolov's Major Essays." *CASS* 40 (2–4): 233–249.
+- Johnson, Don Barton. 1984. "Sasha Sokolov's *Between Dog and Wolf* and the Modernist Tradition." In *Russian Literature in Emigration: The Third Wave*, edited by Olga Matich and Michael Heim, 208–217. Ann Arbor, MI, Ardis.
+- Karriker, Alexandra H. 1979. "Double Vision: Sasha Sokolov's *School for Fools*." *World Literature Today* 53 (4): 610–614.
+- Karriker, Alexandra Heidi. 1987. "Narrative Shifts and Cyclic Patterns in *A School for Fools*." *CASS* 21 (3–4): 287–299.
+- Kasack, Wolfgang. 1988. "Sokolov, Sasha." In *Dictionary of Russian Literature since 1917*, edited by Wolfgang Kasack, translated by Maria Carlson and Jane T. Hedges, 392. New York: Columbia UP.
+- Kazarina, T. V. 1997. "Estetizm Sashi Sokolova kak nravstvennaia pozitsia." In *Literatura "Tret'ei volny,"* 189–194. Samara: Izdatel'stvo "Samarskii universitet".
+- Khlebnikov, Oleg. 2006. "How My Chance Association with Censorship Ended: A Confession." Translated by Ludmilla L. Litus. *CASS* 40 (2–4): 391–392.
+- Khlebnikov, Oleg. 2006. "The Orderly on Duty by the Time Switch." Translated by Ludmilla L. Litus. *CASS* 40 (2–4): 389–390.
+- Kochetkova, Natal'ia. 2017. "'Ia vsegda znal, chto uedu iz Sovetskogo Soiuza'. Sasha Sokolov o raditeliakh-razvedchikakh, psikhbol'nitsakh i Kanade." Lenta.ru. Accessed April 17, 2023. [https://lenta.ru/articles/2017/02/11/sokolovfilm/](https://lenta.ru/articles/2017/02/11/sokolovfilm/).
+- Kocić, Zlata. 2021. "Roman-zagovor Sashi Sokolova *Mezhdu sobakoi i volkom*." *CASS* 55 (3–4): 375–396.
+- Kolb, Hanna. 2000. "The Dissolution of Reality in Sasha Sokolov's *Mezhdu sobakoi i volkom*." Translated by Arnold McMillin. *In Reconstructing the Canon: Russian Writing in the 1980s*, edited by Arnold McMillin, 193–223. Amsterdam: Harwood.
+- Komarova, E. N. 2013. "Otrazhenie Sashi Sokolova v zhurnale 'Zerkalo' (K voprosu o samoprezentatsii russkogo pisatelia-emigranta v emigrantskoi presse)." *Vestnik RGGU* 12 (113): 86–91.
+- Komarova, Elena. 2013. "Retseptsiia tvorchestva Sashi Sokolova v kritike russkogo zarubezh'ia 1970-1980-x gg." *Filologicheskie nauki: Voprosy teorii i praktiki* 10 (28): 85–89.
+- Kopeikin, Anatolii. 1985. "Bezotchetnyi soldat istorii (O novom romane Sashi Sokolova)." Review of *Palisandriia*, by Sasha Sokolov. *Russkaia mysl'* 3588: 15. September 27, 1985.
+- Korovashko, Alexei. 2008. "Zagovornaia poeziia Mezhdu sobakoi i volkom." *Vestnik Nizhegorodskogo universiteta im. N.I. Lobachevskogo* 5: 273-277.
+- Kravchenko, Elena. 2013. *The Prose of Sasha Sokolov: Reflections on/of the Real*. London: Modern Humanities Research Association. [https://www.jstor.org/stable/j.ctt24hzpj](https://www.jstor.org/stable/j.ctt24hzpj).
+- Kravchenko, Elena. 2021. "*Between Dog and Wolf*: Between the Absent and the Double." *CASS* 55 (3–4): 269–279.
+- Kreid, Vadim. 1981. "Zaitil'shchina." *Dvadtsat' dva* 19: 213–218.
+- Kuritsyn, Viacheslav. 2000. *Russkii literaturnyi postmodernizm*. Moskva: OGI.
+- Lanin, B. A. 1998. "Postmodernistkaia proza Sashi Sokolova." In *Ruskii postmodernizm: predvaritel'nye itogi*, 128–133. Stavropol': Izdatel'stvo Stavropol'skogo gos. universiteta.
+- Lehner, Ernst and Johanna. 1960. *Folklore and Symbolism of Flowers, Plants and Trees*. New York: Tudor Publishing Company.
+- Leiderman, Naum, and Lipovetsky, Mark. 2010. Russkaia literatura xx veka (1950–1990-e gody), Tom 2: 1968–1990. Moscow: Akademiia.
+- Lipovetskii, Mark. 1995. "Mifolofiia metamorfoz: Poetika Shkoly dlia durakov Sashi Sokolova." *Oktiabr'* 7: 183–192.
+- Lipovetsky, Mark. 1996. "Self-Portrait on a Timeless Background: Transformations of the Autobiographical Mode in Russian Postmodernism." *a/b: Auto/Biography Studies* 11 (2): 140–162.
+- Litus, Ludmilla L. 1997. "Saša Sokolov's *Škola dlja durakov*: Aesopian Language and Intertextual Play." *The Slavic and East European Journal* 41 (1): 114–134.
+- Litus, Ludmilla L. 1998. "Intertextuality in *Škola dlja durakov* Revisited: Sokolov, Gogol, and the Others." *Russian Language Journal* 52 (171–173): 99-140.
+- Litus, Ludmilla L. 2006. "From the Guest Editor." *CASS* 40 (2–4): ix–x.
+- Litus, Ludmilla L. 2006. "Interviews/Entrevues." *CASS* 40 (2–4): 351.
+- Litus, Ludmilla L. 2006. "Sasha Sokolov's Journey from 'Samizdat' to Russia's Favorite 'Classic': 1976-2006." *CASS* 40 (2–4): 393–424.
+- Litus, Ludmilla L., compiler and editor. "Snezhnyi chelovek." *CASS* 40 (2–4): 379–388.
+- Litus, Ludmilla L., ed. 2006. "Photographs/Illustrations." *CASS* 40 (2–4): xi–xliii.
+- Litus, Ludmilla, with D. Barton Johnson. 2006. "Sasha Sokolov: A Selected Annotated Bibliography (1967-2006)." *CASS* 40 (2–4): 425–494.
+- Lowe, David. 1987. *Russian Writing since 1953: A Critical Survey*. New York, Ungar.
+- Mal'tsev, Iurii. 1976. *Vol'naia russkaia literatura: 1955-1975. Frankfurt am Main: Posev*. 406–407, 460–461.
+- Matich, Ol'ga. 1985. "Nuzhno zabyt' vse staroe i vspominit' vse novoe." Interview with Sasha Sokolov. *Russkaia mysl'*, May 31, 1985, 12.
+- Matich, Olga. "About *Palisandriia*." *Russian Writers at Berkeley*. Accessed Feb. 1, 2023. [http://russianwriters.berkeley.edu/](http://russianwriters.berkeley.edu/).
+- Matich, Olga. 1986. "*Palisandriia*: dissidentskii mif i ego razvenchanie." *Sintaksis* 15 (1986): 86–102. 
+- Matich, Olga. 1986. "Sasha Sokolov's *Palisandriia*: History and Myth." *Russian Review* 45 (4): 415–426.
+- Matich, Olga. 1987. "Sasha Sokolov and His Literary Context." *CASS* 21 (3–4): 301–319.
+- Matich, Olga. 2021. "*Between Dog and Wolf*: Close Readings of Inbetweenness." *CASS* 55 (3–4): 251–268.
+- McDowell, Karen Rice. 1996. "The Reemergence of Medieval Word-Weaving in Sasha Sokolov's *Shkola dlia durakov*: Invoking the Word." PhD diss., U of Virginia.
+- McMillin, Arnold. 1990. "Aberration or the Future: The Avant-Garde Novels of Sasha Sokolov." In *From Pushkin to *Palisandriia*: Essays on the Russian Novel*, edited by Arnold McMillin, 229–243. London: School of Slavonic and East European Studies - U of London.
+- Mkheidze, Georgii. 2004. "Snezhnyi chelovek." Interview with Sasha Sokolov. *Playboy Russia* (July): 48–53.
+- Monter, Barbara Heldt. 1978. "Sasha Sokolov, *A School for Fools*." *Canadian Literature* 77: 110–112.
+- Moody, Fred. 1979. “Madness and the Pattern of Freedom in Sasha Sokolov’s *A School for Fools*.” *Russian Literature Triquarterly* 16: 7–32.
+- Nabokov, Vladimir. 1981. *Lectures on Russian Literature*, edited by Fredson Bowers. New York: Harcourt.
+- Nagibin, Yurii. "A Few Words about Sasha Sokolov." *CASS* 21 (3–4): 201–202.
+- Napolitano, Martina, and José Vergara. 2021. "Talking 'Round and Round with Both, the Wolf and the Hound." Introduction. *CASS* 55 (3–4): 193–197.
+- Napolitano, Martina. 2021. "“Studyin This Volapuke” That Makes the “Barrel of the Narrative” Roll: In Search of a Constructed Voice at the Hour Between Dog and Wolf." *CASS* 55 (3–4): 280–294
+- Napolitano, Martina. 2022. *Sasha Sokolov: The Life and Work of the Russian "Proet."* Stuttgart: Ibidem-Verlag.
+- Orobii, Sergei. 2002. "Istoriia odnogo uchenichestva (Vladimir Nabokov — Sasha Sokolov — Mikhail Shishkin)." *NLO* 6 (118): 293–308.
+- Ostanin, Boris. 2020. *Slovar' k povesti Sashi Sokolova* 'Mezhdu sobakoi i volkom'. Moskva: Pal'mira.
+- Pénot, Sabine and Elke Oberthaler. 2018. "Children’s Games." In *Bruegel: The Master*, edited by Sabine Haag, 130–134. London: Thames & Hudson.
+- Pénot, Sabine and Elke Oberthaler. 2018. "The Seasons." In *Bruegel: The Master*, edited by Sabine Haag, 214–241. London: Thames & Hudson.
+- Podshivalov, Ivan. 1989. “Trilistnik.” *Moskovskii komsomolets* 20: 2. August 20, 1989.
+- Podshivalov, Ivan. 2006. "A Conversation with Sasha Sokolov: Moscow, 1989." Translated by Ludmilla L. Litus. *CASS* 40 (2–4): 352–366.
+- Polovets, A. and S. Rakhlin. 1981. "Sasha Sokolov govorit." *Almanac Press* 21: 8–9, 12. September 3,1981.
+- Pomerantsev, Igor'. 2013. "Sasha Sokolov i Khlebnikove." Radio Svoboda. Accessed April 7, 2023. [https://www.svoboda.org/a/25161164.html](https://www.svoboda.org/a/25161164.html). 
+- Popov, Evgeny. 2021. "Sasha Sokolov and the 'Iron Curtain'." Translated by Martina Napolitano and José Vergara. *CASS* 55 (3–4): 203–205.
+- Proffer, Carl R. 1976. "Writing in the Shadow of the Monolith." *New York Review of Books*, Feb. 19, 1976, 8–12. [https://www.nybooks.com/articles/1976/02/19/writing-in-the-shadow-of-the-monolith/](https://www.nybooks.com/articles/1976/02/19/writing-in-the-shadow-of-the-monolith/).
+- Rowland, Beryl. 1973. *Animals with Human Faces: A Guide to Animal Symbolism*. Knoxville: The U of Tennessee P.
+- Rowland, Beryl. 1978. *Birds with Human Souls: A Guide to Bird Symbolism*. Knoxville: The U of Tennessee P.
+- Rubenstein, Joshua. 1977. "Socialist Surrealism." *Commentary*, Sept. 1977, 67–69.
+- Rudova, Larissa. 2000. "Paradigms of Postmodernism: Conceptualism and Sots-Art in Contemporary Russian Literature." *Pacific Coast Philology* 35 (1): 61–75.
+- Rudova, Larissa. 2000. "Reading Palisandria: Of Menippean Satire and Sots-Art." In Endquote: Sots-Art Literature and Soviet Grand Style, edited by Marina Balina, Nancy Condee, and Evgeny Dobrenko, 211–224. Evanston, IL: Northwestern UP.
+- Rudova, Larissa. 2006. "The Dystopian Vision in Sasha Sokolov's Palisandriia." *CASS* 40 (2–4): 163–177.
+- Ryan, K. 2000. "Sokolov's *Palisandriya*: The Art of History." In *Twentieth-Century Russian Literature: Selected Papers from the Fifth World Congress of Central and East European Studies*, edited by Karen Ryan and Barry P. Scherr, 215–227. London: MacMillan.
+- Salomatin, Alexey V. and Artem E. Skvortsov. 2021. "Mezhdu sobakoi i volkom kak osevoi tekst v pisatel'skom universume Sashi Sokolova." *CASS* 55 (3–4): 337–360.
+- Sapgir, Kira. 1981. "V 'Russkoi mysli' - pisatel' Sasha Sokolov (interv'iu K. Sapiru." *Russkaia mysl'* 3386: 11. November 12, 1981. 
+- Sapgir, Kira. 1985. “Dal'nii bereg Palisandra.” *Kontinent* 46: 385–389.
+- Schmid, Ulrich. 2000. "Flowers of Evil: The Poetics of Monstrosity in Contemporary Russian Literature (Erofeev, Maleev, Sokolov, Sorokin)." *Russian Literature* 48: 205–222.
+- Scoble, Gretchen and Ann Field. 2001. *The Meaning of Herbs: Myth, Language & Lore*. San Francisco: Chronicle Books.
+- Sellink, Manfred. 2018. "Beggars." In *Bruegel: The Master*, edited by Sabine Haag, 282–285. London: Thames & Hudson.
+- Simmons, Cynthia. 1986. "Cohesion and Coherence in Pathological Discourse and its Literary Representation in Sasha Sokolov's *Škola dlia durakova*." *International Jounral of Slavic Linguistics and Poetics* 33: 71–96.
+- Simmons, Cynthia. 1988. "Incarnartions of the Hero Archetype in *School for Fools*." In *The Supernatural in Slavic and Baltic Literature*, edited by Amy Mandelker and Roberta Reeder, 275–289. Columbus, OH: Slavica Publishers.
+- Skjold, Norma Jane. 1982. "Soviet Writers Face New Challenges. Sokolov: Central Vermont's Resident Russian." *The World 11* (11): 1, 10.
+- Skoropanova, I. S. 1999. "Russkoe 'déjà vu': 'Palisandriia' Sashi Sokolova." In *Russkaia postmodernistskaia literatura: Uchebnoe posobie dlia studentov filologicheskikh fakul'tetov vyzov*. Moskva: Izdatel'stvo 'Flinta', Izdatel'stvo 'Nauka'.
+- Skvortsov, Artem. 2018. "Iavivshiesia v inom oblichii: o poezii v proze." *Oktiabr'* 9. Accessed May 11, 2023. [https://magazines.gorky.media/october/2018/9/yavivshiesya-v-inom-oblichii.html](https://magazines.gorky.media/october/2018/9/yavivshiesya-v-inom-oblichii.html).
+- Slepynin, Oleg. 2007. "Sasha Sokolov na fone Karadaga i vinogradnoi lozy." *Zerkalo nedeli*. October 26, 2007. Accessed April 18, 2023. [https://zn.ua/SOCIUM/sasha_sokolov_na_fone_karadaga_i_vinogradnoy_lozy.html](https://zn.ua/SOCIUM/sasha_sokolov_na_fone_karadaga_i_vinogradnoy_lozy.html).
+- Smirnov, Igor'. 1987. "Nepoznavaemyi sub"ekt." *Beseda: religiozno-folosofskii zhurnal* 6: 124–143.
+- Smith, G. S. 2014. Review of *The Prose of Sasha Sokolov: Reflections on/of the Real*, by Elena Kravchenko. *The Slavonic and East European Review* 92 (2): 328–330.
+- Smith, G. S. 2017. "Boozin daze overwhelmed me: Some problems with translating an untranslatable Russian classic." Review of *Between Dog and Wolf*, by Sasha Sokolov, translated by Alexander Boguslawski. *Times Literary Supplement*, October 27, 2017.
+- Smith, Gerald S. 1987. "The Verse in Sasha Sokolov's *Between Dog and Wolf*." *CASS* 21 (3–4): 321–345.
+- Sokolov, Evgeny. 2022. "Predislovie." In *Zapiski zapoinogo okhotnika*, by Sasha Sokolov, 4–12. Toronto-New York: Kismet.
+- Sokolov, Sasha and Donald Barton Johnson. 2021. "Photo Essay." *CASS* 55 (3–4): 199–202.
+- Sokolov, Sasha. 1968. "Vse tsveta radugi." *Nasha zhizn'* 9: 9–11.
+- Sokolov, Sasha. 1971. "Staryi shturman." *Nasha zhizn'* 5: 24–26.
+- Sokolov, Sasha. 1976. *Shkola dlia durakov*. Ann Arbor, MI: Ardis.
+- Sokolov, Sasha. 1977. *A School for Fools*. Translated by Carl R. Proffer. Ann Arbor, MI: Ardis.
+- Sokolov, Sasha. 2020. "Bol'shoe pis'mo ot Sashi Sokolova, kommentarii avtora k kommentariiu kommentatora." In *Slovar' k povesti Sashi Sokolova* 'Mezhdu sobakoi i volkom', by Boris Ostanin, 121–138. Moskva: Pal'mira.
+- Sokolov, Sasha. 2020. *Shkola dlia durakov*. *Mezhdu sobakoi i volkom*. *Palisandriia*. *Esse*. *Triptykh*. Sankt-Peterburg: Azbuka.
+- Sokolov, Sasha. 2021. "Galoshes et cetera." *CASS* 55 (3–4): 207–249.
+- Sokolov, Viktor. 1976. "Poznakom'tes': Aleksandr Sokolov." *Russkaia zhizn'*, Feb. 20, 1976, 3.
+- Ssachno, Helen von. 1979. "Valentin Katajew und Sascha Sokolow." In *Sowjetliteratur Heute*, edited by G. Lindemann, 208–219. Munich: Beck.
+- Tate, Peter. 2007. *Flights of Fancy: Birds in Myth, Legend and Superstition*. New York: Delacorte P.
+- The Nobel Prize in Literature 1959, NobelPrize.org. Accessed Feb. 1, 2023. [https://www.nobelprize.org/prizes/literature/1959/summary/](https://www.nobelprize.org/prizes/literature/1959/summary/).
+- Thomas, Jo. 1976. "Sokolov's in from the Cold with his Sense of Humor Intact and a Powerful Yen to Write." *Detroit Free Press*, Dec. 5, 1976, 21–34.
+- Toker, Leona. 1987. "Gamesman's Sketches (Found in a Bottle): A Reading of Sasha Sokolov's Between Dog and Wolf." *CASS* 21 (3–4): 347–367.
+- Tolstaia, Tat'iana. 1988. "'Poidite navstrechu chitateliu!'." Interview with Tolstaia by Aleksandr Shchuplov. *Knizhnoe obozrenie* 1: 106.
+- Tolstaia, Tat'iana. Introduction to excerpts from *Shkola dlia durakov*. *Ogonek* 33 (3186): 20-21.
+- Tsiv'ian, T. V. 2001. "Nikolai Ugodnik — strannik na Russkoi zemle (neskol'ko primerov iz russkoi literatury XX veka)." In *Semioticheskie puteshestviia*, 58–71. Sankt-Peterburg: Izdatel'stvo Ivana Limbakha.
+- Tsvetkov, Aleksei. 2008. "Uroki merkatora." Foreword to *Trevozhnaia kukolka*, by Sasha Sokolov, 167–190. Sankt-Peterburg: Azbuka-Klassika.
+- Tumanov, Vladimir. 1994. "A Tale Told by Two Idiots: Krik idiota v 'Shkola dlia durakov' S. Sokolova i v 'Shume i iarosti' U. Folknera." *Russian Language Journal* 48 (159–161): 137–154.
+- Vail', Peter and Aleksandr Genis. 1982. *Sovremennaia russkaia proza*. Ann Arbor, MI: Hermitage. 11, 148, 155, 163–165, 182.
+- Vaiman, Naum. 2006. "A Conversation with Sasha Sokolov (Over the Barrier: A Special Broadcast in Honor of Sasha Sokolov's 60th Birthday." Translated by Ludmilla L. Litus. *CASS* 40 (2–4): 367–378.
+- Vasil'ev, S. 2008. “'Metel’' ili 'miatel'? O zaglavii povesti A. S. Pushkina." "Russkaia rech' 6: 8–11.
+- Vel'berg, Boris. "*Mezhdu sobakoi i volkom*." *Novyi amerikanets*, February 2, 1984.
+- Vergara, José. 2019. "The Embodied Language of Sasha Sokolov's *A School for Fools*." *The Slavonic and East European Review* 97 (3): 426–450. [https://www.jstor.org/stable/10.5699/slaveasteurorev2.97.3.0426](https://www.jstor.org/stable/10.5699/slaveasteurorev2.97.3.0426).
+- Vergara, José. 2021. "Flap Your Wings for Goodbye: Avian Imagery in Sasha Sokolov’s *Between Dog and Wolf*." *CASS* 55 (3–4): 361–374. [https://repository.brynmawr.edu/russian_pubs/12/](https://repository.brynmawr.edu/russian_pubs/12/).
+- Voijvodić, Jasmina. 2002. "Otkliki simul'tanizma v postmodernistskoi proze (*Shkola dlia durakov* S. Sokolova)." *Russian Literature* 51 (3): 355–370.
+- Volchek, Dmitrii. "Beseda s Sashei Sokolovym." Radio svoboda. Dec. 18, 2003. Accessed Feb. 1, 2023. [https://www.svoboda.org/a/24200193.html](https://www.svoboda.org/a/24200193.html).
+- Voroneli, A. and I. 1984. "Ia khochu podniat' russkuiu prozu do urovnia poezzii." Interview with Sasha Sokolov. *22* 35: 179–186.
+- Vrubel'-Golubkina, Irina. 2011. "Ia vsiu zhizn' vybiraiu luchshee. Chashche vsego bessoznatel'no..." Interview with Sasha Sokolov. Gorkii. Accessed March 16, 2023. [https://magazines.gorky.media/zerkalo/2011/37/ya-vsyu-zhizn-vybirayu-luchshee-chashhe-vsego-bessoznatelno-8230.html](https://magazines.gorky.media/zerkalo/2011/37/ya-vsyu-zhizn-vybirayu-luchshee-chashhe-vsego-bessoznatelno-8230.html). Originally published in Zerkalo 37 (2011).
+- Wakamiya, Lisa Ryoko. 2005. "Overcoming Death and Denotation in Saša Sokolov's 'A School for Fools'." *Die Welt der Slaven* 50: 57–70.
+- Wakamiya, Lisa Ryoko. 2006. "Transformation, Forgetting and Fate: Self-Representation in the Essays of Sasha Sokolov." *CASS* 40 (3–4): 317-329.
+- Zholkovsky, Aleksandr. 1987. "Posviashchaetsia S." *Sintaksis* 18: 203–212. [https://dornsife.usc.edu/alexander-zholkovsky/s/](https://dornsife.usc.edu/alexander-zholkovsky/s/).
+- Zholkovsky, Alexander. 1987. "The Stylistic Roots of *Palisandriia*." CASS 21 (3–4): 369–400.
+- Ziolkowski, Margaret. 1987. "In the Land of the Lonely Nightjar: Ornithic Imagery in Sokolov's *A School for Fools* and *Between Dog and Wolf*." *CASS* 21 (3–4): 395–410.
+- Zorin, Andrei. 1989. "Nasylaiuschshii veter." *Novyi mir* 12: 250–253.
+- Zubova, L. V. 2000. *Sovremennaia russkaia poeziia v kontekste istorii iazyka*. Moscow: Novoe literaturnoe obozrenie.
+</div>

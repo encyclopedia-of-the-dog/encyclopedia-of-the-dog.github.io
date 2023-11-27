@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Encyclopedia of the Dog</title>
+ <link href="http://localhost:4000/dogopedia-dev/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/dogopedia-dev/"/>
+ <updated>2023-11-21T14:41:50-05:00</updated>
+ <id>http://localhost:4000</id>
+ <author>
+   <name>Digital Scholarship at Bryn Mawr College</name>
+   <email>digitalscholarship@brynmawr.edu</email>
+ </author>
+
+ 
+
+</feed>

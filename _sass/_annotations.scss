@@ -1,0 +1,288 @@
+/* -------- Annotations -------- */
+
+/* visibility of annotation panel and annotation links in main text */
+
+.annotations-hidden {
+  span.annotation-link {
+    color: $text-color;
+    text-decoration: none;
+    pointer-events: none;
+  }
+
+  ~ #annotation-panel,
+  ~ #panel-btn-container,
+  ~ #panel-mask {
+    display: none;
+  }
+}
+
+.annotations-visible {
+  span.annotation-link {
+    background-color: #778eac5f;
+    cursor: pointer;
+  }
+
+  ~ #annotation-panel,
+  ~ #panel-btn-container,
+  ~ #panel-mask {
+    display: block;
+  }
+}
+
+/* annotation panel */
+
+#annotation-panel {
+  width: 100%;
+  height: 200px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: auto;
+  right: auto;
+  border:rgba(0, 0, 0, .1);
+  border-width: 1px 0 0;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  border-top: 1px solid #c3c3c3;
+  padding: .5rem 1rem;
+  background: #fafafa;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+
+  -webkit-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
+
+  a {
+    color: $link-color;
+    text-decoration: underline;
+  }
+
+  p {
+    margin: 0 0 0.5rem 0;
+  }
+
+  h2 {
+    margin-bottom: 0;
+  }
+}
+
+#annotation-container, #chapter-notes-container {
+  font-size: 16px;
+  
+  .annotation {
+    width: 100%;
+    overflow-y: auto;
+    padding: .75rem 0 0 0;
+    border-bottom: 1px solid #c8c8c8;
+  }
+
+  .annotation-text-container {
+    width: 100%;
+  }
+
+  .annotation-text-container.with-img {
+    width: 75%;
+    float: left;
+    padding-right: 1rem;
+  }
+
+  .annotation-img-container {
+    width: 25%;
+    float: right;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  
+  .highlighted, .ch-notes-highlighted {
+    display: inline-block;
+    cursor: pointer;
+    color: $link-color;
+    text-decoration: underline;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .ch-notes-highlighted.not-linked {
+    cursor: initial;
+    color: $text-color;
+  }
+
+  .en-comment{
+    display: block;
+    height: fit-content;
+
+    img {
+      display: none;
+    }
+  }
+
+  .ru-comment {
+    display: block;
+    height: fit-content;
+
+    img {
+      display: none;
+    }
+  }
+
+  #annotations-ru.lang-en {
+    .en-comment {
+      display: block;
+    }
+    .ru-comment {
+      display: none;
+      
+      img {
+        display: none;
+      }
+    }
+  }
+
+  #annotations-ru.lang-ru {
+    .en-comment {
+      display: none;
+    }
+    .ru-comment {
+      display: inline;
+    }
+  }
+
+  #annotations-ru.lang-both {
+    .en-comment {
+      display: block;
+    }
+    .ru-comment {
+      display: block;
+    }
+  }
+
+  /* tags */
+
+  .annotation-tag-container {
+    width: 100%;
+    display: block;
+    text-align: left;
+    margin: 0 0 1rem 0;
+  }
+
+  .tag {
+    font-size: 0.85rem;
+    background-color: slategray;
+    color: white;
+    border-radius: 5px;
+    padding: 2px 5px;
+  }
+
+  .tag-style, .tag-style-register, .tag-register-style, .tag-regyster-style, .tag-stylistic-device {
+    background-color: #4C5C47;
+  }
+
+  .tag-character, .tag-motif, .tag-theme, .tag-symbol, .tag-symbols {
+    background-color: #485B59;
+  }
+
+  .tag-metaphor, .tag-pun, .tag-irony, .tag-ironic, .tag-structure, .tag-poetic-device {
+    background-color: #44576F;
+  }
+
+  .tag-language, .tag-archaism, .tag-phraseologism, .tag-neologism, .tag-foreign {
+    background-color: #524875;
+  }
+
+  .tag-Russia, .tag-russia, .tag-soviet, .tag-folklore, .tag-religion, .tag-bible {
+    background-color: #635167;
+  }
+
+  .tag-author, .tag-self-reference, .tag-thematic-self-reference, .tag-intertextuality, .tag-intratextuality, .tag-explanatory {
+    background-color: #932A52;
+  }
+
+  .tag-music, .tag-sound-play, .tag-rhythm, .tag-metrical-pattern {
+    background-color: #953904;
+  }
+
+  .tag-setting, .tag-location, .tag-time {
+    background-color: #6D4D08;
+  }
+
+  .tag-error, .tag-expand {
+    background-color: #000000;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #annotation-text {
+    font-size: 1em;
+  }
+}
+
+/* panel button and mask */
+  
+#btn-expand-annotations {
+  color: #a9a9a9;
+  width: 5rem;
+  height: 1.25rem;
+  position: fixed;
+  bottom: 199px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fafafa;
+  border: 1px solid #c3c3c3;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: #fafafa;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  z-index: 3;
+  cursor: pointer;
+
+  -webkit-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
+
+  #panel-btn-icon {
+    height: 1rem;
+    fill: #949494;
+    rotate: 180deg;
+    position: relative;
+    top: 1px;
+    pointer-events: none;
+  }
+}
+
+#panel-mask {
+  width: calc(100% - 2rem);
+  height: 15px;
+  position: fixed;
+  bottom: 184px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 4;
+  background-image: linear-gradient(#fafafa, #fafafa, #fafafa8e, #fafafa00);
+
+  -webkit-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
+}
+
+/* styles for expanded annotation panel, button, and mask */
+
+#panel-btn-container.expanded {
+  #btn-expand-annotations {
+    bottom: 399px !important;
+  
+    #panel-btn-icon {
+      rotate: 0deg;
+    }
+  }
+
+  ~ #panel-mask {
+    bottom: 384px !important;
+  }
+
+  ~ #annotation-panel {
+    height: 400px !important;
+  }
+}
