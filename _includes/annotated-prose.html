@@ -127,11 +127,13 @@
                 {% assign replaced-text = this-nested-anno.highlighted_html %}
                 {% capture new-text %}<span id="highlight-{{ this-nested-anno.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ this-nested-anno.Id }}';" tabindex="-1" aria-hidden="true">{{ this-nested-anno.highlighted_html }}</span>{% endcapture %}
                 {% comment %} replace the nested annotation within its parent highlight {% endcomment %}
+                {% unless replaced-text == "." %}{% comment %} This is to prevent issues caused by the annotation of the last period of the chapter. {% endcomment %}
                 {% if new-highlighted != "" %}
                     {% capture new-highlighted %}{{ new-highlighted | replace_first: replaced-text, new-text }}{% endcapture %}
                 {% else %}
                     {% capture new-highlighted %}{{ highlighted | replace_first: replaced-text, new-text }}{% endcapture %}
                 {% endif %}
+                {% endunless %}
             {% endfor %}
             {% comment %} replace the parent highlight in the main text {% endcomment %}
             {% capture replaced-text %}{{ highlighted }}{% if overlapped-annotations %}{{ second-highlighted }}{% endif %}{% endcapture %}
