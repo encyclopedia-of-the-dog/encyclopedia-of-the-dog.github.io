@@ -85,6 +85,23 @@
 
 .homepage-content {
   padding: 1rem 4rem 0;
+  
+  .table-container {
+    border: .5px solid #e5e5e5;
+    padding: 0;
+    margin-bottom: 1rem;
+
+    table {
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .homepage-content .table-container {
+    max-width: 90vw;
+    overflow-x: scroll;
+  }
 }
 
 footer.homepage-footer {

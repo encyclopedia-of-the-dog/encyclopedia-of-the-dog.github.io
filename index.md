@@ -47,6 +47,8 @@ We have used a system of tags to track patterns in *Between Dog and Wolf*. These
 
 ​​With reference to metrical patterns, we have adopted the set of abbreviations commonly used by Russian scholars (see, for example, Yury Orlitsky’s essays):
  
+<div class="table-container" markdown="1">
+
 | Russian Term | English Translation | Russian Abbreviation | English Abbreviation |
 |---|---|---|---|
 | ямб | iamb | я | ya | 
@@ -59,6 +61,7 @@ We have used a system of tags to track patterns in *Between Dog and Wolf*. These
 | дактилическая клаузула | dactylic clausula | д | d |
 | гипердактилическая клаузула | hyperdactylic clausula | гд | gd |
 
+</div>
 
 *Motif*: recurrent elements such as animals, plants, animal-human connections, clothing
 
