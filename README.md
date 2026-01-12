@@ -1,6 +1,6 @@
 # *Encyclopedia of the Dog* Dev Site
 
-## Site Structure (updated 2023-08-04)
+## Site Structure (updated 2026-01-12)
 
 ### _layouts and _includes:
 - page.html is nested inside default.html
@@ -29,28 +29,27 @@
     - This include builds the annotation panel for each chapter, using data from comments-chap-notes.csv and comments-all.csv, and it includes backlinks to the corresponding "highlights" in the main text.
 
 ## _sass:
-- Most, if not all, *Dog*-specific styles are in _dog.scss and _annotations.scss.
+- All *Dog*-specific styles are in _dog.scss and _annotations.scss.
 - _dog.scss contains the styles for the bilingual layouts, while _annotations.scss contains the styles for the annotation functionality.
 - Some of the base Ed code in _ed.scss has been edited.
 - All styles for the annotation panel and text highlights are in _annotations.scss.
 
-## Still to Be Done / Next Steps
+## Next Steps
 
 As the Encyclopedia of the Dog project team moves forward, here are some possible next steps and things to keep in mind:
 
 - Content:
-    - update About page
-    - update Bibliography
-    - update comments data from Hypothesis as more work is done
+    - [x] update Bibliography
+    - [ ] add ToC to homepage
 - Annotations:
-    - add functionality for viewing different "layers" of annotations, allowing the user to select which kinds of annotations are visible by tags
-    - remove comments with editorial tags from the data used on the site
+    - [ ] add functionality for viewing different "layers" of annotations, allowing the user to select which kinds of annotations are visible by tags
+    - [x] remove comments with editorial tags from the data used on the site
 - Proofreading:
-    - after annotation is complete and all annotations have been added to the site, proofread the texts again
+    - [ ] after annotation is complete and all annotations have been added to the site, proofread the texts again
 - Metadata:
-    - include metadata for the images on the site, including the image on the homepage
+    - [ ] include metadata for the images on the site, including the image on the homepage
 - Search:
-    - expand search functionality so that search works in Russian as well as in English by adding the [Lunr Languages](https://github.com/MihaiValentin/lunr-languages) plugin to the site
+    - [x] expand search functionality so that search works in Russian as well as in English by adding the [Lunr Languages](https://github.com/MihaiValentin/lunr-languages) plugin to the site
 
 
 ## End of Summer 2022 Note
