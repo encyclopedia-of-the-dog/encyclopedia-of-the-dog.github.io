@@ -1,196 +1,174 @@
-{% comment %}
-    This include uses Liquid's replace filter to create an annotated version of
+{%- comment -%}
+    This include uses Liquid's "replace" filter to create an annotated version of
     of the chapter text using the Hypothes.is data in _data/comments-all.csv.
-{% endcomment %}
-
-{% comment %} get chapter title from page data and language passed in include statement {% endcomment %}
-{% if include.lang == "en" %}
-    {% capture chapter-title %}{% if page.number == "01" %}{{ page.number }}. DISCORDS BEYOND THE ITIL{% else %}{{ page.number }}. {{ title_en }}{% endif %}{% endcapture %}
-    {% capture annotated-text %}{{ text_en }}{% endcapture %}
-{% elsif include.lang == "ru" %}
-    {% capture chapter-title %}{% if page.number == "01" %}{{ page.number }}. ЗАИТИЛЫЦИНА{% else %}{{ page.number }}. {{ title_ru }}{% endif %}{% endcapture %}
-    {% capture annotated-text %}{{ text_ru }}{% endcapture %}
-{% endif %}
-
-{% assign annotations = site.data.comments-all | where: "chapter", chapter-title %}
-{% assign annotations-length = annotations.size %}
-
-{% comment %} 
+{%- endcomment -%}
+{%- comment -%} get chapter title from page data and language passed in include statement {%- endcomment -%}
+{%- if include.lang == "en" -%}
+    {%- capture chapter-title -%}{%- if page.number == "01" -%}{{ page.number }}. DISCORDS BEYOND THE ITIL{%- else -%}{{ page.number }}. {{ title_en }}{%- endif -%}{%- endcapture -%}
+    {%- capture annotated-text -%}{{ text_en }}{%- endcapture -%}
+{%- elsif include.lang == "ru" -%}
+    {%- capture chapter-title -%}{%- if page.number == "01" -%}{{ page.number }}. ЗАИТИЛЫЦИНА{%- else -%}{{ page.number }}. {{ title_ru }}{%- endif -%}{%- endcapture -%}
+    {%- capture annotated-text -%}{{ text_ru }}{%- endcapture -%}
+{%- endif -%}
+{%- assign annotations = site.data.comments-all | where: "chapter", chapter-title -%}
+{%- assign annotations-length = annotations.size -%}
+{%- comment -%} 
     replacements-completed is used to offset nested forloops to avoid iterating
     over the same annotations more than once.
-{% endcomment %}
-{% assign replacements-completed = 0 %}
-
-{% for i in (1..annotations-length) %}
-    {% for first-annotation in annotations offset:replacements-completed limit:1 %}
-        {% assign highlighted = first-annotation.highlighted_html %}
-        {% assign new-highlighted = "" %}
-        {% assign this-id = first-annotation.Id %}
-    
-        {% comment %} convert start and end position strings to integers {% endcomment %}
-        {% assign this-start = first-annotation.position_start | to_integer %}
-        {% assign this-end = first-annotation.position_end | to_integer %}
-    
-        {% comment %} get value to offset nested forloop {% endcomment %}
-        {% assign replacements-completed = replacements-completed | plus: 1 %}
-    
-        {% comment %} set default values for checks later on {% endcomment %}
-        {% assign same-start = false %}
-        {% assign nested-annotations = "" %}
-        {% assign overlapped-annotations = false %}
-    
-        {% comment %}
+{%- endcomment -%}
+{%- assign replacements-completed = 0 -%}
+{%- for i in (1..annotations-length) -%}
+    {%- for first-annotation in annotations offset:replacements-completed limit:1 -%}
+        {%- assign highlighted = first-annotation.highlighted_html -%}
+        {%- assign new-highlighted = "" -%}
+        {%- assign this-id = first-annotation.Id -%}
+        {%- comment -%} convert start and end position strings to integers {%- endcomment -%}
+        {%- assign this-start = first-annotation.position_start | to_integer -%}
+        {%- assign this-end = first-annotation.position_end | to_integer -%}
+        {%- comment -%} get value to offset nested forloop {%- endcomment -%}
+        {%- assign replacements-completed = replacements-completed | plus: 1 -%}
+        {%- comment -%} set default values for checks later on {%- endcomment -%}
+        {%- assign same-start = false -%}
+        {%- assign nested-annotations = "" -%}
+        {%- assign overlapped-annotations = false -%}
+        {%- comment -%}
             Check next annotations for different kinds of overlap, then end loop 
             when no more nested or overlapping annotations are detected.
-        {% endcomment %}
-    
-        {% for next-annotation in annotations offset:replacements-completed %}
-            {% comment %} convert start and end position strings to integers {% endcomment %}
-            {% assign next-start = next-annotation.position_start | to_integer %}
-            {% assign next-end = next-annotation.position_end | to_integer %}
-            
-            {% comment %} check if the next annotation begins at the same start position as the first and is longer {% endcomment %}
-            {% if next-start == this-start and next-end >= this-end %}
-                {% if forloop.first %}
-                    {% capture inner-highlighted %}<span id="highlight-{{ this-id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ first-annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ highlighted }}</span>{% endcapture %}
-                {% else %}
-                    {% assign inner-highlighted = new-highlighted %}
-                {% endif %}
-                {% capture new-highlighted %}<span id="highlight-{{ next-annotation.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ first-annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ next-annotation.highlighted_html | replace: highlighted, inner-highlighted }}</span>{% endcapture %}
-                {% comment %} update highlighted, this-id, this-start, and this-end for use later (in case there are more nested or overlapped annotations) {% endcomment %}
-                {% assign highlighted = next-annotation.highlighted_html %}
-                {% assign this-id = next-annotation.Id %}
-                {% assign this-start = next-start %}
-                {% assign this-end = next-end %}
-                {% assign same-start = true %}
-                {% comment %} increment replacements-completed {% endcomment %}
-                {% assign replacements-completed = replacements-completed | plus: 1 %}
-            
-            {% comment %} check if the next annotation begins at the same start position as the first and is shorter {% endcomment %}
-            {% elsif next-start == this-start and next-end < this-end %}
-                {% if same-start %}
-                    {% capture prev-highlighted %}{{ inner-highlighted | split: ">" | shift | join: "" | split: "<" | pop | join: "" }}{% endcapture %}
-                    {% capture replaced-highlighted %}{{ next-annotation.highlighted_html | replace: prev-highlighted, inner-highlighted }}{% endcapture %}
-                    {% capture inner-highlighted %}<span id="highlight-{{ next-annotation.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ first-annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ next-annotation.highlighted_html | replace: prev-highlighted, inner-highlighted }}</span>{% endcapture %}
-                    {% capture new-highlighted %}{{ new-highlighted | replace: replaced-highlighted, inner-highlighted }}{% endcapture %}
-                {% else %}
-                    {% capture inner-highlighted %}<span id="highlight-{{ next-annotation.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ first-annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ next-annotation.highlighted_html }}</span>{% endcapture %}
-                    {% capture new-highlighted %}<span id="highlight-{{ this-id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ first-annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ highlighted | replace: next-annotation.highlighted_html, inner-highlighted }}</span>{% endcapture %}
-                {% endif %}
-                {% assign same-start = true %}
-                {% comment %} increment replacements-completed {% endcomment %}
-                {% assign replacements-completed = replacements-completed | plus: 1 %}
-            
-            {% comment %} check if the next annotation is nested within the previous annotation {% endcomment %}
-            {% elsif next-start < this-end and next-end <= this-end %}
-                {% comment %}append id of nested annotation to nested-annotations string{% endcomment %}
-                {% assign nested-annotations = nested-annotations | append: next-annotation.Id | append: ", " %}
-                {% comment %} increment replacements-completed {% endcomment %}
-                {% assign replacements-completed = replacements-completed | plus: 1 %}
-            
-            {% comment %} check if the next annotation overlaps partially with the end of previous annotation {% endcomment %}
-            {% elsif next-start < this-end and next-end > this-end %}
-                {% assign overlap-length = this-end | minus: next-start %}
-                {% assign first-highlighted = next-annotation.highlighted_html | truncate: overlap-length, "" %}
-                {% assign second-highlighted = next-annotation.highlighted_html | replace_first: first-highlighted, "" %}
-                {% assign overlapped-annotations = true %}
-                {% capture new-first-highlighted %}<span id="highlight-{{ next-annotation.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ this-id }}';" tabindex="-1" aria-hidden="true">{{ first-highlighted }}</span>{% endcapture %}
-                {% capture new-second-highlighted %}<span id="highlight-{{ next-annotation.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ next-annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ second-highlighted }}</span>{% endcapture %}
-                {% if new-highlighted != "" %}
-                    {% assign new-highlighted = new-highlighted | replace: first-highlighted, new-first-highlighted %}
-                {% else %}
-                    {% assign new-highlighted = highlighted | replace: first-highlighted, new-first-highlighted %}
-                {% endif %}
-                {% comment %} increment replacements-completed {% endcomment %}
-                {% assign replacements-completed = replacements-completed | plus: 1 %}
-            {% else %}
-                {% break %}
-            {% endif %}
-        {% endfor %}
-    
-        {% comment %}
+        {%- endcomment -%}
+        {%- for next-annotation in annotations offset:replacements-completed -%}
+            {%- comment -%} convert start and end position strings to integers {%- endcomment -%}
+            {%- assign next-start = next-annotation.position_start | to_integer -%}
+            {%- assign next-end = next-annotation.position_end | to_integer -%} 
+            {%- comment -%} check if the next annotation begins at the same start position as the first and is longer {%- endcomment -%}
+            {%- if next-start == this-start and next-end >= this-end -%}
+                {%- if forloop.first -%}
+                    {%- capture inner-highlighted -%}<span id="highlight-{{ this-id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ first-annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ highlighted }}</span>{%- endcapture -%}
+                {%- else -%}
+                    {%- assign inner-highlighted = new-highlighted -%}
+                {%- endif -%}
+                {%- capture new-highlighted -%}<span id="highlight-{{ next-annotation.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ first-annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ next-annotation.highlighted_html | replace: highlighted, inner-highlighted }}</span>{%- endcapture -%}
+                {%- comment -%} update highlighted, this-id, this-start, and this-end for use later (in case there are more nested or overlapped annotations) {%- endcomment -%}
+                {%- assign highlighted = next-annotation.highlighted_html -%}
+                {%- assign this-id = next-annotation.Id -%}
+                {%- assign this-start = next-start -%}
+                {%- assign this-end = next-end -%}
+                {%- assign same-start = true -%}
+                {%- comment -%} increment replacements-completed {%- endcomment -%}
+                {%- assign replacements-completed = replacements-completed | plus: 1 -%} 
+            {%- comment -%} check if the next annotation begins at the same start position as the first and is shorter {%- endcomment -%}
+            {%- elsif next-start == this-start and next-end < this-end -%}
+                {%- if same-start -%}
+                    {%- capture prev-highlighted -%}{{ inner-highlighted | split: ">" | shift | join: "" | split: "<" | pop | join: "" }}{%- endcapture -%}
+                    {%- capture replaced-highlighted -%}{{ next-annotation.highlighted_html | replace: prev-highlighted, inner-highlighted }}{%- endcapture -%}
+                    {%- capture inner-highlighted -%}<span id="highlight-{{ next-annotation.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ first-annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ next-annotation.highlighted_html | replace: prev-highlighted, inner-highlighted }}</span>{%- endcapture -%}
+                    {%- capture new-highlighted -%}{{ new-highlighted | replace: replaced-highlighted, inner-highlighted }}{%- endcapture -%}
+                {%- else -%}
+                    {%- capture inner-highlighted -%}<span id="highlight-{{ next-annotation.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ first-annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ next-annotation.highlighted_html }}</span>{%- endcapture -%}
+                    {%- capture new-highlighted -%}<span id="highlight-{{ this-id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ first-annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ highlighted | replace: next-annotation.highlighted_html, inner-highlighted }}</span>{%- endcapture -%}
+                {%- endif -%}
+                {%- assign same-start = true -%}
+                {%- comment -%} increment replacements-completed {%- endcomment -%}
+                {%- assign replacements-completed = replacements-completed | plus: 1 -%}
+            {%- comment -%} check if the next annotation is nested within the previous annotation {%- endcomment -%}
+            {%- elsif next-start < this-end and next-end <= this-end -%}
+                {%- comment -%}append id of nested annotation to nested-annotations string{%- endcomment -%}
+                {%- assign nested-annotations = nested-annotations | append: next-annotation.Id | append: ", " -%}
+                {%- comment -%} increment replacements-completed {%- endcomment -%}
+                {%- assign replacements-completed = replacements-completed | plus: 1 -%}
+            {%- comment -%} check if the next annotation overlaps partially with the end of previous annotation {%- endcomment -%}
+            {%- elsif next-start < this-end and next-end > this-end -%}
+                {%- assign overlap-length = this-end | minus: next-start -%}
+                {%- assign first-highlighted = next-annotation.highlighted_html | truncate: overlap-length, "" -%}
+                {%- assign second-highlighted = next-annotation.highlighted_html | replace_first: first-highlighted, "" -%}
+                {%- assign overlapped-annotations = true -%}
+                {%- capture new-first-highlighted -%}<span id="highlight-{{ next-annotation.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ this-id }}';" tabindex="-1" aria-hidden="true">{{ first-highlighted }}</span>{%- endcapture -%}
+                {%- capture new-second-highlighted -%}<span id="highlight-{{ next-annotation.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ next-annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ second-highlighted }}</span>{%- endcapture -%}
+                {%- if new-highlighted != "" -%}
+                    {%- assign new-highlighted = new-highlighted | replace: first-highlighted, new-first-highlighted -%}
+                {%- else -%}
+                    {%- assign new-highlighted = highlighted | replace: first-highlighted, new-first-highlighted -%}
+                {%- endif -%}
+                {%- comment -%} increment replacements-completed {%- endcomment -%}
+                {%- assign replacements-completed = replacements-completed | plus: 1 -%}
+            {%- else -%}
+                {%- break -%}
+            {%- endif -%}
+        {%- endfor -%}
+        {%- comment -%}
             Check values of same-start, nested-annotations, and overlapped-annotations, 
             and add highlights to text accordingly.
 
             Start with replacing nested annotations within parent highlight. Then, 
             replace the parent highlight in the main text, taking into account other 
             kinds of overlap, if they exist.
-        {% endcomment %}
-
-        {% if nested-annotations != "" %}
-            {% comment %} convert nested-annotations from a string to an array {% endcomment %}
-            {% assign nested-annotations = nested-annotations | split: ", " %}
-            {% for id in nested-annotations %}
-                {% comment %} get the nested annotation by its id {% endcomment %}
-                {% assign this-nested-anno = annotations | where: "Id", id | first %}
-                {% comment %} assign text to be replaced and its new replacement {% endcomment %}
-                {% assign replaced-text = this-nested-anno.highlighted_html %}
-                {% capture new-text %}<span id="highlight-{{ this-nested-anno.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ this-nested-anno.Id }}';" tabindex="-1" aria-hidden="true">{{ this-nested-anno.highlighted_html }}</span>{% endcapture %}
-                {% comment %} replace the nested annotation within its parent highlight {% endcomment %}
-                {% unless replaced-text == "." %}{% comment %} This is to prevent issues caused by the annotation of the last period of the chapter. {% endcomment %}
-                {% if new-highlighted != "" %}
-                    {% capture new-highlighted %}{{ new-highlighted | replace_first: replaced-text, new-text }}{% endcapture %}
-                {% else %}
-                    {% capture new-highlighted %}{{ highlighted | replace_first: replaced-text, new-text }}{% endcapture %}
-                {% endif %}
-                {% endunless %}
-            {% endfor %}
-            {% comment %} replace the parent highlight in the main text {% endcomment %}
-            {% capture replaced-text %}{{ highlighted }}{% if overlapped-annotations %}{{ second-highlighted }}{% endif %}{% endcapture %}
-            {% unless replaced-text == "." %}{% comment %} This is to prevent issues caused by the annotation of the last period of the chapter. {% endcomment %}
-            {% if same-start %}
-                {% capture new-text %}{{ new-highlighted }}{% if overlapped-annotations %}{{ new-second-highlighted }}{% endif %}{% endcapture %}
-            {% else %}
-                {% capture new-text %}<span id="highlight-{{ first-annotation.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ first-annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ new-highlighted }}</span>{% if overlapped-annotations %}{{ new-second-highlighted }}{% endif %}{% endcapture %}
-            {% endif %}
-            {% capture annotated-text %}{{ annotated-text | replace_first: replaced-text, new-text }}{% endcapture %}
-            {% endunless %}
-
-        {% comment %}
+        {%- endcomment -%}
+        {%- if nested-annotations != "" -%}
+            {%- comment -%} convert nested-annotations from a string to an array {%- endcomment -%}
+            {%- assign nested-annotations = nested-annotations | split: ", " -%}
+            {%- for id in nested-annotations -%}
+                {%- comment -%} get the nested annotation by its id {%- endcomment -%}
+                {%- assign this-nested-anno = annotations | where: "Id", id | first -%}
+                {%- comment -%} assign text to be replaced and its new replacement {%- endcomment -%}
+                {%- assign replaced-text = this-nested-anno.highlighted_html -%}
+                {%- capture new-text -%}<span id="highlight-{{ this-nested-anno.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ this-nested-anno.Id }}';" tabindex="-1" aria-hidden="true">{{ this-nested-anno.highlighted_html }}</span>{%- endcapture -%}
+                {%- comment -%} replace the nested annotation within its parent highlight {%- endcomment -%}
+                {%- unless replaced-text == "." -%}{%- comment -%} This is to prevent issues caused by the annotation of the last period of the chapter. {%- endcomment -%}
+                {%- if new-highlighted != "" -%}
+                    {%- capture new-highlighted -%}{{ new-highlighted | replace_first: replaced-text, new-text }}{%- endcapture -%}
+                {%- else -%}
+                    {%- capture new-highlighted -%}{{ highlighted | replace_first: replaced-text, new-text }}{%- endcapture -%}
+                {%- endif -%}
+                {%- endunless -%}
+            {%- endfor -%}
+            {%- comment -%} replace the parent highlight in the main text {%- endcomment -%}
+            {%- capture replaced-text -%}{{ highlighted }}{%- if overlapped-annotations -%}{{ second-highlighted }}{%- endif -%}{%- endcapture -%}
+            {%- unless replaced-text == "." -%}{%- comment -%} This is to prevent issues caused by the annotation of the last period of the chapter. {%- endcomment -%}
+            {%- if same-start -%}
+                {%- capture new-text -%}{{ new-highlighted }}{%- if overlapped-annotations -%}{{ new-second-highlighted }}{%- endif -%}{%- endcapture -%}
+            {%- else -%}
+                {%- capture new-text -%}<span id="highlight-{{ first-annotation.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ first-annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ new-highlighted }}</span>{%- if overlapped-annotations -%}{{ new-second-highlighted }}{%- endif -%}{%- endcapture -%}
+            {%- endif -%}
+            {%- capture annotated-text -%}{{ annotated-text | replace_first: replaced-text, new-text }}{%- endcapture -%}
+            {%- endunless -%}
+        {%- comment -%}
             If there are no nested annotations, replace (in the main text) any 
             overlapping annotations, taking into account whether any annotations 
             started at the same position, because new-highlighted would already be 
             wrapped in its span tags.
-        {% endcomment %}
-
-        {% elsif overlapped-annotations %}
-            {% capture replaced-text %}{{ highlighted }}{{ second-highlighted }}{% endcapture %}
-            {% unless replaced-text == "." %}{% comment %} This is to prevent issues caused by the annotation of the last period of the chapter. {% endcomment %}
-                {% if same-start %}
-                    {% capture new-text %}{{ new-highlighted }}{{ new-second-highlighted }}{% endcapture %}
-                {% else %}
-                    {% capture new-text %}<span id="highlight-{{ first-annotation.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ first-annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ new-highlighted }}</span>{{ new-second-highlighted }}{% endcapture %}
-                {% endif %}
-                {% capture annotated-text %}{{ annotated-text | replace_first: replaced-text, new-text }}{% endcapture %}
-            {% endunless %}
-        
-        {% comment %}
+        {%- endcomment -%}
+        {%- elsif overlapped-annotations -%}
+            {%- capture replaced-text -%}{{ highlighted }}{{ second-highlighted }}{%- endcapture -%}
+            {%- unless replaced-text == "." -%}{%- comment -%} This is to prevent issues caused by the annotation of the last period of the chapter. {%- endcomment -%}
+                {%- if same-start -%}
+                    {%- capture new-text -%}{{ new-highlighted }}{{ new-second-highlighted }}{%- endcapture -%}
+                {%- else -%}
+                    {%- capture new-text -%}<span id="highlight-{{ first-annotation.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ first-annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ new-highlighted }}</span>{{ new-second-highlighted }}{%- endcapture -%}
+                {%- endif -%}
+                {%- capture annotated-text -%}{{ annotated-text | replace_first: replaced-text, new-text }}{%- endcapture -%}
+            {%- endunless -%}
+        {%- comment -%}
             If there are no nested or overlapped annotations, replace (in the main 
             text) any annotations that started at the same position.
-        {% endcomment %}
-        
-        {% elsif same-start %}
-            {% capture replaced-text %}{{ highlighted }}{% endcapture %}
-            {% unless replaced-text == "." %}{% comment %} This is to prevent issues caused by the annotation of the last period of the chapter. {% endcomment %}
-                {% capture new-text %}{{ new-highlighted }}{% endcapture %}
-                {% capture annotated-text %}{{ annotated-text | replace_first: replaced-text, new-text }}{% endcapture %}
-            {% endunless %}
-
-        {% comment %}
+        {%- endcomment -%}
+        {%- elsif same-start -%}
+            {%- capture replaced-text -%}{{ highlighted }}{%- endcapture -%}
+            {%- unless replaced-text == "." -%}{%- comment -%} This is to prevent issues caused by the annotation of the last period of the chapter. {%- endcomment -%}
+                {%- capture new-text -%}{{ new-highlighted }}{%- endcapture -%}
+                {%- capture annotated-text -%}{{ annotated-text | replace_first: replaced-text, new-text }}{%- endcapture -%}
+            {%- endunless -%}
+        {%- comment -%}
             If there are no kinds of overlap detected, capture a portion of the
             suffix to append to the highlight so that the replace is more likely
             to match the intended target in the main text.
-        {% endcomment %}
-
-        {% else %}
-            {% capture suffix %}{{ first-annotation.suffix_html | newline_to_br | split: "<br />" | first | rstrip | truncate: 5, "" }}{% endcapture %}
-            {% capture replaced-text %}{{ first-annotation.highlighted_html }}{{ suffix }}{% endcapture %}
-            {% unless replaced-text == "." %}{% comment %} This is to prevent issues caused by the annotation of the last period of the chapter. {% endcomment %}
-                {% capture new-text %}<span id="highlight-{{ first-annotation.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ first-annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ first-annotation.highlighted_html }}</span>{{ suffix }}{% endcapture %}
-                {% capture annotated-text %}{{ annotated-text | replace_first: replaced-text, new-text }}{% endcapture %}
-            {% endunless %}
-        {% endif %}
-    {% endfor %}
-{% endfor %}
-
+        {%- endcomment -%}
+        {%- else -%}
+            {%- capture suffix -%}{{ first-annotation.suffix_html | newline_to_br | split: "<br />" | first | rstrip | truncate: 5, "" }}{%- endcapture -%}
+            {%- capture replaced-text -%}{{ first-annotation.highlighted_html }}{{ suffix }}{%- endcapture -%}
+            {%- unless replaced-text == "." -%}{%- comment -%} This is to prevent issues caused by the annotation of the last period of the chapter. {%- endcomment -%}
+                {%- capture new-text -%}<span id="highlight-{{ first-annotation.Id }}" class="annotation-link" role="link" onclick="window.location.href='#{{ first-annotation.Id }}';" tabindex="-1" aria-hidden="true">{{ first-annotation.highlighted_html }}</span>{{ suffix }}{%- endcapture -%}
+                {%- capture annotated-text -%}{{ annotated-text | replace_first: replaced-text, new-text }}{%- endcapture -%}
+            {%- endunless -%}
+        {%- endif -%}
+    {%- endfor -%}
+{%- endfor -%}
 {{ annotated-text }}

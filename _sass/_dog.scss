@@ -19,6 +19,7 @@
   background-size: cover;
   width: 100%;
   height: 350px;
+  z-index: 2;
 
   .dark-banner {
     color: white;
@@ -85,6 +86,7 @@
 
 .homepage-content {
   padding: 1rem 4rem 0;
+  z-index: 1;
   
   .table-container {
     border: .5px solid #e5e5e5;
@@ -255,6 +257,7 @@ article.page.toc-page {
   top: 0;
   height: 65px;
   width: 100%;
+  z-index: 2;
 }
 
 .menu-bar {
@@ -264,7 +267,6 @@ article.page.toc-page {
   background-color: #99AAC1;
   text-align: center;
   padding: .75rem .75rem .5rem;
-  z-index: 6;
 
   ul {
     list-style: none;
@@ -630,6 +632,7 @@ footer {
   margin-left: auto;
   margin-right: auto;
   border-top: 1px solid lighten($text-color, 70%);
+  transition: margin .3s ease-in-out;
 
   p {
     margin: 0 auto .25rem;
@@ -717,4 +720,39 @@ a, .text-title a {
   /* color:#a9b9ca; */
   color: $link-color;
   text-decoration: none;
+}
+
+/* Chapter Transitions */
+
+@keyframes fade-in {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+#chapter-content {
+  li.this-chapter, .text-title, .main-content {
+    animation-name: fade-in;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both;
+  }
+  
+  .text-title {
+    animation-delay: 0.2s;
+  }
+
+  .main-content {
+    animation-delay: 0.4s;
+  }
+}
+
+@keyframes no-fade {
+  from {opacity: 1;}
+  to {opacity: 1;}
+}
+
+.menu-bar {
+  animation-name: no-fade;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
 }

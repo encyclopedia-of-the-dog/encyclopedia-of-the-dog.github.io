@@ -5,7 +5,7 @@ title:               Encyclopedia of the Dog
 tagline:             "An annotated edition of Sasha Sokolov's <i>Between Dog and Wolf</i>"
 description:         "An annotated edition of Sasha Sokolov's Between Dog and Wolf"
 url:                 'https://encyclopediaofthedog.com/'
-baseurl:             ''
+baseurl:             
 
 # About/contact
 author:

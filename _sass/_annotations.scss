@@ -20,6 +20,10 @@
   span.annotation-link {
     background-color: #778eac5f;
     cursor: pointer;
+
+    &:focus {
+      background-color: #F2CB3A;
+    }
   }
 
   ~ #annotation-panel,
@@ -126,7 +130,7 @@
     }
   }
 
-  #annotations-ru.lang-en {
+  #annotations-ru.lang-en, #ch-notes-ru.lang-en {
     .en-comment {
       display: block;
     }
@@ -139,7 +143,7 @@
     }
   }
 
-  #annotations-ru.lang-ru {
+  #annotations-ru.lang-ru, #ch-notes-ru.lang-ru {
     .en-comment {
       display: none;
     }
@@ -148,7 +152,7 @@
     }
   }
 
-  #annotations-ru.lang-both {
+  #annotations-ru.lang-both, #ch-notes-ru.lang-both {
     .en-comment {
       display: block;
     }
@@ -285,4 +289,8 @@
   ~ #annotation-panel {
     height: 400px !important;
   }
+}
+
+#footer.expanded {
+  margin: 0 auto 400px !important;
 }

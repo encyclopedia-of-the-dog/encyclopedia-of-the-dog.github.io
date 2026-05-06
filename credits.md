@@ -20,6 +20,8 @@ Noemi Albanese, Annotation Collaborator
 
 Angelina Rogatch, Translator & Digital Scholarship Project Assistant
 
+Valerie Grechanik, Translator & Digital Scholarship Project Assistant
+
 Jackie Toben, Digital Scholarship Project Assistant
 
 Site developers & Digital Scholarship Summer Fellows: Adrianna Morsey, Arlowe Willingham, Rafiun Haque

@@ -30,18 +30,18 @@ layout: bilingual
         <li class="next-chapter" {% if page.number == "18" %}style="visibility: hidden; aria-hidden="true"{% endif %}><a href='{{ "/chapters/" | append: next | relative_url }}'><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#404040}</style><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></a></li>
       </ul>
       <h1 class="text-title">
-        <span id="en-title">{% include annotated-title.html lang="en" %}</span>
+        <span id="en-title" lang="en">{% include annotated-title.html lang="en" %}</span>
         <span id="title-divider"> / </span>
-        <span id="ru-title">{% include annotated-title.html lang="ru" %}</span>
+        <span id="ru-title" lang="ru">{% include annotated-title.html lang="ru" %}</span>
       </h1>
     </div>
 
     <div class="main-content">
       <div class="text-container" id="texts">
-        <div id="en" markdown="1">
+        <div id="en" lang="en" markdown="1">
           {% include annotated-poetry.html lang="en" %}
         </div>
-        <div id="ru" markdown="1">
+        <div id="ru" lang="ru" markdown="1">
           {% include annotated-poetry.html lang="ru" %}
         </div>
       </div>

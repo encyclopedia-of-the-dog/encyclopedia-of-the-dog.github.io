@@ -78,11 +78,12 @@
             {{ content }}
         
         </main>
-        <footer>
+        <footer id="footer">
           <div class="byline-container-footer">
             <p>From <em>Between Dog and Wolf</em> by Sasha Sokolov, translated by Alexander Boguslawski.</p>
           </div>
           <p>Copyrighted text used with permission of Columbia UP (English) & Azbuka (Russian).</p>
+          <p>This site uses cookies to remember your language preferences. For more information, check out our <a href="{{ '/privacy-policy/' | relative_url }}">Privacy Policy</a>.</p>
         </footer>  
       </div>
     </div>
@@ -133,40 +134,43 @@
     <script>
       // Language buttons
       function showEnglish() {
-          var element = document.getElementById("chapter-content");
+          let element = document.getElementById("chapter-content");
             element.classList.remove("english");
             element.classList.remove("russian");
             element.classList.remove("both");
             element.classList.add("english");
+            document.cookie = "storedLanguage=english; path=/";
         }
       
         function showRussian() {
-          var element = document.getElementById("chapter-content");
+          let element = document.getElementById("chapter-content");
             element.classList.remove("english");
             element.classList.remove("russian");
             element.classList.remove("both");
             element.classList.add("russian");
+            document.cookie = "storedLanguage=russian; path=/";
         }
       
         function showBoth() {
-          var element = document.getElementById("chapter-content");
+          let element = document.getElementById("chapter-content");
             element.classList.remove("english");
             element.classList.remove("russian");
             element.classList.remove("both");
             element.classList.add("both");
+            document.cookie = "storedLanguage=both; path=/";
         }
 
       // Add and remove active class from buttons
       // Get the container element
-      var btnContainer = document.getElementById("language-buttons");
+      let btnContainer = document.getElementById("language-buttons");
 
       // Get all buttons with class="btn" inside the container
-      var btns = btnContainer.getElementsByClassName("btn");
+      let btns = btnContainer.getElementsByClassName("btn");
 
       // Loop through the buttons and add the active class to the current/clicked button
-      for (var i = 0; i < btns.length; i++) {
+      for (let i = 0; i < btns.length; i++) {
         btns[i].addEventListener("click", function () {
-          var current = btnContainer.getElementsByClassName("active");
+          let current = btnContainer.getElementsByClassName("active");
           current[0].className = current[0].className.replace(" active", "");
           this.className += " active";
         });
@@ -190,10 +194,10 @@
       // Close the dropdowns if the user clicks outside of them
       window.onclick = function(event) {
         if (!event.target.matches('.dropbtn')) {
-          var dropdowns = document.getElementsByClassName("dropdown-content");
-          var i;
+          let dropdowns = document.getElementsByClassName("dropdown-content");
+          let i;
           for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
+            let openDropdown = dropdowns[i];
             if (openDropdown.classList.contains('show')) {
               openDropdown.classList.remove('show');
             }
@@ -207,21 +211,21 @@
         document.getElementById("btn-expand-annotations").setAttribute ("aria-hidden", "false");
         document.getElementById("panel-mask").setAttribute ("aria-hidden", "false");
 
-        var content = document.getElementById("chapter-content");
+        let content = document.getElementById("chapter-content");
         content.classList.remove("annotations-hidden");
         content.classList.add("annotations-visible");
         // Add hidden links to tab navigation
-        var spansToHide = document.getElementsByClassName("annotation-link"); //spansToHide is an array
-        for(var i = 0; i < spansToHide.length; i++){
+        let spansToHide = document.getElementsByClassName("annotation-link"); //spansToHide is an array
+        for(let i = 0; i < spansToHide.length; i++){
           spansToHide[i].setAttribute ("tabindex", "0");
           spansToHide[i].setAttribute ("aria-hidden", "false");
         }
-        var spansToHide = document.getElementsByClassName("linked-highlighted"); //spansToHide is an array
-        for(var i = 0; i < spansToHide.length; i++){
+        spansToHide = document.getElementsByClassName("linked-highlighted"); //spansToHide is an array
+        for(let i = 0; i < spansToHide.length; i++){
           spansToHide[i].setAttribute ("tabindex", "0");
           spansToHide[i].setAttribute ("aria-hidden", "false");
         }
-        document.getElementById("texts").style.padding = "0 0 5rem";
+        document.getElementById("footer").style.margin = "0 auto 200px";
       }
 
       // Hide annotations
@@ -230,60 +234,77 @@
         document.getElementById("btn-expand-annotations").setAttribute ("aria-hidden", "true");
         document.getElementById("panel-mask").setAttribute ("aria-hidden", "true");
 
-        var content = document.getElementById("chapter-content");
+        let content = document.getElementById("chapter-content");
         content.classList.remove("annotations-visible");
         content.classList.add("annotations-hidden");
         // Remove hidden links from tab navigation
-        var spansToHide = document.getElementsByClassName("annotation-link"); //spansToHide is an array
-        for(var i = 0; i < spansToHide.length; i++){
+        let spansToHide = document.getElementsByClassName("annotation-link"); //spansToHide is an array
+        for(let i = 0; i < spansToHide.length; i++){
           spansToHide[i].setAttribute ("tabindex", "-1");
           spansToHide[i].setAttribute ("aria-hidden", "true");
         }
-        var spansToHide = document.getElementsByClassName("highlighted"); //spansToHide is an array
-        for(var i = 0; i < spansToHide.length; i++){
+        spansToHide = document.getElementsByClassName("highlighted"); //spansToHide is an array
+        for(let i = 0; i < spansToHide.length; i++){
           spansToHide[i].setAttribute ("tabindex", "-1");
           spansToHide[i].setAttribute ("aria-hidden", "true");
         }
-        document.getElementById("texts").style.padding = "0";
+        
+        document.getElementById("footer").style.margin = "0 auto";
+        document.cookie = "storedAnnotationLanguage=off; path=/";
       }
 
       // Support language toggle in annotation panel
-      var russianAnnotations = document.getElementById("annotations-ru");
+
+      let russianAnnotations = document.getElementById("annotations-ru");
+      let russianChapterNotes = document.getElementById("ch-notes-ru");
       function showEnglishAnnotations(){
         if (russianAnnotations.classList.contains("lang-ru")) {
           russianAnnotations.classList.remove("lang-ru");
+          russianChapterNotes.classList.remove("lang-ru");
         }
         if (russianAnnotations.classList.contains("lang-both")) {
           russianAnnotations.classList.remove("lang-both");
+          russianChapterNotes.classList.remove("lang-both");
         }
         russianAnnotations.classList.add("lang-en");
+        russianChapterNotes.classList.add("lang-en");
+        document.cookie = "storedAnnotationLanguage=english; path=/";
       }
       function showRussianAnnotations(){
         if (russianAnnotations.classList.contains("lang-en")) {
           russianAnnotations.classList.remove("lang-en");
+          russianChapterNotes.classList.remove("lang-en");
         }
         if (russianAnnotations.classList.contains("lang-both")) {
           russianAnnotations.classList.remove("lang-both");
+          russianChapterNotes.classList.remove("lang-both");
         }
         russianAnnotations.classList.add("lang-ru");
+        russianChapterNotes.classList.add("lang-ru");
+        document.cookie = "storedAnnotationLanguage=russian; path=/";
       }
       function showBothAnnotations(){
         if (russianAnnotations.classList.contains("lang-en")) {
           russianAnnotations.classList.remove("lang-en");
+          russianChapterNotes.classList.remove("lang-en");
         }
         if (russianAnnotations.classList.contains("lang-ru")) {
           russianAnnotations.classList.remove("lang-ru");
+          russianChapterNotes.classList.remove("lang-ru");
         }
         russianAnnotations.classList.add("lang-both");
+        russianChapterNotes.classList.add("lang-both");
+        document.cookie = "storedAnnotationLanguage=both; path=/";
       }
 
       // Expand and collapse the annotation panel
       function expandAnnotations(){
         document.getElementById("panel-btn-container").classList.toggle("expanded");
+        document.getElementById("footer").classList.toggle("expanded");
       }
 
       // Make clickable spans keyboard accessible
-      var clickableSpansText = document.getElementsByClassName("annotation-link");
+      let clickableSpansText = document.getElementsByClassName("annotation-link");
       for (let i = 0; i < clickableSpansText.length; i++) {
         clickableSpansText[i].addEventListener("keyup", function(event) {
           event.preventDefault();
@@ -292,7 +313,7 @@
           }
         });
       }
-      var clickableSpansPanel = document.getElementsByClassName("highlighted");
+      let clickableSpansPanel = document.getElementsByClassName("highlighted");
       for (let i = 0; i < clickableSpansPanel.length; i++) {
         clickableSpansPanel[i].addEventListener("keyup", function(event) {
           event.preventDefault();
@@ -301,6 +322,55 @@
           }
         });
       }
+
+      // Function for getting cookies
+      function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i <ca.length; i++) {
+          let c = ca[i];
+          while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return "";
+      }
+
+      // Function for checking the language cookie and setting the text and annotation languages
+        function checkLanguages() {
+          let storedLanguage = getCookie("storedLanguage");
+          if (storedLanguage != "") {
+            if (storedLanguage == "english"){
+              showEnglish();
+            } else if (storedLanguage == "russian"){
+              showRussian();
+            } else if (storedLanguage == "both"){
+              showBoth();
+            }
+          }
+
+          let storedAnnotationLanguage = getCookie("storedAnnotationLanguage");
+          if (storedAnnotationLanguage != "") {
+            if (storedAnnotationLanguage == "english"){
+              showAnnotations();
+              showEnglishAnnotations();
+            } else if (storedAnnotationLanguage == "russian"){
+              showAnnotations();
+              showRussianAnnotations();
+            } else if (storedAnnotationLanguage == "both"){
+              showAnnotations();
+              showBothAnnotations();
+            } else if (storedAnnotationLanguage == "off"){
+              hideAnnotations();
+            }
+          }
+        }
+
+        document.addEventListener("DOMContentLoaded", checkLanguages());
     </script>
 
   </body>

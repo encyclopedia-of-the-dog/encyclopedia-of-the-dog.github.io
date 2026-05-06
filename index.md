@@ -5,13 +5,15 @@ title: "Encyclopedia of the Dog"
 
 *The Encyclopedia of the Dog* is a complete and freely accessible bilingual digital edition of Sasha Sokolov’s 1980 novel *Between Dog and Wolf*. It features both the original Russian text and Alexander Boguslawski’s English translation as well as multiple kinds of annotations to help readers grasp the various meanings, allusions, and layers of the novel.
 
-## How to Use
+See below for instructions on <a href="#how-to-use">how to use this edition</a> as well as a <a href="#tag-glossary">glossary of tags</a> used in the annotations.
+
+<h2 id="how-to-use">How to use this edition</h2>
 
 The Table of Contents can be accessed from the sidebar by clicking the menu icon in the top left corner of any page. Links to all chapters can be found in the Table of Contents and in the menu bar at the top of chapter pages on computers and tablets. The menu bar also contains “Language” and “Annotations” dropdowns which can be used to toggle the language of the text (English, Russian, or both side by side) and the visibility of annotations, respectively.
 
 The “Annotations” dropdown in the menu bar allows readers to select the language of the annotation panel, which will appear at the bottom of the screen when a language is selected. Please note that the annotations for the English text are only available in English. Highlights will also appear in the novel to indicate available annotations. Clicking on these highlights will scroll the annotation panel to the location of the corresponding annotation. In the case of nested and overlapping annotations, clicking on the highlights will scroll the annotation panel to the location of the first annotation in the group. The annotation panel itself can then be scrolled down to reveal subsequent annotations. Finally, the backlink at the top of each annotation will scroll the main text to the location of the corresponding highlight.
 
-## Tags
+<h2 id="tag-glossary">Tag glossary</h2>
 
 We have used a system of tags to track patterns in *Between Dog and Wolf*. These tags identify various basic elements of the novel, such as characters and locations, as well as allusions and other kinds of references. The tags and their meanings are described below.
 
